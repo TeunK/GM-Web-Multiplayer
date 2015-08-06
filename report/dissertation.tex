@@ -1,0 +1,220 @@
+\documentclass[12pt]{report}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{url}
+%\usepackage[left=20mm,top=20mm,bottom=20mm,right=20mm]{geometry}
+\author{Teun Kokke, s1242775}
+\title
+{
+	\vspace*{\dimexpr-1.4in-\topmargin-\headsep-\headheight-\baselineskip}%
+	\hspace*{\dimexpr-1.2in-\evensidemargin-\parindent}%
+	\makebox[\paperwidth][r]{\includegraphics[height=3cm]{logo.png}}
+    Rendonan Minigame\\
+    {\small Software Engineering Large Practical\\Word Count: xxxxx}
+    \vspace{18em}
+}
+\begin{document}
+
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+
+\section*{General Concept}
+text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
+
+\vspace{2em}
+\begin{quote}
+\textit{text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\}
+\end{quote}
+\pagebreak
+
+\section*{files}
+\begin{itemize}
+\item Report: report.pdf
+\item Documentation: documentation.txt
+\item Game Sourcecode: Open files with any text-editor, optionally with syntax highlighting. The language is GML but Javascript highlighting will suffice.
+Files: /GM\_SOURCE/sourcecode/rendonan.gmx/...
+\begin{itemize}
+\item Objects: /objects
+\item Scripts: /scripts (structure displayed in Figure 3, "Difficulties" section of this report)
+\end{itemize}
+\item Website:
+\begin{itemize}
+\item routing: /src/Rendonan/MiniBundle/Resources/config/routing.yml
+\item controllers: /src/Rendonan/MiniBundle/Controller/...
+\item entity classes (db tables): /src/Rendonan/MiniBundle/Entity/...
+\item views: /src/Rendonan/MiniBundle/Resources/views/...
+\end{itemize}
+\item Tests:
+\begin{itemize}
+\item test coverage: /testcoverage/index.html and testcoverage/dashboard.html
+\item test results: /testresult
+\end{itemize}
+\item Example Video: \url{https://www.youtube.com/watch?v=9hUZTXsLuDc}
+\end{itemize}
+\pagebreak
+
+\section*{Structure}
+\subsection*{Website}
+text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
+\subsubsection{Design}
+text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
+\begin{enumerate}
+\item text text text text text text text text text text text text text text text\\
+\begin{enumerate}
+\item text text text text text text text text text text text text text text text\\
+\begin{itemize}
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\end{itemize}
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\end{enumerate}
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\begin{enumerate}
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\begin{itemize}
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\end{itemize}
+\end{enumerate}
+text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
+\end{enumerate}
+text text text text text text text text text text text text text text text\\
+
+\begin{figure}[h]
+\centering
+\makebox[\textwidth]{ \includegraphics[scale=0.33]{symfonySystem.jpg}}
+\caption{text text text text text}
+\end{figure}
+text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
+
+\subsubsection{Refactoring}
+text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
+
+\subsection*{Game}
+\subsubsection{Design}
+text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
+\begin{enumerate}
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\begin{enumerate}
+\item text text text text text text text text text text text text text text text\\
+\begin{itemize}
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\end{itemize}  
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\begin{itemize}
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\end{itemize}
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\begin{itemize}
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\end{itemize}
+text text text text text text text text text text text text text text text\\
+
+\begin{figure}[h]
+\centering
+\makebox[\textwidth]{ \includegraphics[scale=0.31]{userGuide.jpg}}
+\caption{Visual representation of the game room, displaying many of the modules mentioned above.}
+\end{figure}
+
+\end{enumerate}
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\begin{enumerate}
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\end{enumerate}
+\end{enumerate}
+\subsubsection{Refactoring}
+text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
+\subsubsection{Function Structure}
+text text text text text text text text text text text text text text text\\
+\begin{figure}[h]
+\makebox[\textwidth]{\includegraphics[scale=0.42]{script_hierachy.jpg}}
+\caption{Script Hierachy, displaying the alignment of scripts used in gamemaker. Their content is located in the folder GM\_SOURCE/sourcecode/rendonan\_release.gmx/scripts.}
+\end{figure}
+
+\section*{Difficulties}
+text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
+\begin{itemize}
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\end{itemize}
+
+\section*{Testing}
+\subsection*{Website}
+text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
+\begin{itemize}
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\end{itemize}
+
+\subsection*{Game}
+text text text text text text text text text text text text text text text\\
+\begin{enumerate}
+\item \emph{\textbf{Type Checks:}} text text text text text text text text text text text text text text text\\
+\item \emph{\textbf{Logic tests:}} text text text text text text text text text text text text text text text\\
+\item \emph{\textbf{Unit tests:}} text text text text text text text text text text text text text text text\\
+\item \emph{\textbf{Connection tests:}} text text text text text text text text text text text text text text text\\
+\end{enumerate}
+text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
+\subsection*{Test Coverage}
+text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
+
+\section*{Deficiencies}
+text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
+\begin{itemize}
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\item text text text text text text text text text text text text text text text\\
+\end{itemize}
+text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
+
+\section*{Future Improvements}
+\subsection*{Choice of technology / language}
+text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
+\subsection*{Future project potentials}
+text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
+
+\section*{Conclusion}
+text text text text text text text text text text text text text text text\\
+text text text text text text text text text text text text text text text\\
+text text text text text text text text text text text text text text text\\
+
+\end{document}
