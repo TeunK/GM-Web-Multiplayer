@@ -1,2 +1,8 @@
 client/client.gmx/Configs/
 client/extentions/.idea/
+
+report/*.aux
+report/*.out
+report/*.pdf
+report/*.gz
+report/*.log
