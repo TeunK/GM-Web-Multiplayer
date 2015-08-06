@@ -22,7 +22,7 @@
 \end{titlepage}
 
 \section*{General Concept}
-text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
+Creating an extention for Gamemaker creations, to allow fast networking with maximal reliability (priority can be set by developer).
 
 \vspace{2em}
 \begin{quote}
@@ -57,6 +57,18 @@ Files: /GM\_SOURCE/sourcecode/rendonan.gmx/...
 \pagebreak
 
 \section*{Structure}
+
+\subsection*{Research}
+In order to have a fast network connection, the first thing one will think of is the user of UDP.
+\subsubsection{Issues}
+\begin{enumerate}
+\item Gamemaker does \textbf{not} support networking for HTML5 (js) export
+\item The current extentions that exist for gamemaker are limited to a basic use of TCP
+\item Webbrowsers do not generally support the use of UDP.
+\\Suggested methods are developing a java or flash applet, which will handle the network functions.
+\\WebRTC allows js to use UDP data transfer, but security features make holepunching complicated. \footnote{http://danristic.com/html5/javascript/webrtc/2013/08/13/using-the-webrtc-data-channel.html} 
+\end{enumerate} 
+
 \subsection*{Website}
 text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
 \subsubsection{Design}
