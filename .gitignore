@@ -1,5 +1,5 @@
 client/client.gmx/Configs/
-client/extentions/.idea/
+client/extensions/.idea/
 
 report/*.aux
 report/*.out
