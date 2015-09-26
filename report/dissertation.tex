@@ -59,14 +59,18 @@ Files: /GM\_SOURCE/sourcecode/rendonan.gmx/...
 \section*{Structure}
 
 \subsection*{Research}
-In order to have a fast network connection, the first thing one will think of is the user of UDP.
+The project focus is on developing a networking extension, to allow the use of networking services to Gamemaker when using the HTML5 export option.\\
+One of the first thing one would consider is the selection of protocols that will be used in order to establish the connection between two (or more) nodes.\\
+As the project aims to allow users to optimise the extension's networking settings in favour of either speed or reliability, there will be further research done within each of the transport layer protocols: TCP and UDP.\\
+One of the most immediate problems that arise are that due to security constraints, UDP is not normally supported by web-browsers in order to communicate data to other hosts, and communication via TCP may be too slow in case a developer wishes to create an application that relies on a fast connection between hosts.
+
 \subsubsection{Issues}
 \begin{enumerate}
 \item Gamemaker does \textbf{not} support networking for HTML5 (js) export
 \item The current extentions that exist for gamemaker are limited to a basic use of TCP
 \item Webbrowsers do not generally support the use of UDP.
-\\Suggested methods are developing a java or flash applet, which will handle the network functions.
-\\WebRTC allows js to use UDP data transfer, but security features make holepunching complicated. \footnote{http://danristic.com/html5/javascript/webrtc/2013/08/13/using-the-webrtc-data-channel.html} 
+\\Suggested methods are developing a java or flash applet, which will handle the networking features.
+\\A recent technology called \emph{WebRTC} allows js to use UDP data transfer directly on the web-client, but security features  within the network make holepunching complicated. \footnote{http://danristic.com/html5/javascript/webrtc/2013/08/13/using-the-webrtc-data-channel.html} 
 \end{enumerate} 
 
 \subsection*{Website}
