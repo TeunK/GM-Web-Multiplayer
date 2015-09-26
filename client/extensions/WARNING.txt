@@ -1,0 +1,2 @@
+Do not modify extension files in this folder once imported to Gamemaker.
+Use the extensions folder inside client.gmx instead.
