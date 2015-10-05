@@ -1,0 +1,36 @@
+<< src: https://www.youtube.com/watch?v=jAhCuHq08pc >>
+
+01) Install VirtualBox (windows x86): https://www.virtualbox.org/wiki/Downloads
+
+02) Download Mininet (ubuntu 32bit): https://github.com/mininet/mininet/wiki/Mininet-VM-Images
+
+03) Install Mininet system on virtual box (assign 1GB RAM)
+New Mininet PC -> Settings -> Network -> Adapter 2 -> Enable Network Adaptor 
++ Host-only Adapter 
++ Allow All
+
+04) Startup Mininet PC ->
+	Username = mininet
+	Password = mininet
+
+05) Install Xming: http://sourceforge.net/projects/xming/?source=typ_redirect
+
+06) Download putty: http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe
+
+07) open cmd, check startup directory in cmd, copy putty to this dir
+
+08) install Xming
+
+09) In Mininet PC -> (assign IP address so can ssh from host sys=this win7 pc) type: sudo  dhclient
+10) In Mininet PC -> (check if works) type: ifconfig
+	NOTE: eth0 = initial interface, lo = newly adaptor added in settings
+11) In Mininet PC -> (more ifconfig details) type: sudo ifconfig -a
+12) In Mininet PC -> (assign eh1 network adaptor) type: sudo dhclient eth1
+13) In Mininet PC -> (record eth1 inet addr = ip) type: ifconfig -a
+
+Back to regular pc..
+14) cmd type: putty.exe -X mininet@<mininet eth1 ip address here>
+	allow alert (yes)
+
+15) New cmd putty window popup -> password = mininet
+16) (test if works) type: sudo mn
