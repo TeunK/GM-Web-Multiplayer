@@ -18,3 +18,5 @@ var MESSAGES = {
         "update_coordinates": 1
     }
 };
+
+module.exports = MESSAGES;
