@@ -78,8 +78,9 @@ io.sockets.on('connection', function(socket) {
                 pid = readshort();
 
                 // Warn user that client_id has left
+                var msg_type = MESSAGES['S2C'].client_disconnected;
                 clearbuffer();
-                writebyte(9);
+                writebyte(msg_type);
                 writeshort(pid);
                 send_all_clients();
                 break;
