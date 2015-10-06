@@ -53,6 +53,10 @@ function readbyte() {
     return buffer.shift();
 }
 
+//send buffer contents through socket
+function sendmessage(socket) {
+    socket.emit("message", buffer);
+}
 
 
 // server startup message in terminal window
