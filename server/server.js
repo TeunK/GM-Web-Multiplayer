@@ -39,12 +39,39 @@ io.sockets.on('connection', function(socket) {
 
     // reply to client with it's new client_id
     clearbuffer();
-    writebyte(MESSAGES['C2S'].confirm_client_id);
+    writebyte(MESSAGES['S2C'].confirm_client_id);
     writebyte(client_id);
     sendmessage(socket_id);
     console.log("SENT MSG TO CLIENT ID "+client_id);
 
 
+    // handle incoming messages from clients
+    socket_id.on('message', function(data) {
+
+        // store data into buffer
+        buffer      = data;
+        //read the message type
+        messageid   = readbyte();
+
+        switch (messageid) {
+            case MESSAGES['C2S'].initial_client_details:
+                /* RECEIVE CLIENT obj_id AND USERNAME -> FORWARD DATA TO ALL CLIENTS ON NETWORK */
+
+                // Client sends it's initial details, store these
+                obj_client_id   = readshort();
+                obj_client_name = readstring();
+
+                // update all clients with new client's arrival
+                var msg_type = MESSAGES['S2C'].send_client_name;
+                clearbuffer();
+                writebyte(msg_type);
+                writeshort(obj_client_id);
+                writestring(obj_client_name);
+                send_all_clients();
+                break;
+
+        }
+    });
 });
 
 function send_all_clients() {
