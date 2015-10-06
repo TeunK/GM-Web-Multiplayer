@@ -1,10 +1,11 @@
 var GLOBAL  = require('./global.js');
 var http    = require('http');
-var io      = require('socket.io');
+var server  = http.createServer(feedback_page);
+var io      = require('socket.io').listen(server);
 
-//keep server running
-var server = http.createServer(function(req,res){
+server.listen(GLOBAL.port);
 
+function feedback_page(req,res) {
     //Write index page response to confirm server is executing
     res.writeHead(200, {'Content-Type': 'text/html'});
     res.write(
@@ -13,10 +14,7 @@ var server = http.createServer(function(req,res){
         "Success! The server is currently running at "+GLOBAL.host+":"+GLOBAL.port
     );
     res.end();
-}).listen(GLOBAL.port);
-
-// listen to incoming messages
-io.listen(server);
+}
 
 
 
