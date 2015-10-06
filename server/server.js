@@ -20,5 +20,40 @@ function feedback_page(req,res) {
 
 
 
+
+/* SOCKET AND BUFFER FUNCTIONS */
+
+//init buffer
+var buffer = [];
+
+//buffer clear
+function clearbuffer() {
+    buffer = [];
+}
+
+//buffer writes
+function writeshort(value) {
+    buffer.push(value);
+}
+function writebyte(value) {
+    buffer.push(value);
+}
+function writestring(value) {
+    buffer.push(value);
+}
+
+//buffer reads
+function readshort() {
+    return buffer.shift();
+}
+function readstring() {
+    return buffer.shift();
+}
+function readbyte() {
+    return buffer.shift();
+}
+
+
+
 // server startup message in terminal window
 console.log("Server started at "+GLOBAL.host+":"+GLOBAL.port);
