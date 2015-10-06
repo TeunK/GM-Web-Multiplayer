@@ -19,6 +19,29 @@ function feedback_page(req,res) {
 
 
 
+/* Network Logic Handling */
+
+// store all connected users as array
+var controller={};
+controller.clients = [];
+
+
+// on new incoming connection-request..
+io.sockets.on('connection', function(socket) {
+
+    // assign id to client
+    var client_id = controller.clients.length;
+    var socket_id = socket;
+    controller.clients.push( {
+        client_id : client_id,
+        socket_id : socket_id
+    });
+
+
+
+});
+
+
 
 /* SOCKET AND BUFFER FUNCTIONS */
 
