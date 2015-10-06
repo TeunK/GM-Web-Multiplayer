@@ -47,6 +47,16 @@ io.sockets.on('connection', function(socket) {
 
 });
 
+function send_all_clients() {
+    // send buffer-contents to ALL clients that are connected to the server
+    for (var client in controller.clients) {
+        if (client) {
+            sendmessage(controller.clients[client].socket_id);
+        }
+    }
+}
+
+
 
 
 /* SOCKET AND BUFFER FUNCTIONS */
