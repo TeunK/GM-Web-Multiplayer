@@ -1,7 +1,8 @@
-var GLOBAL  = require('./global.js');
-var http    = require('http');
-var server  = http.createServer(feedback_page);
-var io      = require('socket.io').listen(server);
+var GLOBAL      = require('./global.js');
+var MESSAGES    = require('./messages.js');
+var http        = require('http');
+var server      = http.createServer(feedback_page);
+var io          = require('socket.io').listen(server);
 
 server.listen(GLOBAL.port);
 
@@ -15,8 +16,6 @@ function feedback_page(req,res) {
     );
     res.end();
 }
-
-
 
 
 
