@@ -37,6 +37,12 @@ io.sockets.on('connection', function(socket) {
         socket_id : socket_id
     });
 
+    // reply to client with it's new client_id
+    clearbuffer();
+    writebyte(MESSAGES['C2S'].confirm_client_id);
+    writebyte(client_id);
+    sendmessage(socket_id);
+    console.log("SENT MSG TO CLIENT ID "+client_id);
 
 
 });
