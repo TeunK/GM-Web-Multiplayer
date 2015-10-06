@@ -11,11 +11,13 @@
  */
 
 var MESSAGES = {
-    "C2S": {
-        "confirm_client_id": 1
+    "S2C": {
+        "confirm_client_id": 1,
+        "send_client_name": 2
     },
-    "S2C":{
-        "update_coordinates": 1
+    "C2S":{
+        "initial_players_details": 1,
+        "client_disconnects": 2
     }
 };
 
