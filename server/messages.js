@@ -13,7 +13,8 @@
 var MESSAGES = {
     "S2C": {
         "confirm_client_id": 1,
-        "send_client_name": 2
+        "send_client_name": 2,
+        "client_disconnected": 3
     },
     "C2S":{
         "initial_client_details": 1,
