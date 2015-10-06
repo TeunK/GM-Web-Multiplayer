@@ -6,3 +6,5 @@ report/*.out
 report/*.pdf
 report/*.gz
 report/*.log
+server/node_modules/
+server/.idea/
