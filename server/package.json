@@ -1,0 +1,8 @@
+{
+  "name": "GMWebNet-Server",
+  "version": "0.0.1",
+  "description": "Software Engineering - Honours Project",
+  "dependencies": {
+    "socket.io": "^1.3.7"
+  }
+}
