@@ -16,7 +16,7 @@ var MESSAGES = {
         "send_client_name": 2
     },
     "C2S":{
-        "initial_players_details": 1,
+        "initial_client_details": 1,
         "client_disconnects": 2
     }
 };
