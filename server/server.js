@@ -70,6 +70,19 @@ io.sockets.on('connection', function(socket) {
                 send_all_clients();
                 break;
 
+
+            case MESSAGES['C2S'].client_disconnects:
+                /* RECEIVE CLIENT DISCONNECT NOTIFICATION -> FORWARD LEAVING CLIENT_ID TO ALL CLIENTS */
+
+                // Receive client_id of the client that is leaving
+                pid = readshort();
+
+                // Warn user that client_id has left
+                clearbuffer();
+                writebyte(9);
+                writeshort(pid);
+                send_all_clients();
+                break;
         }
     });
 });
