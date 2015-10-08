@@ -8,3 +8,4 @@ report/*.gz
 report/*.log
 server/node_modules/
 server/.idea/
+client/.idea/
