@@ -4,7 +4,7 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions>
-    <extension index="0">extensions\GMWebUDP</extension>
+    <extension index="0">extensions\GMWebNET</extension>
   </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
