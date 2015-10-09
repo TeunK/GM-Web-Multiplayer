@@ -172,7 +172,7 @@
           <returnType>2</returnType>
           <argCount>1</argCount>
           <args>
-            <arg>1</arg>
+            <arg>2</arg>
           </args>
         </function>
         <function>
@@ -191,7 +191,7 @@
           <externalName>read_short</externalName>
           <kind>11</kind>
           <help>wn_read_short() -- read short type</help>
-          <returnType>1</returnType>
+          <returnType>2</returnType>
           <argCount>0</argCount>
           <args/>
         </function>
@@ -209,7 +209,7 @@
           <externalName>read_byte</externalName>
           <kind>11</kind>
           <help>wn_read_byte() -- read byte type</help>
-          <returnType>1</returnType>
+          <returnType>2</returnType>
           <argCount>0</argCount>
           <args/>
         </function>
