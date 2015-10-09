@@ -6,12 +6,12 @@ Honours Project
 ###GENERAL
 This project consists of 2 parts, `Server` and `Client`
 
-####Server
+###Server
 Written with Node.JS
 
 For details, read the readme inside the server directory.
 
-####Client
+###Client
 Combination of JavaScript and GML
 
 For details, read the readme inside of the client directory.
