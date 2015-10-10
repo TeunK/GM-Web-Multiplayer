@@ -12,6 +12,9 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\wn_msgtype.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
   </fonts>
