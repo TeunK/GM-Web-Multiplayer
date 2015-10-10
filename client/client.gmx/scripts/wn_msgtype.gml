@@ -31,5 +31,7 @@ else if (message_direction == "S2C")
             return "send_client_name";
         case 3:
             return "client_disconnected";
+        case 4:
+            return "chat_message";
     }
 }

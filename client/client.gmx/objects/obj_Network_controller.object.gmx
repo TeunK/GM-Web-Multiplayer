@@ -77,6 +77,16 @@ ping            = 0;
             wn_send_message(server_socket)
             
             break;
+            
+        case "chat_message":
+            //receive message from some user
+            sender          = wn_read_string();
+            chat_message    = wn_read_string();
+            
+            //add new message to chatbox
+            obj_Chatbox.chat_contents = add_line(obj_Chatbox.chat_contents, sender, chat_message, c_black);
+            
+            break;
     }
 }
 </string>
@@ -101,16 +111,23 @@ ping            = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (client_id == -1)
+            <string>draw_set_color(c_black);
+draw_set_halign(fa_right);
+
+if (client_id == -1)
 {
+    draw_text(x-24, 20, "Not connected")
     draw_set_color(c_red)
 }
 else
 {
+    draw_text(x-24, 20, "connected")
     draw_set_color(c_lime)
 }
 
-draw_rectangle(0,0,room_width,room_height,0);
+draw_circle(room_width-20,20,8,0);
+
+
 </string>
           </argument>
         </arguments>
