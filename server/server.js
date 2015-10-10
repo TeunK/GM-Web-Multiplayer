@@ -45,47 +45,62 @@ io.sockets.on('connection', function(socket) {
     sendmessage(socket_id);
     console.log("Sent ACK to client, assigned-ID: "+client_id);
 
-    //// handle incoming messages from clients
-    //socket_id.on('message', function(data) {
-    //
-    //    // store data into buffer
-    //    buffer      = data;
-    //    //read the message type
-    //    messageid   = readbyte();
-    //
-    //    switch (messageid) {
-    //        case MESSAGES['C2S'].initial_client_details:
-    //            /* RECEIVE CLIENT obj_id AND USERNAME -> FORWARD DATA TO ALL CLIENTS ON NETWORK */
-    //
-    //            // Client sends it's initial details, store these
-    //            obj_client_id   = readshort();
-    //            obj_client_name = readstring();
-    //
-    //            // update all clients with new client's arrival
-    //            var msg_type = MESSAGES['S2C'].send_client_name;
-    //            clearbuffer();
-    //            writebyte(msg_type);
-    //            writeshort(obj_client_id);
-    //            writestring(obj_client_name);
-    //            send_all_clients();
-    //            break;
-    //
-    //
-    //        case MESSAGES['C2S'].client_disconnects:
-    //            /* RECEIVE CLIENT DISCONNECT NOTIFICATION -> FORWARD LEAVING CLIENT_ID TO ALL CLIENTS */
-    //
-    //            // Receive client_id of the client that is leaving
-    //            pid = readshort();
-    //
-    //            // Warn user that client_id has left
-    //            var msg_type = MESSAGES['S2C'].client_disconnected;
-    //            clearbuffer();
-    //            writebyte(msg_type);
-    //            writeshort(pid);
-    //            send_all_clients();
-    //            break;
-    //    }
-    //});
+    // handle incoming messages from clients
+    socket_id.on('message', function(data) {
+
+        // store data into buffer
+        buffer      = data;
+        //read the message type
+        messageid   = readbyte();
+
+        var msg_type;
+        switch (messageid) {
+            case MESSAGES['C2S'].initial_client_details:
+                /* RECEIVE CLIENT obj_id AND USERNAME -> FORWARD DATA TO ALL CLIENTS ON NETWORK */
+
+                // Client sends it's initial details, store these
+                obj_client_name = readstring();
+
+                // update all clients with new client's arrival
+                msg_type = MESSAGES['S2C'].send_client_name;
+                clearbuffer();
+                writebyte(msg_type);
+                writestring(obj_client_name);
+                send_all_clients();
+                break;
+
+
+            case MESSAGES['C2S'].client_disconnects:
+                /* RECEIVE CLIENT DISCONNECT NOTIFICATION -> FORWARD LEAVING CLIENT_ID TO ALL CLIENTS */
+
+                // Receive client_id of the client that is leaving
+                var pid = readshort();
+
+                // Warn user that client_id has left
+                msg_type = MESSAGES['S2C'].client_disconnected;
+                clearbuffer();
+                writebyte(msg_type);
+                writeshort(pid);
+                send_all_clients();
+                break;
+
+            case MESSAGES['C2S'].chat_message:
+                /* RECEIVE CHAT MESSAGE -> FORWARD MESSAGE TO ALL CLIENTS */
+
+                //load message
+                var user            = readstring();
+                var chat_message    = readstring();
+
+                //spread message
+                msg_type = MESSAGES['S2C'].chat_message;
+                clearbuffer();
+                writebyte(msg_type);
+                writestring(user);
+                writestring(chat_message);
+                send_all_clients();
+                break;
+        }
+    });
 });
 
 function send_all_clients() {
