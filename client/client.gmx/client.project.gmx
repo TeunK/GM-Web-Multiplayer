@@ -9,17 +9,23 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_NetworkController</sprite>
+    <sprite>sprites\spr_Controller</sprite>
+    <sprite>sprites\sprite2</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\wn_msgtype.gml</script>
+    <script>scripts\add_line.gml</script>
+    <script>scripts\draw_chat.gml</script>
   </scripts>
   <fonts name="fonts">
-    <font>fonts\font0</font>
+    <font>fonts\ft_main</font>
   </fonts>
   <objects name="objects">
-    <object>objects\network_controller</object>
+    <object>objects\obj_Network_controller</object>
+    <object>objects\obj_Chatbox</object>
+    <object>objects\obj_Controller</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
