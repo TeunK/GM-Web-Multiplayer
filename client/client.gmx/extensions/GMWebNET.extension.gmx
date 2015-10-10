@@ -39,7 +39,7 @@
           <name>wn_connect</name>
           <externalName>connect</externalName>
           <kind>11</kind>
-          <help>wn_connect(server_ip, server_port) -- Connect to a server at ip (address) and port</help>
+          <help>wn_connect(server_ip, server_port) -- Connect to a server at ip (address) and port. Returns socket-ID</help>
           <returnType>2</returnType>
           <argCount>2</argCount>
           <args>
@@ -73,7 +73,7 @@
           <name>wn_receive_message</name>
           <externalName>receive_message</externalName>
           <kind>11</kind>
-          <help>wn_receive_message(socket) -- while (receive_message(socket)) -&gt; treat incoming message</help>
+          <help>wn_receive_message(socket) -- while (wn_receive_message(socket)) -&gt; handle incoming message</help>
           <returnType>2</returnType>
           <argCount>1</argCount>
           <args>
