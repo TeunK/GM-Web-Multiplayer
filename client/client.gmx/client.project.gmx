@@ -12,7 +12,9 @@
     <sprite>sprites\spr_Controller</sprite>
     <sprite>sprites\sprite2</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\wn_msgtype.gml</script>
