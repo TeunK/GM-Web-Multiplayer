@@ -17,6 +17,8 @@ if (message_direction == "C2S")
             return 1;
         case "client_disconnects":
             return 2;
+        case "chat_message":
+            return 3;
     }
 }
 else if (message_direction == "S2C")
@@ -31,4 +33,3 @@ else if (message_direction == "S2C")
             return "client_disconnected";
     }
 }
-
