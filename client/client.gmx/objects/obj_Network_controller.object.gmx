@@ -3,7 +3,7 @@
   <spriteName>spr_NetworkController</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-9000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -35,7 +35,7 @@ server_port     = 8080;
 //Connect
 server_socket   = wn_connect(server_ip, server_port)
 
-
+ping            = 0;
 
 
 </string>
@@ -70,10 +70,9 @@ server_socket   = wn_connect(server_ip, server_port)
             //receive client_id from server
             client_id = wn_read_byte();
             
-            //respond with our object_id and username
+            //respond with our username
             wn_clear_buffer();
             wn_write_byte(wn_msgtype("C2S", "initial_client_details"));
-            wn_write_short("1234");
             wn_write_string("client username");
             wn_send_message(server_socket)
             
