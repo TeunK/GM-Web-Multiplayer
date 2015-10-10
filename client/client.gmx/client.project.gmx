@@ -21,6 +21,9 @@
   <objects name="objects">
     <object>objects\network_controller</object>
   </objects>
+  <rooms name="rooms">
+    <room>rooms\room0</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
