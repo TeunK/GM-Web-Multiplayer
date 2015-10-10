@@ -8,6 +8,9 @@
 
     C2S = Client-to-Server messages
     S2C = Server-to-Client messages
+
+    NOTICE: It may be good to keep the same data inside the GameMaker client, so that the client- and server agree
+            on the meaning of each message type
  */
 
 var MESSAGES = {
