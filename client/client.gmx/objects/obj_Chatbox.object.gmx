@@ -36,8 +36,8 @@ for (i = 0; i &lt; chat_lines_max; i += 1)
     chat_contents[i,2] = c_white;   //Color
 }
 
-chat_contents = add_line(chat_contents, "SYSTEM: ","Lalalalaaa",c_yellow);
-chat_contents = add_line(chat_contents, "SYSTEM: ","Press &lt;Enter&gt;, type your message, and press &lt;Enter&gt; again to send it.",c_yellow);
+chat_contents = add_line(chat_contents, "SYSTEM: ","Lalalalaaa",c_black);
+chat_contents = add_line(chat_contents, "SYSTEM: ","Press &lt;Enter&gt;, type your message, and press &lt;Enter&gt; again to send it.",c_black);
 
 </string>
           </argument>
@@ -78,18 +78,20 @@ if (keyboard_check_released(vk_enter))
     {
         if (keyboard_string == "") {exit};
         
-        with (obj_Network_controller)
+        if (instance_exists(obj_Network_controller))
         {
-            wn_clear_buffer();
-            wn_write_byte(wn_msgtype("C2S","chat_message"));
-            writestring(global.username);
-            writestring(keyboard_string);
-            sendmessage(global.tcp);
+            with (obj_Network_controller)
+            {
+                wn_clear_buffer();
+                wn_write_byte(wn_msgtype("C2S","chat_message"));
+                wn_write_string(obj_Controller.username);
+                wn_write_string(keyboard_string);
+                wn_send_message(server_socket);
+            }
         }
         
         keyboard_string = "";
     }
-
 }
 
 </string>
@@ -117,17 +119,12 @@ if (keyboard_check_released(vk_enter))
             <string>draw_set_color(c_white);
 draw_set_alpha(1);
 
-//Draw chat frame
-draw_set_color(c_white);
-draw_set_alpha(1);
-draw_rectangle(view_xview + 2,view_yview + 338,view_xview + (view_wview - 2),view_yview + 463,1);
-
 //Draw chat entry frame
 if (chatting) {draw_set_color(c_white)} else {draw_set_color(c_gray)};
 draw_rectangle(view_xview + 2,view_yview + 463,view_xview + (view_wview - 2),view_yview + (view_hview - 2),0);
 
 //Draw chat
-draw_chat(5, 340, chat_contents);
+draw_chat(5, room_height-5, chat_contents);
 </string>
           </argument>
         </arguments>
