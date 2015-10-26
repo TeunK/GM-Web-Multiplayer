@@ -99,6 +99,20 @@ io.sockets.on('connection', function(socket) {
                 writestring(chat_message);
                 send_all_clients();
                 break;
+
+            case MESSAGES['C2S'].ping:
+                /* RECEIVE CHAT MESSAGE -> FORWARD MESSAGE TO ALL CLIENTS */
+
+                //load message
+                var ping_sendtime   = readstring();
+
+                //return message
+                msg_type = MESSAGES['S2C'].ping;
+                clearbuffer();
+                writebyte(msg_type);
+                writestring(ping_sendtime);
+                sendmessage(socket_id);
+                break;
         }
     });
 });
