@@ -79,7 +79,10 @@ if (username != "" &amp;&amp; !instance_exists(obj_Network_controller))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_halign(fa_left);
+            <string>draw_set_color(c_black)
+draw_rectangle(20-4,20-2,20+4+string_width(username),20+2+string_height(username),0)
+draw_set_color(c_white)
+draw_set_halign(fa_left);
 draw_text(20,20,username);
 </string>
           </argument>
