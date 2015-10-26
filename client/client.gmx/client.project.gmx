@@ -11,6 +11,7 @@
     <sprite>sprites\spr_NetworkController</sprite>
     <sprite>sprites\spr_Controller</sprite>
     <sprite>sprites\sprite2</sprite>
+    <sprite>sprites\spr_NetworkDisplayer</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -20,14 +21,17 @@
     <script>scripts\wn_msgtype.gml</script>
     <script>scripts\add_line.gml</script>
     <script>scripts\draw_chat.gml</script>
+    <script>scripts\max_value.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\ft_main</font>
+    <font>fonts\ft_mini</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_Network_controller</object>
     <object>objects\obj_Chatbox</object>
     <object>objects\obj_Controller</object>
+    <object>objects\obj_Network_graph</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
