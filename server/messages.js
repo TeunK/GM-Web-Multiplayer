@@ -18,12 +18,14 @@ var MESSAGES = {
         "confirm_client_id": 1,
         "send_client_name": 2,
         "client_disconnected": 3,
-        "chat_message": 4
+        "chat_message": 4,
+        "ping": 5
     },
     "C2S":{
         "initial_client_details": 1,
         "client_disconnects": 2,
-        "chat_message": 3
+        "chat_message": 3,
+        "ping": 4
     }
 };
 

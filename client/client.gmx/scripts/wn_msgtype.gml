@@ -19,6 +19,8 @@ if (message_direction == "C2S")
             return 2;
         case "chat_message":
             return 3;
+        case "ping":
+            return 4;
     }
 }
 else if (message_direction == "S2C")
@@ -33,5 +35,7 @@ else if (message_direction == "S2C")
             return "client_disconnected";
         case 4:
             return "chat_message";
+        case 5:
+            return "ping";
     }
 }
