@@ -26,18 +26,22 @@
           <argument>
             <kind>1</kind>
             <string>//Our client ID as assigned by server
-client_id       = -1;
+client_id           = -1;
 
 //Server IP and port
-server_ip       = "http://localhost"; 
-server_port     = 8080;
+server_ip           = "http://localhost"; 
+server_port         = 8080;
 
 //Connect
-server_socket   = wn_connect(server_ip, server_port)
+server_socket       = wn_connect(server_ip, server_port)
 
-ping            = 0;
-
-
+client_clock        = 0;
+avg_ping            = 0;
+ping_history_limit  = 40
+for (i=0; i&lt;ping_history_limit; i+=1)
+{
+    ping[i] = 0
+}
 </string>
           </argument>
         </arguments>
@@ -87,7 +91,66 @@ ping            = 0;
             obj_Chatbox.chat_contents = add_line(obj_Chatbox.chat_contents, sender, chat_message, c_black);
             
             break;
+        
+        case "ping":
+            //receive ping time when client sent it to server
+            ping_starttime = wn_read_string();
+            
+            //store time (first shift each ping in history by 1)
+            for (i=ping_history_limit-1; i&gt;=0; i-=1)
+            {
+                ping[i+1] = ping[i]
+            }
+            ping[0] = (client_clock - ping_starttime)
+            
+            break;
     }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//create network displayer
+if (!instance_exists(obj_Network_graph))
+{
+    instance_create(x,y,obj_Network_graph)
+}
+
+//always increment clock
+client_clock += 1;
+
+//send ping request
+if (keyboard_check(vk_space))
+{
+    //store time (first shift each ping in history by 1)
+    for (i=ping_history_limit-1; i&gt;=0; i-=1)
+    {
+        ping[i+1] = ping[i]
+    }
+    ping[0] = abs(ping[1]-50+round(random(100)))
+    
+    /*
+    wn_clear_buffer();
+    wn_write_byte(wn_msgtype("C2S","ping"));
+    wn_write_string(client_clock);
+    wn_send_message(server_socket);
+    */
 }
 </string>
           </argument>
