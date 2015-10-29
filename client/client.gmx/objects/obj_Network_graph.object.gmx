@@ -78,7 +78,7 @@ ping_y = 20
             <kind>1</kind>
             <string>
 //draw limit
-var limit = obj_Network_controller.ping_history_limit
+var limit = min(5, obj_Network_controller.ping_history_limit)
 for (i=0; i&lt;limit; i+=1)
 {
     var ping = obj_Network_controller.ping[i]
