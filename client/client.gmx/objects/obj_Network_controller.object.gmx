@@ -91,7 +91,7 @@ for (i=0; i&lt;ping_history_limit; i+=1)
             var chat_message    = wn_read_string();
             
             //add new message to chatbox
-            obj_Chatbox.chat_contents = add_line(obj_Chatbox.chat_contents, sender, chat_message, c_black);
+            obj_Chatbox.chat_contents = add_line(obj_Chatbox.chat_contents, sender, chat_message, c_white);
             
             break;
         
@@ -218,12 +218,10 @@ else if keyboard_check(vk_down)
     req_rate_ping-=1    
 }  
 if (req_rate_ping &lt;= 0) {req_rate_ping = 1}
-draw_text(room_width/2,room_height/2,req_rate_ping) 
 
 //send ping request
 if ((client_clock mod req_rate_ping) == 0)
 {   
-    draw_text(room_width/2,room_height/2+24,"Beep!@");
     wn_clear_buffer();
     wn_write_byte(wn_msgtype("C2S","ping"));
     wn_write_string(string(get_timer()/1000)); //write current client time in ms

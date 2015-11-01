@@ -36,8 +36,7 @@ for (i = 0; i &lt; chat_lines_max; i += 1)
     chat_contents[i,2] = c_white;   //Color
 }
 
-chat_contents = add_line(chat_contents, "SYSTEM: ","Lalalalaaa",c_black);
-chat_contents = add_line(chat_contents, "SYSTEM: ","Press &lt;Enter&gt;, type your message, and press &lt;Enter&gt; again to send it.",c_black);
+chat_contents = add_line(chat_contents, "SYSTEM: ","Press &lt;Enter&gt;, type your message, and press &lt;Enter&gt; again to send it.",c_white);
 
 </string>
           </argument>
@@ -120,8 +119,8 @@ if (keyboard_check_released(vk_enter))
 draw_set_alpha(1);
 
 //Draw chat entry frame
-if (chatting) {draw_set_color(c_white)} else {draw_set_color(c_gray)};
-draw_rectangle(view_xview + 2,view_yview + 463,view_xview + (view_wview - 2),view_yview + (view_hview - 2),0);
+if (chatting) {draw_set_color(c_white)} else {draw_set_color(c_black)};
+draw_rectangle(0,room_height-18,room_width,room_height-2,0);
 
 //Draw chat
 draw_chat(5, room_height-5, chat_contents);

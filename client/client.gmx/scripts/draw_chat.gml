@@ -12,7 +12,6 @@ var chatting        = obj_Chatbox.chatting
 var line_height     = 16
 
 
-
 var i;
 for (i = 0; i < max_chatlines ; i += 1)
 {

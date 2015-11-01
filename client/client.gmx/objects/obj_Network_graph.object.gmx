@@ -76,13 +76,18 @@ ping_y = 20
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>//color scheme
+var bg_col          = c_black
+var text_col        = c_white
+var curve_col       = c_lime
+
+
 //draw limit
 var limit = min(5, obj_Network_controller.ping_history_limit)
 for (i=0; i&lt;limit; i+=1)
 {
     var ping = obj_Network_controller.ping[i]
-    draw_set_color(c_black)
+    draw_set_color(text_col)
     draw_set_halign(fa_left)
     draw_text(ping_x,ping_y+margin*i, "Ping: "+ping)
 }
@@ -91,17 +96,21 @@ for (i=0; i&lt;limit; i+=1)
 // GRAPH CREATION
 //define bottom-left corner of graph
 var graph_x0        = room_width-600
-var graph_y0        = 200
+var graph_y0        = 220
 var graph_height    = 180
 var graph_width     = 580
 draw_set_font(ft_mini)
 
 //draw background
-draw_set_color(c_white)
+draw_set_color(bg_col)
 draw_rectangle(graph_x0,graph_y0,graph_x0+graph_width,graph_y0-graph_height,0)
 
+//draw pingrate info
+draw_set_color(text_col)
+draw_text(graph_x0,graph_y0+10,"Pinging every: "+string(obj_Network_controller.req_rate_ping)+"/"+string(room_speed)+"s") 
+
 //draw axes
-draw_set_color(c_black)
+draw_set_color(text_col)
 draw_line(graph_x0,graph_y0,graph_x0+graph_width,graph_y0)  //horizontal
 draw_line(graph_x0,graph_y0,graph_x0,graph_y0-graph_height) //vertical
 
@@ -109,7 +118,7 @@ draw_line(graph_x0,graph_y0,graph_x0,graph_y0-graph_height) //vertical
 var pings = obj_Network_controller.ping
 var max_val = max_value(pings)
 draw_set_halign(fa_right)
-draw_set_color(c_black)
+draw_set_color(text_col)
 draw_text(graph_x0-5,graph_y0,"0ms");
 var verticals = 5
 for (i=1; i&lt;=verticals; i+=1)
@@ -152,10 +161,10 @@ for(i=1; i&lt;interval_count; i+=1)
     var y_new                   = ping_new_val_percent * graph_height
     
     //draw line
-    draw_set_color(c_green)
+    draw_set_color(curve_col)
     draw_line(graph_x0+x_left,graph_y0-y_old,graph_x0+x_right, graph_y0-y_new)
     draw_set_halign(fa_center)
-    draw_set_color(c_black)
+    draw_set_color(text_col)
     draw_text(graph_x0+x_right,graph_y0-y_new-20,pings[i])
     draw_set_halign(fa_left)
 }
