@@ -75,7 +75,7 @@ for (i=0; i&lt;ping_history_limit; i+=1)
     {
         case "confirm_client_id":
             //receive client_id from server
-            var client_id = wn_read_byte();
+            client_id = wn_read_byte();
             
             //respond with our username
             wn_clear_buffer();
