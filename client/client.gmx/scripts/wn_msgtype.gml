@@ -21,6 +21,10 @@ if (message_direction == "C2S")
             return 3;
         case "ping":
             return 4;
+        case "client_count":
+            return 5;
+        case "request_count":
+            return 6;
     }
 }
 else if (message_direction == "S2C")
@@ -37,5 +41,9 @@ else if (message_direction == "S2C")
             return "chat_message";
         case 5:
             return "ping";
+        case 6:
+            return "client_count";
+        case 7:
+            return "request_count"
     }
 }

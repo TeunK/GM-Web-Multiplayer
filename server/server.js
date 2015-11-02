@@ -25,18 +25,22 @@ function feedback_page(req,res) {
 var controller={};
 controller.clients = [];
 
+var starttime = new Date().getTime();
+var requestsHandled = 0;
 
 // on new incoming connection-request..
 io.sockets.on('connection', function(socket) {
     console.log("Incoming Connection Request..");
+    requestsHandled++;
 
     // assign id to client
     var client_id = controller.clients.length;
     var socket_id = socket;
-    controller.clients.push( {
+    var client_data = {
         client_id : client_id,
         socket_id : socket_id
-    });
+    };
+    controller.clients.push(client_data);
 
     // reply to client with it's new client_id
     clearbuffer();
@@ -47,6 +51,7 @@ io.sockets.on('connection', function(socket) {
 
     // handle incoming messages from clients
     socket_id.on('message', function(data) {
+        requestsHandled++;
 
         // store data into buffer
         buffer      = data;
@@ -75,6 +80,8 @@ io.sockets.on('connection', function(socket) {
 
                 // Receive client_id of the client that is leaving
                 var pid = readshort();
+                //remove client data from list of clients
+                controller.clients.splice(client_data, 1);
 
                 // Warn user that client_id has left
                 msg_type = MESSAGES['S2C'].client_disconnected;
@@ -111,6 +118,27 @@ io.sockets.on('connection', function(socket) {
                 clearbuffer();
                 writebyte(msg_type);
                 writestring(ping_sendtime);
+                sendmessage(socket_id);
+                break;
+
+            case MESSAGES['C2S'].client_count:
+                //return message
+                msg_type = MESSAGES['S2C'].client_count;
+                clearbuffer();
+                writebyte(msg_type);
+                writebyte(controller.clients.length);
+                sendmessage(socket_id);
+                break;
+
+            case MESSAGES['C2S'].request_count:
+                var now = new Date().getTime();
+                var timediff = (now - starttime)/1000;
+                var avg_requests = Math.round(requestsHandled / timediff);
+
+                msg_type = MESSAGES['S2C'].request_count;
+                clearbuffer();
+                writebyte(msg_type);
+                writebyte(avg_requests);
                 sendmessage(socket_id);
                 break;
         }

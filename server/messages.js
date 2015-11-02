@@ -19,13 +19,17 @@ var MESSAGES = {
         "send_client_name": 2,
         "client_disconnected": 3,
         "chat_message": 4,
-        "ping": 5
+        "ping": 5,
+        "client_count": 6,
+        "request_count": 7
     },
     "C2S":{
         "initial_client_details": 1,
         "client_disconnects": 2,
         "chat_message": 3,
-        "ping": 4
+        "ping": 4,
+        "client_count": 5,
+        "request_count": 6
     }
 };
 

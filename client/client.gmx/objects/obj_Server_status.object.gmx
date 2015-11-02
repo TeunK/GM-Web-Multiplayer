@@ -35,8 +35,8 @@ lines[4] = "Ping Freq: "+string(round(room_speed/obj_Network_controller.req_rate
 
 lines[5] = ""
 lines[6] = "SERVER DETAILS"
-lines[7] = "No. of clients connected: "
-lines[8] = "Server handling requests/second: "
+lines[7] = "No. of clients connected: "+string(obj_Network_controller.client_count)
+lines[8] = "Server handling requests/second: "+string(obj_Network_controller.request_count)
 
 //init
 var x0          = 20
