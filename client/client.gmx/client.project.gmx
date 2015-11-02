@@ -22,6 +22,7 @@
     <script>scripts\add_line.gml</script>
     <script>scripts\draw_chat.gml</script>
     <script>scripts\max_value.gml</script>
+    <script>scripts\strings_to_widths.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\ft_main</font>
@@ -32,6 +33,7 @@
     <object>objects\obj_Chatbox</object>
     <object>objects\obj_Controller</object>
     <object>objects\obj_Network_graph</object>
+    <object>objects\obj_Server_status</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

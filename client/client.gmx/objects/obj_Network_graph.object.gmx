@@ -84,6 +84,7 @@ var curve_col       = c_lime
 
 //draw limit
 var limit = min(5, obj_Network_controller.ping_history_limit)
+/*
 for (i=0; i&lt;limit; i+=1)
 {
     var ping = obj_Network_controller.ping[i]
@@ -91,12 +92,13 @@ for (i=0; i&lt;limit; i+=1)
     draw_set_halign(fa_left)
     draw_text(ping_x,ping_y+margin*i, "Ping: "+ping)
 }
+*/
 
 /*************************************/
 // GRAPH CREATION
 //define bottom-left corner of graph
 var graph_x0        = room_width-600
-var graph_y0        = 220
+var graph_y0        = 240
 var graph_height    = 180
 var graph_width     = 580
 draw_set_font(ft_mini)

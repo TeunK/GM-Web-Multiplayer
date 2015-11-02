@@ -121,6 +121,8 @@ draw_set_alpha(1);
 //Draw chat entry frame
 if (chatting) {draw_set_color(c_white)} else {draw_set_color(c_black)};
 draw_rectangle(0,room_height-18,room_width,room_height-2,0);
+//Draw chat surrounding box
+
 
 //Draw chat
 draw_chat(5, room_height-5, chat_contents);

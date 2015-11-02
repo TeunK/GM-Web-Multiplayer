@@ -6,11 +6,18 @@ draw_set_font(ft_main);
 
 var x0              = argument0
 var y0              = argument1
+var width           = room_width-x0
 var messages        = argument2
 var max_chatlines   = obj_Chatbox.chat_lines_max
 var chatting        = obj_Chatbox.chatting
 var line_height     = 16
+var margin          = 5
 
+//draw bg box
+draw_set_color(c_black)
+draw_set_alpha(0.5)
+draw_rectangle(x0-margin,y0-line_height,x0+width+margin, y0-(max_chatlines+1)*line_height-margin,0)
+draw_set_alpha(1)
 
 var i;
 for (i = 0; i < max_chatlines ; i += 1)

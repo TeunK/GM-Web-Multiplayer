@@ -134,6 +134,10 @@ if (!instance_exists(obj_Network_graph))
 {
     instance_create(x,y,obj_Network_graph)
 }
+if (!instance_exists(obj_Server_status))
+{
+    instance_create(x,y,obj_Server_status)
+}
 
 //always increment clock
 client_clock += 1;
@@ -167,7 +171,7 @@ draw_set_halign(fa_right);
 draw_set_valign(fa_middle);
 if (client_id == -1)
 {
-    var msg = "CPU:"+string(fps_real)+"/s | Attempting to establish connection to server.."
+    var msg = "Attempting to establish connection to server.. ("+string(round(client_clock / room_speed))+")"
     draw_set_color(c_black)
     draw_rectangle(room_width-20+4,20-0.5*string_height(msg),room_width-4-28-string_width(msg),20+0.5*string_height(msg),0)
     draw_set_color(c_white)
@@ -176,7 +180,7 @@ if (client_id == -1)
 }
 else
 {
-    var msg = "CPU:"+string(fps_real)+"/s | connected"
+    var msg = "Connected"
     draw_set_color(c_black)
     draw_rectangle(room_width-20+4,20-0.5*string_height(msg),room_width-4-28-string_width(msg),20+0.5*string_height(msg),0)
     draw_set_color(c_white)
