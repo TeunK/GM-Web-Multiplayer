@@ -79,7 +79,7 @@ io.sockets.on('connection', function(socket) {
                 /* RECEIVE CLIENT DISCONNECT NOTIFICATION -> FORWARD LEAVING CLIENT_ID TO ALL CLIENTS */
 
                 // Receive client_id of the client that is leaving
-                var pid = readshort();
+                var obj_client_name = readstring();
                 //remove client data from list of clients
                 controller.clients.splice(client_data, 1);
 
@@ -87,7 +87,7 @@ io.sockets.on('connection', function(socket) {
                 msg_type = MESSAGES['S2C'].client_disconnected;
                 clearbuffer();
                 writebyte(msg_type);
-                writeshort(pid);
+                writeshort(obj_client_name);
                 send_all_clients();
                 break;
 
@@ -110,6 +110,8 @@ io.sockets.on('connection', function(socket) {
             case MESSAGES['C2S'].ping:
                 /* RECEIVE CHAT MESSAGE -> FORWARD MESSAGE TO ALL CLIENTS */
 
+                // Client sends it's initial details, store these
+                var obj_client_name = readstring();
                 //load message
                 var ping_sendtime   = readstring();
 
@@ -117,6 +119,7 @@ io.sockets.on('connection', function(socket) {
                 msg_type = MESSAGES['S2C'].ping;
                 clearbuffer();
                 writebyte(msg_type);
+                writestring(obj_client_name);
                 writestring(ping_sendtime);
                 sendmessage(socket_id);
                 break;
@@ -126,6 +129,7 @@ io.sockets.on('connection', function(socket) {
                 msg_type = MESSAGES['S2C'].client_count;
                 clearbuffer();
                 writebyte(msg_type);
+                writebyte("any");
                 writebyte(controller.clients.length);
                 sendmessage(socket_id);
                 break;
@@ -138,6 +142,7 @@ io.sockets.on('connection', function(socket) {
                 msg_type = MESSAGES['S2C'].request_count;
                 clearbuffer();
                 writebyte(msg_type);
+                writebyte("any");
                 writebyte(avg_requests);
                 sendmessage(socket_id);
                 break;
