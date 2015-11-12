@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//Our client ID as assigned by server
-client_id           = -1;
+client_id           = instance_number(obj_Network_controller);
 client_name         = "client_"+string(instance_number(obj_Network_controller))
 
 //Server IP and port
@@ -43,10 +43,14 @@ req_rate_ping       = obj_Controller.req_rate_ping //send x pings per second
 for (i=0; i&lt;ping_history_limit; i+=1)
 {
     ping[i] = 0
+    instances[i] = instance_number(obj_Network_controller)
 }
 
 //Server details
 update_timer        = room_speed //requests server-update every second
+
+//track item count
+item_count          = instance_number(obj_Network_controller)
 </string>
           </argument>
         </arguments>
@@ -70,10 +74,10 @@ update_timer        = room_speed //requests server-update every second
           <argument>
             <kind>1</kind>
             <string>//send disconnect-client msg
-show_message("disconnect client: "+string(client_name));
+//show_message("disconnect client: "+string(client_name));
 wn_write_byte(wn_msgtype("C2S", "client_disconnects"));
 wn_send_message(server_socket)
-wn_disconnect(server_socket);
+//wn_disconnect(server_socket);
 </string>
           </argument>
         </arguments>
@@ -96,7 +100,15 @@ wn_disconnect(server_socket);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>while(wn_receive_message(server_socket))
+            <string>
+//client destruction
+if (obj_Controller.clients &lt; instance_number(obj_Network_controller) &amp;&amp; client_name == "client_"+string(instance_number(obj_Network_controller)))
+{
+    instance_destroy();
+}
+
+/*
+while(wn_receive_message(server_socket))
 {
     var msg_type=wn_msgtype("S2C",wn_read_byte());
     var sender_name = wn_read_string();
@@ -133,8 +145,10 @@ wn_disconnect(server_socket);
                 for (i=ping_history_limit-1; i&gt;=0; i-=1)
                 {
                     ping[i+1] = ping[i]
+                    instances[i+1] = instances[i]
                 }
                 ping[0] = (string(get_timer()/1000) - ping_starttime)
+                instances[0] = instance_number(obj_Network_controller)
                 
                 break;
                 
@@ -150,8 +164,10 @@ wn_disconnect(server_socket);
         }
     }
 }
+*/
 
 //send ping requests
+req_rate_ping       = obj_Controller.req_rate_ping //send x pings per second
 if ((client_clock mod req_rate_ping) == 0)
 {   
     wn_clear_buffer();
@@ -260,7 +276,22 @@ wn_disconnect(server_socket);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// draw server status (top-right)
+            <string>var x0 = 5
+var y0 = 200
+var margin = 12
+draw_set_color(c_white)
+pingstring = client_name+" png: "
+var printlim = 5
+var printdistance = 75
+draw_set_font(ft_mini)
+draw_text(x0,y0+item_count*margin,pingstring)
+for (j=0; j&lt;min(array_length_1d(ping),printlim); j+=1)
+{
+    draw_text(x0+15+(j+1)*printdistance,y0+item_count*margin,ping[j])
+}
+draw_set_font(ft_main)
+
+// draw server status (top-right)
 /*
 draw_set_color(c_black);
 draw_set_halign(fa_right);
