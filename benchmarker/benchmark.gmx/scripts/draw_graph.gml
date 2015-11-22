@@ -91,7 +91,7 @@ for(i=1; i<interval_count; i+=1)
     draw_set_halign(fa_center)
     draw_set_color(text_col)
     if (instances[i] == 0) {instances[i] = 1}
-    draw_text(graph_x0+x_right,graph_y0-y_new-20,pings[i])
+    draw_text(graph_x0+x_right,graph_y0-y_new-20,round(pings[i]))
     draw_set_halign(fa_left)
 }
 draw_set_font(ft_main)

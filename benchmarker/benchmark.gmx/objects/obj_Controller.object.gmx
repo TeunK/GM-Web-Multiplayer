@@ -182,13 +182,13 @@ with (obj_Network_controller)
                 with (senderid)
                 {
                     //store time (first shift each ping in history by 1)
-                    for (i=ping_history_limit-1; i&gt;=0; i-=1)
+                    for (i=1; i&lt;ping_history_limit; i+=1)
                     {
-                        ping[i+1] = ping[i]
-                        instances[i+1] = instances[i]
+                        ping[i-1] = ping[i]
+                        instances[i-1] = instances[i]
                     }
-                    ping[0] = (string(get_timer()/1000) - ping_starttime)
-                    instances[0] = instance_number(obj_Network_controller)
+                    ping[ping_history_limit-1] = (string(get_timer()/1000) - ping_starttime)
+                    instances[ping_history_limit-1] = instance_number(obj_Network_controller)
                 }
             }
             pings = calc_total_pings()
