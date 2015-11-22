@@ -72,7 +72,7 @@ nodes = ds_map_create();
           <argument>
             <kind>1</kind>
             <string>
-pings = calc_total_pings()
+
 
 
 //client creation
@@ -92,13 +92,21 @@ else if keyboard_check(vk_down) &amp;&amp; req_rate_ping &gt; 1
 {
     req_rate_ping -= 1
 }
-else if keyboard_check(vk_right)
+else if keyboard_check(vk_right) &amp;&amp; !keyboard_check(vk_control)
 {
     clients += 1
 }
-else if keyboard_check(vk_left) &amp;&amp; clients &gt; 1
+else if keyboard_check(vk_left) &amp;&amp; !keyboard_check(vk_control) &amp;&amp; clients &gt; 1
 {
     clients -= 1
+}
+else if (keyboard_check_pressed(vk_right) &amp;&amp; keyboard_check(vk_control))
+{
+    clients += 100
+}
+else if (keyboard_check_pressed(vk_left) &amp;&amp; keyboard_check(vk_control) &amp;&amp; clients &gt; 100)
+{
+    clients -= 100
 }
 
 //check # of connected clients
@@ -183,6 +191,7 @@ with (obj_Network_controller)
                     instances[0] = instance_number(obj_Network_controller)
                 }
             }
+            pings = calc_total_pings()
             
             break;
             
@@ -234,7 +243,6 @@ if keyboard_check(vk_space)
 }
 
 //total average ping over all pings and network controllers
-pings = calc_total_pings()
 var totalavgping = -1
 var totaldevping = max_value(pings) - min_value(pings)
 if (array_length_1d(pings) == ping_history_limit)
