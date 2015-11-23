@@ -1,0 +1,9 @@
+hons:
+
+introduction: (nothing related to implementation, but in general what problem you try to solve) whats the problem, what do you try to solve
+background: technology and design decisions
+
+design: design decisions
+implementation:
+evaluation: if found weakness (even if fixed), mention and state details how fix
+conclusion
