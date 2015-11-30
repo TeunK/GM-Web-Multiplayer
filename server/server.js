@@ -59,6 +59,9 @@ io.sockets.on('connection', function(socket) {
         messageid   = readbyte();
 
         var msg_type;
+        console.log("DETAILS: "+controller);
+        console.log("CLIENTS: "+controller.clients.length);
+
         switch (messageid) {
             case MESSAGES['C2S'].initial_client_details:
                 /* RECEIVE CLIENT obj_id AND USERNAME -> FORWARD DATA TO ALL CLIENTS ON NETWORK */
@@ -82,6 +85,8 @@ io.sockets.on('connection', function(socket) {
                 var obj_client_name = readstring();
                 //remove client data from list of clients
                 controller.clients.splice(client_data, 1);
+
+                console.log("CLIENT DISCONNECTED:" + obj_client_name);
 
                 // Warn user that client_id has left
                 msg_type = MESSAGES['S2C'].client_disconnected;
@@ -110,7 +115,7 @@ io.sockets.on('connection', function(socket) {
             case MESSAGES['C2S'].ping:
                 /* RECEIVE CHAT MESSAGE -> FORWARD MESSAGE TO ALL CLIENTS */
 
-                // Client sends it's initial details, store these
+                // Client sends it's initial details
                 var obj_client_name = readstring();
                 //load message
                 var ping_sendtime   = readstring();
@@ -127,6 +132,7 @@ io.sockets.on('connection', function(socket) {
             case MESSAGES['C2S'].client_count:
                 //return message
                 msg_type = MESSAGES['S2C'].client_count;
+
                 clearbuffer();
                 writebyte(msg_type);
                 writebyte("any");
@@ -145,6 +151,27 @@ io.sockets.on('connection', function(socket) {
                 writebyte("any");
                 writebyte(avg_requests);
                 sendmessage(socket_id);
+                break;
+
+            case MESSAGES['C2S'].new_virtual_client:
+                var obj_client_name = readstring();
+
+                //add client name to array if not yet registered
+                if (controller.clients.indexOf(obj_client_name) == -1) {
+                    controller.clients.push(client_id+"."+obj_client_name);
+                }
+
+                break;
+
+            case MESSAGES['C2S'].remove_virtual_client:
+                var obj_client_name = readstring();
+
+                //remove virtual client from array if registered
+                var index = controller.clients.indexOf(client_id+"."+obj_client_name);
+                if (index > -1) {
+                    controller.clients.splice(index, 1);
+                }
+
                 break;
         }
     });
@@ -196,7 +223,14 @@ function readbyte() {
 
 //send buffer contents through socket
 function sendmessage(socket) {
-    socket.emit("message", buffer);
+    if (socket)
+    {
+        socket.emit("message", buffer);
+    }
+    else
+    {
+        console.log("SOCKET ERROR: "+socket);
+    }
 }
 
 

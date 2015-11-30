@@ -25,6 +25,10 @@ if (message_direction == "C2S")
             return 5;
         case "request_count":
             return 6;
+        case "new_virtual_client":
+            return 7;
+        case "remove_virtual_client":
+            return 8;
     }
 }
 else if (message_direction == "S2C")

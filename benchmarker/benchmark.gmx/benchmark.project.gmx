@@ -32,6 +32,7 @@
     </scripts>
     <script>scripts\draw_graph.gml</script>
     <script>scripts\calc_total_pings.gml</script>
+    <script>scripts\button_pressed.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\ft_main</font>

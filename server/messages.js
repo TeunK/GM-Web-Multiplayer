@@ -29,7 +29,9 @@ var MESSAGES = {
         "chat_message": 3,
         "ping": 4,
         "client_count": 5,
-        "request_count": 6
+        "request_count": 6,
+        "new_virtual_client": 7,
+        "remove_virtual_client": 8
     }
 };
 

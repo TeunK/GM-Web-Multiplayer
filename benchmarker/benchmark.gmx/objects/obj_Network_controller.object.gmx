@@ -34,7 +34,7 @@ server_ip           = obj_Controller.server_ip;
 server_port         = obj_Controller.server_port;
 server_socket = -1
 //Connect
-server_socket       = wn_connect(server_ip, server_port)
+server_socket       = obj_Controller.server_socket;//wn_connect(server_ip, server_port)
 
 client_clock        = 0;
 avg_ping            = 0;
@@ -51,6 +51,17 @@ update_timer        = room_speed //requests server-update every second
 
 //track item count
 item_count          = instance_number(obj_Network_controller)
+
+//client with id=0 also checks global client counts
+client_count = 0
+global_clients_timer = 0
+global_clients_limit = 60
+
+//inform server about joining
+wn_clear_buffer();
+wn_write_byte(wn_msgtype("C2S","new_virtual_client"));
+wn_write_string(client_name);
+wn_send_message(server_socket);
 </string>
           </argument>
         </arguments>
@@ -73,11 +84,11 @@ item_count          = instance_number(obj_Network_controller)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//send disconnect-client msg
-//show_message("disconnect client: "+string(client_name));
-wn_write_byte(wn_msgtype("C2S", "client_disconnects"));
-wn_send_message(server_socket)
-//wn_disconnect(server_socket);
+            <string>//inform server about leaving
+wn_clear_buffer();
+wn_write_byte(wn_msgtype("C2S","remove_virtual_client"));
+wn_write_string(client_name);
+wn_send_message(server_socket);
 </string>
           </argument>
         </arguments>
@@ -175,6 +186,18 @@ if ((client_clock mod req_rate_ping) == 0)
     wn_write_string(client_name);
     wn_write_string(string(get_timer()/1000)); //write current client time in ms
     wn_send_message(server_socket);
+}
+
+if (client_id == 1)
+{
+    global_clients_timer += 1
+    if global_clients_timer mod global_clients_limit == 0
+    {
+        wn_clear_buffer();
+        wn_write_byte(wn_msgtype("C2S","client_count"));
+        wn_write_string(username);
+        wn_send_message(server_socket);
+    }
 }
 
 //request updates

@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>username = "benchmarker-x";
+            <string>username = "benchmarker";
 
-clients = 0;
+clients = 1;
 connected = 0;
 
 //details for clients
@@ -49,6 +49,8 @@ instance_create(x,y,obj_Network_graph)
 
 //list of clients
 nodes = ds_map_create();
+
+
 </string>
           </argument>
         </arguments>
@@ -263,12 +265,29 @@ lines[1] = "CPU: "+string(fps_real)+" iterations/s"
 lines[2] = "FPS: "+string(fps)+" frames/s"
 lines[3] = "clients: "+string(clients)
 lines[4] = "real_clients: "+string(instance_number(obj_Network_controller))
-lines[5] = "average: "+string(totalavgping)
-lines[6] = "deviation: "+string(totaldevping)
-lines[7] = "ping-rate/s: "+string(room_speed / req_rate_ping)
-lines[8] = "total req/sec: "+string(clients * req_rate_ping)
+lines[5] = "global_clients; "+string(client_count)
+lines[6] = "average: "+string(totalavgping)
+lines[7] = "deviation: "+string(totaldevping)
+lines[8] = "ping-rate/s: "+string(room_speed / req_rate_ping)
+lines[9] = "total req/sec: "+string(clients * req_rate_ping)
+lines[10] = "ping count: "+string(array_length_1d(pings))
 
-
+if button_pressed(205,50,"-100 clients",c_white,c_black) &amp;&amp; clients &gt; 100
+{
+    clients -= 100
+}
+if button_pressed(310,50,"+100 clients",c_white,c_black)
+{
+    clients += 100
+}
+if button_pressed(205,90,"-ping",c_white,c_black) &amp;&amp; req_rate_ping &gt; 1
+{
+    req_rate_ping -= 1
+}
+if button_pressed(310,90,"+ping",c_white,c_black)
+{
+    req_rate_ping += 1
+}
 
 draw_data(x0,y0,lines)
 

@@ -5,8 +5,9 @@ var curve_col       = c_lime
 
 
 //draw limit
-var limit = min(5, obj_Controller.ping_history_limit)
 /*
+var limit = min(5, obj_Controller.ping_history_limit)
+
 for (i=0; i<limit; i+=1)
 {
     var ping = obj_Network_controller.ping[i]
