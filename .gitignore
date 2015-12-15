@@ -10,3 +10,4 @@ server/node_modules/
 server/.idea/
 client/.idea/
 client/output/
+.idea/
