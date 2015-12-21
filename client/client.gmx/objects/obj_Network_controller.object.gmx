@@ -29,7 +29,7 @@
 client_id           = -1;
 
 //Server IP and port
-server_ip           = "82.39.79.35"; 
+server_ip           = "94.254.82.131"//"82.39.79.35"; 
 server_port         = 24000;
 
 //Connect
