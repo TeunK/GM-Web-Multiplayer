@@ -1,8 +1,9 @@
-\documentclass[12pt]{report}
+\documentclass[12pt]{article}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{hyperref}
 \usepackage{wrapfig}
+\usepackage[sort]{cite}
 \usepackage{url}
 %\usepackage[left=20mm,top=20mm,bottom=20mm,right=20mm]{geometry}
 \author{Teun Kokke, s1242775}
@@ -21,59 +22,163 @@
 \maketitle
 \end{titlepage}
 
-\section*{General Concept}
-Creating an extention for Gamemaker creations, to allow fast networking with maximal reliability (priority can be set by developer).
+\section*{QUESTIONS TO SUPERVISOR}
+\begin{itemize}
+\item need to mention examples in background for "why gamemaker"? if no, where should examples be given if at all?
+\end{itemize}
 
-\vspace{2em}
-\begin{quote}
-\textit{text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\}
-\end{quote}
+\section*{Abstract}
+Creating an extention for Gamemaker creations, to allow fast networking with maximal reliability.
 \pagebreak
 
-\section*{files}
-\begin{itemize}
-\item Report: report.pdf
-\item Documentation: documentation.txt
-\item Game Sourcecode: Open files with any text-editor, optionally with syntax highlighting. The language is GML but Javascript highlighting will suffice.
-Files: /GM\_SOURCE/sourcecode/rendonan.gmx/...
-\begin{itemize}
-\item Objects: /objects
-\item Scripts: /scripts (structure displayed in Figure 3, "Difficulties" section of this report)
-\end{itemize}
-\item Website:
-\begin{itemize}
-\item routing: /src/Rendonan/MiniBundle/Resources/config/routing.yml
-\item controllers: /src/Rendonan/MiniBundle/Controller/...
-\item entity classes (db tables): /src/Rendonan/MiniBundle/Entity/...
-\item views: /src/Rendonan/MiniBundle/Resources/views/...
-\end{itemize}
-\item Tests:
-\begin{itemize}
-\item test coverage: /testcoverage/index.html and testcoverage/dashboard.html
-\item test results: /testresult
-\end{itemize}
-\item Example Video: \url{https://www.youtube.com/watch?v=9hUZTXsLuDc}
-\end{itemize}
+\tableofcontents
 \pagebreak
 
-\section*{Structure}
+\part{Preamble}
+\pagebreak
 
-\subsection*{Research}
+\section{Introduction}
+
+\section{Background}
+%intro and synopsis (topic description and setting context of published literature, main results summarized.. about 5 pages)
+%- summary of ALL contributions, code, research interpretations, tests, experiments (bulleted list)
+
+\subsection{HTML5}
+
+\paragraph{}HTML5 was released in 2014 (October 28th) by the World Wide Web Consortium (W3C) and is a raising web standard, improving its predecessor HTML4 with the aim to reduce the dependence of functionality from third-party plugins such as Flash and Java applets, which are deprecated and unsupported by many devices\footnote{http://i-programmer.info/news/86-browsers/8783-death-of-flash-and-java.html}.
+\paragraph{}Scripting is replaced in HTML5 by markup where-ever possible, causing the world of browser-gaming to change rapidly. One of the the newly introduced features is the <canvas> tag, giving rise to isometric JavaScript applications.
+
+
+\subsection{NodeJS}
+NodeJS \footnote{http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js}
+\paragraph{}
+
+\subsection{GameMaker}
+\subsection{Environmental Psychology}
+\subsection{Networks in applications}
+\subsection{The full picture}
+\paragraph{}Gamemaker by YoyoGames is a software creation tool with the aim to simplify and speed up game and app development. It is cheap, simple to learn and flexible to use, making the software demanded by small teams, professionals and novice developers. Consequently, the human nature of staying within trusted environments causes developers to stick to Gamemaker.
+
+\paragraph{}During the rise of HTML5 and the growing popularity of the Gamemaker, YoyoGames has provided the functionality to export any application to a JavaScript program that can be executed directly in the browser. This way i.a. updates can be made seamless, require no file-download nor installation, is platform-independent and easier to distribute.
+
+\paragraph{}Some features are lost during the transition from a windows-executable to a web-application. One of them is a critical component to application popularity: networking functionality. Since the HTML5 update in September 2011, this feature was never added.
+\paragraph{} The implementation in this Honours project will allow developers to again add networking features to their web-browser applications.
+
+\pagebreak
+\part{Literature Review}
+\pagebreak
+
+\section{Networks}
+\subsection{OSI layers and Protocols}
+%how to imagine the path data has to travel
+\subsection{Inter-application communication}
+%how do applications communicate
+
+\section{Network benchmark criteria}
+%which criteria to consider when testing a network
+\subsection{Target audience}
+%explain the types of target audience, who do the developers of an application using the extension intend to target. How does this affect the demands on the network
+%focus on location of users
+
+\subsection{Minimal requirements}
+%minimal requirements for a network for a proper user experience
+
+\section{Socket.io "under the hood"}
+%benchmarks for socket.io made by other developers
+
+\pagebreak
+\part{Implementation}
+%discussion of work undertaken, sub-problems, solutions, difficulties
+%\\- concentrated discussions for implementation principles and aspects
+%\\- clarify WHAT WAS COMPLETED, and what wasnt.
+\pagebreak
+\section{Design}
+\subsection{Project layout and prior considerations}
+\subsection{Server and client}
+\subsection{Creating applications}
+\subsubsection{Benchmark application}
+%Explain about ownmade application using the extension, how it tests the given benchmarks (eg. delay, data, equality)
+\subsubsection{Real test application}
+%Explain about ownmade test application representing a real game / program, made for observing user experience of the network for games developed with the extension.
+\subsubsection{Templates for developers}
+%How to make it easy for other developers to create applications with the extension. eg. Creating templates
+
+%project layout. client, server, benchmark application, equality application, user experience
+
+\section{The extension}
+
+\section{Mapping from GML to the extension}
+
+\section{Receiving and handling data at the server}
+
+
+\pagebreak
+\part{Experiments}
+%description of experiments, presentation + interpretation of the data
+\pagebreak
+
+\section{Setup}
+%explain every detail of how the experiments were setup, how everything worked.
+Found people across the globe to assist in testing, family, friends and people found through social media, the Dutch gamemaker community and the Yoyogames forums.
+\begin{itemize}
+\item All network experiments are executed on a single server located in Edinburgh.
+\item In each experiment all clients were connected and communicating to the server simultaneously.
+\end{itemize}
+Server specs:
+%Note: add reminder that developers can setup peer-to-peer network by using the extension to serve as both server and client in their client application, but that these tests specifically consider the strength of each individual application acting as server.
+\subsection{Hardware}
+\subsection{Network}
+
+\section{Controlled Environment}
+%testing in dummynet with specified setups
+\subsection{Considerations}
+\subsection{Delay test}
+\subsection{Data test}
+\subsection{Equality test}
+
+\section{Real Network}
+%testing the extension in real networks
+\subsection{Local}
+\paragraph{Setup}
+Five clients physically located in the same local home network.
+Router specs
+\paragraph{Delay}
+\paragraph{Fairness}
+
+\subsection{Global}
+\subsubsection{Same city}
+\paragraph{Setup}
+Ten clients physically located in Edinburgh.
+\paragraph{Delay}
+\paragraph{Fairness}
+
+\subsubsection{Same country}
+\paragraph{Setup}
+Three clients physically located in Scotland: Edinburgh, Glasgow and Dundee.
+\paragraph{Delay}
+\paragraph{Fairness}
+
+\subsubsection{Europe}
+\paragraph{Setup}
+Ten clients physically located in the United Kingdom, Hungary, France, Germany and the Netherlands.
+\paragraph{Delay}
+\paragraph{Fairness}
+
+\subsubsection{Inter-continental}
+\paragraph{Setup}
+Ten clients physically located in South Africa, California (USA), India, Thailand, Germany, Hungary, United Kingdom and the Netherlands.
+\paragraph{Delay}
+\paragraph{Fairness}
+\section{Developer Friendliness}
+%userfriendliness of the extension, how hard is it for other developers to use it?
+\subsection{User Feedback}
+%feedback from users given through forum
+
 The project focus is on developing a networking extension, to allow the use of networking services to Gamemaker when using the HTML5 export option.\\
 One of the first thing one would consider is the selection of protocols that will be used in order to establish the connection between two (or more) nodes.\\
 As the project aims to allow users to optimise the extension's networking settings in favour of either speed or reliability, there will be further research done within each of the transport layer protocols: TCP and UDP.\\
 One of the most immediate problems that arise are that due to security constraints, UDP is not normally supported by web-browsers in order to communicate data to other hosts, and communication via TCP may be too slow in case a developer wishes to create an application that relies on a fast connection between hosts.
 
-\subsubsection{Issues}
-\begin{enumerate}
-\item Gamemaker does \textbf{not} support networking for HTML5 (js) export
-\item The current extentions that exist for gamemaker are limited to a basic use of TCP
-\item Webbrowsers do not generally support the use of UDP.
-\\Suggested methods are developing a java or flash applet, which will handle the networking features.
-\\A recent technology called \emph{WebRTC} allows js to use UDP data transfer directly on the web-client, but security features  within the network make holepunching complicated. \footnote{http://danristic.com/html5/javascript/webrtc/2013/08/13/using-the-webrtc-data-channel.html} 
-\end{enumerate} 
-
-\subsubsection{Evaluation}
 In order to evaluate the efficiency of the networking extension, use Dummynet to setup a controlled environment.
 
 \begin{enumerate}
@@ -84,166 +189,46 @@ In order to evaluate the efficiency of the networking extension, use Dummynet to
 \item Store logs, evaluate
 \end{enumerate}
 
-\footnote{SetupMininet.txt}  
-
-\subsection*{Website}
-text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
-\subsubsection{Design}
-text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
+tests executed:
 \begin{enumerate}
-\item text text text text text text text text text text text text text text text\\
+\item 1) 
+\end{enumerate}
+
+\section{Interpretation of the data}
+
+\section{Issues}
 \begin{enumerate}
-\item text text text text text text text text text text text text text text text\\
-\begin{itemize}
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\end{itemize}
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\end{enumerate}
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\begin{enumerate}
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\begin{itemize}
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\end{itemize}
-\end{enumerate}
-text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
-\end{enumerate}
-text text text text text text text text text text text text text text text\\
+\item Gamemaker does \textbf{not} support networking for HTML5 (js) export
+\item The current extentions that exist for gamemaker are limited to a basic use of TCP
+\item Webbrowsers do not generally support the use of UDP.
+\\Suggested methods are developing a java or flash applet, which will handle the networking features.
+\\A recent technology called \emph{WebRTC} allows js to use UDP data transfer directly on the web-client, but security features  within the network make holepunching complicated.
+\end{enumerate} 
 
-\begin{figure}[h]
-\centering
-\makebox[\textwidth]{ \includegraphics[scale=0.33]{symfonySystem.jpg}}
-\caption{text text text text text}
-\end{figure}
-text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
+\pagebreak
+\part{Epilogue}
+\pagebreak
+\section{Evaluation}
+\section{Conclusion}
+%conclusion, main achievements, unsolved problems, direction for further work
 
-\subsubsection{Refactoring}
-text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
 
-\subsection*{Game}
-\subsubsection{Design}
-text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
-\begin{enumerate}
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\begin{enumerate}
-\item text text text text text text text text text text text text text text text\\
-\begin{itemize}
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\end{itemize}  
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\begin{itemize}
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\end{itemize}
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\begin{itemize}
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\end{itemize}
-text text text text text text text text text text text text text text text\\
 
-\begin{figure}[h]
-\centering
-\makebox[\textwidth]{ \includegraphics[scale=0.31]{userGuide.jpg}}
-\caption{Visual representation of the game room, displaying many of the modules mentioned above.}
-\end{figure}
+\begin{thebibliography}{1}
 
-\end{enumerate}
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\begin{enumerate}
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\end{enumerate}
-\end{enumerate}
-\subsubsection{Refactoring}
-text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
-\subsubsection{Function Structure}
-text text text text text text text text text text text text text text text\\
-\begin{figure}[h]
-\makebox[\textwidth]{\includegraphics[scale=0.42]{script_hierachy.jpg}}
-\caption{Script Hierachy, displaying the alignment of scripts used in gamemaker. Their content is located in the folder GM\_SOURCE/sourcecode/rendonan\_release.gmx/scripts.}
-\end{figure}
+  \bibitem{notes} John W. Dower {\em Readings compiled for History
+  21.479.}  1991.
 
-\section*{Difficulties}
-text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
-\begin{itemize}
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\end{itemize}
+  \bibitem{impj}  The Japan Reader {\em Imperial Japan 1800-1945} 1973:
+  Random House, N.Y.
 
-\section*{Testing}
-\subsection*{Website}
-text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
-\begin{itemize}
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\end{itemize}
+  \bibitem{norman} E. H. Norman {\em Japan's emergence as a modern
+  state} 1940: International Secretariat, Institute of Pacific
+  Relations.
 
-\subsection*{Game}
-text text text text text text text text text text text text text text text\\
-\begin{enumerate}
-\item \emph{\textbf{Type Checks:}} text text text text text text text text text text text text text text text\\
-\item \emph{\textbf{Logic tests:}} text text text text text text text text text text text text text text text\\
-\item \emph{\textbf{Unit tests:}} text text text text text text text text text text text text text text text\\
-\item \emph{\textbf{Connection tests:}} text text text text text text text text text text text text text text text\\
-\end{enumerate}
-text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
-\subsection*{Test Coverage}
-text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
+  \bibitem{fo} Bob Tadashi Wakabayashi {\em Anti-Foreignism and Western
+  Learning in Early-Modern Japan} 1986: Harvard University Press.
 
-\section*{Deficiencies}
-text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
-\begin{itemize}
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\item text text text text text text text text text text text text text text text\\
-\end{itemize}
-text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
-
-\section*{Future Improvements}
-\subsection*{Choice of technology / language}
-text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
-\subsection*{Future project potentials}
-text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\text text text text text text text text text text text text text text text\\
-
-\section*{Conclusion}
-text text text text text text text text text text text text text text text\\
-text text text text text text text text text text text text text text text\\
-text text text text text text text text text text text text text text text\\
+\end{thebibliography}
 
 \end{document}
