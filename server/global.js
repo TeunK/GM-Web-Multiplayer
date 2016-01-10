@@ -1,7 +1,7 @@
 var GLOBAL = {
     "project_name": "GMWebNet Server",
     "transport_mode":"TCP",
-    "host":"94.254.82.131",
+    "host":"192.168.0.2",
     "port":24000
 };
 
