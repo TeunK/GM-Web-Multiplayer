@@ -1,0 +1,112 @@
+\beamer@endinputifotherversion {3.19pt}
+\headcommand {\slideentry {0}{0}{1}{3/3}{}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\sectionentry {1}{QUESTIONS TO SUPERVISOR}{5}{QUESTIONS TO SUPERVISOR}{0}}
+\headcommand {\beamer@sectionpages {1}{4}}
+\headcommand {\beamer@subsectionpages {1}{4}}
+\headcommand {\sectionentry {2}{TODO}{5}{TODO}{0}}
+\headcommand {\beamer@sectionpages {5}{4}}
+\headcommand {\beamer@subsectionpages {5}{4}}
+\headcommand {\sectionentry {3}{Abstract}{5}{Abstract}{0}}
+\headcommand {\beamer@sectionpages {5}{4}}
+\headcommand {\beamer@subsectionpages {5}{4}}
+\headcommand {\partentry {Preamble}{1}}
+\headcommand {\beamer@partpages {1}{10}}
+\headcommand {\beamer@sectionpages {5}{10}}
+\headcommand {\beamer@subsectionpages {5}{10}}
+\headcommand {\sectionentry {4}{Introduction}{11}{Introduction}{1}}
+\headcommand {\beamer@sectionpages {11}{10}}
+\headcommand {\beamer@subsectionpages {11}{10}}
+\headcommand {\sectionentry {5}{Background}{11}{Background}{1}}
+\headcommand {\beamer@sectionpages {11}{10}}
+\headcommand {\beamer@subsectionpages {11}{10}}
+\headcommand {\beamer@subsectionentry {1}{5}{1}{11}{HTML5}}\headcommand {\beamer@subsectionpages {11}{10}}
+\headcommand {\beamer@subsectionentry {1}{5}{2}{11}{NodeJS}}\headcommand {\beamer@subsectionpages {11}{10}}
+\headcommand {\beamer@subsectionentry {1}{5}{3}{11}{GameMaker}}\headcommand {\beamer@subsectionpages {11}{10}}
+\headcommand {\beamer@subsectionentry {1}{5}{4}{11}{Environmental Psychology}}\headcommand {\beamer@subsectionpages {11}{10}}
+\headcommand {\beamer@subsectionentry {1}{5}{5}{11}{Networks in applications}}\headcommand {\beamer@subsectionpages {11}{10}}
+\headcommand {\beamer@subsectionentry {1}{5}{6}{11}{The full picture}}\headcommand {\beamer@subsectionpages {11}{10}}
+\headcommand {\partentry {Literature Review}{2}}
+\headcommand {\beamer@partpages {11}{12}}
+\headcommand {\beamer@sectionpages {11}{12}}
+\headcommand {\beamer@subsectionpages {11}{12}}
+\headcommand {\sectionentry {6}{Networks}{13}{Networks}{2}}
+\headcommand {\beamer@sectionpages {13}{12}}
+\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\beamer@subsectionentry {2}{6}{1}{13}{OSI layers and Protocols}}\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\beamer@subsectionentry {2}{6}{2}{13}{Inter-application communication}}\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\sectionentry {7}{Network benchmark criteria}{13}{Network benchmark criteria}{2}}
+\headcommand {\beamer@sectionpages {13}{12}}
+\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\beamer@subsectionentry {2}{7}{1}{13}{Target audience}}\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\beamer@subsectionentry {2}{7}{2}{13}{Minimal requirements}}\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\sectionentry {8}{Socket.io "under the hood"}{13}{Socket.io "under the hood"}{2}}
+\headcommand {\beamer@sectionpages {13}{12}}
+\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\partentry {Implementation}{3}}
+\headcommand {\beamer@partpages {13}{12}}
+\headcommand {\beamer@sectionpages {13}{12}}
+\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\sectionentry {9}{Design}{13}{Design}{3}}
+\headcommand {\beamer@sectionpages {13}{12}}
+\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\beamer@subsectionentry {3}{9}{1}{13}{Project layout and prior considerations}}\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\beamer@subsectionentry {3}{9}{2}{13}{Server and client}}\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\beamer@subsectionentry {3}{9}{3}{13}{Creating applications}}\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\beamer@subsubsectionentry {3}{9}{3}{1}{13}{Benchmark application}}
+\headcommand {\beamer@subsubsectionentry {3}{9}{3}{2}{13}{Real test application}}
+\headcommand {\beamer@subsubsectionentry {3}{9}{3}{3}{13}{Templates for developers}}
+\headcommand {\sectionentry {10}{The extension}{13}{The extension}{3}}
+\headcommand {\beamer@sectionpages {13}{12}}
+\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\sectionentry {11}{Mapping from GML to the extension}{13}{Mapping from GML to the extension}{3}}
+\headcommand {\beamer@sectionpages {13}{12}}
+\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\sectionentry {12}{Receiving and handling data at the server}{13}{Receiving and handling data at the server}{3}}
+\headcommand {\beamer@sectionpages {13}{12}}
+\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\partentry {Experiments}{4}}
+\headcommand {\beamer@partpages {13}{12}}
+\headcommand {\beamer@sectionpages {13}{12}}
+\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\sectionentry {13}{Setup}{13}{Setup}{4}}
+\headcommand {\beamer@sectionpages {13}{12}}
+\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\beamer@subsectionentry {4}{13}{1}{13}{Server hardware and network specification}}\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\sectionentry {14}{Controlled Environment}{13}{Controlled Environment}{4}}
+\headcommand {\beamer@sectionpages {13}{12}}
+\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\beamer@subsectionentry {4}{14}{1}{13}{Considerations}}\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\beamer@subsectionentry {4}{14}{2}{14}{Stress tests}}\headcommand {\beamer@subsectionpages {13}{13}}
+\headcommand {\beamer@subsubsectionentry {4}{14}{2}{1}{14}{Concurrent connections}}
+\headcommand {\beamer@subsubsectionentry {4}{14}{2}{2}{15}{Message handling performance}}
+\headcommand {\sectionentry {15}{Real Network Delay and Fairness}{15}{Real Network Delay and Fairness}{4}}
+\headcommand {\beamer@sectionpages {13}{14}}
+\headcommand {\beamer@subsectionpages {14}{14}}
+\headcommand {\beamer@subsectionentry {4}{15}{1}{15}{Fairness depending on bandwidth}}\headcommand {\beamer@subsectionpages {15}{14}}
+\headcommand {\beamer@subsectionentry {4}{15}{2}{15}{Fairness depending on location}}\headcommand {\beamer@subsectionpages {15}{14}}
+\headcommand {\sectionentry {16}{Developer Friendliness}{17}{Developer Friendliness}{4}}
+\headcommand {\beamer@sectionpages {15}{16}}
+\headcommand {\beamer@subsectionpages {15}{16}}
+\headcommand {\beamer@subsectionentry {4}{16}{1}{17}{User Feedback}}\headcommand {\beamer@subsectionpages {17}{16}}
+\headcommand {\sectionentry {17}{Interpretation of the data}{18}{Interpretation of the data}{4}}
+\headcommand {\beamer@sectionpages {17}{17}}
+\headcommand {\beamer@subsectionpages {17}{17}}
+\headcommand {\sectionentry {18}{Issues}{18}{Issues}{4}}
+\headcommand {\beamer@sectionpages {18}{17}}
+\headcommand {\beamer@subsectionpages {18}{17}}
+\headcommand {\partentry {Epilogue}{5}}
+\headcommand {\beamer@partpages {13}{19}}
+\headcommand {\beamer@sectionpages {18}{19}}
+\headcommand {\beamer@subsectionpages {18}{19}}
+\headcommand {\sectionentry {19}{Evaluation}{20}{Evaluation}{5}}
+\headcommand {\beamer@sectionpages {20}{19}}
+\headcommand {\beamer@subsectionpages {20}{19}}
+\headcommand {\sectionentry {20}{Conclusion}{20}{Conclusion}{5}}
+\headcommand {\beamer@sectionpages {20}{19}}
+\headcommand {\beamer@subsectionpages {20}{19}}
+\headcommand {\beamer@partpages {20}{20}}
+\headcommand {\beamer@subsectionpages {20}{20}}
+\headcommand {\beamer@sectionpages {20}{20}}
+\headcommand {\beamer@documentpages {20}}
+\headcommand {\def \inserttotalframenumber {1}}

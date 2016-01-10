@@ -1,11 +1,13 @@
 \documentclass[12pt]{article}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{wrapfig}
 \usepackage[sort]{cite}
 \usepackage{url}
 %\usepackage[left=20mm,top=20mm,bottom=20mm,right=20mm]{geometry}
+
+\begin{document}
 \author{Teun Kokke, s1242775}
 \title
 {
@@ -16,7 +18,6 @@
     {\small Software Engineering Large Practical\\Word Count: xxxxx}
     \vspace{18em}
 }
-\begin{document}
 
 \begin{titlepage}
 \maketitle
@@ -24,7 +25,15 @@
 
 \section*{QUESTIONS TO SUPERVISOR}
 \begin{itemize}
-\item need to mention examples in background for "why gamemaker"? if no, where should examples be given if at all?
+\item Need to mention examples in background for "why gamemaker"? if no, where should examples be given if at all?
+\item Known from previous experiments: a single instance cannot simulate more than roughly 700 clients without causing losing stability. Do I have to show this in detail with a graph as part of the experiments, or should I just mention that eg. 500 clients per instance is arbitrary for this reason and ignore the details?
+\item Is it required to include formulae for mean, variance and standard-deviation?
+\end{itemize}
+
+\section*{TODO}
+\begin{itemize}
+\item give definition for server-reponse time
+\item in section "fairness depending on location", add world map with tested locations and their average mean
 \end{itemize}
 
 \section*{Abstract}
@@ -73,6 +82,7 @@ NodeJS \footnote{http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js}
 %how to imagine the path data has to travel
 \subsection{Inter-application communication}
 %how do applications communicate
+%IMPORTANT: State why there is no need for testing fairness between different bandwidths for web applications. (ie. games and web-apps only really need to send small variables, no big data is transported)
 
 \section{Network benchmark criteria}
 %which criteria to consider when testing a network
@@ -82,6 +92,8 @@ NodeJS \footnote{http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js}
 
 \subsection{Minimal requirements}
 %minimal requirements for a network for a proper user experience
+http://drewww.github.io/socket.io-benchmarking/
+\\http://blog.mixu.net/2011/11/22/performance-benchmarking-socket-io-0-8-7-0-7-11-and-0-6-17-and-nodes-native-tcp/
 
 \section{Socket.io "under the hood"}
 %benchmarks for socket.io made by other developers
@@ -124,51 +136,162 @@ Found people across the globe to assist in testing, family, friends and people f
 \item All network experiments are executed on a single server located in Edinburgh.
 \item In each experiment all clients were connected and communicating to the server simultaneously.
 \end{itemize}
-Server specs:
 %Note: add reminder that developers can setup peer-to-peer network by using the extension to serve as both server and client in their client application, but that these tests specifically consider the strength of each individual application acting as server.
-\subsection{Hardware}
-\subsection{Network}
+\subsection{Server hardware and network specification}
+\begin{itemize}
+\item Node v0.12.3
+\item Socket.io v1.3.7
+
+\item Windows 7, SP 1
+\item 64-bit platform
+\item Intel(R) Core(TM) i7-2600K CPU @ 3.40GHz, 3401Mhz, 4 Cores (8 Logical Processors)
+\item 12.6GB Available Physical Memory
+
+\item 54.0Mb/s download
+\item 3.0Mb/s upload
+\end{itemize}
 
 \section{Controlled Environment}
 %testing in dummynet with specified setups
 \subsection{Considerations}
-\subsection{Delay test}
-\subsection{Data test}
-\subsection{Equality test}
+\begin{itemize}
+\item Server performance with regard to the number of concurrent connections.
+\item The number of messages that can be handled by the server simultaneously.
+\item The effect on server response-time of geographic distance between the client and server.
+\item Fairness in server response-time between individual clients
+\end{itemize}
 
-\section{Real Network}
+\paragraph{Network Configuration}
+\begin{itemize}
+\item The network assumes no packet losses.
+\item The network in-pipe is set to 10ms delay and a 5Mbit/s connection.
+\item The network out-pipe is set to 10ms delay and a 5Mbit/s connection.
+\end{itemize}
+
+
+
+\subsection{Stress tests}
+
+\subsubsection{Concurrent connections}
+\paragraph{Environment}
+\begin{itemize}
+\item Variable number of concurrent connections cc, up to 15 instances with each simulating at most 500 clients.
+\item Each client sends 8-byte packages
+\item Each client sends 1 package every second
+\item Each package roundtrip time is measured
+\end{itemize}
+
+\paragraph{Records}
+\begin{itemize}
+\item CPU usage on the server
+\item CPU time on the server
+\item Resident set size (RSS) on the server
+\end{itemize}
+
+\paragraph{Results}\mbox{}\\\\
+
+\begin{center}
+
+\begin{figure}
+% \centering% default with `floatrow`
+\includegraphics[scale=0.75]{test_CLIENT_CPUusage.jpg}
+\caption{Displaying the CPU usage for the server process in percent.}
+\vspace{1em}
+When the CPU usage is above 70 percent, the user may experience lag. Such high CPU usage indicates insufficient processing power. Either the CPU needs to be upgraded, or the user experience reduced 
+\footnote{\url{https://en.wikipedia.org/wiki/CPU_time}}
+\end{figure}
+
+
+\begin{figure}
+% \centering% default with `floatrow`
+\includegraphics[scale=0.75]{test_CLIENT_CPUtime.jpg}
+\caption{CPU time in milliseconds, displaying the amount of time required for the server to process the clients.}
+\end{figure}
+
+
+\begin{figure}
+% \centering% default with `floatrow`
+\includegraphics[scale=0.75]{test_CLIENT_RSS.jpg}
+\caption{Resident set size in Megabit, showing the portion of RAM that is occupied by the server process.}
+\end{figure}
+
+\end{center}
+
+
+\subsubsection{Message handling performance}
+\paragraph{Environment}
+\begin{itemize}
+\item 5000 concurrent connections (10 instances each simulating 500 clients)
+\item Each client sends 8-byte packages
+\item Each client sends a variable number n of packages per second.
+\item Each package roundtrip time is measured
+\end{itemize}
+
+\paragraph{Records}
+\begin{itemize}
+\item Mean roundtrip time between all clients
+\item Deviation in roundtrip time between all clients
+\end{itemize}
+
+\paragraph{Results}
+
+\section{Real Network Delay and Fairness}
 %testing the extension in real networks
-\subsection{Local}
-\paragraph{Setup}
-Five clients physically located in the same local home network.
-Router specs
-\paragraph{Delay}
-\paragraph{Fairness}
 
-\subsection{Global}
-\subsubsection{Same city}
-\paragraph{Setup}
-Ten clients physically located in Edinburgh.
-\paragraph{Delay}
-\paragraph{Fairness}
+\subsection{Fairness depending on location}
+For this experiment, multiple tests were executed with clients being located at specified locations. In each case, the clients were sending 8-byte messages to the server at a regular interval of 1 second for 2 minutes. The 120 roundtrip times for each client were then averaged in order to blur occasional peaks. At this point the roundtrip times of the clients in each common location were averaged, and then the deviance of the roundtrip times at each of these locations were calculated.
 
-\subsubsection{Same country}
-\paragraph{Setup}
-Three clients physically located in Scotland: Edinburgh, Glasgow and Dundee.
-\paragraph{Delay}
-\paragraph{Fairness}
+\paragraph{Test cases:}
+\begin{enumerate}
+\item Local network setting: Five clients physically located in the same local home network.
 
-\subsubsection{Europe}
-\paragraph{Setup}
-Ten clients physically located in the United Kingdom, Hungary, France, Germany and the Netherlands.
-\paragraph{Delay}
-\paragraph{Fairness}
+\item Same city: Five clients physically located in Edinburgh (LAN excluded).
 
-\subsubsection{Inter-continental}
-\paragraph{Setup}
-Ten clients physically located in South Africa, California (USA), India, Thailand, Germany, Hungary, United Kingdom and the Netherlands.
-\paragraph{Delay}
-\paragraph{Fairness}
+\item Same country: Three clients physically located in Scotland: Edinburgh, Glasgow and Dundee.
+
+\item Europe: Five clients physically located in the United Kingdom, Hungary, France, Germany and the Netherlands.
+
+\item Inter-continental: Eight clients physically located in South Africa, California (USA), India, Thailand, Germany, Hungary, United Kingdom and the Netherlands.
+
+\end{enumerate}
+
+\paragraph{Results:}Average roundtrip times per location:
+\begin{center}
+  \begin{tabular}{ r | l }
+Location		& Average RTT \\ \hline\hline
+LAN				& 32ms	\\
+Edinburgh		& 55ms	\\
+Dundee			& 65ms	\\
+Germany			& 67ms	\\
+Glasgow			& 68ms	\\
+France			& 69ms	\\
+the Netherlands	& 70ms	\\
+United Kingdom	& 71ms	\\
+Hungary			& 76ms	\\
+India			& 103ms	\\
+South Africa	& 144ms	\\
+California (USA)& 158ms	\\
+Thailand		& 171ms	\\
+  \end{tabular}
+\end{center}
+
+Average roundtrip times per test:
+\begin{center}
+  \begin{tabular}{ | r || c | c | c | c | c |}
+    \hline
+    Test case 		& 1 		& 2 		& 3 		& 4 		& 5 		\\ \hline\hline
+    Mean RTT 		& 32.1ms 	& 54.8ms 	& 62.7ms 	& 70.6ms 	& 107.5ms	\\ \hline
+    Variance RTT 	& 1.3ms 	& 8.2ms 	& 46.3ms 	& 11.3ms 	& 1900.9ms	\\ \hline
+    Std RTT			& 0.4ms		& 2.9ms		& 6.8ms		& 3.36ms	& 43.6ms	\\ \hline
+  \end{tabular}
+\end{center}
+
+
+
+
+
+
+
 \section{Developer Friendliness}
 %userfriendliness of the extension, how hard is it for other developers to use it?
 \subsection{User Feedback}

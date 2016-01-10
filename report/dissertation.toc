@@ -2,18 +2,18 @@
 \contentsline {section}{\numberline {1}Introduction}{5}{section.1}
 \contentsline {section}{\numberline {2}Background}{5}{section.2}
 \contentsline {subsection}{\numberline {2.1}HTML5}{5}{subsection.2.1}
-\contentsline {paragraph}{}{5}{section*.4}
 \contentsline {paragraph}{}{5}{section*.5}
-\contentsline {subsection}{\numberline {2.2}NodeJS}{5}{subsection.2.2}
 \contentsline {paragraph}{}{5}{section*.6}
+\contentsline {subsection}{\numberline {2.2}NodeJS}{5}{subsection.2.2}
+\contentsline {paragraph}{}{5}{section*.7}
 \contentsline {subsection}{\numberline {2.3}GameMaker}{5}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}Environmental Psychology}{5}{subsection.2.4}
 \contentsline {subsection}{\numberline {2.5}Networks in applications}{5}{subsection.2.5}
 \contentsline {subsection}{\numberline {2.6}The full picture}{5}{subsection.2.6}
-\contentsline {paragraph}{}{5}{section*.7}
-\contentsline {paragraph}{}{6}{section*.8}
+\contentsline {paragraph}{}{5}{section*.8}
 \contentsline {paragraph}{}{6}{section*.9}
 \contentsline {paragraph}{}{6}{section*.10}
+\contentsline {paragraph}{}{6}{section*.11}
 \contentsline {part}{II\hspace {1em}Literature Review}{7}{part.2}
 \contentsline {section}{\numberline {3}Networks}{8}{section.3}
 \contentsline {subsection}{\numberline {3.1}OSI layers and Protocols}{8}{subsection.3.1}
@@ -35,39 +35,27 @@
 \contentsline {section}{\numberline {9}Receiving and handling data at the server}{10}{section.9}
 \contentsline {part}{IV\hspace {1em}Experiments}{11}{part.4}
 \contentsline {section}{\numberline {10}Setup}{12}{section.10}
-\contentsline {subsection}{\numberline {10.1}Hardware}{12}{subsection.10.1}
-\contentsline {subsection}{\numberline {10.2}Network}{12}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.1}Server hardware and network specification}{12}{subsection.10.1}
 \contentsline {section}{\numberline {11}Controlled Environment}{12}{section.11}
 \contentsline {subsection}{\numberline {11.1}Considerations}{12}{subsection.11.1}
-\contentsline {subsection}{\numberline {11.2}Delay test}{12}{subsection.11.2}
-\contentsline {subsection}{\numberline {11.3}Data test}{12}{subsection.11.3}
-\contentsline {subsection}{\numberline {11.4}Equality test}{12}{subsection.11.4}
-\contentsline {section}{\numberline {12}Real Network}{12}{section.12}
-\contentsline {subsection}{\numberline {12.1}Local}{12}{subsection.12.1}
-\contentsline {paragraph}{Setup}{12}{section*.11}
-\contentsline {paragraph}{Delay}{12}{section*.12}
-\contentsline {paragraph}{Fairness}{12}{section*.13}
-\contentsline {subsection}{\numberline {12.2}Global}{13}{subsection.12.2}
-\contentsline {subsubsection}{\numberline {12.2.1}Same city}{13}{subsubsection.12.2.1}
-\contentsline {paragraph}{Setup}{13}{section*.14}
-\contentsline {paragraph}{Delay}{13}{section*.15}
-\contentsline {paragraph}{Fairness}{13}{section*.16}
-\contentsline {subsubsection}{\numberline {12.2.2}Same country}{13}{subsubsection.12.2.2}
-\contentsline {paragraph}{Setup}{13}{section*.17}
-\contentsline {paragraph}{Delay}{13}{section*.18}
-\contentsline {paragraph}{Fairness}{13}{section*.19}
-\contentsline {subsubsection}{\numberline {12.2.3}Europe}{13}{subsubsection.12.2.3}
-\contentsline {paragraph}{Setup}{13}{section*.20}
-\contentsline {paragraph}{Delay}{13}{section*.21}
-\contentsline {paragraph}{Fairness}{13}{section*.22}
-\contentsline {subsubsection}{\numberline {12.2.4}Inter-continental}{13}{subsubsection.12.2.4}
-\contentsline {paragraph}{Setup}{13}{section*.23}
-\contentsline {paragraph}{Delay}{13}{section*.24}
-\contentsline {paragraph}{Fairness}{13}{section*.25}
-\contentsline {section}{\numberline {13}Developer Friendliness}{14}{section.13}
-\contentsline {subsection}{\numberline {13.1}User Feedback}{14}{subsection.13.1}
-\contentsline {section}{\numberline {14}Interpretation of the data}{14}{section.14}
-\contentsline {section}{\numberline {15}Issues}{14}{section.15}
-\contentsline {part}{V\hspace {1em}Epilogue}{16}{part.5}
-\contentsline {section}{\numberline {16}Evaluation}{17}{section.16}
-\contentsline {section}{\numberline {17}Conclusion}{17}{section.17}
+\contentsline {paragraph}{Network Configuration}{13}{section*.12}
+\contentsline {subsection}{\numberline {11.2}Stress tests}{13}{subsection.11.2}
+\contentsline {subsubsection}{\numberline {11.2.1}Concurrent connections}{13}{subsubsection.11.2.1}
+\contentsline {paragraph}{Environment}{13}{section*.13}
+\contentsline {paragraph}{Records}{13}{section*.14}
+\contentsline {paragraph}{Results}{13}{section*.15}
+\contentsline {subsubsection}{\numberline {11.2.2}Message handling performance}{16}{subsubsection.11.2.2}
+\contentsline {paragraph}{Environment}{16}{section*.16}
+\contentsline {paragraph}{Records}{16}{section*.17}
+\contentsline {paragraph}{Results}{16}{section*.18}
+\contentsline {section}{\numberline {12}Real Network Delay and Fairness}{16}{section.12}
+\contentsline {subsection}{\numberline {12.1}Fairness depending on location}{16}{subsection.12.1}
+\contentsline {paragraph}{Test cases:}{16}{section*.19}
+\contentsline {paragraph}{Results:}{17}{section*.20}
+\contentsline {section}{\numberline {13}Developer Friendliness}{17}{section.13}
+\contentsline {subsection}{\numberline {13.1}User Feedback}{17}{subsection.13.1}
+\contentsline {section}{\numberline {14}Interpretation of the data}{18}{section.14}
+\contentsline {section}{\numberline {15}Issues}{18}{section.15}
+\contentsline {part}{V\hspace {1em}Epilogue}{20}{part.5}
+\contentsline {section}{\numberline {16}Evaluation}{21}{section.16}
+\contentsline {section}{\numberline {17}Conclusion}{21}{section.17}
