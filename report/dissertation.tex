@@ -176,9 +176,7 @@ Found people across the globe to assist in testing, family, friends and people f
 \paragraph{Environment}
 \begin{itemize}
 \item Variable number of concurrent connections cc, up to 15 instances with each simulating at most 500 clients.
-\item Each client sends 8-byte packages
-\item Each client sends 1 package every second
-\item Each package roundtrip time is measured
+\item Clients do not contact the server after establishing a connection.
 \end{itemize}
 
 \paragraph{Records}
