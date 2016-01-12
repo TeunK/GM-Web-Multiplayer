@@ -42,20 +42,20 @@
 \contentsline {subsection}{\numberline {11.2}Stress tests}{13}{subsection.11.2}
 \contentsline {subsubsection}{\numberline {11.2.1}Concurrent connections}{13}{subsubsection.11.2.1}
 \contentsline {paragraph}{Environment}{13}{section*.13}
-\contentsline {paragraph}{Records}{13}{section*.14}
+\contentsline {paragraph}{Dependent variables}{13}{section*.14}
 \contentsline {paragraph}{Results}{13}{section*.15}
-\contentsline {subsubsection}{\numberline {11.2.2}Message handling performance}{16}{subsubsection.11.2.2}
+\contentsline {subsubsection}{\numberline {11.2.2}Message broadcasting performance}{16}{subsubsection.11.2.2}
 \contentsline {paragraph}{Environment}{16}{section*.16}
-\contentsline {paragraph}{Records}{16}{section*.17}
+\contentsline {paragraph}{Dependent variables}{16}{section*.17}
 \contentsline {paragraph}{Results}{16}{section*.18}
-\contentsline {section}{\numberline {12}Real Network Delay and Fairness}{16}{section.12}
-\contentsline {subsection}{\numberline {12.1}Fairness depending on location}{16}{subsection.12.1}
-\contentsline {paragraph}{Test cases:}{16}{section*.19}
-\contentsline {paragraph}{Results:}{17}{section*.20}
-\contentsline {section}{\numberline {13}Developer Friendliness}{17}{section.13}
-\contentsline {subsection}{\numberline {13.1}User Feedback}{17}{subsection.13.1}
-\contentsline {section}{\numberline {14}Interpretation of the data}{18}{section.14}
-\contentsline {section}{\numberline {15}Issues}{18}{section.15}
-\contentsline {part}{V\hspace {1em}Epilogue}{20}{part.5}
-\contentsline {section}{\numberline {16}Evaluation}{21}{section.16}
-\contentsline {section}{\numberline {17}Conclusion}{21}{section.17}
+\contentsline {section}{\numberline {12}Real Network Delay and Fairness}{18}{section.12}
+\contentsline {subsection}{\numberline {12.1}Fairness depending on location}{18}{subsection.12.1}
+\contentsline {paragraph}{Test cases:}{18}{section*.19}
+\contentsline {paragraph}{Results:}{18}{section*.20}
+\contentsline {section}{\numberline {13}Developer Friendliness}{19}{section.13}
+\contentsline {subsection}{\numberline {13.1}User Feedback}{19}{subsection.13.1}
+\contentsline {section}{\numberline {14}Interpretation of the data}{20}{section.14}
+\contentsline {section}{\numberline {15}Issues}{20}{section.15}
+\contentsline {part}{V\hspace {1em}Epilogue}{21}{part.5}
+\contentsline {section}{\numberline {16}Evaluation}{22}{section.16}
+\contentsline {section}{\numberline {17}Conclusion}{22}{section.17}

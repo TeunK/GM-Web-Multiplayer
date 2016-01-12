@@ -177,13 +177,14 @@ Found people across the globe to assist in testing, family, friends and people f
 \begin{itemize}
 \item Variable number of concurrent connections cc, up to 15 instances with each simulating at most 500 clients.
 \item Clients do not contact the server after establishing a connection.
+\item The CPU usage, time and RSS (Resident set size) are recorded after each every time another group of 100 clients connect to the server.
 \end{itemize}
 
-\paragraph{Records}
+\paragraph{Dependent variables}
 \begin{itemize}
 \item CPU usage on the server
 \item CPU time on the server
-\item Resident set size (RSS) on the server
+\item RSS on the server
 \end{itemize}
 
 \paragraph{Results}\mbox{}\\\\
@@ -216,22 +217,47 @@ When the CPU usage is above 70 percent, the user may experience lag. Such high C
 \end{center}
 
 
-\subsubsection{Message handling performance}
+\subsubsection{Message broadcasting performance}
 \paragraph{Environment}
 \begin{itemize}
-\item 5000 concurrent connections (10 instances each simulating 500 clients)
-\item Each client sends 8-byte packages
-\item Each client sends a variable number n of packages per second.
-\item Each package roundtrip time is measured
+\item 5000 concurrent connections (10 instances each simulating at most 500 clients).
+\item Each package that is sent has a size of 8 bytes.
+\item Each client sends packages at regular time intervals, causing the server to handle n messages every second.
+\item Each client measures the roundtrip time of its package to the server.
 \end{itemize}
 
-\paragraph{Records}
+\paragraph{Dependent variables}
 \begin{itemize}
 \item Mean roundtrip time between all clients
-\item Deviation in roundtrip time between all clients
+\item Variance of the roundtrip time between all clients
+\item Standard Deviation of the roundtrip time between all clients
 \end{itemize}
 
 \paragraph{Results}
+\begin{center}
+
+\begin{figure}[h]
+% \centering% default with `floatrow`
+\includegraphics[scale=0.32]{test_SERVER_RTTmean.jpg}
+\caption{The mean roundtrip time of all the messages that pass through the server. As expected, with few concurrent clients connected to the server, the server manages to broadcast many more messages.}
+\end{figure}
+
+
+\begin{figure}
+% \centering% default with `floatrow`
+\includegraphics[scale=0.32]{test_SERVER_RTTvariance.jpg}
+\caption{The variance of the roundtrip times, showing the fairness between clients decreases significantly when the server receives messages faster than it can broadcast.}
+\end{figure}
+
+
+\begin{figure}
+% \centering% default with `floatrow`
+\includegraphics[scale=0.32]{test_SERVER_RTTstd.jpg}
+\caption{Standard deviation of the message roundtrip times.}
+\end{figure}
+
+\end{center}
+
 
 \section{Real Network Delay and Fairness}
 %testing the extension in real networks
