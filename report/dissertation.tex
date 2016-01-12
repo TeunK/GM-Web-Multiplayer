@@ -192,6 +192,7 @@ Found people across the globe to assist in testing, family, friends and people f
 \begin{center}
 
 \begin{figure}
+\label{fig:cpu_usage}
 % \centering% default with `floatrow`
 \includegraphics[scale=0.75]{test_CLIENT_CPUusage.jpg}
 \caption{Displaying the CPU usage for the server process in percent.}
@@ -202,6 +203,7 @@ When the CPU usage is above 70 percent, the user may experience lag. Such high C
 
 
 \begin{figure}
+\label{fig:cpu_time}
 % \centering% default with `floatrow`
 \includegraphics[scale=0.75]{test_CLIENT_CPUtime.jpg}
 \caption{CPU time in milliseconds, displaying the amount of time required for the server to process the clients.}
@@ -209,6 +211,7 @@ When the CPU usage is above 70 percent, the user may experience lag. Such high C
 
 
 \begin{figure}
+\label{fig:cpu_rss}
 % \centering% default with `floatrow`
 \includegraphics[scale=0.75]{test_CLIENT_RSS.jpg}
 \caption{Resident set size in Megabit, showing the portion of RAM that is occupied by the server process.}
@@ -237,6 +240,7 @@ When the CPU usage is above 70 percent, the user may experience lag. Such high C
 \begin{center}
 
 \begin{figure}[h]
+\label{fig:broadcast_rtt_mean}
 % \centering% default with `floatrow`
 \includegraphics[scale=0.32]{test_SERVER_RTTmean.jpg}
 \caption{The mean roundtrip time of all the messages that pass through the server. As expected, with few concurrent clients connected to the server, the server manages to broadcast many more messages.}
@@ -244,6 +248,7 @@ When the CPU usage is above 70 percent, the user may experience lag. Such high C
 
 
 \begin{figure}
+\label{fig:broadcast_rtt_variance}
 % \centering% default with `floatrow`
 \includegraphics[scale=0.32]{test_SERVER_RTTvariance.jpg}
 \caption{The variance of the roundtrip times, showing the fairness between clients decreases significantly when the server receives messages faster than it can broadcast.}
@@ -251,6 +256,7 @@ When the CPU usage is above 70 percent, the user may experience lag. Such high C
 
 
 \begin{figure}
+\label{fig:broadcast_rtt_std}
 % \centering% default with `floatrow`
 \includegraphics[scale=0.32]{test_SERVER_RTTstd.jpg}
 \caption{Standard deviation of the message roundtrip times.}
