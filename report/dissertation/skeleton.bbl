@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+
+\bibitem{P1}
+Hiroki Arimura.
+\newblock Learning acyclic first-order horn sentences from entailment.
+\newblock In {\em Proc. of the 8th Intl. Conf. on Algorithmic Learning Theory,
+  ALT '97}, pages 432--445, 1997.
+
+\bibitem{P2}
+Chen-Chung Chang and H.~Jerome Keisler.
+\newblock {\em Model Theory}.
+\newblock North-Holland, third edition, 1990.
+
+\end{thebibliography}
