@@ -1,0 +1,16 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: dissertation.aux
+The style file: plain.bst
+Database file #1: bibliography.bib
+You're missing a field name---line 5 of file bibliography.bib
+ :  
+ :  %year = "",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 14 of file bibliography.bib
+ :  
+ :  %address = "",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty year in Fairness_and_Playability
+Warning--empty note in Multiplayer_Networking_modern_engine
+(There were 2 error messages)

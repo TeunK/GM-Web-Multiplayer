@@ -5,6 +5,7 @@
 \usepackage{wrapfig}
 \usepackage[sort]{cite}
 \usepackage{url}
+\usepackage[utf8]{inputenc}
 %\usepackage[left=20mm,top=20mm,bottom=20mm,right=20mm]{geometry}
 
 \begin{document}
@@ -14,8 +15,8 @@
 	\vspace*{\dimexpr-1.4in-\topmargin-\headsep-\headheight-\baselineskip}%
 	\hspace*{\dimexpr-1.2in-\evensidemargin-\parindent}%
 	\makebox[\paperwidth][r]{\includegraphics[height=3cm]{logo.png}}
-    Rendonan Minigame\\
-    {\small Software Engineering Large Practical\\Word Count: xxxxx}
+    Networking Extension\\
+    {\small For the Gamemaker HTML5 Export module\\Word Count: xxxxx}
     \vspace{18em}
 }
 
@@ -86,6 +87,9 @@ NodeJS \footnote{http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js}
 
 \section{Network benchmark criteria}
 %which criteria to consider when testing a network
+ref for fairness and playability \cite{Fairness_and_Playability}
+ref for multiplayer networking in modern game engines \cite{Multiplayer_Networking_modern_engine}
+
 \subsection{Target audience}
 %explain the types of target audience, who do the developers of an application using the extension intend to target. How does this affect the demands on the network
 %focus on location of users
@@ -360,28 +364,24 @@ tests executed:
 
 \pagebreak
 \part{Epilogue}
+
 \pagebreak
 \section{Evaluation}
 \section{Conclusion}
 %conclusion, main achievements, unsolved problems, direction for further work
 
 
+%https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Standard_templates
 
-\begin{thebibliography}{1}
-
-  \bibitem{notes} John W. Dower {\em Readings compiled for History
-  21.479.}  1991.
-
-  \bibitem{impj}  The Japan Reader {\em Imperial Japan 1800-1945} 1973:
-  Random House, N.Y.
-
-  \bibitem{norman} E. H. Norman {\em Japan's emergence as a modern
-  state} 1940: International Secretariat, Institute of Pacific
-  Relations.
-
-  \bibitem{fo} Bob Tadashi Wakabayashi {\em Anti-Foreignism and Western
-  Learning in Early-Modern Japan} 1986: Harvard University Press.
-
-\end{thebibliography}
+%
+%http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js
+%http://drewww.github.io/socket.io-benchmarking/
+%http://socket.io/get-started/chat/
+%http://blog.mixu.net/2011/11/22/performance-benchmarking-socket-io-0-8-7-0-7-11-and-0-6-17-and-nodes-native-tcp/
+%https://bocoup.com/weblog/node-stress-test-analysis
+%
+%
+\bibliographystyle{plain}
+\bibliography{bibliography}
 
 \end{document}
