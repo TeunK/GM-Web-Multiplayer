@@ -1,61 +1,61 @@
-\contentsline {part}{I\hspace {1em}Preamble}{4}{part.1}
-\contentsline {section}{\numberline {1}Introduction}{5}{section.1}
-\contentsline {section}{\numberline {2}Background}{5}{section.2}
-\contentsline {subsection}{\numberline {2.1}HTML5}{5}{subsection.2.1}
-\contentsline {paragraph}{}{5}{section*.5}
-\contentsline {paragraph}{}{5}{section*.6}
-\contentsline {subsection}{\numberline {2.2}NodeJS}{5}{subsection.2.2}
-\contentsline {paragraph}{}{5}{section*.7}
-\contentsline {subsection}{\numberline {2.3}GameMaker}{5}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Environmental Psychology}{5}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Networks in applications}{5}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}The full picture}{5}{subsection.2.6}
-\contentsline {paragraph}{}{5}{section*.8}
-\contentsline {paragraph}{}{6}{section*.9}
-\contentsline {paragraph}{}{6}{section*.10}
-\contentsline {paragraph}{}{6}{section*.11}
-\contentsline {part}{II\hspace {1em}Literature Review}{7}{part.2}
-\contentsline {section}{\numberline {3}Networks}{8}{section.3}
-\contentsline {subsection}{\numberline {3.1}OSI layers and Protocols}{8}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Inter-application communication}{8}{subsection.3.2}
-\contentsline {section}{\numberline {4}Network benchmark criteria}{8}{section.4}
-\contentsline {subsection}{\numberline {4.1}Target audience}{8}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Minimal requirements}{8}{subsection.4.2}
-\contentsline {section}{\numberline {5}Socket.io "under the hood"}{8}{section.5}
-\contentsline {part}{III\hspace {1em}Implementation}{9}{part.3}
-\contentsline {section}{\numberline {6}Design}{10}{section.6}
-\contentsline {subsection}{\numberline {6.1}Project layout and prior considerations}{10}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Server and client}{10}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Creating applications}{10}{subsection.6.3}
-\contentsline {subsubsection}{\numberline {6.3.1}Benchmark application}{10}{subsubsection.6.3.1}
-\contentsline {subsubsection}{\numberline {6.3.2}Real test application}{10}{subsubsection.6.3.2}
-\contentsline {subsubsection}{\numberline {6.3.3}Templates for developers}{10}{subsubsection.6.3.3}
-\contentsline {section}{\numberline {7}The extension}{10}{section.7}
-\contentsline {section}{\numberline {8}Mapping from GML to the extension}{10}{section.8}
-\contentsline {section}{\numberline {9}Receiving and handling data at the server}{10}{section.9}
-\contentsline {part}{IV\hspace {1em}Experiments}{11}{part.4}
-\contentsline {section}{\numberline {10}Setup}{12}{section.10}
-\contentsline {subsection}{\numberline {10.1}Server hardware and network specification}{12}{subsection.10.1}
-\contentsline {section}{\numberline {11}Controlled Environment}{12}{section.11}
-\contentsline {subsection}{\numberline {11.1}Considerations}{12}{subsection.11.1}
-\contentsline {paragraph}{Network Configuration}{13}{section*.12}
-\contentsline {subsection}{\numberline {11.2}Stress tests}{13}{subsection.11.2}
-\contentsline {subsubsection}{\numberline {11.2.1}Concurrent connections}{13}{subsubsection.11.2.1}
-\contentsline {paragraph}{Environment}{13}{section*.13}
-\contentsline {paragraph}{Dependent variables}{13}{section*.14}
-\contentsline {paragraph}{Results}{13}{section*.15}
-\contentsline {subsubsection}{\numberline {11.2.2}Message broadcasting performance}{16}{subsubsection.11.2.2}
-\contentsline {paragraph}{Environment}{16}{section*.16}
-\contentsline {paragraph}{Dependent variables}{16}{section*.17}
-\contentsline {paragraph}{Results}{16}{section*.18}
-\contentsline {section}{\numberline {12}Real Network Delay and Fairness}{18}{section.12}
-\contentsline {subsection}{\numberline {12.1}Fairness depending on location}{18}{subsection.12.1}
-\contentsline {paragraph}{Test cases:}{18}{section*.19}
-\contentsline {paragraph}{Results:}{18}{section*.20}
-\contentsline {section}{\numberline {13}Developer Friendliness}{19}{section.13}
-\contentsline {subsection}{\numberline {13.1}User Feedback}{19}{subsection.13.1}
-\contentsline {section}{\numberline {14}Interpretation of the data}{20}{section.14}
-\contentsline {section}{\numberline {15}Issues}{20}{section.15}
-\contentsline {part}{V\hspace {1em}Epilogue}{21}{part.5}
-\contentsline {section}{\numberline {16}Evaluation}{22}{section.16}
-\contentsline {section}{\numberline {17}Conclusion}{22}{section.17}
+\contentsline {part}{I\hspace {1em}Preamble}{5}{part.1}
+\contentsline {section}{\numberline {1}Introduction}{6}{section.1}
+\contentsline {section}{\numberline {2}Background}{6}{section.2}
+\contentsline {subsection}{\numberline {2.1}HTML5}{6}{subsection.2.1}
+\contentsline {paragraph}{}{6}{section*.5}
+\contentsline {paragraph}{}{6}{section*.6}
+\contentsline {subsection}{\numberline {2.2}NodeJS}{6}{subsection.2.2}
+\contentsline {paragraph}{}{6}{section*.7}
+\contentsline {subsection}{\numberline {2.3}GameMaker}{6}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Environmental Psychology}{6}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Networks in applications}{6}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}The full picture}{6}{subsection.2.6}
+\contentsline {paragraph}{}{6}{section*.8}
+\contentsline {paragraph}{}{7}{section*.9}
+\contentsline {paragraph}{}{7}{section*.10}
+\contentsline {paragraph}{}{7}{section*.11}
+\contentsline {part}{II\hspace {1em}Literature Review}{8}{part.2}
+\contentsline {section}{\numberline {3}Networks}{9}{section.3}
+\contentsline {subsection}{\numberline {3.1}OSI layers and Protocols}{9}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Inter-application communication}{9}{subsection.3.2}
+\contentsline {section}{\numberline {4}Network benchmark criteria}{9}{section.4}
+\contentsline {subsection}{\numberline {4.1}Target audience}{9}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Minimal requirements}{9}{subsection.4.2}
+\contentsline {section}{\numberline {5}Socket.io "under the hood"}{9}{section.5}
+\contentsline {part}{III\hspace {1em}Implementation}{10}{part.3}
+\contentsline {section}{\numberline {6}Design}{11}{section.6}
+\contentsline {subsection}{\numberline {6.1}Project layout and prior considerations}{11}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Server and client}{11}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Creating applications}{11}{subsection.6.3}
+\contentsline {subsubsection}{\numberline {6.3.1}Benchmark application}{11}{subsubsection.6.3.1}
+\contentsline {subsubsection}{\numberline {6.3.2}Real test application}{11}{subsubsection.6.3.2}
+\contentsline {subsubsection}{\numberline {6.3.3}Templates for developers}{11}{subsubsection.6.3.3}
+\contentsline {section}{\numberline {7}The extension}{11}{section.7}
+\contentsline {section}{\numberline {8}Mapping from GML to the extension}{11}{section.8}
+\contentsline {section}{\numberline {9}Receiving and handling data at the server}{11}{section.9}
+\contentsline {part}{IV\hspace {1em}Experiments}{12}{part.4}
+\contentsline {section}{\numberline {10}Setup}{13}{section.10}
+\contentsline {subsection}{\numberline {10.1}Server hardware and network specification}{13}{subsection.10.1}
+\contentsline {section}{\numberline {11}Controlled Environment}{13}{section.11}
+\contentsline {subsection}{\numberline {11.1}Considerations}{13}{subsection.11.1}
+\contentsline {paragraph}{Network Configuration}{14}{section*.12}
+\contentsline {subsection}{\numberline {11.2}Stress tests}{14}{subsection.11.2}
+\contentsline {subsubsection}{\numberline {11.2.1}Concurrent connections}{14}{subsubsection.11.2.1}
+\contentsline {paragraph}{Environment}{14}{section*.13}
+\contentsline {paragraph}{Dependent variables}{14}{section*.14}
+\contentsline {paragraph}{Results}{14}{section*.15}
+\contentsline {subsubsection}{\numberline {11.2.2}Message broadcasting performance}{17}{subsubsection.11.2.2}
+\contentsline {paragraph}{Environment}{17}{section*.16}
+\contentsline {paragraph}{Dependent variables}{17}{section*.17}
+\contentsline {paragraph}{Results}{17}{section*.18}
+\contentsline {section}{\numberline {12}Real Network Delay and Fairness}{19}{section.12}
+\contentsline {subsection}{\numberline {12.1}Fairness depending on location}{19}{subsection.12.1}
+\contentsline {paragraph}{Test cases:}{19}{section*.19}
+\contentsline {paragraph}{Results:}{19}{section*.20}
+\contentsline {section}{\numberline {13}Developer Friendliness}{20}{section.13}
+\contentsline {subsection}{\numberline {13.1}User Feedback}{20}{subsection.13.1}
+\contentsline {section}{\numberline {14}Interpretation of the data}{21}{section.14}
+\contentsline {section}{\numberline {15}Issues}{21}{section.15}
+\contentsline {part}{V\hspace {1em}Epilogue}{22}{part.5}
+\contentsline {section}{\numberline {16}Evaluation}{23}{section.16}
+\contentsline {section}{\numberline {17}Conclusion}{23}{section.17}
