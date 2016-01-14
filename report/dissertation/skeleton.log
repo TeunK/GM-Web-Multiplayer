@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.2.1)  13 JAN 2016 19:25
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.2.1)  14 JAN 2016 16:33
 entering extended mode
 **skeleton.tex
 (D:\Programming\HONS\report\dissertation\skeleton.tex
@@ -224,40 +224,40 @@ LaTeX Font Info:    ... okay on input line 7.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 50.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 18.66588pt on input line 50.
+(Font)              scaled to size 18.66588pt on input line 21.
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
 
 ]
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 50.
+(Font)              scaled to size 10.79993pt on input line 21.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 50.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 50.
+(Font)              scaled to size 10.79993pt on input line 21.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 50.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 21.
 LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
-(Font)              scaled to size 10.79993pt on input line 50.
+(Font)              scaled to size 10.79993pt on input line 21.
  [3]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 23.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 52.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 23.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 15.55188pt on input line 52.
+(Font)              scaled to size 15.55188pt on input line 23.
  [4]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 55.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 55.
+(Font)              scaled to size 22.39185pt on input line 26.
 
 (D:\Programming\HONS\report\dissertation\skeleton.toc
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
@@ -284,48 +284,71 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
-)
-\tf@toc=\write3
  [5
 
-] [6
+])
+\tf@toc=\write3
+ [6]
+Chapter 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 37.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 12.9599pt on input line 37.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7
 
 ]
-Chapter 1.
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 65.
+Overfull \vbox (105.9992pt too high) has occurred while \output is active []
 
-Underfull \vbox (badness 1708) has occurred while \output is active []
 
- [7]
 [8]
 Chapter 2.
-(D:\Programming\HONS\report\dissertation\skeleton.bbl [9
+
+Overfull \hbox (16.21097pt too wide) in paragraph at lines 68--68
+[]\OT1/phv/b/n/17.28 Fairnesss and Playa-bil-ity in On-line Mul-ti-player Games
+ 
+ []
+
+[9
 
 ] [10
 
-]) [11]
+]
+Chapter 3.
+[11] [12
+
+]
+Chapter 4.
+[13] [14
+
+]
+Chapter 5.
+(D:\Programming\HONS\report\dissertation\skeleton.bbl [15] [16
+
+]) [17]
 (D:\Programming\HONS\report\dissertation\skeleton.aux) ) 
 Here is how much of TeX's memory you used:
- 3214 strings out of 494045
- 48567 string characters out of 3148391
- 110029 words of memory out of 3000000
- 6472 multiletter control sequences out of 15000+200000
- 33182 words of font info for 63 fonts, out of 3000000 for 9000
+ 3212 strings out of 494045
+ 48572 string characters out of 3148391
+ 114029 words of memory out of 3000000
+ 6473 multiletter control sequences out of 15000+200000
+ 34465 words of font info for 62 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  43i,5n,40p,225b,242s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Program Files/MiKTe
 X 2.9/fonts/enc/dvips/fontname/8r.enc}<D:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/urw/cour
-ier/ucrr8a.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb
-><D:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><D:/Program F
-iles/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><D:/Program Files/MiKTeX 2
-.9/fonts/type1/urw/times/utmb8a.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/ur
-w/times/utmr8a.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.p
-fb>
-Output written on skeleton.pdf (11 pages, 87844 bytes).
+urw/helvetic/uhvb8a.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/u
+hvr8a.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><D:
+/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><D:/Program Files/Mi
+KTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><D:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/urw/times/utmri8a.pfb>
+Output written on skeleton.pdf (17 pages, 76146 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
+ 82 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

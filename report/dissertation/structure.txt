@@ -1,6 +1,64 @@
+Abstract %summarising the report
+
+
+== PREAMBLE ==
 Background
 - HTML5
-- NodeJS
-- GameMaker
-- Networks in Applications
+- NodeJS (include socket.io)
+- GameMaker (include its evolution and typical target audience)
+- Networks in Applications (include minimal requirements)
 - TCP and UDP
+- Inter-application communication
+- .. %anything that will be covered and requires explaining
+
+Related work %subsections with similar game / application devevelopment software
+- Unity
+- Unreal Engine 4
+- CryEngine
+- Havok Vision Engine
+- Project Anarchy
+- ShiVa
+- App Game Kit
+- GameSalad
+- ...
+
+== LITERATURE REVIEW == %Literature that will affect design decisions
+- Multiplayer Networking in Modern Game Engines
+- Fairness and Playability in Online Multiplayer Games
+- ...
+
+== DEVELOPMENT ==
+Design %about the high level design ideas / structure, make clear connection with literature review
+- Prior considerations
+- Developer template
+- Server and client (p2p options, general info)
+- Mapping from GML to the extension
+
+Implementation %details regarding the actual code and files
+- Server
+- Client
+- The extension
+
+Applications Developed with the Extension
+- Benchmark application
+- Real game application
+- Developer template
+
+== NETWORK EXTENSION EVALUATION ==
+- Setup
+-- Controlled Network Experiments
+-- Real Network Experiments
+- Results
+-- Controlled Network Results
+--- Concurrent connections
+--- Message Broadcasting Performance
+-- Real Network Results
+--- Locationwise Delay Fairness
+
+== EPILOGUE ==
+Conclusion
+- Comparison of the Extended GameMaker Functionality with Related Work
+- Criticism on the Implementation and Design Decisions %make clear connection with the evaluation
+- Possible Future Improvements
+
+Bibliography %ie. references
