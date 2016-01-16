@@ -1,12 +1,22 @@
-
 % to choose your degree
 % please un-comment just one of the following
 \documentclass[bsc,frontabs,twoside,singlespacing,parskip,deptreport]{infthesis}     % for BSc, BEng etc.
 % \documentclass[minf,frontabs,twoside,singlespacing,parskip,deptreport]{infthesis}  % for MInf
-\usepackage{float}
+
+\usepackage{float} %for image positioning
+\usepackage[hidelinks]{hyperref} %clickable url, hide url box
+\usepackage{xcolor} %paint url, links and citations
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+\usepackage[T1]{fontenc} %fix < > characters
+
 \begin{document}
 
-\title{A Network Extension for the Gamemaker HTML5 Export Module}
+\title{A Network Extension for Gamemaker HTML5}
 
 \author{Teun Kokke}
 \course{Software Engineering} 
@@ -45,8 +55,8 @@ Creating an extention for Gamemaker creations, to allow fast networking with max
 % <<<< REMOVE THESE
 
 \section*{Acknowledgements}
-Acknowledgements go here. 
-Found people across the globe to assist in testing, family, friends and people found through social media, the Dutch Gamemaker community and the Yoyogames forums.
+First of all, I would like to thank my supervisor Dr. Myungjin Lee for guiding me through the process of writing the report and critisizing my work.
+I am also sincerely grateful to those people across the globe who have assisted me with testing and collecting data for the evalutation experiments. My sincere gratitude to my family, friends, the Dutch Gamemaker community and the Yoyogames forums, for providing me with feedback and ideas without which this project would not have been the same.
 \tableofcontents
 
 %\pagenumbering{arabic}
@@ -59,27 +69,6 @@ Found people across the globe to assist in testing, family, friends and people f
 \section{Background}
 %intro and synopsis (topic description and setting context of published literature, main results summarized.. about 5 pages)
 %- summary of ALL contributions, code, research interpretations, tests, experiments (bulleted list)
-\subsection{HTML5}
-\paragraph{}HTML5 was released in 2014 (October 28th) by the World Wide Web Consortium (W3C) and is a raising web standard, improving its predecessor HTML4 with the aim to reduce the dependence of functionality from third-party plugins such as Flash and Java applets, which are deprecated and unsupported by many devices\footnote{http://i-programmer.info/news/86-browsers/8783-death-of-flash-and-java.html}.
-
-Scripting is replaced in HTML5 by markup where-ever possible, causing the world of browser-gaming to change rapidly. One of the the newly introduced features is the <canvas> tag, giving rise to isometric JavaScript applications.
-
-\subsection{NodeJS}
-%include socket.io %benchmarks for socket.io made by other developers
-
-NodeJS \footnote{http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js}
-\subsection{GameMaker}
-%include its evolution and typical target audience
-%explain the types of target audience, who do the developers of an application using the extension intend to target. How does this affect the demands on the network
-%focus on location of users
-\paragraph{}Gamemaker by YoyoGames is a software creation tool with the aim to simplify and speed up game and app development. It is cheap, simple to learn and flexible to use, making the software demanded by small teams, professionals and novice developers. Consequently, the human nature of staying within trusted environments causes developers to stick to Gamemaker.
-
-During the rise of HTML5 and the growing popularity of Gamemaker, YoyoGames has provided the functionality to export any application to a JavaScript program that can be executed directly in the browser. This way i.a. updates can be made seamless, require no file-download nor installation, is platform-independent and easier to distribute.
-
-Some features are lost during the transition from a windows-executable to a web-application. One of them is a critical component to application popularity: networking functionality. Since the HTML5 update in September 2011, this feature was never added.
-
-The implementation in this Honours project will allow developers to again add networking features to their web-browser applications.
-
 \subsection{Networks in Applications}
 %include minimal requirements
 %which criteria to consider when testing a network
@@ -90,11 +79,64 @@ ref for multiplayer networking in modern game engines \cite{Multiplayer_Networki
 http://drewww.github.io/socket.io-benchmarking/
 \\http://blog.mixu.net/2011/11/22/performance-benchmarking-socket-io-0-8-7-0-7-11-and-0-6-17-and-nodes-native-tcp/
 \subsection{TCP and UDP}
+The project focus is on developing a networking extension, to allow the use of networking services to Gamemaker when using the HTML5 export option. One of the first thing one would consider is the selection of protocols that will be used in order to establish the connection between two (or more) nodes. As the project aims to allow users to optimise the extension's networking settings in favour of either speed or reliability, there will be further research done within each of the transport layer protocols: TCP and UDP.
+One of the most immediate problems that arise are that due to security constraints, UDP is not normally supported by web-browsers in order to communicate data to other hosts, and communication via TCP may be too slow in case a developer wishes to create an application that relies on a fast connection between hosts.
+
+In order to evaluate the efficiency of the networking extension, use Dummynet to setup a controlled environment.
+
 \subsection{Inter-application Communication}
 %how do applications communicate
 %IMPORTANT: State why there is no need for testing fairness between different bandwidths for web applications. (ie. games and web-apps only really need to send small variables, no big data is transported)
 
+\subsection{HTML5}
+\paragraph{}HTML5 is a raising web standard released in 2014 by the World Wide Web Consortium (W3C). It is designed to be cross-platform and runs on most modern web browsers such as Google Chrome, Mozilla Firefox, Apple Safari, and Opera. Also mobile web browsers that come preinstalled on iPhones, iPads and Android phones support HTML5.
+
+It superseeds its predecessors HTML4 and XHTML 1.1 with the aim to reduce the dependence of functionality from third-party plugins such as Flash and Java applets, which are either deprecated or entirely unsupported by most devices \cite{Death_Flash_Java}.
+
+Scripting is replaced in HTML5 by markup where possible, causing the world of browser-gaming to change rapidly. One of the the newly introduced features is the <canvas> element, which is defined as "a resolution-dependent bitmap canvas which can be used for rendering graphs, game graphics or other visual images on the fly"\cite{HTML5_Up_and_Running}. The element can thus be used to draw graphics in JavaScript with the "Canvas API"\cite{Canvas_API}.
+
+\subsection{Node.js}
+%include socket.io %benchmarks for socket.io made by other developers
+Node.js is a JavaScript interface with the aim to create "real-time websites with push capability" allowing developers to work in the "non-blocking event-driven I/O paradigm" \cite{Why_Nodejs}. This means that developers can use it to create real-time web applications where a server and client can both initiate communication, and both can exchange data freely without repeatedly having to refresh the webpage.
+
+In short, new client connections get allocated to a heap in the memory and client events are handled on a single thread by the server's operating system without choking the Node.js event loop. This therefore allows servers running Node.js to maintain thousands of concurrent connections without running out of RAM memory\cite{Node_Stress_Test}, as opposed to traditional servers which create a new thread for each client.
+
+\begin{center}
+\begin{figure}
+\centering
+\label{fig:nodejs_server_client}
+% \centering% default with `floatrow`
+\includegraphics[scale=0.5]{images/nodejs_img.png}
+\caption{image displaying the comparison of clients connected to a Node.js server versus clients connected to a traditional server. The traditional (unscalable) system which would rapidly run out of RAM as it assigns new clients to their own thread\cite{NodeJS_Image}}.
+\end{figure}
+\end{center}
+
+\subsection{Socket.io}
+Socket.io is an event-driven JavaScript library that can be used both on the client's browser, and a server\cite{Socketio}. It is capable of sending and receiving data via WebSockets (handled through a TCP connection) without interruption of the code flow\cite{Socketio_Benchmark}\cite{Socketio_TCP_Benchmark}. For this reason, it is often used in combination with Node.js.
+
+\subsection{GameMaker}
+%include its evolution and typical target audience
+%explain the types of target audience, who do the developers of an application using the extension intend to target. How does this affect the demands on the network
+%focus on location of users
+
+\begin{enumerate}
+\item Gamemaker does \textbf{not} support networking for HTML5 (js) export
+\item The current extentions that exist for gamemaker are limited to a basic use of TCP
+\item Webbrowsers do not generally support the use of UDP.
+\\Suggested methods are developing a java or flash applet, which will handle the networking features.
+\\A recent technology called \emph{WebRTC} allows js to use UDP data transfer directly on the web-client, but security features  within the network make holepunching complicated.
+\end{enumerate} 
+
+\paragraph{}Gamemaker by YoyoGames is a software creation tool with the aim to simplify and speed up game and app development. It is cheap, simple to learn and flexible to use, making the software demanded by small teams, professionals and novice developers. Consequently, the human nature of staying within trusted environments causes developers to stick to Gamemaker.
+
+During the rise of HTML5 and the growing popularity of Gamemaker, YoyoGames has provided the functionality to export any application to a JavaScript program that can be executed directly in the browser. This way i.a. updates can be made seamless, require no file-download nor installation, is platform-independent and easier to distribute.
+
+Some features are lost during the transition from a windows-executable to a web-application. One of them is a critical component to application popularity: networking functionality. Since the HTML5 update in September 2011, this feature was never added.
+
+The implementation in this Honours project will allow developers to again add networking features to their web-browser applications.
+
 \section{Related Work}
+\subsection{JSiso}http://jsiso.com/
 \subsection{Unity}
 \subsection{Unreal Engine 4}
 \subsection{CryEngine}
@@ -201,9 +243,9 @@ The network was controlled using Dummynet, using a below-average UK household ne
 
 \subsection{Real Network Experiments}
 The network was consistently running with a 54.0Mb/s download and 3.0Mb/s upload speed.
-\paragraph{}All network experiments are executed on a single server located in Edinburgh. In each experiment all clients were connected and communicating to the server simultaneously.
+\paragraph{}Multiple tests were executed with clients being located at specified locations. In each case, the clients were sending 8-byte messages to the server at a regular interval of 1 second for 2 minutes. The 120 roundtrip times for each client were then averaged in order to blur occasional peaks. At this point the roundtrip times of the clients in each common location were averaged, and then the deviance of the roundtrip times at each of these locations were calculated.
 
-
+All network experiments were executed using a single server located in Edinburgh and in each experiment all clients were connected and communicating to that server simultaneously.
 
 \section{Results}
 \subsection{Controlled Network Results}
@@ -211,7 +253,8 @@ The network was consistently running with a 54.0Mb/s download and 3.0Mb/s upload
 The following experiment evaluates the server performance with regard to the number of clients.
 
 \begin{center}
-\begin{figure}[H]
+\begin{figure}
+\centering
 \label{fig:cpu_usage}
 % \centering% default with `floatrow`
 \includegraphics[scale=0.75]{images/test_CLIENT_CPUusage.jpg}
@@ -221,6 +264,7 @@ When the CPU usage is above 70 percent, the user may experience lag. Such high C
 \end{figure}
 
 \begin{figure}
+\centering
 \label{fig:cpu_time}
 % \centering% default with `floatrow`
 \includegraphics[scale=0.75]{images/test_CLIENT_CPUtime.jpg}
@@ -228,6 +272,7 @@ When the CPU usage is above 70 percent, the user may experience lag. Such high C
 \end{figure}
 
 \begin{figure}
+\centering
 \label{fig:cpu_rss}
 % \centering% default with `floatrow`
 \includegraphics[scale=0.75]{images/test_CLIENT_RSS.jpg}
@@ -243,6 +288,7 @@ The following experiment evaluates the number of messages that can be handled by
 \begin{center}
 
 \begin{figure}[h]
+\centering
 \label{fig:broadcast_rtt_mean}
 % \centering% default with `floatrow`
 \includegraphics[scale=0.32]{images/test_SERVER_RTTmean.jpg}
@@ -251,6 +297,7 @@ The following experiment evaluates the number of messages that can be handled by
 
 
 \begin{figure}
+\centering
 \label{fig:broadcast_rtt_variance}
 % \centering% default with `floatrow`
 \includegraphics[scale=0.32]{images/test_SERVER_RTTvariance.jpg}
@@ -259,6 +306,7 @@ The following experiment evaluates the number of messages that can be handled by
 
 
 \begin{figure}
+\centering
 \label{fig:broadcast_rtt_std}
 % \centering% default with `floatrow`
 \includegraphics[scale=0.32]{images/test_SERVER_RTTstd.jpg}
@@ -273,7 +321,50 @@ The following experiment evaluates the number of messages that can be handled by
 \subsubsection{Location-wise Delay Fairness}
 The following experiment evaluates the effect of the geographical distance between groups of clients and the server with respect to fairness in response-time from the server to the clients.
 
+\paragraph{Test cases:}
+\begin{enumerate}
+\item Local network setting: Five clients physically located in the same local home network.
 
+\item Same city: Five clients physically located in Edinburgh (LAN excluded).
+
+\item Same country: Three clients physically located in Scotland: Edinburgh, Glasgow and Dundee.
+
+\item Europe: Five clients physically located in the United Kingdom, Hungary, France, Germany and the Netherlands.
+
+\item Inter-continental: Eight clients physically located in South Africa, California (USA), India, Thailand, Germany, Hungary, United Kingdom and the Netherlands.
+
+\end{enumerate}
+
+\paragraph{Results:}Average roundtrip times per location:
+\begin{center}
+  \begin{tabular}{ r | l }
+Location		& Average RTT \\ \hline\hline
+LAN				& 32ms	\\
+Edinburgh		& 55ms	\\
+Dundee			& 65ms	\\
+Germany			& 67ms	\\
+Glasgow			& 68ms	\\
+France			& 69ms	\\
+the Netherlands	& 70ms	\\
+United Kingdom	& 71ms	\\
+Hungary			& 76ms	\\
+India			& 103ms	\\
+South Africa	& 144ms	\\
+California (USA)& 158ms	\\
+Thailand		& 171ms	\\
+  \end{tabular}
+\end{center}
+
+Average roundtrip times per test:
+\begin{center}
+  \begin{tabular}{ | r || c | c | c | c | c |}
+    \hline
+    Test case 		& 1 		& 2 		& 3 		& 4 		& 5 		\\ \hline\hline
+    Mean RTT 		& 32.1ms 	& 54.8ms 	& 62.7ms 	& 70.6ms 	& 107.5ms	\\ \hline
+    Variance RTT 	& 1.3ms 	& 8.2ms 	& 46.3ms 	& 11.3ms 	& 1900.9ms	\\ \hline
+    Std RTT			& 0.4ms		& 2.9ms		& 6.8ms		& 3.36ms	& 43.6ms	\\ \hline
+  \end{tabular}
+\end{center}
 
 
 
@@ -292,9 +383,24 @@ The following experiment evaluates the effect of the geographical distance betwe
 
 
 % -----------------------
-% use the following and \cite{} as above if you use BibTeX
-% otherwise generate bibtem entries
-\bibliographystyle{plain}
+% >>>> REMOVE THIS BLOCK
+\cite{Multiplayer_Networking_modern_engine}
+\cite{Fairness_and_Playability}
+\cite{Pro_HTML5_Programming}
+\cite{HTML5_Up_and_Running}
+\cite{Friendly_Programming}
+\cite{Mark_Overmars}
+\cite{Death_Flash_Java}
+\cite{Why_Nodejs}
+\cite{Node_Stress_Test}
+\cite{NodeJS_Image}
+\cite{Socketio_Benchmark}
+\cite{Socketio_TCP_Benchmark}
+\cite{Socketio}
+\cite{Canvas_API}
+% <<<< REMOVE THIS BLOCK
+
+\bibliographystyle{unsrt}
 \bibliography{mybibfile}
 
 \end{document}

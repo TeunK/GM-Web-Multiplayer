@@ -1,14 +1,90 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{P1}
-Hiroki Arimura.
-\newblock Learning acyclic first-order horn sentences from entailment.
-\newblock In {\em Proc. of the 8th Intl. Conf. on Algorithmic Learning Theory,
-  ALT '97}, pages 432--445, 1997.
+\bibitem{Fairness_and_Playability}
+Jeremy Brun, Farzad Safaei, and Paul Boustead.
+\newblock {\em Fairness and playability in online multiplayer games}.
+\newblock PhD thesis, University of Wollongong.
 
-\bibitem{P2}
-Chen-Chung Chang and H.~Jerome Keisler.
-\newblock {\em Model Theory}.
-\newblock North-Holland, third edition, 1990.
+\bibitem{Multiplayer_Networking_modern_engine}
+Alan Edwardes.
+\newblock Multiplayer networking in a modern game engine.
+
+\bibitem{Death_Flash_Java}
+Ian Elliot.
+\newblock Death of flash and java.
+\newblock
+  \url{http://i-programmer.info/news/86-browsers/8783-death-of-flash-and-java.html},
+  14 July 2015.
+\newblock [Accessed: 2016-01-16].
+
+\bibitem{HTML5_Up_and_Running}
+Mark Pilgrim.
+\newblock {\em HTML5: Up and Running}.
+\newblock O'Reilly Media Inc., 1005 Gravenstein Highway North, Sebastopol, CA
+  95472., 2010.
+
+\bibitem{Canvas_API}
+Mozilla~Developer Network.
+\newblock Canvas api.
+\newblock \url{https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API},
+  2015.
+\newblock [Accessed: 2016-01-16].
+
+\bibitem{Why_Nodejs}
+Tomislav Capan.
+\newblock Why the hell would i use node.js.
+\newblock \url{http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js},
+  2014.
+\newblock [Accessed: 2016-01-16].
+
+\bibitem{Node_Stress_Test}
+Mike Pennisi.
+\newblock Realtime node.js app: A stress testing story.
+\newblock \url{https://bocoup.com/weblog/node-stress-test-analysis}, 2012.
+\newblock [Accessed: 2016-01-16].
+
+\bibitem{NodeJS_Image}
+Alejandro Hernandez.
+\newblock Init.js: A guide to the why and how of full-stack javascript.
+\newblock
+  \url{http://www.toptal.com/javascript/guide-to-full-stack-javascript-initjs}.
+\newblock [Accessed: 2016-01-16].
+
+\bibitem{Socketio}
+socket.io.
+\newblock \url{http://socket.io/}.
+\newblock Homepage, [Accessed: 2016-01-16].
+
+\bibitem{Socketio_Benchmark}
+Drew Harry.
+\newblock Practical socket.io benchmarking.
+\newblock \url{http://drewww.github.io/socket.io-benchmarking/}, 2012.
+\newblock [Accessed: 2016-01-16].
+
+\bibitem{Socketio_TCP_Benchmark}
+Mikito Takada.
+\newblock Performance benchmarking socket.io 0.8.7, 0.7.11 and 0.6.17 and
+  node's native tcp.
+\newblock
+  \url{http://blog.mixu.net/2011/11/22/performance-benchmarking-socket-io-0-8-7-0-7-11-and-0-6-17-and-nodes-native-tcp/},
+  2011.
+\newblock [Accessed: 2016-01-16].
+
+\bibitem{Pro_HTML5_Programming}
+Peter Lubbers, Brian Albers, and Frank Salim.
+\newblock {\em Pro HTML5 Programming}.
+\newblock Paul Manning, Springer Science and Business Media, LLC., 233 Spring
+  Street, New York, 2010.
+
+\bibitem{Friendly_Programming}
+Nathaniel~S. Borenstein.
+\newblock {\em Programming as if People Mattered: Friendly Programs, Software
+  Engineering and Other Noble Delusions. 3rd ed.}
+\newblock Princeton University Press, Princeton, New Jersey, 1994.
+
+\bibitem{Mark_Overmars}
+Mark Overmars.
+\newblock Teaching computer science through game design.
+\newblock {\em Entertainment Computing}.
 
 \end{thebibliography}
