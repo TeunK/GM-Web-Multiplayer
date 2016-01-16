@@ -30,7 +30,6 @@ Related work %subsections with similar game / application devevelopment software
 == DEVELOPMENT ==
 Design %about the high level design ideas / structure, make clear connection with literature review
 - Prior considerations
-- Developer template
 - Server and client (p2p options, general info)
 - Mapping from GML to the extension
 
