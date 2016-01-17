@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  16 JAN 2016 21:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  17 JAN 2016 01:44
 entering extended mode
 **./skeleton.tex
 (skeleton.tex
@@ -419,11 +419,11 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 37.
  [4]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 60.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 63.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 60.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 63.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 60.
+(Font)              scaled to size 22.39185pt on input line 63.
  (skeleton.toc
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
@@ -461,44 +461,41 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 [6]
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 72.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 78.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 72.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 78.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 72.
-
-Overfull \hbox (16.57524pt too wide) in paragraph at lines 79--81
-\T1/ptm/m/n/12 http://blog.mixu.net/2011/11/22/performance-benchmarking-socket-
-io-0-8-7-0-7-11-and-
- []
-
-
-Underfull \vbox (badness 2351) has occurred while \output is active []
-
- [7
+(Font)              scaled to size 12.9599pt on input line 78.
+[7
 
 ]
-Overfull \hbox (8.331pt too wide) in paragraph at lines 100--101
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 96.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 96.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 96.
+
+Overfull \hbox (8.331pt too wide) in paragraph at lines 104--105
 \T1/ptm/m/n/12 ca-pa-bil-ity" al-low-ing de-vel-op-ers to work in the "non-bloc
 king event-driven I/O paradigm"
  []
 
-<images/nodejs_img.png, id=299, 626.34pt x 803.0pt>
+[8] <images/nodejs_img.png, id=318, 626.34pt x 803.0pt>
 File: images/nodejs_img.png Graphic file (type png)
 
 <use images/nodejs_img.png>
-Package pdftex.def Info: images/nodejs_img.png used on input line 109.
+Package pdftex.def Info: images/nodejs_img.png used on input line 113.
 (pdftex.def)             Requested size: 313.16922pt x 401.49902pt.
- [8] [9 <./images/nodejs_img.png (PNG copy)>]
-Underfull \vbox (badness 6477) has occurred while \output is active []
 
- [10]
-[11] [12
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9 <./images/nodejs_img.png (PNG copy)>] [10] [11] [12
 
 ]
 Chapter 2.
 
-Overfull \hbox (16.21097pt too wide) in paragraph at lines 160--160
+Overfull \hbox (16.21097pt too wide) in paragraph at lines 165--165
 []\T1/phv/b/n/17.28 Fairnesss and Playa-bil-ity in On-line Mul-ti-player Games 
 
  []
@@ -511,53 +508,53 @@ Chapter 3.
 
 ]
 Chapter 4.
-[17] [18] <images/test_CLIENT_CPUusage.jpg, id=376, 481.8pt x 290.08376pt>
+[17] [18] <images/test_CLIENT_CPUusage.jpg, id=386, 481.8pt x 290.08376pt>
 File: images/test_CLIENT_CPUusage.jpg Graphic file (type jpg)
 
 <use images/test_CLIENT_CPUusage.jpg>
-Package pdftex.def Info: images/test_CLIENT_CPUusage.jpg used on input line 260
+Package pdftex.def Info: images/test_CLIENT_CPUusage.jpg used on input line 268
 .
 (pdftex.def)             Requested size: 361.3491pt x 217.56227pt.
 
-<images/test_CLIENT_CPUtime.jpg, id=377, 481.8pt x 290.08376pt>
+<images/test_CLIENT_CPUtime.jpg, id=387, 481.8pt x 290.08376pt>
 File: images/test_CLIENT_CPUtime.jpg Graphic file (type jpg)
 
 <use images/test_CLIENT_CPUtime.jpg>
-Package pdftex.def Info: images/test_CLIENT_CPUtime.jpg used on input line 270.
+Package pdftex.def Info: images/test_CLIENT_CPUtime.jpg used on input line 278.
 
 (pdftex.def)             Requested size: 361.3491pt x 217.56227pt.
 
-<images/test_CLIENT_RSS.jpg, id=378, 481.8pt x 290.08376pt>
+<images/test_CLIENT_RSS.jpg, id=388, 481.8pt x 290.08376pt>
 File: images/test_CLIENT_RSS.jpg Graphic file (type jpg)
 
 <use images/test_CLIENT_RSS.jpg>
-Package pdftex.def Info: images/test_CLIENT_RSS.jpg used on input line 278.
+Package pdftex.def Info: images/test_CLIENT_RSS.jpg used on input line 286.
 (pdftex.def)             Requested size: 361.3491pt x 217.56227pt.
 
-<images/test_SERVER_RTTmean.jpg, id=379, 1255.69125pt x 488.82625pt>
+<images/test_SERVER_RTTmean.jpg, id=389, 1255.69125pt x 488.82625pt>
 File: images/test_SERVER_RTTmean.jpg Graphic file (type jpg)
 
 <use images/test_SERVER_RTTmean.jpg>
-Package pdftex.def Info: images/test_SERVER_RTTmean.jpg used on input line 294.
+Package pdftex.def Info: images/test_SERVER_RTTmean.jpg used on input line 302.
 
 (pdftex.def)             Requested size: 401.8294pt x 156.42758pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/test_SERVER_RTTvariance.jpg, id=380, 1238.6275pt x 489.83pt>
+<images/test_SERVER_RTTvariance.jpg, id=390, 1238.6275pt x 489.83pt>
 File: images/test_SERVER_RTTvariance.jpg Graphic file (type jpg)
 
 <use images/test_SERVER_RTTvariance.jpg>
 Package pdftex.def Info: images/test_SERVER_RTTvariance.jpg used on input line 
-303.
+311.
 (pdftex.def)             Requested size: 396.3689pt x 156.7488pt.
 
-<images/test_SERVER_RTTstd.jpg, id=381, 1257.69875pt x 484.81125pt>
+<images/test_SERVER_RTTstd.jpg, id=391, 1257.69875pt x 484.81125pt>
 File: images/test_SERVER_RTTstd.jpg Graphic file (type jpg)
 
 <use images/test_SERVER_RTTstd.jpg>
-Package pdftex.def Info: images/test_SERVER_RTTstd.jpg used on input line 312.
+Package pdftex.def Info: images/test_SERVER_RTTstd.jpg used on input line 320.
 (pdftex.def)             Requested size: 402.47182pt x 155.14276pt.
 
 Underfull \vbox (badness 4713) has occurred while \output is active []
@@ -571,63 +568,74 @@ Chapter 5.
 ] [24
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 38--43
+Underfull \hbox (badness 10000) in paragraph at lines 4--10
+[]\T1/ptm/m/n/12 Vinny Ling-ham.  Top 20 rea-sons why web apps are su-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--10
+\T1/ptm/m/n/12 pe-rior to desk-top apps.  [][]$\T1/pcr/m/n/12 http : / / www . 
+vinnylingham . com /$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--10
+$\T1/pcr/m/n/12 top-[]20-[]reasons-[]why-[]web-[]apps-[]are-[]superior-[]to-[]d
+esktop-[]apps . html$[][]\T1/ptm/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--74
 []\T1/ptm/m/n/12 Alejandro Her-nan-dez.  Init.js: A guide to the why and how
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--43
+Underfull \hbox (badness 10000) in paragraph at lines 69--74
 \T1/ptm/m/n/12 of full-stack javascript.  [][]$\T1/pcr/m/n/12 http : / / www . 
 toptal . com / javascript /$
  []
 
-
-Underfull \hbox (badness 2126) in paragraph at lines 56--63
+[25]
+Underfull \hbox (badness 2126) in paragraph at lines 87--94
 []\T1/ptm/m/n/12 Mikito Takada.  Per-for-mance bench-mark-ing socket.io 0.8.7, 
 0.7.11 and
  []
 
 
-Underfull \hbox (badness 5519) in paragraph at lines 56--63
+Underfull \hbox (badness 5519) in paragraph at lines 87--94
 \T1/ptm/m/n/12 0.6.17 and node's na-tive tcp.  [][]$\T1/pcr/m/n/12 http : / / b
 log . mixu . net / 2011 / 11 / 22 /$
  []
 
 
-Overfull \hbox (114.40027pt too wide) in paragraph at lines 56--63
+Overfull \hbox (114.40027pt too wide) in paragraph at lines 87--94
 $\T1/pcr/m/n/12 performance-[]benchmarking-[]socket-[]io-[]0-[]8-[]7-[]0-[]7-[]
 11-[]and-[]0-[]6-[]17-[]and-[]nodes-[]native-[]tcp/$[][]\T1/ptm/m/n/12 ,
  []
 
-[25])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 406.
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 419.
  [26]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 406.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 419.
  (skeleton.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 406.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 406.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 419.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 419.
+Package rerunfilecheck Info: File `skeleton.out' has not changed.
+(rerunfilecheck)             Checksum: FD6E29E1E45A9E906537AADFB71AE31E;3363.
 
-
-Package rerunfilecheck Warning: File `skeleton.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `skeleton.out':
-(rerunfilecheck)             Before: 67FF761821B2101176031FB586D52FDC;3378
-(rerunfilecheck)             After:  49E7DDDF0C6FFAE3019AFBCFFC6D99A4;3378.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 406.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 419.
  ) 
 Here is how much of TeX's memory you used:
- 7972 strings out of 493634
- 119076 string characters out of 3141302
- 211619 words of memory out of 3000000
- 11121 multiletter control sequences out of 15000+200000
- 59736 words of font info for 70 fonts, out of 3000000 for 9000
+ 8012 strings out of 493634
+ 119692 string characters out of 3141302
+ 211818 words of memory out of 3000000
+ 11151 multiletter control sequences out of 15000+200000
+ 76535 words of font info for 96 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 43i,7n,67p,541b,421s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,8n,67p,634b,422s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x8
@@ -637,9 +645,9 @@ nts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
 e1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/time
 s/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.p
 fb>
-Output written on skeleton.pdf (26 pages, 819875 bytes).
+Output written on skeleton.pdf (26 pages, 827857 bytes).
 PDF statistics:
- 521 PDF objects out of 1000 (max. 8388607)
- 127 named destinations out of 1000 (max. 500000)
+ 540 PDF objects out of 1000 (max. 8388607)
+ 133 named destinations out of 1000 (max. 500000)
  428 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -56,7 +56,10 @@ Creating an extention for Gamemaker creations, to allow fast networking with max
 
 \section*{Acknowledgements}
 First of all, I would like to thank my supervisor Dr. Myungjin Lee for guiding me through the process of writing the report and critisizing my work.
-I am also sincerely grateful to those people across the globe who have assisted me with testing and collecting data for the evalutation experiments. My sincere gratitude to my family, friends, the Dutch Gamemaker community and the Yoyogames forums, for providing me with feedback and ideas without which this project would not have been the same.
+
+I am also grateful to those people across the globe who have assisted me with testing and collecting data for the evalutation experiments.
+
+My sincere gratitude to my family, friends, the Dutch Gamemaker community and the Yoyogames forums, for providing me with feedback and ideas without which this project would not have been the same.
 \tableofcontents
 
 %\pagenumbering{arabic}
@@ -69,27 +72,28 @@ I am also sincerely grateful to those people across the globe who have assisted 
 \section{Background}
 %intro and synopsis (topic description and setting context of published literature, main results summarized.. about 5 pages)
 %- summary of ALL contributions, code, research interpretations, tests, experiments (bulleted list)
+In the current day and age, we spend a large portion of our time using web applications. A vast amount of the internet consists of services supported by web applications, and browser games are as popular as ever.
+
+There exist many good reasons for this to be true. Browser applications and games do not require prior installation. They are therefore easy to start up, safe from viruses and don't require an admin-user account in order to be executed\cite{Web_Apps_Superior}. They are able to interact with other web applications. They are highly platform independent and potential users are generally easy to reach. Also their updates are seamless and can be implemented without requiring patch downloads to a harddrive.
 \subsection{Networks in Applications}
 %include minimal requirements
 %which criteria to consider when testing a network
-ref for fairness and playability \cite{Fairness_and_Playability}
-ref for multiplayer networking in modern game engines \cite{Multiplayer_Networking_modern_engine}
+Humans are naturally social beings, are found to be more drawn into games when this social aspect is being provided, and are therefore more likely to return in the future\cite{Browser_Games}. When allowed, we can share a sense of community, develop our own social identity within the application, and regularly seek social support from peer users, even about non-related and real-life topics\cite{Community_Social_Psychology}. Users of networked applications are much \textbf{more likely to advertise} the application in their social circles than they are for non-networked applications.
 
-%minimal requirements for a network for a proper user experience
-http://drewww.github.io/socket.io-benchmarking/
-\\http://blog.mixu.net/2011/11/22/performance-benchmarking-socket-io-0-8-7-0-7-11-and-0-6-17-and-nodes-native-tcp/
+\subsection{Network Fairness}
+Having that said, one must consider the technical aspect of the network: if the application is in the form of a game, \textbf{playability and fairness are crucial for an enjoyable gameplay}. This is especially true for games containing elements where speed or response time is important.
+
+In a typical networked game, game clients are described by a \textbf{limited set of parameters} received by a server. These parameters represent the "game state". \textbf{When due to delay between the clients and server the game state is desynchronised, fairness is reduced}\cite{Fairness_and_Playability}.
+
 \subsection{TCP and UDP}
-The project focus is on developing a networking extension, to allow the use of networking services to Gamemaker when using the HTML5 export option. One of the first thing one would consider is the selection of protocols that will be used in order to establish the connection between two (or more) nodes. As the project aims to allow users to optimise the extension's networking settings in favour of either speed or reliability, there will be further research done within each of the transport layer protocols: TCP and UDP.
-One of the most immediate problems that arise are that due to security constraints, UDP is not normally supported by web-browsers in order to communicate data to other hosts, and communication via TCP may be too slow in case a developer wishes to create an application that relies on a fast connection between hosts.
+Choosing the right protocol to handle the data transmissions is therefore crucial. Transmission protocols are one of the contributors that will heavily characterise the network.
+ 
+Generally speaking, TCP is a form of reliable data transmission but contains therefore extra overhead, making it therefore known to be slightly slower than UDP when the network has little packet loss.
 
-In order to evaluate the efficiency of the networking extension, use Dummynet to setup a controlled environment.
-
-\subsection{Inter-application Communication}
-%how do applications communicate
-%IMPORTANT: State why there is no need for testing fairness between different bandwidths for web applications. (ie. games and web-apps only really need to send small variables, no big data is transported)
+As aforementioned, Websocket is a protocol built on TCP in 2011. However, its sister WebRTC which is built on UDP, is still vaguely "under construction"\cite{Browser_Networking}. No proper standards are out yet, which combined with the fact that UDP requires manual rule control by the developer, makes UDP many times \textbf{more complicated} for developers to handle efficiently.
 
 \subsection{HTML5}
-\paragraph{}HTML5 is a raising web standard released in 2014 by the World Wide Web Consortium (W3C). It is designed to be cross-platform and runs on most modern web browsers such as Google Chrome, Mozilla Firefox, Apple Safari, and Opera. Also mobile web browsers that come preinstalled on iPhones, iPads and Android phones support HTML5.
+\paragraph{}HTML5 is a raising web standard released in 2014 by the World Wide Web Consortium (W3C). It is designed to be cross-platform and runs on most modern web browsers such as Google Chrome, Mozilla Firefox, Apple Safari, and Opera \footnote{HTML5 supported browsers are found at \url{https://html5test.com/results/desktop.html}}. Also mobile web browsers that come preinstalled on iPhones, iPads and Android phones support HTML5.
 
 It superseeds its predecessors HTML4 and XHTML 1.1 with the aim to reduce the dependence of functionality from third-party plugins such as Flash and Java applets, which are either deprecated or entirely unsupported by most devices \cite{Death_Flash_Java}.
 
@@ -114,6 +118,7 @@ In short, new client connections get allocated to a heap in the memory and clien
 \subsection{Socket.io}
 Socket.io is an event-driven JavaScript library that can be used both on the client's browser, and a server\cite{Socketio}. It is capable of sending and receiving data via WebSockets (handled through a TCP connection) without interruption of the code flow\cite{Socketio_Benchmark}\cite{Socketio_TCP_Benchmark}. For this reason, it is often used in combination with Node.js.
 
+%TODO continue here :)
 \subsection{GameMaker}
 %include its evolution and typical target audience
 %explain the types of target audience, who do the developers of an application using the extension intend to target. How does this affect the demands on the network
@@ -158,6 +163,7 @@ The implementation in this Honours project will allow developers to again add ne
 \section{Multiplayer Networking in Modern Game Engines}
 
 \section{Fairnesss and Playability in Online Multiplayer Games}
+% more detail on Network Fairness, causes and fixes to unfairness (see background section)
 
 \section{...}
 
@@ -176,6 +182,8 @@ The implementation in this Honours project will allow developers to again add ne
 %How to make it easy for other developers to create applications with the extension. eg. Creating templates
 %project layout (modularisation / separation of concerns). client, server, benchmark application, equality application, user experience
 \subsection{Server and Client}
+%how do applications communicate
+%IMPORTANT: State why there is no need for testing fairness between different bandwidths for web applications. (ie. games and web-apps only really need to send small variables, no big data is transported)
 \subsubsection{Good Coding Practices}
 \subsubsection{Interaction}
 %Mapping from GML to the extension
@@ -398,6 +406,11 @@ Average roundtrip times per test:
 \cite{Socketio_TCP_Benchmark}
 \cite{Socketio}
 \cite{Canvas_API}
+\cite{Web_Apps_Superior}
+\cite{Community_Social_Psychology}
+\cite{Why_MMOG}
+\cite{Browser_Games}
+\cite{Browser_Networking}
 % <<<< REMOVE THIS BLOCK
 
 \bibliographystyle{unsrt}

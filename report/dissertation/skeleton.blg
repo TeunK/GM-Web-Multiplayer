@@ -13,10 +13,32 @@ You're missing a field name---line 18 of file mybibfile.bib
 I'm skipping whatever remains of this entry
 You're missing a field name---line 53 of file mybibfile.bib
  :     
- :     %volume   = "",
+ :     %edition   = "",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 68 of file mybibfile.bib
+ :     
+ :     %note     = "",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 79 of file mybibfile.bib
+ :     
+ :     %month    = "",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 91 of file mybibfile.bib
+ :     
+ :     %month    = "",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 99 of file mybibfile.bib
+ :     
+ :     %volume   = "3",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--empty year in Fairness_and_Playability
+Warning--empty publisher in Browser_Networking
+Warning--empty year in Browser_Networking
 Warning--empty note in Multiplayer_Networking_modern_engine
-Warning--empty year in Mark_Overmars
-(There were 3 error messages)
+Warning--empty year in Why_MMOG
+(There were 7 error messages)

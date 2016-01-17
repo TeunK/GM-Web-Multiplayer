@@ -1,13 +1,35 @@
 \begin{thebibliography}{10}
 
+\bibitem{Web_Apps_Superior}
+Vinny Lingham.
+\newblock Top 20 reasons why web apps are superior to desktop apps.
+\newblock
+  \url{http://www.vinnylingham.com/top-20-reasons-why-web-apps-are-superior-to-desktop-apps.html},
+  2007.
+\newblock [Accessed: 2016-01-16].
+
+\bibitem{Browser_Games}
+Christoph Klimmt, Hannah Schmid, and Julia Orthmann.
+\newblock Exploring the enjoyment of playing browser games.
+\newblock {\em Cyberpsychology \& behavior : the impact of the Internet,
+  multimedia and virtual reality on behavior and society}, 12(2):231--234,
+  2009.
+
+\bibitem{Community_Social_Psychology}
+Erin~L. O'~Connor, Huon Longman, Katherine~M. White, and Patricia~L. Obst.
+\newblock Sense of community, social identity and social support among players
+  of massively multiplayer online games (mmogs): A qualitative analysis.
+\newblock {\em Journal of Community \& Applied Social Psychology},
+  25(6):459--473, 2015.
+
 \bibitem{Fairness_and_Playability}
 Jeremy Brun, Farzad Safaei, and Paul Boustead.
 \newblock {\em Fairness and playability in online multiplayer games}.
 \newblock PhD thesis, University of Wollongong.
 
-\bibitem{Multiplayer_Networking_modern_engine}
-Alan Edwardes.
-\newblock Multiplayer networking in a modern game engine.
+\bibitem{Browser_Networking}
+Ilya Grigorik.
+\newblock {\em High Performance Browser Networking}.
 
 \bibitem{Death_Flash_Java}
 Ian Elliot.
@@ -70,6 +92,10 @@ Mikito Takada.
   2011.
 \newblock [Accessed: 2016-01-16].
 
+\bibitem{Multiplayer_Networking_modern_engine}
+Alan Edwardes.
+\newblock Multiplayer networking in a modern game engine.
+
 \bibitem{Pro_HTML5_Programming}
 Peter Lubbers, Brian Albers, and Frank Salim.
 \newblock {\em Pro HTML5 Programming}.
@@ -79,12 +105,18 @@ Peter Lubbers, Brian Albers, and Frank Salim.
 \bibitem{Friendly_Programming}
 Nathaniel~S. Borenstein.
 \newblock {\em Programming as if People Mattered: Friendly Programs, Software
-  Engineering and Other Noble Delusions. 3rd ed.}
-\newblock Princeton University Press, Princeton, New Jersey, 1994.
+  Engineering and Other Noble Delusions}.
+\newblock Princeton University Press, Princeton, New Jersey, 3rd edition, 1994.
 
 \bibitem{Mark_Overmars}
 Mark Overmars.
 \newblock Teaching computer science through game design.
-\newblock {\em Entertainment Computing}.
+\newblock {\em Journal Computer}, 37(4):81--83, April 2004.
+
+\bibitem{Why_MMOG}
+L~Suarez, C~Thio, and S~Singh.
+\newblock Why people play massively multiplayer online games?
+\newblock {\em International Journal of e-Education, e-Business, e-Management
+  and e-Learning}.
 
 \end{thebibliography}
