@@ -1,65 +1,66 @@
-\contentsline {chapter}{\numberline {1}Background and Related Work}{9}{chapter.1}
-\contentsline {section}{\numberline {1.1}Background}{9}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Networks in Applications}{9}{subsection.1.1.1}
-\contentsline {subsection}{\numberline {1.1.2}Network Fairness}{9}{subsection.1.1.2}
-\contentsline {subsection}{\numberline {1.1.3}TCP versus UDP}{10}{subsection.1.1.3}
-\contentsline {subsubsection}{\numberline {1.1.3.1}Socket.io}{10}{subsubsection.1.1.3.1}
-\contentsline {subsubsection}{\numberline {1.1.3.2}WebRTC}{10}{subsubsection.1.1.3.2}
-\contentsline {subsection}{\numberline {1.1.4}HTML5}{10}{subsection.1.1.4}
-\contentsline {paragraph}{\numberline {1.1.4.0.1}}{10}{paragraph.1.1.4.0.1}
-\contentsline {subsection}{\numberline {1.1.5}Node.js}{11}{subsection.1.1.5}
-\contentsline {subsection}{\numberline {1.1.6}GameMaker}{11}{subsection.1.1.6}
-\contentsline {section}{\numberline {1.2}Related Work}{12}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}CoronaSDK}{13}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Gideros Studio}{13}{subsection.1.2.2}
-\contentsline {subsection}{\numberline {1.2.3}Maoi}{13}{subsection.1.2.3}
-\contentsline {subsection}{\numberline {1.2.4}JSiso}{13}{subsection.1.2.4}
-\contentsline {subsection}{\numberline {1.2.5}Unity}{13}{subsection.1.2.5}
-\contentsline {chapter}{\numberline {2}Literature Review}{15}{chapter.2}
-\contentsline {section}{\numberline {2.1}Getting Users to Advertise Your Application}{15}{section.2.1}
-\contentsline {section}{\numberline {2.2}Fairnesss and Playability in Online Multiplayer Games}{15}{section.2.2}
-\contentsline {section}{\numberline {2.3}Multiplayer Networking in Modern Game Engines}{15}{section.2.3}
-\contentsline {section}{\numberline {2.4}Details Why WebRTC is Complicated to Handle Efficiently}{15}{section.2.4}
-\contentsline {section}{\numberline {2.5}Drawing Graphics with the HTML5 Canvas API}{15}{section.2.5}
-\contentsline {section}{\numberline {2.6}Creating Extensions for GameMaker Studio}{16}{section.2.6}
-\contentsline {chapter}{\numberline {3}Development}{17}{chapter.3}
-\contentsline {section}{\numberline {3.1}Design}{17}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Prior Considerations}{17}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Server and Client}{17}{subsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.2.1}Good Coding Practices}{17}{subsubsection.3.1.2.1}
-\contentsline {subsubsection}{\numberline {3.1.2.2}Interaction}{17}{subsubsection.3.1.2.2}
-\contentsline {section}{\numberline {3.2}Implementation}{17}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Server}{17}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Client}{17}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}The Extension}{17}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Applications Developed with the Extension}{17}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Benchmark Application}{17}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Real Game Application}{17}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Developer Template}{17}{subsection.3.3.3}
-\contentsline {chapter}{\numberline {4}Network Extension Evaluation}{19}{chapter.4}
-\contentsline {section}{\numberline {4.1}Setup}{19}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Controlled Network Experiments}{19}{subsection.4.1.1}
-\contentsline {subsubsection}{\numberline {4.1.1.1}Concurrent Connections Specifics}{19}{subsubsection.4.1.1.1}
-\contentsline {paragraph}{\numberline {4.1.1.1.1}Environment}{19}{paragraph.4.1.1.1.1}
-\contentsline {paragraph}{\numberline {4.1.1.1.2}Dependent variables}{19}{paragraph.4.1.1.1.2}
-\contentsline {subsubsection}{\numberline {4.1.1.2}Message Broadcasting Specifics}{19}{subsubsection.4.1.1.2}
-\contentsline {paragraph}{\numberline {4.1.1.2.1}Environment}{19}{paragraph.4.1.1.2.1}
-\contentsline {paragraph}{\numberline {4.1.1.2.2}Dependent variables}{20}{paragraph.4.1.1.2.2}
-\contentsline {subsubsection}{\numberline {4.1.1.3}Server hardware and network specification}{20}{subsubsection.4.1.1.3}
-\contentsline {paragraph}{\numberline {4.1.1.3.1}}{20}{paragraph.4.1.1.3.1}
-\contentsline {subsection}{\numberline {4.1.2}Real Network Experiments}{20}{subsection.4.1.2}
-\contentsline {paragraph}{\numberline {4.1.2.0.1}}{20}{paragraph.4.1.2.0.1}
-\contentsline {section}{\numberline {4.2}Results}{21}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Controlled Network Results}{21}{subsection.4.2.1}
-\contentsline {subsubsection}{\numberline {4.2.1.1}Concurrent Connections}{21}{subsubsection.4.2.1.1}
-\contentsline {subsubsection}{\numberline {4.2.1.2}Message Broadcasting Performance}{21}{subsubsection.4.2.1.2}
-\contentsline {subsection}{\numberline {4.2.2}Real Network Results}{23}{subsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.2.1}Location-wise Delay Fairness}{23}{subsubsection.4.2.2.1}
-\contentsline {paragraph}{\numberline {4.2.2.1.1}Test cases:}{23}{paragraph.4.2.2.1.1}
-\contentsline {paragraph}{\numberline {4.2.2.1.2}Results:}{24}{paragraph.4.2.2.1.2}
-\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{25}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conclusion}{25}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Comparison of the Extended GameMaker Functionality with Related Work}{25}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Criticism on the Implementation and Design Decisions}{25}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}Future Improvements}{25}{section.5.2}
-\contentsline {chapter}{Bibliography}{27}{chapter*.12}
+\contentsline {chapter}{\numberline {1}Introduction}{9}{chapter.1}
+\contentsline {chapter}{\numberline {2}Background and Related Work}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}Background}{11}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Networks in Applications}{11}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Network Fairness}{11}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}TCP versus UDP}{11}{subsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.3.1}Socket.io}{12}{subsubsection.2.1.3.1}
+\contentsline {subsubsection}{\numberline {2.1.3.2}WebRTC}{12}{subsubsection.2.1.3.2}
+\contentsline {subsection}{\numberline {2.1.4}HTML5}{12}{subsection.2.1.4}
+\contentsline {paragraph}{\numberline {2.1.4.0.1}}{12}{paragraph.2.1.4.0.1}
+\contentsline {subsection}{\numberline {2.1.5}Node.js}{13}{subsection.2.1.5}
+\contentsline {subsection}{\numberline {2.1.6}GameMaker}{13}{subsection.2.1.6}
+\contentsline {section}{\numberline {2.2}Related Work}{14}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}CoronaSDK}{14}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Gideros Studio}{14}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Maoi}{14}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}JSiso}{14}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Unity}{15}{subsection.2.2.5}
+\contentsline {chapter}{\numberline {3}Literature Review}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}Getting Users to Advertise Your Application}{17}{section.3.1}
+\contentsline {section}{\numberline {3.2}Fairnesss and Playability in Online Multiplayer Games}{17}{section.3.2}
+\contentsline {section}{\numberline {3.3}Multiplayer Networking in Modern Game Engines}{17}{section.3.3}
+\contentsline {section}{\numberline {3.4}Details Why WebRTC is Complicated to Handle Efficiently}{17}{section.3.4}
+\contentsline {section}{\numberline {3.5}Drawing Graphics with the HTML5 Canvas API}{17}{section.3.5}
+\contentsline {section}{\numberline {3.6}Creating Extensions for GameMaker Studio}{18}{section.3.6}
+\contentsline {chapter}{\numberline {4}Development}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}Design}{19}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Prior Considerations}{19}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Server and Client}{19}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2.1}Good Coding Practices}{19}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\numberline {4.1.2.2}Interaction}{19}{subsubsection.4.1.2.2}
+\contentsline {section}{\numberline {4.2}Implementation}{19}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Server}{19}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Client}{19}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}The Extension}{19}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}Applications Developed with the Extension}{19}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Benchmark Application}{19}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Real Game Application}{19}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Developer Template}{19}{subsection.4.3.3}
+\contentsline {chapter}{\numberline {5}Network Extension Evaluation}{21}{chapter.5}
+\contentsline {section}{\numberline {5.1}Setup}{21}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Controlled Network Experiments}{21}{subsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1.1}Concurrent Connections Specifics}{21}{subsubsection.5.1.1.1}
+\contentsline {paragraph}{\numberline {5.1.1.1.1}Environment}{21}{paragraph.5.1.1.1.1}
+\contentsline {paragraph}{\numberline {5.1.1.1.2}Dependent variables}{21}{paragraph.5.1.1.1.2}
+\contentsline {subsubsection}{\numberline {5.1.1.2}Message Broadcasting Specifics}{21}{subsubsection.5.1.1.2}
+\contentsline {paragraph}{\numberline {5.1.1.2.1}Environment}{21}{paragraph.5.1.1.2.1}
+\contentsline {paragraph}{\numberline {5.1.1.2.2}Dependent variables}{22}{paragraph.5.1.1.2.2}
+\contentsline {subsubsection}{\numberline {5.1.1.3}Server hardware and network specification}{22}{subsubsection.5.1.1.3}
+\contentsline {paragraph}{\numberline {5.1.1.3.1}}{22}{paragraph.5.1.1.3.1}
+\contentsline {subsection}{\numberline {5.1.2}Real Network Experiments}{22}{subsection.5.1.2}
+\contentsline {paragraph}{\numberline {5.1.2.0.1}}{22}{paragraph.5.1.2.0.1}
+\contentsline {section}{\numberline {5.2}Results}{23}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Controlled Network Results}{23}{subsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.1.1}Concurrent Connections}{23}{subsubsection.5.2.1.1}
+\contentsline {subsubsection}{\numberline {5.2.1.2}Message Broadcasting Performance}{23}{subsubsection.5.2.1.2}
+\contentsline {subsection}{\numberline {5.2.2}Real Network Results}{25}{subsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.2.1}Location-wise Delay Fairness}{25}{subsubsection.5.2.2.1}
+\contentsline {paragraph}{\numberline {5.2.2.1.1}Test cases:}{25}{paragraph.5.2.2.1.1}
+\contentsline {paragraph}{\numberline {5.2.2.1.2}Results:}{26}{paragraph.5.2.2.1.2}
+\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{27}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclusion}{27}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Comparison of the Extended GameMaker Functionality with Related Work}{27}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Criticism on the Implementation and Design Decisions}{27}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Future Improvements}{27}{section.6.2}
+\contentsline {chapter}{Bibliography}{29}{chapter*.12}
