@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  18 JAN 2016 02:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  18 JAN 2016 02:31
 entering extended mode
 **./skeleton.tex
 (skeleton.tex
@@ -640,7 +640,7 @@ nts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
 e1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/time
 s/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.p
 fb>
-Output written on skeleton.pdf (30 pages, 810064 bytes).
+Output written on skeleton.pdf (30 pages, 810045 bytes).
 PDF statistics:
  581 PDF objects out of 1000 (max. 8388607)
  146 named destinations out of 1000 (max. 500000)
