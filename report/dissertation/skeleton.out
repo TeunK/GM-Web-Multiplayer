@@ -2,48 +2,45 @@
 \BOOKMARK [1][-]{section.1.1}{Background}{chapter.1}% 2
 \BOOKMARK [2][-]{subsection.1.1.1}{Networks in Applications}{section.1.1}% 3
 \BOOKMARK [2][-]{subsection.1.1.2}{Network Fairness}{section.1.1}% 4
-\BOOKMARK [2][-]{subsection.1.1.3}{TCP and UDP}{section.1.1}% 5
+\BOOKMARK [2][-]{subsection.1.1.3}{TCP versus UDP}{section.1.1}% 5
 \BOOKMARK [2][-]{subsection.1.1.4}{HTML5}{section.1.1}% 6
 \BOOKMARK [2][-]{subsection.1.1.5}{Node.js}{section.1.1}% 7
-\BOOKMARK [2][-]{subsection.1.1.6}{Socket.io}{section.1.1}% 8
-\BOOKMARK [2][-]{subsection.1.1.7}{GameMaker}{section.1.1}% 9
-\BOOKMARK [1][-]{section.1.2}{Related Work}{chapter.1}% 10
-\BOOKMARK [2][-]{subsection.1.2.1}{JSiso}{section.1.2}% 11
-\BOOKMARK [2][-]{subsection.1.2.2}{Unity}{section.1.2}% 12
-\BOOKMARK [2][-]{subsection.1.2.3}{Unreal Engine 4}{section.1.2}% 13
-\BOOKMARK [2][-]{subsection.1.2.4}{CryEngine}{section.1.2}% 14
-\BOOKMARK [2][-]{subsection.1.2.5}{Havok Vision Engine}{section.1.2}% 15
-\BOOKMARK [2][-]{subsection.1.2.6}{Project Anarchy}{section.1.2}% 16
-\BOOKMARK [2][-]{subsection.1.2.7}{ShiVa}{section.1.2}% 17
-\BOOKMARK [2][-]{subsection.1.2.8}{App Game Kit}{section.1.2}% 18
-\BOOKMARK [2][-]{subsection.1.2.9}{GameSalad}{section.1.2}% 19
-\BOOKMARK [2][-]{subsection.1.2.10}{...}{section.1.2}% 20
-\BOOKMARK [0][-]{chapter.2}{Literature Review}{}% 21
-\BOOKMARK [1][-]{section.2.1}{Multiplayer Networking in Modern Game Engines}{chapter.2}% 22
-\BOOKMARK [1][-]{section.2.2}{Fairnesss and Playability in Online Multiplayer Games}{chapter.2}% 23
-\BOOKMARK [1][-]{section.2.3}{...}{chapter.2}% 24
-\BOOKMARK [0][-]{chapter.3}{Development}{}% 25
-\BOOKMARK [1][-]{section.3.1}{Design}{chapter.3}% 26
-\BOOKMARK [2][-]{subsection.3.1.1}{Prior Considerations}{section.3.1}% 27
-\BOOKMARK [2][-]{subsection.3.1.2}{Server and Client}{section.3.1}% 28
-\BOOKMARK [1][-]{section.3.2}{Implementation}{chapter.3}% 29
-\BOOKMARK [2][-]{subsection.3.2.1}{Server}{section.3.2}% 30
-\BOOKMARK [2][-]{subsection.3.2.2}{Client}{section.3.2}% 31
-\BOOKMARK [2][-]{subsection.3.2.3}{The Extension}{section.3.2}% 32
-\BOOKMARK [1][-]{section.3.3}{Applications Developed with the Extension}{chapter.3}% 33
-\BOOKMARK [2][-]{subsection.3.3.1}{Benchmark Application}{section.3.3}% 34
-\BOOKMARK [2][-]{subsection.3.3.2}{Real Game Application}{section.3.3}% 35
-\BOOKMARK [2][-]{subsection.3.3.3}{Developer Template}{section.3.3}% 36
-\BOOKMARK [0][-]{chapter.4}{Network Extension Evaluation}{}% 37
-\BOOKMARK [1][-]{section.4.1}{Setup}{chapter.4}% 38
-\BOOKMARK [2][-]{subsection.4.1.1}{Controlled Network Experiments}{section.4.1}% 39
-\BOOKMARK [2][-]{subsection.4.1.2}{Real Network Experiments}{section.4.1}% 40
-\BOOKMARK [1][-]{section.4.2}{Results}{chapter.4}% 41
-\BOOKMARK [2][-]{subsection.4.2.1}{Controlled Network Results}{section.4.2}% 42
-\BOOKMARK [2][-]{subsection.4.2.2}{Real Network Results}{section.4.2}% 43
-\BOOKMARK [0][-]{chapter.5}{Conclusion and Future Work}{}% 44
-\BOOKMARK [1][-]{section.5.1}{Conclusion}{chapter.5}% 45
-\BOOKMARK [2][-]{subsection.5.1.1}{Comparison of the Extended GameMaker Functionality with Related Work}{section.5.1}% 46
-\BOOKMARK [2][-]{subsection.5.1.2}{Criticism on the Implementation and Design Decisions}{section.5.1}% 47
-\BOOKMARK [1][-]{section.5.2}{Future Improvements}{chapter.5}% 48
-\BOOKMARK [0][-]{chapter*.12}{Bibliography}{}% 49
+\BOOKMARK [2][-]{subsection.1.1.6}{GameMaker}{section.1.1}% 8
+\BOOKMARK [1][-]{section.1.2}{Related Work}{chapter.1}% 9
+\BOOKMARK [2][-]{subsection.1.2.1}{CoronaSDK}{section.1.2}% 10
+\BOOKMARK [2][-]{subsection.1.2.2}{Gideros Studio}{section.1.2}% 11
+\BOOKMARK [2][-]{subsection.1.2.3}{Maoi}{section.1.2}% 12
+\BOOKMARK [2][-]{subsection.1.2.4}{JSiso}{section.1.2}% 13
+\BOOKMARK [2][-]{subsection.1.2.5}{Unity}{section.1.2}% 14
+\BOOKMARK [0][-]{chapter.2}{Literature Review}{}% 15
+\BOOKMARK [1][-]{section.2.1}{Getting Users to Advertise Your Application}{chapter.2}% 16
+\BOOKMARK [1][-]{section.2.2}{Fairnesss and Playability in Online Multiplayer Games}{chapter.2}% 17
+\BOOKMARK [1][-]{section.2.3}{Multiplayer Networking in Modern Game Engines}{chapter.2}% 18
+\BOOKMARK [1][-]{section.2.4}{Details Why WebRTC is Complicated to Handle Efficiently}{chapter.2}% 19
+\BOOKMARK [1][-]{section.2.5}{Drawing Graphics with the HTML5 Canvas API}{chapter.2}% 20
+\BOOKMARK [1][-]{section.2.6}{Creating Extensions for GameMaker Studio}{chapter.2}% 21
+\BOOKMARK [0][-]{chapter.3}{Development}{}% 22
+\BOOKMARK [1][-]{section.3.1}{Design}{chapter.3}% 23
+\BOOKMARK [2][-]{subsection.3.1.1}{Prior Considerations}{section.3.1}% 24
+\BOOKMARK [2][-]{subsection.3.1.2}{Server and Client}{section.3.1}% 25
+\BOOKMARK [1][-]{section.3.2}{Implementation}{chapter.3}% 26
+\BOOKMARK [2][-]{subsection.3.2.1}{Server}{section.3.2}% 27
+\BOOKMARK [2][-]{subsection.3.2.2}{Client}{section.3.2}% 28
+\BOOKMARK [2][-]{subsection.3.2.3}{The Extension}{section.3.2}% 29
+\BOOKMARK [1][-]{section.3.3}{Applications Developed with the Extension}{chapter.3}% 30
+\BOOKMARK [2][-]{subsection.3.3.1}{Benchmark Application}{section.3.3}% 31
+\BOOKMARK [2][-]{subsection.3.3.2}{Real Game Application}{section.3.3}% 32
+\BOOKMARK [2][-]{subsection.3.3.3}{Developer Template}{section.3.3}% 33
+\BOOKMARK [0][-]{chapter.4}{Network Extension Evaluation}{}% 34
+\BOOKMARK [1][-]{section.4.1}{Setup}{chapter.4}% 35
+\BOOKMARK [2][-]{subsection.4.1.1}{Controlled Network Experiments}{section.4.1}% 36
+\BOOKMARK [2][-]{subsection.4.1.2}{Real Network Experiments}{section.4.1}% 37
+\BOOKMARK [1][-]{section.4.2}{Results}{chapter.4}% 38
+\BOOKMARK [2][-]{subsection.4.2.1}{Controlled Network Results}{section.4.2}% 39
+\BOOKMARK [2][-]{subsection.4.2.2}{Real Network Results}{section.4.2}% 40
+\BOOKMARK [0][-]{chapter.5}{Conclusion and Future Work}{}% 41
+\BOOKMARK [1][-]{section.5.1}{Conclusion}{chapter.5}% 42
+\BOOKMARK [2][-]{subsection.5.1.1}{Comparison of the Extended GameMaker Functionality with Related Work}{section.5.1}% 43
+\BOOKMARK [2][-]{subsection.5.1.2}{Criticism on the Implementation and Design Decisions}{section.5.1}% 44
+\BOOKMARK [1][-]{section.5.2}{Future Improvements}{chapter.5}% 45
+\BOOKMARK [0][-]{chapter*.12}{Bibliography}{}% 46

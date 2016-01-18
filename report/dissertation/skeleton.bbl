@@ -27,9 +27,35 @@ Jeremy Brun, Farzad Safaei, and Paul Boustead.
 \newblock {\em Fairness and playability in online multiplayer games}.
 \newblock PhD thesis, University of Wollongong.
 
+\bibitem{Socketio}
+socket.io.
+\newblock \url{http://socket.io/}.
+\newblock Homepage, [Accessed: 2016-01-16].
+
+\bibitem{Socketio_Benchmark}
+Drew Harry.
+\newblock Practical socket.io benchmarking.
+\newblock \url{http://drewww.github.io/socket.io-benchmarking/}, 2012.
+\newblock [Accessed: 2016-01-16].
+
+\bibitem{Socketio_TCP_Benchmark}
+Mikito Takada.
+\newblock Performance benchmarking socket.io 0.8.7, 0.7.11 and 0.6.17 and
+  node's native tcp.
+\newblock
+  \url{http://blog.mixu.net/2011/11/22/performance-benchmarking-socket-io-0-8-7-0-7-11-and-0-6-17-and-nodes-native-tcp/},
+  2011.
+\newblock [Accessed: 2016-01-16].
+
 \bibitem{Browser_Networking}
 Ilya Grigorik.
 \newblock {\em High Performance Browser Networking}.
+
+\bibitem{P2P_Video_Streaming_HTML5_WebRTC}
+Martin~Kirkholt Melhus.
+\newblock {\em P2P Video Streaming with HTML5 and WebRTC}.
+\newblock PhD thesis, Norwegian University of Science and Technology,
+  Trondheim, June 2015.
 
 \bibitem{Death_Flash_Java}
 Ian Elliot.
@@ -72,29 +98,25 @@ Alejandro Hernandez.
   \url{http://www.toptal.com/javascript/guide-to-full-stack-javascript-initjs}.
 \newblock [Accessed: 2016-01-16].
 
-\bibitem{Socketio}
-socket.io.
-\newblock \url{http://socket.io/}.
-\newblock Homepage, [Accessed: 2016-01-16].
+\bibitem{Gamemaker_DnD}
+Thomas Claburn.
+\newblock Gamemaker promises drag-n-drop game creation.
+\newblock {\em Informationweek}.
 
-\bibitem{Socketio_Benchmark}
-Drew Harry.
-\newblock Practical socket.io benchmarking.
-\newblock \url{http://drewww.github.io/socket.io-benchmarking/}, 2012.
-\newblock [Accessed: 2016-01-16].
+\bibitem{Mark_Overmars}
+Mark Overmars.
+\newblock Teaching computer science through game design.
+\newblock {\em Journal Computer}, 37(4):81--83, April 2004.
 
-\bibitem{Socketio_TCP_Benchmark}
-Mikito Takada.
-\newblock Performance benchmarking socket.io 0.8.7, 0.7.11 and 0.6.17 and
-  node's native tcp.
-\newblock
-  \url{http://blog.mixu.net/2011/11/22/performance-benchmarking-socket-io-0-8-7-0-7-11-and-0-6-17-and-nodes-native-tcp/},
-  2011.
-\newblock [Accessed: 2016-01-16].
+\bibitem{GameMaker_Studio}
+Llopis Noel.
+\newblock Gamemaker studio v1.1.7.
+\newblock {\em Game Developer}, 20(1):40, January 2013.
 
 \bibitem{Multiplayer_Networking_modern_engine}
 Alan Edwardes.
 \newblock Multiplayer networking in a modern game engine.
+\newblock 2014.
 
 \bibitem{Pro_HTML5_Programming}
 Peter Lubbers, Brian Albers, and Frank Salim.
@@ -108,15 +130,20 @@ Nathaniel~S. Borenstein.
   Engineering and Other Noble Delusions}.
 \newblock Princeton University Press, Princeton, New Jersey, 3rd edition, 1994.
 
-\bibitem{Mark_Overmars}
-Mark Overmars.
-\newblock Teaching computer science through game design.
-\newblock {\em Journal Computer}, 37(4):81--83, April 2004.
-
 \bibitem{Why_MMOG}
 L~Suarez, C~Thio, and S~Singh.
 \newblock Why people play massively multiplayer online games?
 \newblock {\em International Journal of e-Education, e-Business, e-Management
-  and e-Learning}.
+  and e-Learning}, 3(1).
+
+\bibitem{Optimizing_Multiplayer_3D_Game_Synch}
+Alessandro Alinone.
+\newblock Optimizing multiplayer 3d game synchronization over the web.
+\newblock {\em Lightstreamer}.
+
+\bibitem{Optimizing_WebSockets_Bandwidth}
+Eric Li.
+\newblock Optimizing websockets bandwidth.
+\newblock {\em Multiplayer}.
 
 \end{thebibliography}
