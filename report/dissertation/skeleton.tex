@@ -50,6 +50,7 @@ Creating an extention for GameMaker creations, to allow fast networking with max
 \item fill in further details on experiment setup (text format)
 \item Write down details about implementation
 \item Possibly add new implementation features / clean up existing implementations.
+\item Find out: how large is the gamepix community / how many users did they get feedback from in order to create the list?
 \end{itemize}
 % <<<< REMOVE THESE
 
@@ -155,29 +156,34 @@ Some of the features are normally supported by GameMaker are however lost during
 The implementation in this Honours project will allow developers to again add networking features to their web-browser applications.
 
 \section{Related Work}
-Being primarily a 2D graphically oriented game development tool for almost any imaginable platform, it has many competitors. Therefore we must remind ourselves of the main focus of this project: improving the HTML5-export feature. 
+Being a cross-platform game development tool primarily for 2D graphically oriented games, GameMaker has many competitors. It is therefore reasonable for developers to first consider using game developing tools that support networking features natively. But before being able to investigate pros and cons between gamemaker and related game development tools, appropriate competitors must first be identified.
 
-For this reason, I shall from this point consider GameMaker to be a purely browser-oriented application / game development tool and will therefore also treat it as such.
+Note that GameMaker does natively support networking functionality for non-browser games. However we must remind ourselves of the aim of this project: creating a networking extension to improve GameMaker's functionality \textbf{for developing browser games}. For this reason, this paper will consider GameMaker to be a development tool for browser games.
 
-In order to further reduce the variety of software that can be used for creating browser games, I found help online from instances hosting tables with the "best-rated browser game development tools" on the market. These ratings were established by providing feedback based on users personal experience.
+In order to find the most related software for these purposes, assistance was found from multiple online third-party instances. These instances collect user feedback for the browser-game development tools. Their ratings were established by allowing users to criticise tools based their personal experience, and apply a score. The review system is similar to that of the Google Play Store\cite{Google_Play_Store} and the Apple App Store\cite{Apple_App_Store}, and may therefore be a reasonable method for finding the more commonly used tools.
 
-The tables were hosted at the following domains:
-html5gameengine.com\footnote{https://html5gameengine.com/}, 
-developer.mozilla.org\footnote{https://developer.mozilla.org/en-US/docs/Games/Tools/Engines\_and\_tools}, 
-gamepix.com\footnote{http://www.gamepix.com/blog/the-big-list-of-html5-3d-games-engines/}, 
-noeticforce.com\footnote{http://noeticforce.com/best-3d-javascript-game-engines-frameworks-webgl-html5} and 
-develop-online.net\footnote{http://www.develop-online.net/news/the-top-14-game-engines-the-list-in-full/0114330}.
-
-Any non-2D engines, not-browser-supported engines, as well as engines without a clear graphical interface were removed. After this process, the following list remains:
+The considered instances are:
 \begin{itemize}
-\item Construct 2 (also mentioned by Duncan during a phone interview\cite{Gamemaker_DnD})
-\item ImpactJS
-\item EaseIJS
-\item Phaser
-\item pixi.js
-\item Canvace
-\item Crafty
+\item html5gameengine.com\footnote{https://html5gameengine.com/}, responsible for recording score and user votes
+\item developer.mozilla.org\footnote{https://developer.mozilla.org/en-US/docs/Games/Tools/Engines\_and\_tools}, displaying a general list of game engines implemented with HTML5 and JavaScript.
+\item gamepix.com\footnote{http://www.gamepix.com/blog/the-big-list-of-2d-html5-games-engines/}, generated a list based on suggestions received by the gamepix.com community.
 \end{itemize}
+
+The following table is carefully constructed by combining the best rated 2D browser-supported game developing tools as advertised by the instances mentioned above.
+\begin{center}
+  \begin{tabular}{ | r || c | c | c | c | c | c | }
+  	\hline
+  	Engine			& Score		& Voters& Adv. by developer.mozilla.org & Adv. by gamepix.com\\ \hline\hline
+    Pixi.js			& 5.0 / 5	& 50	& yes & yes\\ \hline
+    Phaser			& 4.5 / 5	& 129	& yes & yes\\ \hline
+    EaseIJS			& 4.5 / 5	& 63	& no  & yes\\ \hline
+    Three.js		& 4.5 / 5	& 32	& no  & no \\ \hline
+    Crafty.js		& 4.5 / 5	& 18	& yes & yes\\ \hline
+    Construct 2		& 4.0 / 5	& 136	& yes & yes\\ \hline
+   	Quintus			& 4.5 / 5	& 29	& no  & yes\\ \hline
+    Canvace			& n/a		& 0		& yes & yes\\ \hline
+  \end{tabular}
+\end{center}
 
 \subsection{CoronaSDK}
 \subsection{Gideros Studio}
@@ -460,6 +466,8 @@ Average roundtrip times per test:
 \cite{GameMaker_Studio}
 \cite{Optimizing_Multiplayer_3D_Game_Synch}
 \cite{Optimizing_WebSockets_Bandwidth}
+\cite{Google_Play_Store}
+\cite{Apple_App_Store}
 % <<<< REMOVE THIS BLOCK
 
 \bibliographystyle{unsrt}

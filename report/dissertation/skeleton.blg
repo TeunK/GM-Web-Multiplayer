@@ -26,42 +26,52 @@ You're missing a field name---line 79 of file mybibfile.bib
  :     %note     = "",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 90 of file mybibfile.bib
+You're missing a field name---line 87 of file mybibfile.bib
  :     
- :     %month    = "",
+ :     %number    = "",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 You're missing a field name---line 98 of file mybibfile.bib
  :     
- :     %volume   = "",
+ :     %volume    = "",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 115 of file mybibfile.bib
- :     
- :     %note     = "",
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 126 of file mybibfile.bib
+You're missing a field name---line 114 of file mybibfile.bib
  :     
  :     %month    = "",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 136 of file mybibfile.bib
+You're missing a field name---line 122 of file mybibfile.bib
+ :     
+ :     %volume   = "",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 139 of file mybibfile.bib
+ :     
+ :     %note     = "",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 150 of file mybibfile.bib
+ :     
+ :     %month    = "",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 160 of file mybibfile.bib
  :     
  :     %pages    = "",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 146 of file mybibfile.bib
+You're missing a field name---line 170 of file mybibfile.bib
  :     
  :     %volume   = "",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 158 of file mybibfile.bib
+You're missing a field name---line 182 of file mybibfile.bib
  :     
  :     %volume   = "",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 238 of file mybibfile.bib
+Repeated entry---line 262 of file mybibfile.bib
  : @misc{Web_Apps_Superior
  :                        ,
 I'm skipping whatever remains of this entry
@@ -69,8 +79,10 @@ Warning--empty year in Fairness_and_Playability
 Warning--empty publisher in Browser_Networking
 Warning--empty year in Browser_Networking
 Warning--empty year in Gamemaker_DnD
+Warning--empty year in Google_Play_Store
+Warning--empty year in Apple_App_Store
 Warning--empty note in Multiplayer_Networking_modern_engine
 Warning--empty year in Why_MMOG
 Warning--empty year in Optimizing_Multiplayer_3D_Game_Synch
 Warning--empty year in Optimizing_WebSockets_Bandwidth
-(There were 13 error messages)
+(There were 15 error messages)

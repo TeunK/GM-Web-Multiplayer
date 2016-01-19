@@ -43,7 +43,7 @@ Mikito Takada.
 \newblock Performance benchmarking socket.io 0.8.7, 0.7.11 and 0.6.17 and
   node's native tcp.
 \newblock
-  \url{http://blog.mixu.net/2011/11/22/performance-benchmarking-socket-io-0-8-7-0-7-11-and-0-6-17-and-nodes-native-tcp/},
+  http://blog.mixu.net/2011/11/22/performance-benchmarking-socket-io-0-8-7-0-7-11-and-0-6-17-and-nodes-native-tcp/,
   2011.
 \newblock [Accessed: 2016-01-16].
 
@@ -112,6 +112,20 @@ Mark Overmars.
 Llopis Noel.
 \newblock Gamemaker studio v1.1.7.
 \newblock {\em Game Developer}, 20(1):40, January 2013.
+
+\bibitem{Google_Play_Store}
+Bin Fu, Jialiu Lin, Lei Li, Christos Faloutsos, Jason Hong, and Norman Sadeh.
+\newblock Why people hate your app: making sense of user feedback in a mobile
+  app store.
+\newblock {\em KDD '13: Proceedings of the 19th ACM SIGKDD international
+  conference on Knowledge discovery and data mining}, 13.
+
+\bibitem{Apple_App_Store}
+Jin~Hyung Kim, Inchan Kim, and Ho~Geun Lee.
+\newblock The success factors for app store-like platform businesses from the
+  perspective of third-party developers: An empirical study based on a dual
+  model framework.
+\newblock {\em PACIS Conference Proceedings}.
 
 \bibitem{Multiplayer_Networking_modern_engine}
 Alan Edwardes.
