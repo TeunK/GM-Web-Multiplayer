@@ -25,7 +25,7 @@ Erin~L. O'~Connor, Huon Longman, Katherine~M. White, and Patricia~L. Obst.
 \bibitem{Fairness_and_Playability}
 Jeremy Brun, Farzad Safaei, and Paul Boustead.
 \newblock {\em Fairness and playability in online multiplayer games}.
-\newblock PhD thesis, University of Wollongong.
+\newblock PhD thesis, University of Wollongong, 2006.
 
 \bibitem{Socketio}
 socket.io.
@@ -50,6 +50,8 @@ Mikito Takada.
 \bibitem{Browser_Networking}
 Ilya Grigorik.
 \newblock {\em High Performance Browser Networking}.
+\newblock O’Reilly Media, Inc., 1005 Gravenstein Highway North, Sebastopol,
+  CA 95472., 2013.
 
 \bibitem{P2P_Video_Streaming_HTML5_WebRTC}
 Martin~Kirkholt Melhus.
@@ -101,7 +103,7 @@ Alejandro Hernandez.
 \bibitem{Gamemaker_DnD}
 Thomas Claburn.
 \newblock Gamemaker promises drag-n-drop game creation.
-\newblock {\em Informationweek}.
+\newblock {\em Informationweek}, May 2012.
 
 \bibitem{Mark_Overmars}
 Mark Overmars.
@@ -118,19 +120,19 @@ Bin Fu, Jialiu Lin, Lei Li, Christos Faloutsos, Jason Hong, and Norman Sadeh.
 \newblock Why people hate your app: making sense of user feedback in a mobile
   app store.
 \newblock {\em KDD '13: Proceedings of the 19th ACM SIGKDD international
-  conference on Knowledge discovery and data mining}, 13.
+  conference on Knowledge discovery and data mining}, 13:1276--1284, 2013.
 
 \bibitem{Apple_App_Store}
 Jin~Hyung Kim, Inchan Kim, and Ho~Geun Lee.
 \newblock The success factors for app store-like platform businesses from the
   perspective of third-party developers: An empirical study based on a dual
   model framework.
-\newblock {\em PACIS Conference Proceedings}.
+\newblock {\em PACIS Conference Proceedings}, 2010.
 
 \bibitem{Multiplayer_Networking_modern_engine}
 Alan Edwardes.
 \newblock Multiplayer networking in a modern game engine.
-\newblock 2014.
+\newblock Project Writeup, 2014.
 
 \bibitem{Pro_HTML5_Programming}
 Peter Lubbers, Brian Albers, and Frank Salim.
@@ -148,16 +150,21 @@ Nathaniel~S. Borenstein.
 L~Suarez, C~Thio, and S~Singh.
 \newblock Why people play massively multiplayer online games?
 \newblock {\em International Journal of e-Education, e-Business, e-Management
-  and e-Learning}, 3(1).
+  and e-Learning}, 3(1), 2013.
 
 \bibitem{Optimizing_Multiplayer_3D_Game_Synch}
 Alessandro Alinone.
 \newblock Optimizing multiplayer 3d game synchronization over the web.
-\newblock {\em Lightstreamer}.
+\newblock {\em Lightstreamer}, October 2013.
 
 \bibitem{Optimizing_WebSockets_Bandwidth}
 Eric Li.
 \newblock Optimizing websockets bandwidth.
-\newblock {\em Multiplayer}.
+\newblock {\em Multiplayer}, September 2012.
+
+\bibitem{HTML5_Game_Dev_Gamemaker}
+Jason~Lee Elliott.
+\newblock {\em HTML5 Game Development with GameMaker}.
+\newblock Packt, 35 Livery Street, Birmingham B3 2PB, UK, 2013.
 
 \end{thebibliography}

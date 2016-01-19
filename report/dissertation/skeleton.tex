@@ -150,47 +150,86 @@ Developing applications and games in GameMaker is cheap, simple to learn and fle
 During the rise of HTML5 and the growing popularity of Gamemaker, YoyoGames has provided the functionality to export any application to a JavaScript program that can be executed directly in the browser\cite{GameMaker_Studio}.
 
 Some of the features are normally supported by GameMaker are however lost during the transition to a web application. One of these features is the networking functionality. Thus far since the update to export GameMaker applications to HTML5 in September 2011, YoYoGames has never included this feature\footnote{http://docs.yoyogames.com/source/dadiospice/002\_reference/networking/index.html}. Several attempts have been made by the YoYoGames community, however all known versions are considered to be in alpha stage and are regularly found to fail to be used by other developers.
+
+The main GameMaker community forum is hosted by YoYoGames\footnote{http://gmc.yoyogames.com/}, serving 280.000 registered users recorded in January 2016, with a combined total of 220.000 topics and 3.480.000 posts. There also exists a notable GameMaker forum in the Netherlands\footnote{http://www.game-maker.nl/forums/} which hosts an additional 557000 posts for 56000 topics for almost 18000 members.
+
+%TODO Do something with these "footnotes"!
 \footnote{http://gmc.yoyogames.com/index.php?showtopic=520438}
 \footnote{http://gmc.yoyogames.com/index.php?showtopic=332957}
 
-The implementation in this Honours project will allow developers to again add networking features to their web-browser applications.
-
 \section{Related Work}
-Being a cross-platform game development tool primarily for 2D graphically oriented games, GameMaker has many competitors. It is therefore reasonable for developers to first consider using game developing tools that support networking features natively. But before being able to investigate pros and cons between gamemaker and related game development tools, appropriate competitors must first be identified.
+Being a cross-platform game development tool primarily for 2D graphically oriented games, GameMaker has many competitors. It is therefore sensible for developers to first consider using game developing tools that support networking features natively. Although, looking for "the best" development tool is unreasonable, as this is a matter of personal preference. Before being able to investigate pros and cons between gamemaker and related game development tools, appropriate competitors must first be identified.
 
-Note that GameMaker does natively support networking functionality for non-browser games. However we must remind ourselves of the aim of this project: creating a networking extension to improve GameMaker's functionality \textbf{for developing browser games}. For this reason, this paper will consider GameMaker to be a development tool for browser games.
+Note that GameMaker does natively support networking functionality for non-browser games. However we must remind ourselves of the aim of this project: creating a networking extension to improve GameMaker's functionality \textbf{for developing 2D browser games}. For this reason, this paper will consider GameMaker to be a development tool for browser games.
 
-In order to find the most related software for these purposes, assistance was found from multiple online third-party instances. These instances collect user feedback for the browser-game development tools. Their ratings were established by allowing users to criticise tools based their personal experience, and apply a score. The review system is similar to that of the Google Play Store\cite{Google_Play_Store} and the Apple App Store\cite{Apple_App_Store}, and may therefore be a reasonable method for finding the more commonly used tools.
+In order to find the most related software for these purposes, assistance was found from online third-party instances. These instances collect user feedback for the browser-game development tools. Their ratings were established by allowing users to criticise tools based on their personal experience, and apply a score. The review system of html5gameengine.com\footnote{https://html5gameengine.com/} represents that of the Google Play Store\cite{Google_Play_Store} and the Apple App Store\cite{Apple_App_Store}, and may therefore be a somewhat reasonable method for finding the more commonly used tools.
 
-The considered instances are:
-\begin{itemize}
-\item html5gameengine.com\footnote{https://html5gameengine.com/}, responsible for recording score and user votes
-\item developer.mozilla.org\footnote{https://developer.mozilla.org/en-US/docs/Games/Tools/Engines\_and\_tools}, displaying a general list of game engines implemented with HTML5 and JavaScript.
-\item gamepix.com\footnote{http://www.gamepix.com/blog/the-big-list-of-2d-html5-games-engines/}, generated a list based on suggestions received by the gamepix.com community.
-\end{itemize}
+developer.mozilla.org\footnote{https://developer.mozilla.org/en-US/docs/Games/Tools/Engines\_and\_tools} (world rank 198 by alexa.com\footnote{http://www.alexa.com/}) hosts a list of tools titled "HTML5 game engines", and holds suggestions by 26 developers each with different backgrounds in 2D browser game development. gamepix.com\footnote{http://www.gamepix.com/blog/the-big-list-of-2d-html5-games-engines/} hosts a list of similar tools, but is less detailed about their sources.
 
-The following table is carefully constructed by combining the best rated 2D browser-supported game developing tools as advertised by the instances mentioned above.
+The following table of related software is carefully constructed by combining the best rated 2D browser-supported game developing tools as advertised by the communities for the instances mentioned above.
 \begin{center}
   \begin{tabular}{ | r || c | c | c | c | c | c | }
   	\hline
-  	Engine			& Score		& Voters& Adv. by developer.mozilla.org & Adv. by gamepix.com\\ \hline\hline
-    Pixi.js			& 5.0 / 5	& 50	& yes & yes\\ \hline
-    Phaser			& 4.5 / 5	& 129	& yes & yes\\ \hline
-    EaseIJS			& 4.5 / 5	& 63	& no  & yes\\ \hline
-    Three.js		& 4.5 / 5	& 32	& no  & no \\ \hline
-    Crafty.js		& 4.5 / 5	& 18	& yes & yes\\ \hline
-    Construct 2		& 4.0 / 5	& 136	& yes & yes\\ \hline
-   	Quintus			& 4.5 / 5	& 29	& no  & yes\\ \hline
-    Canvace			& n/a		& 0		& yes & yes\\ \hline
+  	Tool			& Score		& Voters& Mozilla* 	& Gamepix** 	& Native GUI\\ \hline\hline
+    Pixi.js			& 5.0 / 5	& 50	& yes	& yes	& no	\\ \hline
+    Phaser			& 4.5 / 5	& 129	& yes	& yes	& yes	\\ \hline
+    EaselJS			& 4.5 / 5	& 63	& no	& yes	& no	\\ \hline
+    Crafty.js		& 4.5 / 5	& 18	& yes	& yes	& no	\\ \hline
+    Construct 2		& 4.0 / 5	& 136	& yes	& yes	& yes	\\ \hline
+   	Quintus			& 4.5 / 5	& 29	& no	& yes	& no	\\ \hline
+  	Unity			& n/a		& n/a	& yes	& yes	& yes	\\ \hline
+    \multicolumn{5}{l}{* \textit{Advertised by developer.mozilla.org}\footnote{https://developer.mozilla.org/en-US/docs/Games/Tools/Engines\_and\_tools}} \\
+    \multicolumn{5}{l}{** \textit{Advertised by gamepix.com}\footnote{http://www.gamepix.com/blog/the-big-list-of-2d-html5-games-engines/}} \\
   \end{tabular}
 \end{center}
 
-\subsection{CoronaSDK}
-\subsection{Gideros Studio}
-\subsection{Maoi}
+\subsection{Pixi.js, EaselJS, Quintus and Crafty.js}
+Despite Pixi.js, EaselJS, Crafty.js and Quintus being tools for developing 2D browser games, they are merely JavaScript frameworks and libraries to assist developers in creating raw JavaScript games. If networking is expected to be part of a browser game, these tools will also require additional resources for implementing this feature.
 
-\subsection{JSiso}http://jsiso.com/
+Their community is relatively small and scattered across the web. The forums for these tools are hosted on third-party websites and make it therefore hard to measure their size and activity accurately.
+
+
+\begin{center}
+  \begin{tabular}{ | r || c | l | }
+  	\multicolumn{3}{l}{\textit{Community Activity for Pixi.js, EaselJS, Quintus and Crafty.js}}
+  	\\ \hline
+  	Tool			& Topics	& URL	\\ \hline\hline
+    Pixi.js			& 1455		& http://www.html5gamedevs.com/forum/15-pixijs/		\\ \hline
+    EaselJS			& 738		& http://stackoverflow.com/questions/tagged/createjs\footnote{http://community.createjs.com/}		\\ \hline
+   	Quintus			& n/a		& https://plus.google.com/communities/104292074755089084725		\\ \hline
+    Crafty.js		& 1666		& https://groups.google.com/forum/\#!forum/craftyjs		\\ \hline
+  \end{tabular}
+\label{table:JS_Framework_Libraries}
+\end{center}
+
+
+\subsection{Phaser}
+http://www.html5gamedevs.com/forum/14-phaser/
+
+community size:
+8793 topics
+
+\subsection{Construct 2}
+https://www.scirra.com/forum/
+
+103176 topics (204194 registered users)
+529,164 posts
+
 \subsection{Unity}
+https://unity3d.com/public-relations
+
+4500000 registered users
+
+http://forum.unity3d.com/forums/2d.53/
+
+5,595 topics
+
+\subsection{GameMaker}
+http://gmc.yoyogames.com/
+
+281181 registered users
+3480574 total posts
+
 
 
 
@@ -468,6 +507,7 @@ Average roundtrip times per test:
 \cite{Optimizing_WebSockets_Bandwidth}
 \cite{Google_Play_Store}
 \cite{Apple_App_Store}
+\cite{HTML5_Game_Dev_Gamemaker}
 % <<<< REMOVE THIS BLOCK
 
 \bibliographystyle{unsrt}
