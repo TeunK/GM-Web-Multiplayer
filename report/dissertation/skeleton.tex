@@ -26,37 +26,47 @@
 
 \abstract{
 summarising the report\\
-Creating an extention for GameMaker creations, to allow fast networking with maximal reliability.
 }
 
 \maketitle
 
 % REMOVE THESE >>>>
-\section*{Questions to Dr. Lee}
+\section*{COMPLETED}
 \begin{itemize}
-\item What to reference? stackoverflow? is it legit?
-\item How does "related work" apply to "other game developer engines", when my work is to improve one, not to build one?
-\item Need to mention examples in background for "why gamemaker"? if no, where should examples be given if at all?
-\item Is there a difference between a "software engineering" and a "computer science" dissertation? Consider software engineering main focus is more likely to be "implementation", "coding standards", "design standards" and "best practices". My case involves writing a script that extends an existing system. Therefore there is relatively little "implementation" work compared to those where a complete system is built. Thus how much additional underlying "research" (as opposed to "stackoverflow user solutions") is required to compensate?
-\item Known from previous experiments: a single instance cannot simulate more than roughly 700 clients without causing losing stability. Do I have to show this in detail with a graph as part of the evaluation experiments to justify the reason why I allowed at most 500 clients per instance? or should I instead just mention that eg. 500 clients per instance is arbitrary for this reason and ignore the details?
-\item Is it required to include formulae for mean, variance and standard-deviation?
+\item planning the project
+\item general research on the topic, ie. answer the question: "where to start?"
+\item developing the implementation
+\item develop application using the working extension to test if it works (both locally and online)
+\item evaluation: assessing the limits of the implementation (given a specific server specification).  Both locally and online (different distances to server, different cities? countries? continents?)
+\item write networking extension implementation
+\item execute experiments to evaluate the implementation
 \end{itemize}
 
 \section*{TODO}
+February
 \begin{itemize}
 \item give definition for server-reponse time
 \item in section "fairness depending on location", add world map with tested locations and their average mean
 \item Consider actual playability in a game OR add assumption how RTT affects atual usage of an application (find reference?)
-\item fill in further details on experiment setup (text format)
-\item Write down details about implementation
+\item write literature review and development section
+\item transform details of experiment setup in text format (+ write additional details if details are missing)
+\item Write down details about implementation, design decisions must be well justified according to literature
 \item Possibly add new implementation features / clean up existing implementations.
-\item Find out: how large is the gamepix community / how many users did they get feedback from in order to create the list?
+\item explain the evaluation results
+\end{itemize}
+March
+\begin{itemize}
+\item clarify thesis and write intro
+\item Record video of working implementation
+\item Create proper template for other developers to use + writing down a guide how to use it, where to start etc.
+\item Release the project to the community
+\item Finalize report
 \end{itemize}
 % <<<< REMOVE THESE
 
 \pagebreak
 \section*{Acknowledgements}
-First of all, I would like to thank my supervisor Dr. Myungjin Lee for guiding me through the process of writing the report and critisizing my work.
+First of all, I would like to thank my supervisor Dr. Myungjin Lee for guiding me through the process of writing the report and giving feedback of my work.
 
 I am also grateful to those people across the globe who have assisted me with testing and collecting data for the evalutation experiments.
 
@@ -92,11 +102,11 @@ In the current day and age, we spend a large portion of our time using web appli
 
 There exist many good reasons for this. Browser applications and games do not require prior installation. They are therefore easy to start up, safe from viruses and don't require an admin-user account in order to be executed\cite{Web_Apps_Superior}. They are able to interact with other web applications. They are highly platform independent and potential users are generally easy to reach. Also their updates are seamless and can be implemented without requiring patch downloads to a harddrive.
 
-The market in this area is therefore booming. Developers all across the world are trying to be the fastest at developing their games, in the easiest way possible. The easier the process, the faster the development. The faster the development, the more income is generated.
+The market in this area is therefore booming. Developers all across the world are trying to be the fastest at developing their games, in the easiest way possible. The easier the process, the faster the development. The faster the development, the sooner the game can be released.
 
-One of many developer tools that aims for exactly these two ideals is GameMaker Studio. However due to the feature limitation of creating networked applications, developers may be forced to use less appealing software instead. 
+One of many developer tools that aims for exactly these two ideals is GameMaker Studio. However due to the feature limitation of creating networked applications, developers may be forced to use less suited software instead. 
 
-This paper therefore investigates the quality of related software. It also demonstrates how an extension can be added to GameMaker, one that will add networking features to HTML5 games and applications.
+This paper therefore investigates the quality of related software. It also demonstrates how an extension can be added to GameMaker, one that will add networking features to HTML5 games and applications. Additionally, the server's behaviour will be assessed based on the specified setup, and suggestions will be added based on other literature in order to improve this further.
 
 \chapter{Background and Related Work}
 \section{Background}
@@ -106,17 +116,21 @@ This paper therefore investigates the quality of related software. It also demon
 Humans are naturally social beings, are found to be more drawn into games when this social aspect is being provided, and are therefore more likely to return in the future\cite{Browser_Games}. When allowed, we can share a sense of community, develop our own social identity within the application, and regularly seek social support from peer users, even about non-related and real-life topics\cite{Community_Social_Psychology}. Users of networked applications are \textbf{more likely to advertise} the application in their social circles than they are for non-networked applications.
 
 \subsection{Network Fairness}
-Having that said, one must consider the technical aspect of the network: if the application is in the form of a game, \textbf{playability and fairness are crucial for an enjoyable gameplay}. This is especially true for games containing elements where speed or response time is important.
+Having that said, one must consider the technical aspect of the network: if the application is in the form of a game, \textbf{playability and fairness are crucial for an enjoyable gameplay}. This is especially true for games containing elements where speed or response time is important. \textit{TODO: Add reference}
+%TODO add reference
 
 In a typical networked game, game clients are described by a \textbf{limited set of parameters} received by a server. These parameters represent the "game state". \textbf{When due to delay between the clients and server the game state is desynchronised, fairness is reduced}\cite{Fairness_and_Playability}.
 
 \subsection{TCP versus UDP}
+%TODO explain what is tcp and udp before mentioning which one is better when. because.. what do they do??
+\textit{TODO: explain what is tcp and udp before mentioning which one is better when. because.. what are they? what do they do?}
+
 Choosing the right protocol to handle the data transmissions is therefore crucial. Transmission protocols are one of the contributors that will heavily characterise the network.
  
 Generally speaking, TCP is a form of reliable data transmission but contains therefore extra overhead, making it therefore known to be slightly slower than UDP when the network has little packet loss.
 
 \subsubsection{Socket.io}
-Socket.io is an event-driven JavaScript library that can be used both on the client's browser, and a server\cite{Socketio}. It is capable of sending and receiving data using the WebSocket protocol built in 2011 (which is handled through TCP), without interruption of the code flow\cite{Socketio_Benchmark}\cite{Socketio_TCP_Benchmark}. For this reason, it is \textbf{often used in combination with Node.js}.
+Socket.io is an event-driven JavaScript library that can be used both on the client's browser, and a server\cite{Socketio}. It supports features that allow sending and receiving data using the WebSocket protocol built in 2011 (which is handled through TCP), without interruption of the code flow\cite{Socketio_Benchmark}\cite{Socketio_TCP_Benchmark}. For this reason, it is \textbf{often used in combination with Node.js}.
 
 \subsubsection{WebRTC}
 As aforementioned, Websocket is a protocol built on TCP. However, it has a little sister: WebRTC. WebRTC built on UDP, but is still vaguely "under construction"\cite{Browser_Networking}. Although certain web applications have already been created with WebRTC (mainly for P2P video streaming \cite{P2P_Video_Streaming_HTML5_WebRTC}), no proper standards are out yet\cite{Web_Apps_Superior}.
@@ -149,13 +163,9 @@ Developing applications and games in GameMaker is cheap, simple to learn and fle
 
 During the rise of HTML5 and the growing popularity of Gamemaker, YoyoGames has provided the functionality to export any application to a JavaScript program that can be executed directly in the browser\cite{GameMaker_Studio}.
 
-Some of the features are normally supported by GameMaker are however lost during the transition to a web application. One of these features is the networking functionality. Thus far since the update to export GameMaker applications to HTML5 in September 2011, YoYoGames has never included this feature\footnote{http://docs.yoyogames.com/source/dadiospice/002\_reference/networking/index.html}. Several attempts have been made by the YoYoGames community, however all known versions are considered to be in alpha stage and are regularly found to fail to be used by other developers.
+Some of the features are normally supported by GameMaker are however lost during the transition to a web application. One of these features is the networking functionality. Thus far since the update to export GameMaker applications to HTML5 in September 2011, YoYoGames has never included this feature\footnote{http://docs.yoyogames.com/source/dadiospice/002\_reference/networking/index.html}. Several attempts have been made by the YoYoGames community, however all known versions are considered to be in alpha stage and are regularly found to fail to be used by other developers\footnote{https://github.com/amorri40/39js}. %TODO stronger argument WHY it doesnt work
 
-The main GameMaker community forum is hosted by YoYoGames\footnote{http://gmc.yoyogames.com/}, serving 280.000 registered users recorded in January 2016, with a combined total of 220.000 topics and 3.480.000 posts. There also exists a notable GameMaker forum in the Netherlands\footnote{http://www.game-maker.nl/forums/} which hosts an additional 557000 posts for 56000 topics for almost 18000 members.
-
-%TODO Do something with these "footnotes"!
-\footnote{http://gmc.yoyogames.com/index.php?showtopic=520438}
-\footnote{http://gmc.yoyogames.com/index.php?showtopic=332957}
+The main GameMaker community forum is hosted directly by YoYoGames\footnote{http://gmc.yoyogames.com/}, serving 280.000 registered users recorded in January 2016, with a combined total of 220.000 topics and 3.480.000 posts. There also exists a notable GameMaker forum in the Netherlands\footnote{http://www.game-maker.nl/forums/} which hosts an additional 557.000 posts for 56.000 topics for almost 18.000 members.
 
 \section{Related Work}
 Being a cross-platform game development tool primarily for 2D graphically oriented games, GameMaker has many competitors. It is therefore sensible for developers to first consider using game developing tools that support networking features natively. Although, looking for "the best" development tool is unreasonable, as this is a matter of personal preference. Before being able to investigate pros and cons between gamemaker and related game development tools, appropriate competitors must first be identified.
@@ -178,22 +188,22 @@ The following table of related software is carefully constructed by combining th
     Construct 2		& 4.0 / 5	& 136	& yes	& yes	& yes	\\ \hline
    	Quintus			& 4.5 / 5	& 29	& no	& yes	& no	\\ \hline
   	Unity			& n/a		& n/a	& yes	& yes	& yes	\\ \hline
-    \multicolumn{5}{l}{* \textit{Advertised by developer.mozilla.org}\footnote{https://developer.mozilla.org/en-US/docs/Games/Tools/Engines\_and\_tools}} \\
-    \multicolumn{5}{l}{** \textit{Advertised by gamepix.com}\footnote{http://www.gamepix.com/blog/the-big-list-of-2d-html5-games-engines/}} \\
+    \multicolumn{5}{l}{* \textit{Advertised at developer.mozilla.org}\footnote{https://developer.mozilla.org/en-US/docs/Games/Tools/Engines\_and\_tools}} \\
+    \multicolumn{5}{l}{** \textit{Advertised at gamepix.com}\footnote{http://www.gamepix.com/blog/the-big-list-of-2d-html5-games-engines/}} \\
   \end{tabular}
 \end{center}
 
 \subsection{Pixi.js, EaselJS, Quintus and Crafty.js}
-Despite Pixi.js, EaselJS, Crafty.js and Quintus being tools for developing 2D browser games, they are merely JavaScript frameworks and libraries to assist developers in creating raw JavaScript games. If networking is expected to be part of a browser game, these tools will also require additional resources for implementing this feature.
+Despite Pixi.js, EaselJS, Crafty.js and Quintus being tools for developing 2D browser games, they are merely JavaScript frameworks and libraries to assist developers when creating raw JavaScript games. If networking is expected to be part of a browser game, these tools will also require additional resources for implementing this feature.
 
-Their community is relatively small and scattered across the web. The forums for these tools are hosted on third-party websites and make it therefore hard to measure their size and activity accurately.
+Their community is relatively small and scattered across the web. The forums for these tools are hosted on third-party websites and make it therefore difficult to measure their size and activity accurately.
 
 
 \begin{center}
   \begin{tabular}{ | r || c | l | }
   	\multicolumn{3}{l}{\textit{Community Activity for Pixi.js, EaselJS, Quintus and Crafty.js}}
   	\\ \hline
-  	Tool			& Topics	& URL	\\ \hline\hline
+  	Tool			& Topics	& Community main page	\\ \hline\hline
     Pixi.js			& 1455		& http://www.html5gamedevs.com/forum/15-pixijs/		\\ \hline
     EaselJS			& 738		& http://stackoverflow.com/questions/tagged/createjs\footnote{http://community.createjs.com/}		\\ \hline
    	Quintus			& n/a		& https://plus.google.com/communities/104292074755089084725		\\ \hline
@@ -480,11 +490,11 @@ Average roundtrip times per test:
 
 % -----------------------
 % >>>> REMOVE THIS BLOCK
-\cite{Multiplayer_Networking_modern_engine}
+\cite{Multiplayer_Networking_modern_engine} %unused
 \cite{Fairness_and_Playability}
-\cite{Pro_HTML5_Programming}
+\cite{Pro_HTML5_Programming} %unused
 \cite{HTML5_Up_and_Running}
-\cite{Friendly_Programming}
+\cite{Friendly_Programming} %unused
 \cite{Mark_Overmars}
 \cite{Death_Flash_Java}
 \cite{Why_Nodejs}
@@ -496,20 +506,21 @@ Average roundtrip times per test:
 \cite{Canvas_API}
 \cite{Web_Apps_Superior}
 \cite{Community_Social_Psychology}
-\cite{Why_MMOG}
+\cite{Why_MMOG} %unused
 \cite{Browser_Games}
 \cite{Browser_Networking}
 \cite{Web_Apps_Superior}
 \cite{P2P_Video_Streaming_HTML5_WebRTC}
 \cite{Gamemaker_DnD}
 \cite{GameMaker_Studio}
-\cite{Optimizing_Multiplayer_3D_Game_Synch}
-\cite{Optimizing_WebSockets_Bandwidth}
+\cite{Optimizing_Multiplayer_3D_Game_Synch} %unused
+\cite{Optimizing_WebSockets_Bandwidth} %unused
 \cite{Google_Play_Store}
 \cite{Apple_App_Store}
-\cite{HTML5_Game_Dev_Gamemaker}
+\cite{HTML5_Game_Dev_Gamemaker} %unused
 % <<<< REMOVE THIS BLOCK
 
+%TODO change style to apa before submission. ignore "errors", it should still work after a few retries
 \bibliographystyle{unsrt}
 \bibliography{mybibfile}
 
