@@ -50,8 +50,8 @@ Mikito Takada.
 \bibitem{Browser_Networking}
 Ilya Grigorik.
 \newblock {\em High Performance Browser Networking}.
-\newblock O’Reilly Media, Inc., 1005 Gravenstein Highway North, Sebastopol,
-  CA 95472., 2013.
+\newblock O'Reilly Media, Inc., 1005 Gravenstein Highway North, Sebastopol, CA
+  95472., 2013.
 
 \bibitem{P2P_Video_Streaming_HTML5_WebRTC}
 Martin~Kirkholt Melhus.
@@ -129,6 +129,14 @@ Jin~Hyung Kim, Inchan Kim, and Ho~Geun Lee.
   model framework.
 \newblock {\em PACIS Conference Proceedings}, 2010.
 
+\bibitem{Construct2_Multiplayer_Tutorial}
+Ashley Gullen.
+\newblock Multiplayer tutorial.
+\newblock
+  \url{https://www.scirra.com/tutorials/892/multiplayer-tutorial-1-concepts/page-1},
+  March 2014.
+\newblock Scirra, creators of Construct 2.
+
 \bibitem{Multiplayer_Networking_modern_engine}
 Alan Edwardes.
 \newblock Multiplayer networking in a modern game engine.
@@ -166,5 +174,16 @@ Eric Li.
 Jason~Lee Elliott.
 \newblock {\em HTML5 Game Development with GameMaker}.
 \newblock Packt, 35 Livery Street, Birmingham B3 2PB, UK, 2013.
+
+\bibitem{SE_7_Principles}
+Barry~W. Boehm.
+\newblock Seven basic principles of software engineering.
+\newblock {\em Journal of Systems and Software}, 3(1):3--24, March 1983.
+
+\bibitem{Software_Engineering}
+Klaus Pohl, Gunter Bockle, and Frank van~der Frank.
+\newblock {\em Software Product Line Engineering: Foundations, Principles and
+  Techniques}.
+\newblock Springer, Springer-Verlag Berlin Heidelberg, 2005.
 
 \end{thebibliography}

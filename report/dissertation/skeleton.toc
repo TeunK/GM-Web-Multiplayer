@@ -11,11 +11,9 @@
 \contentsline {subsection}{\numberline {2.1.5}Node.js}{13}{subsection.2.1.5}
 \contentsline {subsection}{\numberline {2.1.6}GameMaker}{13}{subsection.2.1.6}
 \contentsline {section}{\numberline {2.2}Related Work}{14}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Pixi.js, EaselJS, Quintus and Crafty.js}{15}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Phaser}{15}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Construct 2}{15}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Unity}{16}{subsection.2.2.4}
-\contentsline {subsection}{\numberline {2.2.5}GameMaker}{16}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.1}Pixi.js, EaselJS, Quintus, Crafty.js and Phaser}{15}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Construct 2}{15}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Unity}{16}{subsection.2.2.3}
 \contentsline {chapter}{\numberline {3}Literature Review}{17}{chapter.3}
 \contentsline {section}{\numberline {3.1}Getting Users to Advertise Your Application}{17}{section.3.1}
 \contentsline {section}{\numberline {3.2}Fairnesss and Playability in Online Multiplayer Games}{17}{section.3.2}
@@ -63,4 +61,4 @@
 \contentsline {subsection}{\numberline {6.1.1}Comparison of the Extended GameMaker Functionality with Related Work}{27}{subsection.6.1.1}
 \contentsline {subsection}{\numberline {6.1.2}Criticism on the Implementation and Design Decisions}{27}{subsection.6.1.2}
 \contentsline {section}{\numberline {6.2}Future Improvements}{27}{section.6.2}
-\contentsline {chapter}{Bibliography}{29}{chapter*.12}
+\contentsline {chapter}{Bibliography}{29}{chapter*.14}

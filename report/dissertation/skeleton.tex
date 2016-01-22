@@ -13,6 +13,8 @@
     urlcolor={blue!80!black}
 }
 \usepackage[T1]{fontenc} %fix < > characters
+\usepackage{footnote} %footnotes in tables
+%\renewcommand{\familydefault}{\sfdefault}
 
 \begin{document}
 
@@ -85,6 +87,8 @@ My sincere gratitude to my family, friends, the Dutch Gamemaker community and th
 \item CPU - Central Processing Unit
 \item RAM - Random Access Memory
 \item LAN - Local Area Network
+\item GUI - Graphical User Interface
+\item IDE - Integrated Development Environment
 \end{itemize}
 
 \tableofcontents
@@ -116,8 +120,7 @@ This paper therefore investigates the quality of related software. It also demon
 Humans are naturally social beings, are found to be more drawn into games when this social aspect is being provided, and are therefore more likely to return in the future\cite{Browser_Games}. When allowed, we can share a sense of community, develop our own social identity within the application, and regularly seek social support from peer users, even about non-related and real-life topics\cite{Community_Social_Psychology}. Users of networked applications are \textbf{more likely to advertise} the application in their social circles than they are for non-networked applications.
 
 \subsection{Network Fairness}
-Having that said, one must consider the technical aspect of the network: if the application is in the form of a game, \textbf{playability and fairness are crucial for an enjoyable gameplay}. This is especially true for games containing elements where speed or response time is important. \textit{TODO: Add reference}
-%TODO add reference
+Having that said, one must consider the technical aspect of the network: if the application is in the form of a game, \textbf{playability and fairness are crucial for an enjoyable gameplay}. This is especially true for games containing elements where speed or response time is important\cite{Fairness_and_Playability}.
 
 In a typical networked game, game clients are described by a \textbf{limited set of parameters} received by a server. These parameters represent the "game state". \textbf{When due to delay between the clients and server the game state is desynchronised, fairness is reduced}\cite{Fairness_and_Playability}.
 
@@ -154,6 +157,7 @@ In short, new client connections get allocated to a heap in the memory and clien
 
 
 \subsection{GameMaker}
+%TODO explain the use of the GUI, support fast development, maintainable hierachy / structure and design principles (+references)
 %include its evolution and typical target audience
 %explain the types of target audience, who do the developers of an application using the extension intend to target. How does this affect the demands on the network
 %focus on location of users
@@ -176,11 +180,14 @@ In order to find the most related software for these purposes, assistance was fo
 
 developer.mozilla.org\footnote{https://developer.mozilla.org/en-US/docs/Games/Tools/Engines\_and\_tools} (world rank 198 by alexa.com\footnote{http://www.alexa.com/}) hosts a list of tools titled "HTML5 game engines", and holds suggestions by 26 developers each with different backgrounds in 2D browser game development. gamepix.com\footnote{http://www.gamepix.com/blog/the-big-list-of-2d-html5-games-engines/} hosts a list of similar tools, but is less detailed about their sources.
 
-The following table of related software is carefully constructed by combining the best rated 2D browser-supported game developing tools as advertised by the communities for the instances mentioned above.
-\begin{center}
+Table \ref{table:Related_Tools} was carefully constructed by combining the best rated 2D browser-supported game developing tools as advertised by the communities for the instances mentioned above.
+
+\begin{savenotes}
+\begin{table}
+\centering
   \begin{tabular}{ | r || c | c | c | c | c | c | }
   	\hline
-  	Tool			& Score		& Voters& Mozilla* 	& Gamepix** 	& Native GUI\\ \hline\hline
+  	\textbf{Tool}			& \textbf{Score}		& \textbf{Voters}& \textbf{Mozilla}\footnote{Advertised at developer.mozilla.org: \url{developer.mozilla.org https://developer.mozilla.org/en-US/docs/Games/Tools/Engines\_and\_tools}} 	& \textbf{Gamepix}\footnote{Advertised at \url{http://www.gamepix.com/blog/the-big-list-of-2d-html5-games-engines/}} 	& \textbf{Native GUI}\\ \hline\hline
     Pixi.js			& 5.0 / 5	& 50	& yes	& yes	& no	\\ \hline
     Phaser			& 4.5 / 5	& 129	& yes	& yes	& yes	\\ \hline
     EaselJS			& 4.5 / 5	& 63	& no	& yes	& no	\\ \hline
@@ -188,59 +195,66 @@ The following table of related software is carefully constructed by combining th
     Construct 2		& 4.0 / 5	& 136	& yes	& yes	& yes	\\ \hline
    	Quintus			& 4.5 / 5	& 29	& no	& yes	& no	\\ \hline
   	Unity			& n/a		& n/a	& yes	& yes	& yes	\\ \hline
-    \multicolumn{5}{l}{* \textit{Advertised at developer.mozilla.org}\footnote{https://developer.mozilla.org/en-US/docs/Games/Tools/Engines\_and\_tools}} \\
-    \multicolumn{5}{l}{** \textit{Advertised at gamepix.com}\footnote{http://www.gamepix.com/blog/the-big-list-of-2d-html5-games-engines/}} \\
   \end{tabular}
-\end{center}
+  \caption{Some of the highest rated and most promoted 2D browser-game development tools}
+  \label{table:Related_Tools}
+\end{table}%
+\end{savenotes}
 
-\subsection{Pixi.js, EaselJS, Quintus and Crafty.js}
-Despite Pixi.js, EaselJS, Crafty.js and Quintus being tools for developing 2D browser games, they are merely JavaScript frameworks and libraries to assist developers when creating raw JavaScript games. If networking is expected to be part of a browser game, these tools will also require additional resources for implementing this feature.
+\subsection{Pixi.js, EaselJS, Quintus, Crafty.js and Phaser}
+Despite Pixi.js, EaselJS, Crafty.js, Phaser and Quintus being legitimate tools for developing games, they are merely JavaScript frameworks and libraries to assist developers when creating raw JavaScript games. Therefore, if networking is expected to be part of a browser game, these tools will also require additional resources such as WebSocket for implementing this feature.
 
 Their community is relatively small and scattered across the web. The forums for these tools are hosted on third-party websites and make it therefore difficult to measure their size and activity accurately.
 
-
-\begin{center}
+\begin{savenotes}
+\begin{table}
+\centering
   \begin{tabular}{ | r || c | l | }
-  	\multicolumn{3}{l}{\textit{Community Activity for Pixi.js, EaselJS, Quintus and Crafty.js}}
-  	\\ \hline
-  	Tool			& Topics	& Community main page	\\ \hline\hline
+  \hline
+  	\textbf{Tool}			& \textbf{Topics}	& \textbf{Community main page}	\\ \hline\hline
     Pixi.js			& 1455		& http://www.html5gamedevs.com/forum/15-pixijs/		\\ \hline
-    EaselJS			& 738		& http://stackoverflow.com/questions/tagged/createjs\footnote{http://community.createjs.com/}		\\ \hline
+    EaselJS			& 738		& http://stackoverflow.com/questions/tagged/createjs\footnote{Statement of community moving to stackoverflow: http://community.createjs.com/}		\\ \hline
    	Quintus			& n/a		& https://plus.google.com/communities/104292074755089084725		\\ \hline
     Crafty.js		& 1666		& https://groups.google.com/forum/\#!forum/craftyjs		\\ \hline
+    Phaser			& 8793		& http://www.html5gamedevs.com/forum/14-phaser/		\\ \hline
   \end{tabular}
+  \caption{Displaying the community activeness for each of the mentioned tools, along with their corresponding location.}
 \label{table:JS_Framework_Libraries}
-\end{center}
+\end{table}
+\end{savenotes}
 
+Although the five tools assist in the development, they do not compare with GameMaker as their user base is many times smaller. A GUI is also not provided, forcing developers to use a standard programming IDE.
 
-\subsection{Phaser}
-http://www.html5gamedevs.com/forum/14-phaser/
-
-community size:
-8793 topics
 
 \subsection{Construct 2}
-https://www.scirra.com/forum/
+Construct 2 is one of the main contenders. It provides its own GUI and shares similar ideals as those of gamemaker: simplifying the development for novice programmers. This is done by supporting inbuilt D\&D features. Code programming can also be used after installing a required extension. It is a generally well known tool with a community of over 204.000 registered users, responsible for more than 529.000 posts for 103.000 topics\footnote{https://www.scirra.com/forum/}.
 
-103176 topics (204194 registered users)
-529,164 posts
+In April 2014, release r164 to r168 updated the engine with networking features by allowing users to create a said "network object"\footnote{https://www.scirra.com/manual/174/multiplayer}. This object is pre-defined with "features to develop real-time online multiplayer games", provided using WebRTC DataChannels (UDP) for P2P connections. 
+
+It is a very well established update with optimisation support included, eg. by providing preliminary setups for "NAT traversal to connect through common router/network setups", "Interpolation and extrapolation modes to ensure smooth in-game motion", "Support for lag compensation" and more. Administrator at Scirra, Ashley G. states however that "even though Construct 2's Multiplayer object takes care of many of the complexities, ..., it is important to understand how multiplayer online games fundamentally work"\cite{Construct2_Multiplayer_Tutorial}.
+
+%TODO explain down-sides, why gamemaker still worth updating
+%TODO explain cost
 
 \subsection{Unity}
+In the world of browser-game development, Unity is by far the most acknowledged tool. It comes with a professional GUI, allowing developers to create games using D\&D as well as with programming languages C\# and JavaScript\footnote{http://docs.unity3d.com/ScriptReference/index.html}.
+
+Networking features are supported as a D\&D class\footnote{http://docs.unity3d.com/ScriptReference/Network.html}, but can also be used by installing the "WebSocket-Sharp" plugin in C\#\footnote{https://github.com/sta/websocket-sharp}.
+
+Currently there are roughly 4.500.000 users registered to the Unity forum\footnote{http://forum.unity3d.com/forums}, however only a small percentage of this is active in 2D development as this only hosts 5600 topics\footnote{http://forum.unity3d.com/forums/2d.53/}. 
+
+This is most likely due to the fact that Unity is aimed towards experienced 3D game-developers and offers much overhead when only using its 2D capabilities. In the poorly populated 2D section of the forum, replies such as "have you considered using GameMaker?"\footnote{http://forum.unity3d.com/threads/where-to-start-2d-toolkit-or-platformer-pro.380770/} are therefore a common response.
+
 https://unity3d.com/public-relations
 
-4500000 registered users
+4.500.000 registered users
 
 http://forum.unity3d.com/forums/2d.53/
 
 5,595 topics
 
-\subsection{GameMaker}
-http://gmc.yoyogames.com/
-
-281181 registered users
-3480574 total posts
-
-
+licenses http://unity3d.com/unity/licenses
+cost https://store.unity3d.com/products/pricing
 
 
 
@@ -518,6 +532,9 @@ Average roundtrip times per test:
 \cite{Google_Play_Store}
 \cite{Apple_App_Store}
 \cite{HTML5_Game_Dev_Gamemaker} %unused
+\cite{SE_7_Principles}
+\cite{Software_Engineering}
+\cite{Construct2_Multiplayer_Tutorial}
 % <<<< REMOVE THIS BLOCK
 
 %TODO change style to apa before submission. ignore "errors", it should still work after a few retries

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  21 JAN 2016 02:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  22 JAN 2016 23:52
 entering extended mode
 **./skeleton.tex
 (skeleton.tex
@@ -293,29 +293,34 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-)) (skeleton.aux)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\mdwtools\footnote.sty"
+Package: footnote 1997/01/28 1.13 Save footnotes around boxes
+\fn@notes=\box28
+\fn@width=\dimen124
+)
+(skeleton.aux)
 \openout1 = `skeleton.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 17.
-LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 17
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 19.
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 19
 .
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omspzccm.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omspzccm.fd"
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -354,13 +359,13 @@ LaTeX Font Info:    ... okay on input line 17.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count104
-\scratchdimen=\dimen124
-\scratchbox=\box28
+\scratchdimen=\dimen125
+\scratchbox=\box29
 \nofMPsegments=\count105
 \nofMParguments=\count106
 \everyMPshowfont=\toks18
 \MPscratchCnt=\count107
-\MPscratchDim=\dimen125
+\MPscratchDim=\dimen126
 \MPnumerator=\count108
 \makeMPintoPDFobject=\count109
 \everyMPtoPDFconversion=\toks19
@@ -369,8 +374,8 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring ON on input line 17.
+\AtBeginShipoutBox=\box30
+Package hyperref Info: Link coloring ON on input line 19.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -379,60 +384,60 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count110
 )
-LaTeX Info: Redefining \ref on input line 17.
-LaTeX Info: Redefining \pageref on input line 17.
-LaTeX Info: Redefining \nameref on input line 17.
+LaTeX Info: Redefining \ref on input line 19.
+LaTeX Info: Redefining \pageref on input line 19.
+LaTeX Info: Redefining \nameref on input line 19.
 
 (skeleton.out) (skeleton.out)
 \@outlinefile=\write3
 \openout3 = `skeleton.out'.
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 32.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 34.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 32.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 34.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 18.66588pt on input line 32.
+(Font)              scaled to size 18.66588pt on input line 34.
  [1
 
 {C:/Users/Gebruiker/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 32.
+(Font)              scaled to size 10.79993pt on input line 34.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 32.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 34.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 32.
+(Font)              scaled to size 10.79993pt on input line 34.
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--32
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 32.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 34.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 10.79993pt on input line 32.
+(Font)              scaled to size 10.79993pt on input line 34.
 [3]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 34.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 36.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 34.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 36.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 15.55188pt on input line 34.
+(Font)              scaled to size 15.55188pt on input line 36.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 36.
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 38.
  [4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5]
 [6]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 90.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 94.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 90.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 94.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 90.
+(Font)              scaled to size 22.39185pt on input line 94.
  (skeleton.toc
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
@@ -476,42 +481,60 @@ Chapter 1.
 ]
 Chapter 2.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 113.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 117.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 113.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 117.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 113.
+(Font)              scaled to size 12.9599pt on input line 117.
 [11]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 141.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 144.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 141.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 144.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 141.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 144.
  [12]
-Overfull \hbox (8.331pt too wide) in paragraph at lines 151--152
+Overfull \hbox (8.331pt too wide) in paragraph at lines 154--155
 \T1/ptm/m/n/12 ca-pa-bil-ity" al-low-ing de-vel-op-ers to work in the "non-bloc
 king event-driven I/O paradigm"
  []
 
 [13]
-Overfull \hbox (12.3196pt too wide) in paragraph at lines 177--178
+Overfull \hbox (12.3196pt too wide) in paragraph at lines 181--182
 []\T1/ptm/m/n/12 developer.mozilla.org[][][][][] (world rank 198 by alexa.com[]
 [][][][]) hosts a list of tools ti-tled "HTML5
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14]
-Overfull \hbox (5.37576pt too wide) in paragraph at lines 203--213
- [] 
+Overfull \hbox (5.38289pt too wide) in paragraph at lines 190--190
+[][]\T1/ptm/m/n/10 Advertised at [][]$\T1/pcr/m/n/10 http : / / www . gamepix .
+ com / blog / the-[]big-[]list-[]of-[]2d-[]html5-[]games-[]engines/$[][]| 
  []
 
-[15] [16]
+
+Underfull \vbox (badness 2903) has occurred while \output is active []
+
+ [14]
+Overfull \hbox (6.57562pt too wide) in paragraph at lines 212--221
+ [][] 
+ []
+
+
+Overfull \hbox (2.91953pt too wide) in paragraph at lines 226--227
+[]\T1/ptm/m/n/12 Although the five tools as-sist in the de-vel-op-ment, they do
+ not com-pare with GameMaker
+ []
+
+[15]
+Overfull \hbox (11.9533pt too wide) in paragraph at lines 256--258
+[]\T1/ptm/m/n/12 licenses http://unity3d.com/unity/licenses cost https://store.
+unity3d.com/products/pricing 
+ []
+
+[16]
 Chapter 3.
 
-Overfull \hbox (16.21097pt too wide) in paragraph at lines 255--255
+Overfull \hbox (16.21097pt too wide) in paragraph at lines 269--269
 []\T1/phv/b/n/17.28 Fairnesss and Playa-bil-ity in On-line Mul-ti-player Games 
 
  []
@@ -526,53 +549,53 @@ Chapter 4.
 
 ]
 Chapter 5.
-[21] [22] <images/test_CLIENT_CPUusage.jpg, id=427, 481.8pt x 290.08376pt>
+[21] [22] <images/test_CLIENT_CPUusage.jpg, id=447, 481.8pt x 290.08376pt>
 File: images/test_CLIENT_CPUusage.jpg Graphic file (type jpg)
 
 <use images/test_CLIENT_CPUusage.jpg>
-Package pdftex.def Info: images/test_CLIENT_CPUusage.jpg used on input line 365
+Package pdftex.def Info: images/test_CLIENT_CPUusage.jpg used on input line 379
 .
 (pdftex.def)             Requested size: 361.3491pt x 217.56227pt.
 
-<images/test_CLIENT_CPUtime.jpg, id=428, 481.8pt x 290.08376pt>
+<images/test_CLIENT_CPUtime.jpg, id=448, 481.8pt x 290.08376pt>
 File: images/test_CLIENT_CPUtime.jpg Graphic file (type jpg)
 
 <use images/test_CLIENT_CPUtime.jpg>
-Package pdftex.def Info: images/test_CLIENT_CPUtime.jpg used on input line 375.
+Package pdftex.def Info: images/test_CLIENT_CPUtime.jpg used on input line 389.
 
 (pdftex.def)             Requested size: 361.3491pt x 217.56227pt.
 
-<images/test_CLIENT_RSS.jpg, id=429, 481.8pt x 290.08376pt>
+<images/test_CLIENT_RSS.jpg, id=449, 481.8pt x 290.08376pt>
 File: images/test_CLIENT_RSS.jpg Graphic file (type jpg)
 
 <use images/test_CLIENT_RSS.jpg>
-Package pdftex.def Info: images/test_CLIENT_RSS.jpg used on input line 383.
+Package pdftex.def Info: images/test_CLIENT_RSS.jpg used on input line 397.
 (pdftex.def)             Requested size: 361.3491pt x 217.56227pt.
 
-<images/test_SERVER_RTTmean.jpg, id=430, 1255.69125pt x 488.82625pt>
+<images/test_SERVER_RTTmean.jpg, id=450, 1255.69125pt x 488.82625pt>
 File: images/test_SERVER_RTTmean.jpg Graphic file (type jpg)
 
 <use images/test_SERVER_RTTmean.jpg>
-Package pdftex.def Info: images/test_SERVER_RTTmean.jpg used on input line 399.
+Package pdftex.def Info: images/test_SERVER_RTTmean.jpg used on input line 413.
 
 (pdftex.def)             Requested size: 401.8294pt x 156.42758pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/test_SERVER_RTTvariance.jpg, id=431, 1238.6275pt x 489.83pt>
+<images/test_SERVER_RTTvariance.jpg, id=451, 1238.6275pt x 489.83pt>
 File: images/test_SERVER_RTTvariance.jpg Graphic file (type jpg)
 
 <use images/test_SERVER_RTTvariance.jpg>
 Package pdftex.def Info: images/test_SERVER_RTTvariance.jpg used on input line 
-408.
+422.
 (pdftex.def)             Requested size: 396.3689pt x 156.7488pt.
 
-<images/test_SERVER_RTTstd.jpg, id=432, 1257.69875pt x 484.81125pt>
+<images/test_SERVER_RTTstd.jpg, id=452, 1257.69875pt x 484.81125pt>
 File: images/test_SERVER_RTTstd.jpg Graphic file (type jpg)
 
 <use images/test_SERVER_RTTstd.jpg>
-Package pdftex.def Info: images/test_SERVER_RTTstd.jpg used on input line 417.
+Package pdftex.def Info: images/test_SERVER_RTTstd.jpg used on input line 431.
 (pdftex.def)             Requested size: 402.47182pt x 155.14276pt.
 
 Underfull \vbox (badness 4713) has occurred while \output is active []
@@ -620,32 +643,39 @@ toptal . com / javascript /$
  []
 
 [30])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 527.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 544.
  [31]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 527.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 544.
  (skeleton.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 527.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 527.
-Package rerunfilecheck Info: File `skeleton.out' has not changed.
-(rerunfilecheck)             Checksum: 89E9707A90C54B3319BA6F38936BA576;3369.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 527.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 544.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 544.
+
+
+Package rerunfilecheck Warning: File `skeleton.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `skeleton.out':
+(rerunfilecheck)             Before: 50FF82CBDBE9B25BA6EB7CE0EC07A0E0;3316
+(rerunfilecheck)             After:  5AEFF9FFEDDD8C24EA0BC13B5708DECB;3252.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 544.
  ) 
 Here is how much of TeX's memory you used:
- 8032 strings out of 493634
- 120043 string characters out of 3141302
- 213456 words of memory out of 3000000
- 11153 multiletter control sequences out of 15000+200000
+ 8090 strings out of 493634
+ 120990 string characters out of 3141302
+ 215331 words of memory out of 3000000
+ 11196 multiletter control sequences out of 15000+200000
  76535 words of font info for 96 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 43i,14n,47p,703b,415s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not ex
+ 43i,16n,47p,703b,531s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not ex
 ist, replaced by a fixed one
 
-pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not exis
-t, replaced by a fixed one
+pdfTeX warning (dest): name{subsection.2.2.4} has been referenced but does not 
+exist, replaced by a fixed one
 
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fi
@@ -656,9 +686,9 @@ s/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/
 utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on skeleton.pdf (31 pages, 819097 bytes).
+Output written on skeleton.pdf (31 pages, 827903 bytes).
 PDF statistics:
- 598 PDF objects out of 1000 (max. 8388607)
- 153 named destinations out of 1000 (max. 500000)
- 407 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 627 PDF objects out of 1000 (max. 8388607)
+ 165 named destinations out of 1000 (max. 500000)
+ 399 words of extra memory for PDF output out of 10000 (max. 10000000)
 
