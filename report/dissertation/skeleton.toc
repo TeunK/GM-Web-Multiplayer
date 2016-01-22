@@ -61,4 +61,4 @@
 \contentsline {subsection}{\numberline {6.1.1}Comparison of the Extended GameMaker Functionality with Related Work}{27}{subsection.6.1.1}
 \contentsline {subsection}{\numberline {6.1.2}Criticism on the Implementation and Design Decisions}{27}{subsection.6.1.2}
 \contentsline {section}{\numberline {6.2}Future Improvements}{27}{section.6.2}
-\contentsline {chapter}{Bibliography}{29}{chapter*.14}
+\contentsline {chapter}{Bibliography}{29}{chapter*.15}
