@@ -1,19 +1,19 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.2.1)  15 JAN 2016 14:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  22 JAN 2016 22:35
 entering extended mode
-**infthesis.tex
+**mybibfile.tex
 
 ! Emergency stop.
-<*> infthesis.tex
+<*> mybibfile.tex
                  
 *** (job aborted, file error in nonstop mode)
 
  
 Here is how much of TeX's memory you used:
- 2 strings out of 494045
- 19 string characters out of 3148391
- 48890 words of memory out of 3000000
- 3399 multiletter control sequences out of 15000+200000
+ 2 strings out of 493634
+ 19 string characters out of 3141302
+ 52604 words of memory out of 3000000
+ 3491 multiletter control sequences out of 15000+200000
  3640 words of font info for 14 fonts, out of 3000000 for 9000
- 715 hyphenation exceptions out of 8191
+ 1025 hyphenation exceptions out of 8191
  0i,0n,0p,1b,6s stack positions out of 5000i,500n,10000p,200000b,50000s
 !  ==> Fatal error occurred, no output PDF file produced!
