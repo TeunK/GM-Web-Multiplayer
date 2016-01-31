@@ -29,10 +29,10 @@
 
 
 //get variables
-gameclient=obj_Login.gameclient;   //this client (from this file)
-login=obj_Login.login;
-name=obj_Login.name;
-client=obj_Login.client;           //last client used by player
+gameclient=200;   //this client (from this file)
+login=1;
+name=obj_LProceed.username;
+client=200;           //last client used by player
 
 
 
@@ -171,13 +171,14 @@ countdown=20;
             <kind>1</kind>
             <string>countdown-=1;
 
-
+/*
 if gameclient &lt; client
 {
     show_message("An updated game client has been released. Please download the newest version for free at www.rendonan.com");
     show_message("Your client Version: "+string(gameclient)+string(". Newest client version: ")+string(client));
     instance_destroy();
 }
+*/
 
 if countdown&lt;=0
 {

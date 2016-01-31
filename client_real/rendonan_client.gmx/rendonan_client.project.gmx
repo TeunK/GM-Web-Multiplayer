@@ -656,6 +656,9 @@
       <script>scripts\scr_inferno_init.gml</script>
       <script>scripts\magic_trigger.gml</script>
     </scripts>
+    <scripts name="db_functions">
+      <script>scripts\md5_encrypt.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\ft_NPC</font>

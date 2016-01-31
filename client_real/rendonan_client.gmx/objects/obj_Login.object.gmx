@@ -25,13 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>gameclient=110;
+            <string>gameclient=200;
 
 username=obj_LProceed.username;
 password=obj_LProceed.password;
-
-
-
+name = username;
+instance_destroy();
+/*
 http_dll_init();
 
 md5_begin();
@@ -56,6 +56,7 @@ httprequest_set_post_parameter(httprequest, "security5", "j89g8k2jiop3gt2sg8uasm
 
 // the third argument: true=POST; false=GET
 httprequest_connect(httprequest, "http://www.rendonan.com/gamelogin.php", true);
+*/
 </string>
           </argument>
         </arguments>
@@ -78,7 +79,7 @@ httprequest_connect(httprequest, "http://www.rendonan.com/gamelogin.php", true);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>    instance_create(x,y,obj_Verifier);
+            <string>instance_create(x,y,obj_Verifier);
     //create=instance_create(x,y,obj_Verifier);
     //create.gameclient=gameclient;
     //create.login=login;
@@ -179,11 +180,12 @@ if login=1
 
     
 }
-*/
+
 
 if httprequest!=-1 {
     httprequest_destroy(httprequest);
 }
+*/
 </string>
           </argument>
         </arguments>
@@ -207,6 +209,7 @@ if httprequest!=-1 {
           <argument>
             <kind>1</kind>
             <string>// step event
+/*
 var st;
 if httprequest!=-1 {
     httprequest_update(httprequest);
@@ -234,6 +237,7 @@ if httprequest!=-1 {
     }
 
 }
+*/
 </string>
           </argument>
         </arguments>
@@ -256,13 +260,7 @@ if httprequest!=-1 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// room end event
-if httprequest!=-1 {
-    httprequest_destroy(httprequest);
-}
-
-
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>

@@ -155,6 +155,7 @@ slot_legs_ID =string(s_Legs.itemID);
 /***************************************************
   Initialise connection for upload
  ***************************************************/
+/*
 http_dll_init();
 
 //var upload, st;
@@ -583,10 +584,7 @@ httprequest_set_post_parameter(upload, "slot_legs_ID", slot_legs_ID);
 
 // the third argument: true=POST; false=GET
 httprequest_connect(upload, "http://www.rendonan.com/gamelogout.php", true);
-
-
-
-
+*/
 </string>
           </argument>
         </arguments>
@@ -610,11 +608,11 @@ httprequest_connect(upload, "http://www.rendonan.com/gamelogout.php", true);
           <argument>
             <kind>1</kind>
             <string>
-
+/*
 if upload!=-1 {
     httprequest_destroy(upload);
 }
-
+*/
 if quit=1
 {
     game_end();
@@ -641,7 +639,9 @@ if quit=1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>timer-=1
+            <string>game_end();
+
+timer-=1
 
 // step event
 var st;
@@ -710,9 +710,11 @@ if done=1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if upload!=-1 {
+            <string>/*
+if upload!=-1 {
     httprequest_destroy(upload);
 }
+*/
 </string>
           </argument>
         </arguments>
