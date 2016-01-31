@@ -12,3 +12,4 @@ client/.idea/
 client/output/
 .idea/
 gmserver/
+server/gmserver.js
