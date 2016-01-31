@@ -42,7 +42,7 @@ blackboxalpha=1;
 if global.ComeFromTutorial=0 || global.ComeFromTutorial=1
 {
     SS_SoundStopAll();
-    SS_LoopSound(global.sng_Intro);
+    //SS_LoopSound(global.sng_Intro);
 }
     
 chat=0;
@@ -70,11 +70,12 @@ skip=0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if SS_IsSoundPlaying(global.sng_Intro)
+            <string>/*
+if SS_IsSoundPlaying(global.sng_Intro)
 {
     SS_StopSound(global.sng_Intro);
 }
-
+*/
 global.ComeFromTutorial=1
 </string>
           </argument>
@@ -407,8 +408,10 @@ if step=4
     {
         regulatealpha=1;
         storymode("REALITY! ",c_white,ft_menu,alpha,600);
+        /*
         SS_StopSound(global.sng_Intro);
         if !SS_IsSoundPlaying(snd_Thunder) {SS_PlaySound(snd_Thunder);}
+        */
     }
     
     if timer&gt;5*textinterval+4*textduration +30 &amp;&amp; timer &lt;= 5*textinterval+5*textduration + 32

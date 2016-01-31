@@ -12,7 +12,7 @@
   $$$$$$$$$$$$$$$$$$ Consumables $$$$$$$$$$$$$$$$$$$
  ***************************************************/
 
-SS_PlaySound(global.fx_Potion);
+//SS_PlaySound(global.fx_Potion);
 
 //itemID[i*8+ii]_effects();
  if itemID[i*8+ii]=2  //Small Health Potion

@@ -198,7 +198,7 @@ if instance_exists(obj_tdPlayer)
 
 if hp &lt;= 0
 {
-    SS_PlaySound(global.fx_Splash);
+    //SS_PlaySound(global.fx_Splash);
     instance_destroy();
     
     if instance_exists(obj_gGoldGTorb)
@@ -371,5 +371,8 @@ if instance_exists(obj_gGoldGTorb)
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>15,15</point>
+    <point>15,15</point>
+  </PhysicsShapePoints>
 </object>

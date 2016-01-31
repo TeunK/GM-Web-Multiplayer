@@ -108,7 +108,7 @@ if hp &gt;= hptotal {hp=hptotal}
 stateswitch-=1
 if stateswitch&lt;=0
 {
-    SS_PlaySound(global.fx_BossState);
+    //SS_PlaySound(global.fx_BossState);
     prevstate=state;
     state=1+round(random(3))
     stateswitch=150+round(random(150));
@@ -255,7 +255,7 @@ if hppercent &gt; 20
 if hp &lt;= 0
 {
     instance_destroy();
-    SS_PlaySound(global.fx_Smash2);
+    //SS_PlaySound(global.fx_Smash2);
     if instance_exists(obj_gGoldGTorb)
     {
         if distance_to_object(instance_nearest(x,y,obj_gGoldGTorb)) &gt;= instance_nearest(x,y,obj_gGoldGTorb).atkrange
@@ -462,5 +462,8 @@ if (inrange)
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>77,73</point>
+    <point>75,75</point>
+  </PhysicsShapePoints>
 </object>

@@ -39,13 +39,14 @@ alpha=0;
 
 blackboxalpha=0;
 
-
+/*
 if SS_IsSoundPlaying(global.sng_Menu)
 {
     SS_StopSound(global.sng_Menu)
 }
 SS_LoopSound(global.sng_Intro);
-    
+*/ 
+   
 chat=0;
 </string>
           </argument>
@@ -69,7 +70,7 @@ chat=0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>SS_StopSound(global.sng_Intro);
+            <string>//SS_StopSound(global.sng_Intro);
 
 if room!=MainMenu
 {

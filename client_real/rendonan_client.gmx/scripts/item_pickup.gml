@@ -23,7 +23,7 @@ for (ii=0; ii<2; ii+=1)
             {
                //increase quantity of that item
                ds_map_replace(invQ,argument0,itemQ[i]+argument1)
-               SS_PlaySound(global.fx_Pickup);
+               //SS_PlaySound(global.fx_Pickup);
                return(true)
                exit;
             }
@@ -36,7 +36,7 @@ for (ii=0; ii<2; ii+=1)
                  //if slot is open, put item in there and set quantity to quantity of picked up item(s)
                  ds_list_replace(inv,i,argument0)
                  ds_map_replace(invQ,argument0,itemQ[i]+argument1)
-                 SS_PlaySound(global.fx_Pickup);
+                 //SS_PlaySound(global.fx_Pickup);
                  return (true);
                  exit;
             }

@@ -1,5 +1,5 @@
 //argument0 = sliding or shutting; sliding = 0 / shutting = 1
-
+/*
 if argument0 = 0
 {
     if !SS_IsSoundPlaying(global.fx_HeavySlide)
@@ -20,3 +20,4 @@ else if argument0 = 1
     }
     SS_PlaySound(global.fx_SlideShut);
 }
+*/

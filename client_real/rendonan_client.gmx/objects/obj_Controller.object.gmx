@@ -56,8 +56,6 @@ if instance_exists(obj_Verifier)
     }
     
     //buffer_destroy(buffer);
-    
-
 }
 
 
@@ -1983,6 +1981,7 @@ if !instance_exists(obj_Skillbar)
           <argument>
             <kind>1</kind>
             <string>//Game Music Mastering:
+/*
 if room=room_Town1
 {
     if !SS_IsSoundPlaying(global.sng_Town)
@@ -2009,6 +2008,7 @@ else if (room=room_Cave1)
         SS_LoopSound(global.sng_Boss);
     }
 }
+*/
 </string>
           </argument>
         </arguments>
@@ -2034,7 +2034,7 @@ else if (room=room_Cave1)
             <string>socket_destroy(socket);
 buffer_destroy(global.chatbuffer);
 
-SS_Unload();
+//SS_Unload();
 </string>
           </argument>
         </arguments>

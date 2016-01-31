@@ -6,7 +6,7 @@ if ownexp  > ownexptotal
     //LEVEL UP; grats :)
     if ownexp  >=ownexptotal        
     {
-        SS_PlaySound(global.fx_LevelUp);
+        //SS_PlaySound(global.fx_LevelUp);
         ownstatpoint+=7
         ownexp=0;
         ownlevel+=1;

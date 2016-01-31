@@ -34,7 +34,7 @@ if canhit=1
         //attack 1
         instance_create(x,y,obj_Slash1);
         if sound_isplaying(global.fx_Sweep2) {sound_stop(global.fx_Sweep2)}
-        SS_PlaySound(global.fx_Sweep2);
+        //SS_PlaySound(global.fx_Sweep2);
         hitting=1
         if learnchain1>=2
         {chain1+=1; atktimemax=round(10/attackspeed)} else {chain1=1; atktimemax=round(30/attackspeed)}
@@ -48,7 +48,7 @@ if canhit=1
         //attack 2
         instance_create(x,y,obj_Slash1);
         if sound_isplaying(global.fx_Sweep2) {sound_stop(global.fx_Sweep2)}
-        SS_PlaySound(global.fx_Sweep2);
+        //SS_PlaySound(global.fx_Sweep2);
         hitting=1
         if learnchain1>=3
         {chain1+=1; atktimemax=round(7/attackspeed)} else {chain1=1; atktimemax=round(30/attackspeed)}
@@ -62,7 +62,7 @@ if canhit=1
         //attack 3
         instance_create(x,y,obj_Slash1);
         if sound_isplaying(global.fx_Sweep2) {sound_stop(global.fx_Sweep2)}
-        SS_PlaySound(global.fx_Sweep2);
+        //SS_PlaySound(global.fx_Sweep2);
         hitting=1
         if learnchain1>=4
         {chain1+=1; atktimemax=round(5/attackspeed)} else {chain1=1; atktimemax=round(30/attackspeed)}
@@ -76,7 +76,7 @@ if canhit=1
         //attack 4
         instance_create(x,y,obj_Slash1);
         if sound_isplaying(global.fx_Sweep2) {sound_stop(global.fx_Sweep2)}
-        SS_PlaySound(global.fx_Sweep2);
+        //SS_PlaySound(global.fx_Sweep2);
         hitting=1
         if learnchain1>=5
         {chain1+=1; atktimemax=round(3/attackspeed)} else {chain1=1; atktimemax=round(30/attackspeed)}

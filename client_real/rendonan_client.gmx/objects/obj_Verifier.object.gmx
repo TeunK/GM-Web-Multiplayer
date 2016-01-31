@@ -185,7 +185,7 @@ if countdown&lt;=0
     {
         if room == room_Login
         {
-            SS_PlaySound(global.fx_SlideShut);
+            //SS_PlaySound(global.fx_SlideShut);
             transition_kind=17;
             room_goto(room_Initials);
         }

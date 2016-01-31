@@ -1458,7 +1458,8 @@ y Bottom:             view_yview[0]+121+(32*i)
                         longest=max(string_width(itemname), string_width(itemtype), string_width(itemlevel), string_width(iteminfo));
                         highest=max(string_height(itemname), string_height(itemtype), string_height(itemlevel), string_height(iteminfo));
                         
-                        draw_sprite(spr_INVitem,variable_local_get("slot["+string(i*8+ii)+"]"),view_xview[0]+743+(32*ii),view_yview[0]+89+(32*i));
+                        //draw_sprite(spr_INVitem,variable_local_get("slot["+string(i*8+ii)+"]"),view_xview[0]+743+(32*ii),view_yview[0]+89+(32*i));
+                        draw_sprite(spr_INVitem,0,view_xview[0]+743+(32*ii),view_yview[0]+89+(32*i));
                         
                         //draw white background rectangle
                         draw_set_color(c_white);

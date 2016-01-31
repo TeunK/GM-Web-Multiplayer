@@ -1,3 +1,4 @@
+    /*
     //Music
     
     if SS_IsSoundPlaying(global.sng_Anticipation) {SS_StopSound(global.sng_Anticipation)}
@@ -31,3 +32,4 @@
     if SS_IsSoundPlaying(global.fx_ReverseWavez) {SS_StopSound(global.fx_ReverseWavez)}
     if SS_IsSoundPlaying(global.fx_Spawn) {SS_StopSound(global.fx_Spawn)}
     if SS_IsSoundPlaying(global.fx_LevelUp) {SS_StopSound(global.fx_LevelUp)}
+    */

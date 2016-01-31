@@ -28,6 +28,7 @@
             <string>/***************************************************
   This object/script imports all external sound files found from the installer
  ***************************************************/
+/*
 if global.musicdefined=0
 {
     
@@ -252,6 +253,7 @@ if global.musicdefined=0
     
     global.musicdefined=1;
 }
+*/
 </string>
           </argument>
         </arguments>
@@ -284,13 +286,14 @@ if room=MainMenu
 
 
 
-    //Volume Status
-    if show_question("Mute Game?") global.volume=0 else global.volume=0.4; //also defined later by obj_controller create event 2nd script
-    //sound_global_volume(power(global.volume,0.3));
-    SS_SetSoundVolAll(10000*power(global.volume,0.3));
-    volumeset=0
-    volumeamount=100
+//Volume Status
+if show_question("Mute Game?") global.volume=0 else global.volume=0.4; //also defined later by obj_controller create event 2nd script
+//sound_global_volume(power(global.volume,0.3));
+SS_SetSoundVolAll(10000*power(global.volume,0.3));
+volumeset=0
+volumeamount=100
 
+/*
 if SS_IsSoundPlaying(global.sng_Intro)
 {
     SS_StopSound(global.sng_Intro)
@@ -299,6 +302,7 @@ if !SS_IsSoundPlaying(global.sng_Menu)
 {
     SS_PlaySound(global.sng_Menu);
 }
+*/
 </string>
           </argument>
         </arguments>

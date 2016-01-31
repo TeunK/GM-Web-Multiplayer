@@ -1,3 +1,4 @@
+    /*
     //argument0 = volume, 0 to 10 000
     
     //Music
@@ -32,3 +33,4 @@
     SS_SetSoundVol(global.fx_ReverseWavez,argument0);
     SS_SetSoundVol(global.fx_Spawn,argument0);
     SS_SetSoundVol(global.fx_LevelUp,argument0);
+    */
