@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>username = "";
+            <string>username = "dog";
 </string>
           </argument>
         </arguments>
@@ -48,15 +48,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>while (username == "")
-{
-    username = get_string("Username:","");
-}
+            <string>//ask user for username
+while (username == "") username = get_string("Username:","");
 
-if (username != "" &amp;&amp; !instance_exists(obj_Network_controller))
-{
-    instance_create(x,y,obj_Network_controller);
-}
+//if username is set, start network
+if (username != "" &amp;&amp; !instance_exists(obj_Network_controller)) instance_create(x,y,obj_Network_controller);
 </string>
           </argument>
         </arguments>

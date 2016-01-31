@@ -29,25 +29,46 @@
 client_id           = -1;
 
 //Server IP and port
-server_ip           = "82.39.79.35"; 
+server_ip           = "127.0.0.1" //"82.39.79.35"; 
 server_port         = 24000;
 
 //Connect
+connected           = false;
 server_socket       = wn_connect(server_ip, server_port)
-
 client_clock        = 0;
-avg_ping            = 0;
-ping_history_limit  = 40
-req_rate_ping       = 60 //send x pings per second
-for (i=0; i&lt;ping_history_limit; i+=1)
-{
-    ping[i] = 0
-}
+update_speed        = 1;
 
-//Server details
-update_timer        = room_speed //requests server-update every second
-client_count        = -1
-request_count       = -1
+//other users
+users = ds_map_create();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>client_clock += 1;
+
+//track connected status
+if (client_id == -1) connected = false else connected = true;
+
+//create chatbox when connected
+if (connected &amp;&amp; !instance_exists(obj_Chatbox)) instance_create(x,y,obj_Chatbox);
 </string>
           </argument>
         </arguments>
@@ -120,56 +141,69 @@ request_count       = -1
             request_count = wn_read_string();
             
             break;
+            
+        case "update_user":
+            //network variable
+            var userid = wn_read_string();
+            
+            //ensure incoming update is not about self-user
+            if (userid != client_id)
+            {
+                if (ds_map_find_value(users, userid))
+                {
+                    //user was already known
+                    player_id = ds_map_find_value(users, userid)
+                }
+                else
+                {
+                    //new user appeared
+                    player_id = instance_create(0,0,obj_DummyPlayer);
+                    ds_map_add(users, userid, player_id);
+                }
+                
+                //update user's values
+                player_id.sprite_id = wn_read_string();
+                player_id.username  = wn_read_string();
+                player_id.x         = wn_read_string();
+                player_id.y         = wn_read_string();
+                player_id.hp        = wn_read_string();
+                player_id.str       = wn_read_string();
+            }
+            else
+            {
+                wn_clear_buffer();
+            }
+            break;
     }
 }
 
-//request updates
-if (client_clock mod update_timer == 0)
+//update server with coordinates
+if (connected &amp;&amp; client_clock mod update_speed == 0)
 {
-    //request for client-count
-    wn_write_byte(wn_msgtype("C2S", "client_count"));
-    wn_send_message(server_socket)   
+    if (instance_exists(obj_Player) &amp;&amp; instance_exists(obj_Controller))
+    {
+        wn_clear_buffer();
+        
+        //update message type
+        wn_write_byte(wn_msgtype("C2S", "update_user"));
+        
+        //network variable
+        wn_write_string(client_id);
+        
+        //controller variable
+        wn_write_string(obj_Controller.username);
+        
+        //player variables
+        wn_write_string(obj_Player.sprite_id);
+        wn_write_string(round(obj_Player.x));
+        wn_write_string(round(obj_Player.y));
+        wn_write_string(round(obj_Player.hp));
+        wn_write_string(round(obj_Player.str));
+        
+        //send
+        wn_send_message(server_socket)   
+    }
 }
-else if (client_clock mod update_timer == 10)
-{
-    //request for request-count
-    wn_write_byte(wn_msgtype("C2S", "request_count"));
-    wn_send_message(server_socket)
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//create network displayer
-if (!instance_exists(obj_Network_graph))
-{
-    instance_create(x,y,obj_Network_graph)
-}
-if (!instance_exists(obj_Server_status))
-{
-    instance_create(x,y,obj_Server_status)
-}
-
-//always increment clock
-client_clock += 1;
-
-
 </string>
           </argument>
         </arguments>
@@ -223,14 +257,14 @@ wn_send_message(server_socket)
 draw_set_color(c_black);
 draw_set_halign(fa_right);
 draw_set_valign(fa_middle);
-if (client_id == -1)
+if (!connected)
 {
     var msg = "Attempting to establish connection to server.. ("+string(round(client_clock / room_speed))+")"
     draw_set_color(c_black)
     draw_rectangle(room_width-20+4,20-0.5*string_height(msg),room_width-4-28-string_width(msg),20+0.5*string_height(msg),0)
     draw_set_color(c_white)
     draw_text(room_width-28, 20, msg)
-    draw_set_color(c_red)
+    draw_sprite(spr_button,0,room_width-20,20);
 }
 else
 {
@@ -239,52 +273,11 @@ else
     draw_rectangle(room_width-20+4,20-0.5*string_height(msg),room_width-4-28-string_width(msg),20+0.5*string_height(msg),0)
     draw_set_color(c_white)
     draw_text(room_width-28, 20, msg)
-    draw_set_color(c_lime)
+    draw_sprite(spr_button,0,room_width-20,20);
 }
 
-draw_circle(room_width-20,20,8,0);
 draw_set_valign(fa_top)
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>// modify pinging rate
-draw_set_color(c_black)
-if keyboard_check(vk_up)
-{
-    req_rate_ping+=1    
-}  
-else if keyboard_check(vk_down)
-{
-    req_rate_ping-=1    
-}  
-if (req_rate_ping &lt;= 0) {req_rate_ping = 1}
-
-//send ping request
-if ((client_clock mod req_rate_ping) == 0)
-{   
-    wn_clear_buffer();
-    wn_write_byte(wn_msgtype("C2S","ping"));
-    wn_write_string(string(get_timer()/1000)); //write current client time in ms
-    wn_send_message(server_socket);
-}
 </string>
           </argument>
         </arguments>

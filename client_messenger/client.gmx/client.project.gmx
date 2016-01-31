@@ -12,6 +12,8 @@
     <sprite>sprites\spr_Controller</sprite>
     <sprite>sprites\sprite2</sprite>
     <sprite>sprites\spr_NetworkDisplayer</sprite>
+    <sprite>sprites\spr_button</sprite>
+    <sprite>sprites\spr_Player</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -32,8 +34,8 @@
     <object>objects\obj_Network_controller</object>
     <object>objects\obj_Chatbox</object>
     <object>objects\obj_Controller</object>
-    <object>objects\obj_Network_graph</object>
-    <object>objects\obj_Server_status</object>
+    <object>objects\obj_Player</object>
+    <object>objects\obj_DummyPlayer</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

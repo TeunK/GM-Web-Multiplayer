@@ -21,7 +21,8 @@ var MESSAGES = {
         "chat_message": 4,
         "ping": 5,
         "client_count": 6,
-        "request_count": 7
+        "request_count": 7,
+        "update_user": 8
     },
     "C2S":{
         "initial_client_details": 1,
@@ -31,7 +32,8 @@ var MESSAGES = {
         "client_count": 5,
         "request_count": 6,
         "new_virtual_client": 7,
-        "remove_virtual_client": 8
+        "remove_virtual_client": 8,
+        "update_user": 9
     }
 };
 
