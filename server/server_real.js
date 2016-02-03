@@ -35,26 +35,27 @@ io.sockets.on('connection', function(client_socket) {
 
 /* Network Logic Handling */
 action = {};
-action[MESSAGES['C2S'].initial_client_details] = function(player){
+var msgs = MESSAGES['C2S'];
+action[msgs.initial_client_details] = function(player){
     username = bufferread();
     player.set_username(username);
 };
-action[MESSAGES['C2S'].client_disconnects] = function(player){
+action[msgs.client_disconnects] = function(player){
     controller.clients.splice(obj_player, 1);
     player.disconnect();
 };
-action[MESSAGES['C2S'].chat_message] = function(player){
+action[msgs.chat_message] = function(player){
     var chat_message = bufferread();
     player.send_message(chat_message);
 };
-action[MESSAGES['C2S'].ping] = function(player){
+action[msgs.ping] = function(player){
     var ping_sendtime   = bufferread();
     player.return_ping(ping_sendtime);
 };
-action[MESSAGES['C2S'].client_count] = function(player){
+action[msgs.client_count] = function(player){
     player.return_clientcount();
 };
-action[MESSAGES['C2S'].update_user] = function(player){
+action[msgs.update_user] = function(player){
     player.update();
 };
 
