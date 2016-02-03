@@ -41,7 +41,8 @@ action[msgs.initial_client_details] = function(player){
     player.set_username(username);
 };
 action[msgs.client_disconnects] = function(player){
-    controller.clients.splice(obj_player, 1);
+    console.log("logout");
+    controller.clients.splice(player, 1);
     player.disconnect();
 };
 action[msgs.chat_message] = function(player){
@@ -99,6 +100,7 @@ Player.prototype.get_socket_id = function() {
 };
 Player.prototype.update = function() {
     this.receive_player_data();
+    console.log("Client ["+this.client_id.toString()+"]: ("+this.x.toString()+","+this.y.toString()+")");
     this.broadcast_player_data();
 };
 Player.prototype.receive_player_data = function() {
@@ -137,6 +139,7 @@ Player.prototype.broadcast_player_data = function() {
     broadcast();
 };
 Player.prototype.disconnect = function() {
+    console.log("USER "+this.client_id.toString()+" tried to LOGOUT");
     msg_type = MESSAGES['S2C'].client_disconnected;
     clearbuffer();
     bufferwrite(msg_type);
@@ -144,6 +147,7 @@ Player.prototype.disconnect = function() {
     broadcast();
 };
 Player.prototype.send_message = function(message) {
+    console.log("message: "+message);
     msg_type = MESSAGES['S2C'].chat_message;
     clearbuffer();
     bufferwrite(msg_type);

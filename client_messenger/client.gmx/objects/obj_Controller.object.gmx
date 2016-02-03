@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>username = "USER-"+string(1000+round(random(8999)));
+            <string>randomize(); //init random seeds
+username = "USER-"+string(1000+round(random(8999)));
 </string>
           </argument>
         </arguments>
@@ -88,6 +89,8 @@ if keyboard_check(vk_space)
     draw_line(0,mouse_y,room_width,mouse_y)
     draw_text(mouse_x + 14,mouse_y - 20, "("+string(mouse_x)+", "+string(mouse_y)+")")
 }
+
+
 </string>
           </argument>
         </arguments>

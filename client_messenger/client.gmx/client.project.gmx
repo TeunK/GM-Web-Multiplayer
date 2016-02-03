@@ -25,6 +25,8 @@
     <script>scripts\draw_chat.gml</script>
     <script>scripts\max_value.gml</script>
     <script>scripts\strings_to_widths.gml</script>
+    <script>scripts\btn_pressed.gml</script>
+    <script>scripts\mouse_enters.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\ft_main</font>

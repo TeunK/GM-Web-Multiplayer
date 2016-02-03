@@ -36,7 +36,7 @@ server_port         = 24000;
 connected           = false;
 server_socket       = wn_connect(server_ip, server_port)
 client_clock        = 0;
-update_speed        = 1;
+update_speed        = 150;
 
 //other users
 users = ds_map_create();
@@ -111,6 +111,7 @@ if (connected &amp;&amp; !instance_exists(obj_Chatbox)) instance_create(x,y,obj_
             
         case "chat_message":
             //receive message from some user
+            var sender          = wn_read_string();
             var chat_message    = wn_read_string();
             
             //add new message to chatbox
@@ -141,11 +142,35 @@ if (connected &amp;&amp; !instance_exists(obj_Chatbox)) instance_create(x,y,obj_
             
             break;
             
-        case "update_user":
+        case "client_disconnected":
             //network variable
             var userid = wn_read_string();
             
-            show_message("received player update from user "+string(userid));
+            //ensure incoming update is not about self-user
+            if (userid != client_id)
+            {
+                if (ds_map_find_value(users, userid))
+                {
+                    //user was already known
+                    player_instance = ds_map_find_value(users, userid)
+                    with (player_instance)
+                    {
+                        instance_destroy();
+                    }
+                    ds_map_delete(users,userid);
+                }
+            }
+            else
+            {
+                game_end();
+                show_message("Game should have ended for this player by now..");
+            }
+            
+            break;
+            
+        case "update_user":
+            //network variable
+            var userid = wn_read_string();
             
             //ensure incoming update is not about self-user
             if (userid != client_id)
@@ -184,7 +209,7 @@ if (connected &amp;&amp; !instance_exists(obj_Chatbox)) instance_create(x,y,obj_
 }
 
 //update server with coordinates
-if (connected &amp;&amp; client_clock mod update_speed == 150)
+if (connected &amp;&amp; client_clock mod update_speed == 0)
 {
     if (instance_exists(obj_Player) &amp;&amp; instance_exists(obj_Controller))
     {
@@ -212,8 +237,6 @@ if (connected &amp;&amp; client_clock mod update_speed == 150)
         
         //send
         wn_send_message(server_socket)   
-        
-        show_message("sent player update to server");
     }
 }
 </string>
@@ -285,11 +308,17 @@ else
     draw_rectangle(room_width-20+4,20-0.5*string_height(msg),room_width-4-28-string_width(msg),20+0.5*string_height(msg),0)
     draw_set_color(c_white)
     draw_text(room_width-28, 20, msg)
-    draw_sprite(spr_button,0,room_width-20,20);
+    draw_sprite(spr_button,1,room_width-20,20);
 }
 
 draw_set_valign(fa_top)
 
+if (btn_pressed(20,50,"LOGOUT"))
+{
+    //send disconnect-client msg
+    wn_write_byte(wn_msgtype("C2S", "client_disconnects"));
+    wn_send_message(server_socket)
+}
 </string>
           </argument>
         </arguments>
