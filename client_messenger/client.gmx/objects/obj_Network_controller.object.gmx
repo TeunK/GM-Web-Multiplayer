@@ -104,14 +104,13 @@ if (connected &amp;&amp; !instance_exists(obj_Chatbox)) instance_create(x,y,obj_
             //respond with our username
             wn_clear_buffer();
             wn_write_byte(wn_msgtype("C2S", "initial_client_details"));
-            wn_write_string("client username");
+            wn_write_string(obj_Controller.username);
             wn_send_message(server_socket)
             
             break;
             
         case "chat_message":
             //receive message from some user
-            var sender          = wn_read_string();
             var chat_message    = wn_read_string();
             
             //add new message to chatbox
@@ -146,6 +145,8 @@ if (connected &amp;&amp; !instance_exists(obj_Chatbox)) instance_create(x,y,obj_
             //network variable
             var userid = wn_read_string();
             
+            show_message("received player update from user "+string(userid));
+            
             //ensure incoming update is not about self-user
             if (userid != client_id)
             {
@@ -162,12 +163,17 @@ if (connected &amp;&amp; !instance_exists(obj_Chatbox)) instance_create(x,y,obj_
                 }
                 
                 //update user's values
-                player_id.sprite_id = wn_read_string();
                 player_id.username  = wn_read_string();
+                player_id.sprite_id = wn_read_string();
                 player_id.x         = wn_read_string();
                 player_id.y         = wn_read_string();
-                player_id.hp        = wn_read_string();
-                player_id.str       = wn_read_string();
+                player_id.h_speed   = wn_read_string();
+                player_id.v_speed   = wn_read_string();
+                player_id.td_direction= wn_read_string();
+                player_id.roomname  = wn_read_string();
+                player_id.armor_top = wn_read_string();
+                player_id.level     = wn_read_string();
+                                
             }
             else
             {
@@ -178,7 +184,7 @@ if (connected &amp;&amp; !instance_exists(obj_Chatbox)) instance_create(x,y,obj_
 }
 
 //update server with coordinates
-if (connected &amp;&amp; client_clock mod update_speed == 0)
+if (connected &amp;&amp; client_clock mod update_speed == 150)
 {
     if (instance_exists(obj_Player) &amp;&amp; instance_exists(obj_Controller))
     {
@@ -186,10 +192,7 @@ if (connected &amp;&amp; client_clock mod update_speed == 0)
         
         //update message type
         wn_write_byte(wn_msgtype("C2S", "update_user"));
-        
-        //network variable
-        wn_write_string(client_id);
-        
+
         //controller variable
         wn_write_string(obj_Controller.username);
         
@@ -197,11 +200,20 @@ if (connected &amp;&amp; client_clock mod update_speed == 0)
         wn_write_string(obj_Player.sprite_id);
         wn_write_string(round(obj_Player.x));
         wn_write_string(round(obj_Player.y));
-        wn_write_string(round(obj_Player.hp));
-        wn_write_string(round(obj_Player.str));
+        wn_write_string(round(obj_Player.h_speed));
+        wn_write_string(round(obj_Player.v_speed));
+        wn_write_string(round(obj_Player.mouse_x));
+        wn_write_string(round(obj_Player.mouse_y));
+        wn_write_string(round(obj_Player.td_direction));
+        wn_write_string(round(obj_Player.roomname));
+        wn_write_string(round(obj_Player.armor_top));
+        wn_write_string(round(obj_Player.level));
+        
         
         //send
         wn_send_message(server_socket)   
+        
+        show_message("sent player update to server");
     }
 }
 </string>

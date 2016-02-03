@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>username = "dog";
+            <string>username = "USER-"+string(1000+round(random(8999)));
 </string>
           </argument>
         </arguments>

@@ -27,15 +27,13 @@
             <kind>1</kind>
             <string>//var address, name, port;
 
-address = "81.170.218.152";
+address = "127.0.0.1" //"82.39.79.35"; 
 name = obj_Controller.username
-port = 39083;
+port = 24000;
 
 
-socket = socket_create();
-socket_connect(socket, global.address, port);
+socket = wn_connect(server_ip, server_port);
 
-global.buffer = buffer_create();
 connected = false;
 
 global.server_delaystarted = false;
@@ -46,11 +44,25 @@ player_id = 0;
 //instance_create(random(room_width - 60) + 30, random(room_height - 60) + 30, obj_localplayer);
 obj_tdPlayer.username = obj_Controller.username;
 
-// send name
-buffer_clear(global.buffer);
-buffer_write_uint8(global.buffer, 11);
-buffer_write_string(global.buffer, name);
-socket_write_message(socket, global.buffer);
+
+//////////////////////////////////////
+/*
+//Our client ID as assigned by server
+client_id           = -1;
+
+//Server IP and port
+server_ip           = "127.0.0.1" //"82.39.79.35"; 
+server_port         = 24000;
+
+//Connect
+connected           = false;
+server_socket       = wn_connect(server_ip, server_port)
+client_clock        = 0;
+update_speed        = 1;
+
+//other users
+users = ds_map_create();
+*/
 </string>
           </argument>
         </arguments>

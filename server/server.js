@@ -41,13 +41,13 @@ io.sockets.on('connection', function(socket) {
         // store data into buffer
         buffer      = data;
         //read the message type
-        messageid   = bufferread();
+        message_code   = bufferread();
 
         var msg_type;
         console.log("DETAILS: "+controller);
         console.log("CLIENTS: "+controller.clients.length);
 
-        switch (messageid) {
+        switch (message_code) {
             case MESSAGES['C2S'].initial_client_details:
                 /* RECEIVE CLIENT obj_id AND USERNAME -> FORWARD DATA TO ALL CLIENTS ON NETWORK */
 
