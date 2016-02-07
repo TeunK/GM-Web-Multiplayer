@@ -6,7 +6,7 @@ report/*.out
 report/*.pdf
 report/*.gz
 report/*.log
-server/node_modules/
+server/node_modules/socket.ioX
 server/.idea/
 client/.idea/
 client/output/
