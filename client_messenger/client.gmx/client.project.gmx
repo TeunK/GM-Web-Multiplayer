@@ -17,6 +17,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\background1</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -27,6 +28,7 @@
     <script>scripts\strings_to_widths.gml</script>
     <script>scripts\btn_pressed.gml</script>
     <script>scripts\mouse_enters.gml</script>
+    <script>scripts\set_updates_per_second.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\ft_main</font>
