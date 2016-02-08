@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,15 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_id   = 2//0 + round(random(3));
+            <string>sprite_id   = 0 + round(random(3));
 x           = random(room_width);
 y           = random(room_height);
 h_speed     = 0;
 v_speed     = 0
 td_direction= direction
-roomname   = room_get_name(room);
+roomname    = room_get_name(room);
 armor_top   = sprite_id;
 level       = 1 + round(random(125));
+username    = "undefined"
 </string>
           </argument>
         </arguments>
@@ -64,7 +65,9 @@ td_direction= direction
 roomname   = room_get_name(room);
 armor_top   = sprite_id;
 
-text_details = "hspeed: "+string(h_speed)+"#vspeed: "+string(v_speed)+"#dir: "+string(td_direction)+"#room: "+string(roomname)+"#armor: "+string(armor_top);
+
+//text_details = "hspeed: "+string(h_speed)+"#vspeed: "+string(v_speed)+"#dir: "+string(td_direction)+"#room: "+string(roomname)+"#armor: "+string(armor_top);
+text_details = username
 margin = 6
 box_width = string_width(text_details) + margin
 box_height = string_height(text_details) + 2*margin
@@ -75,6 +78,8 @@ draw_set_font(ft_mini)
 draw_set_colour(c_black)
 draw_text(x,y+11,text_details);
 draw_set_halign(fa_left)
+
+
 </string>
           </argument>
         </arguments>
