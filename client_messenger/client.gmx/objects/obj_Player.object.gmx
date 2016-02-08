@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_id   = 2//0 + round(random(3));
-x           = random(room_width);
-y           = random(room_height);
+            <string>sprite_id   = 0 + round(random(3));
+x           = 350 + random(room_width-350);
+y           = 280 + random(40);
 h_speed     = 0;
 v_speed     = 0
 td_direction= direction
@@ -67,7 +67,9 @@ td_direction= direction
 roomname   = room_get_name(room);
 armor_top   = sprite_id;
 
-text_details = "hspeed: "+string(h_speed)+"#vspeed: "+string(v_speed)+"#dir: "+string(td_direction)+"#room: "+string(roomname)+"#armor: "+string(armor_top);
+
+//text_details = "hspeed: "+string(h_speed)+"#vspeed: "+string(v_speed)+"#dir: "+string(td_direction)+"#room: "+string(roomname)+"#armor: "+string(armor_top);
+text_details = obj_Controller.username
 margin = 6
 box_width = string_width(text_details) + margin
 box_height = string_height(text_details) + 2*margin
@@ -78,6 +80,7 @@ draw_set_font(ft_mini)
 draw_set_colour(c_black)
 draw_text(x,y+11,text_details);
 draw_set_halign(fa_left)
+
 </string>
           </argument>
         </arguments>
