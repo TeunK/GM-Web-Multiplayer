@@ -13,3 +13,5 @@ client/output/
 .idea/
 gmserver/
 server/gmserver.js
+node_modules/.bin/
+node_modules/supervisor/
