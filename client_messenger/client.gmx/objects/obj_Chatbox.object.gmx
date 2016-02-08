@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>chatting = false;
-chat_lines_max = 10;
+chat_lines_max = 8;
 
 var i;
 for (i = 0; i &lt; chat_lines_max; i += 1)
