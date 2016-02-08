@@ -26,20 +26,17 @@
           <argument>
             <kind>1</kind>
             <string>//Our client ID as assigned by server
-client_id           = -1;
-
-//Server IP and port
 server_ip           = "127.0.0.1" //"82.39.79.35"; 
 server_port         = 24000;
-
-//Connect
-connected           = false;
 server_socket       = wn_connect(server_ip, server_port)
-client_clock        = 0;
-update_speed        = 150;
+update_speed        = set_updates_per_second(60);
 
-//other users
+
+
 users = ds_map_create();
+client_clock = 0;
+connected = false;
+client_id = -1;
 </string>
           </argument>
         </arguments>
