@@ -29,7 +29,7 @@
 server_ip           = "127.0.0.1" //"82.39.79.35"; 
 server_port         = 24000;
 server_socket       = wn_connect(server_ip, server_port)
-update_speed        = set_updates_per_second(60);
+update_speed        = set_updates_per_second(30);
 
 
 

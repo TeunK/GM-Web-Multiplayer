@@ -56,8 +56,8 @@ level       = 1 + round(random(125));
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x += 4 * (keyboard_check(vk_right) - keyboard_check(vk_left)); 
-y += 4 * (keyboard_check(vk_down) - keyboard_check(vk_up)); 
+            <string>x += 5 * (keyboard_check(vk_right) - keyboard_check(vk_left)); 
+y += 5 * (keyboard_check(vk_down) - keyboard_check(vk_up)); 
 draw_sprite(sprite_index,sprite_id,x,y);
 
 
