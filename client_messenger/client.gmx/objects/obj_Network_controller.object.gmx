@@ -90,26 +90,26 @@ if (connected &amp;&amp; !instance_exists(obj_Chatbox)) instance_create(x,y,obj_
             <kind>1</kind>
             <string>while(wn_receive_message(server_socket))
 {
-    var msg_type=wn_msgtype("S2C",wn_read_byte());
+    var msg_type=wn_msgtype("S2C",wn_buffer_read());
     
     switch(msg_type)
     {
         case "confirm_client_id":
             //receive client_id from server
-            client_id = wn_read_byte();
+            client_id = wn_buffer_read();
             
             //respond with our username
             wn_clear_buffer();
-            wn_write_byte(wn_msgtype("C2S", "initial_client_details"));
-            wn_write_string(obj_Controller.username);
+            wn_buffer_write(wn_msgtype("C2S", "initial_client_details"));
+            wn_buffer_write(obj_Controller.username);
             wn_send_message(server_socket)
             
             break;
             
         case "chat_message":
             //receive message from some user
-            var sender          = wn_read_string();
-            var chat_message    = wn_read_string();
+            var sender          = wn_buffer_read();
+            var chat_message    = wn_buffer_read();
             
             //add new message to chatbox
             obj_Chatbox.chat_contents = add_line(obj_Chatbox.chat_contents, sender, chat_message, c_white);
@@ -118,7 +118,7 @@ if (connected &amp;&amp; !instance_exists(obj_Chatbox)) instance_create(x,y,obj_
         
         case "ping":
             //receive ping time when client sent it to server
-            var ping_starttime = wn_read_string();
+            var ping_starttime = wn_buffer_read();
             
             //store time (first shift each ping in history by 1)
             for (i=ping_history_limit-1; i&gt;=0; i-=1)
@@ -130,18 +130,18 @@ if (connected &amp;&amp; !instance_exists(obj_Chatbox)) instance_create(x,y,obj_
             break;
             
         case "client_count":
-            client_count = wn_read_byte();
+            client_count = wn_buffer_read();
                         
             break;
             
         case "request_count":
-            request_count = wn_read_string();
+            request_count = wn_buffer_read();
             
             break;
             
         case "client_disconnected":
             //network variable
-            var userid = wn_read_string();
+            var userid = wn_buffer_read();
             
             //ensure incoming update is not about self-user
             if (userid != client_id)
@@ -167,7 +167,7 @@ if (connected &amp;&amp; !instance_exists(obj_Chatbox)) instance_create(x,y,obj_
             
         case "update_user":
             //network variable
-            var userid = wn_read_string();
+            var userid = wn_buffer_read();
             
             //ensure incoming update is not about self-user
             if (userid != client_id)
@@ -185,16 +185,16 @@ if (connected &amp;&amp; !instance_exists(obj_Chatbox)) instance_create(x,y,obj_
                 }
                 
                 //update user's values
-                player_id.username  = wn_read_string();
-                player_id.sprite_id = wn_read_string();
-                player_id.x         = wn_read_string();
-                player_id.y         = wn_read_string();
-                player_id.h_speed   = wn_read_string();
-                player_id.v_speed   = wn_read_string();
-                player_id.td_direction= wn_read_string();
-                player_id.roomname  = wn_read_string();
-                player_id.armor_top = wn_read_string();
-                player_id.level     = wn_read_string();
+                player_id.username  = wn_buffer_read();
+                player_id.sprite_id = wn_buffer_read();
+                player_id.x         = wn_buffer_read();
+                player_id.y         = wn_buffer_read();
+                player_id.h_speed   = wn_buffer_read();
+                player_id.v_speed   = wn_buffer_read();
+                player_id.td_direction= wn_buffer_read();
+                player_id.roomname  = wn_buffer_read();
+                player_id.armor_top = wn_buffer_read();
+                player_id.level     = wn_buffer_read();
                                 
             }
             else
@@ -213,26 +213,23 @@ if (connected &amp;&amp; client_clock mod update_speed == 0)
         wn_clear_buffer();
         
         //update message type
-        wn_write_byte(wn_msgtype("C2S", "update_user"));
+        wn_buffer_write(wn_msgtype("C2S", "update_user"));
 
         //controller variable
-        wn_write_string(obj_Controller.username);
+        wn_buffer_write(obj_Controller.username);
         
         //player variables
-        wn_write_string(obj_Player.sprite_id);
-        wn_write_string(round(obj_Player.x));
-        wn_write_string(round(obj_Player.y));
-        wn_write_string(round(obj_Player.h_speed));
-        wn_write_string(round(obj_Player.v_speed));
-        wn_write_string(round(obj_Player.mouse_x));
-        wn_write_string(round(obj_Player.mouse_y));
-        wn_write_string(round(obj_Player.td_direction));
-        wn_write_string(round(obj_Player.roomname));
-        wn_write_string(round(obj_Player.armor_top));
-        wn_write_string(round(obj_Player.level));
-        
-        
-        //send
+        wn_buffer_write(obj_Player.sprite_id);
+        wn_buffer_write(round(obj_Player.x));
+        wn_buffer_write(round(obj_Player.y));
+        wn_buffer_write(round(obj_Player.h_speed));
+        wn_buffer_write(round(obj_Player.v_speed));
+        wn_buffer_write(round(obj_Player.mouse_x));
+        wn_buffer_write(round(obj_Player.mouse_y));
+        wn_buffer_write(round(obj_Player.td_direction));
+        wn_buffer_write(round(obj_Player.roomname));
+        wn_buffer_write(round(obj_Player.armor_top));
+        wn_buffer_write(round(obj_Player.level));
         wn_send_message(server_socket)   
     }
 }
@@ -260,9 +257,7 @@ if (connected &amp;&amp; client_clock mod update_speed == 0)
             <kind>1</kind>
             <string>//send disconnect-client msg
 show_message("disconnect client");
-wn_write_byte(wn_msgtype("C2S", "client_disconnects"));
-wn_send_message(server_socket)
-
+wn_disconnect(server_socket, wn_msgtype("C2S", "client_disconnects"));
 </string>
           </argument>
         </arguments>
@@ -313,7 +308,7 @@ draw_set_valign(fa_top)
 if (btn_pressed(20,50,"LOGOUT"))
 {
     //send disconnect-client msg
-    wn_write_byte(wn_msgtype("C2S", "client_disconnects"));
+    wn_buffer_write(wn_msgtype("C2S", "client_disconnects"));
     wn_send_message(server_socket)
 }
 </string>

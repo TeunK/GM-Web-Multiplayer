@@ -1,9 +1,3 @@
-/**
- * Created by Teun on 08/10/2015.
- */
-
-
-
 var sockets     = []; //init connected sockets
 var buffer      = []; //init memory buffer
 var messages    = []; //init messages for storage
@@ -18,8 +12,15 @@ function connect(server_ip, server_port) {
 }
 
 //disconnect from server
-function disconnect(socket) {
-    // todo: send disconnection message to server before disconnecting socket
+function disconnect(socket, value) {
+    /*socket to disconnect, value = "DISCONNECT" msg_id for server*/
+
+    //send disconnection message to server before disconnecting socket
+    clear_buffer();
+    buffer_write(value);
+    send_message(socket);
+
+    //disconnect the socket and free memory
     if (socket) {
         socket.disconnect();
         delete socket;
@@ -51,44 +52,10 @@ function receive_message(socket) {
 function clear_buffer() {
     buffer = [];
 }
-
-//buffer write types
-function write_short(value) {
+function buffer_write(value) {
     buffer.push(value);
 }
-function write_ushort(value) {
-    buffer.push(value);
-}
-function write_int(value) {
-    buffer.push(value);
-}
-function write_uint(value) {
-    buffer.push(value);
-}
-function write_float(value) {
-    buffer.push(value);
-}
-function write_double(value) {
-    buffer.push(value);
-}
-function write_chars(value) {
-    buffer.push(value);
-}
-function write_byte(value) {
-    buffer.push(value);
-}
-function write_string(value) {
-    buffer.push(value);
-}
-
-//buffer reads
-function read_short() {
-    return buffer.shift();
-}
-function read_string() {
-    return buffer.shift();
-}
-function read_byte() {
+function buffer_read() {
     return buffer.shift();
 }
 
