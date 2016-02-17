@@ -64,7 +64,6 @@ function buffer_read() {
 
 
 /* AUXILLARY FUNCTIONALITY */
-
 // create new socket for connection between server_address (host) and return its reference
 function socket_connect(host_addr) {
     var socket = io.connect(host_addr);

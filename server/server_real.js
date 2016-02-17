@@ -214,7 +214,7 @@ function sendmessage(socket) {
 
 
 
-
+//------------------------------------------------------------------------------
 // server startup message in terminal window
 console.log("Server started at "+GLOBAL.host+":"+GLOBAL.port);
 function feedback_page(req,res)
