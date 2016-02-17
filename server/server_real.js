@@ -174,6 +174,7 @@ Player.prototype.return_clientcount = function() {
 
 
 
+
 /////////////////////////////////////////////////////////////////
 function broadcast() {
     // send buffer-contents to ALL clients that are connected to the server
@@ -198,7 +199,7 @@ function clearbuffer() {
 function bufferwrite(value) {
     buffer.push(value);
 }
-function bufferread(value) {
+function bufferread() {
     return buffer.shift();
 }
 
@@ -222,8 +223,7 @@ function feedback_page(req,res)
     //Write index page response to confirm server is executing
     res.writeHead(200, {'Content-Type': 'text/html'});
     res.write(
-        "<h1>"+GLOBAL.project_name+"</h1>" +
-        "<br/>" +
+        "<h1>"+GLOBAL.project_name+"</h1>" + "<br/>" +
         "Success! The server is currently running at "+GLOBAL.host+":"+GLOBAL.port
     );
     res.end();
