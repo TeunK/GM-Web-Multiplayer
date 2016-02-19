@@ -298,6 +298,19 @@ how to create an extension to GameMaker
 \subsection{Prior Considerations}
 %How to make it easy for other developers to create applications with the extension. eg. Creating templates
 %project layout (modularisation / separation of concerns). client, server, benchmark application, equality application, user experience
+%TODO Add background research section explaining: Software design principles, robustness, reliability, reusability, understandability.
+\paragraph*{Software Design Principles:}
+The code needs to be coherent and follow software design principles where-ever applicable in order to support robustness, reliability, reusability, and understandability. This because it needs to be easily readable and understood by other developers that want to use the extension. It also needs to be maintainable for use by others and easily extendable whenever needed.
+\paragraph*{Client tasks:}
+The client has to be executable in the browser. It should be an application or game which uses the extension in order to interact with other existing clients.
+\paragraph*{Extension tasks:}
+The functions inside the extension should be easily callable from within the GameMaker interface. They should keep the "networking" knowledge requirement of the developer to a minimum. The extension also has to be able to execute in the browser as part of the client, and execute socket send- and receive commands while doing so.
+\paragraph*{Server tasks:}
+The server must to mimic the architectural structure of the client. It has to keep track of the state of each of the connected clients. it should also act as centralized controller that allows instances to interact with other instances. These instances are synchronized with those on the clients. Therefore, a change in the instance on the server should trigger a change for its representative instance in the clients.
+
+
+
+
 \subsection{Server and Client}
 %how do applications communicate
 %IMPORTANT: State why there is no need for testing fairness between different bandwidths for web applications. (ie. games and web-apps only really need to send small variables, no big data is transported)
@@ -324,58 +337,29 @@ how to create an extension to GameMaker
 % -----------------------
 \chapter{Network Extension Evaluation}
 %description of experiments, presentation + (directly including) interpretation of the data
-\section{Setup}
-%explain every detail of how the experiments were setup, how everything worked.
-%Note: add reminder that developers can setup peer-to-peer network by using the extension to serve as both server and client in their client application, but that these tests specifically consider the strength of each individual application acting as server.
 
-\subsection{Controlled Network Experiments}
+\section{Controlled Network}
 The controlled experiments were conducted in order to predict server behaviour when loaded under similar pressure in future occasions. 
 
-\subsubsection{Concurrent Connections Specifics}
-\paragraph{Environment}
+Experiments were executed on a Windows 7 64-bit platform with 12.6GB available physical memory and an Intel(R) Core(TM) i7-2600K CPU @ 3.40GHz processor. The software included Node v0.12.3 and Socket.io v1.3.7 in order to handle the networking operations.
+
+The network was controlled using Dummynet, using a below-average UK household network setup \footnote{http://www.ispreview.co.uk/index.php/2015/02/ofcom-average-uk-home-broadband-speeds-slowly-reach-23mbps.html}. This involves an upload speed of 5Mbit/s, and a download speed of 1Mbit/, although no packet loss was set in order to ensure consistency throughout the controlled network experiments.
+
+\subsection{Concurrent Connections}
+The following experiment evaluates the server performance with regard to the number of clients.
+
+\paragraph*{Environment Setup}
 \begin{itemize}
 \item Variable number of concurrent connections cc, up to 15 instances with each simulating at most 500 clients.
 \item Clients do not contact the server after establishing a connection.
 \item The CPU usage, time and RSS (Resident set size) are recorded after each every time another group of 100 clients connect to the server.
 \end{itemize}
-\paragraph{Dependent variables}
+\paragraph*{Dependent variables}
 \begin{itemize}
 \item CPU usage on the server
 \item CPU time on the server
 \item RSS on the server
 \end{itemize}
-
-\subsubsection{Message Broadcasting Specifics}
-\paragraph{Environment}
-\begin{itemize}
-\item 5000 concurrent connections (10 instances each simulating at most 500 clients).
-\item Each package that is sent has a size of 8 bytes.
-\item Each client sends packages at regular time intervals, causing the server to handle n messages every second.
-\item Each client measures the roundtrip time of its package to the server.
-\end{itemize}
-
-\paragraph{Dependent variables}
-\begin{itemize}
-\item Mean roundtrip time between all clients
-\item Variance of the roundtrip time between all clients
-\item Standard Deviation of the roundtrip time between all clients
-\end{itemize}
-
-\subsubsection{Server hardware and network specification}
-\paragraph{}The controlled network experiments were executed on a Windows 7 64-bit platform with 12.6GB available physical memory and an Intel(R) Core(TM) i7-2600K CPU @ 3.40GHz processor. The software included Node v0.12.3 and Socket.io v1.3.7 in order to handle the networking operations.
-
-The network was controlled using Dummynet, using a below-average UK household network setup. This involves an upload speed of 5Mbit/s, and a download speed of 1Mbit/, although no packet loss was set in order to ensure consistency throughout the controlled network experiments.
-
-\subsection{Real Network Experiments}
-The network was consistently running with a 54.0Mb/s download and 3.0Mb/s upload speed.
-\paragraph{}Multiple tests were executed with clients being located at specified locations. In each case, the clients were sending 8-byte messages to the server at a regular interval of 1 second for 2 minutes. The 120 roundtrip times for each client were then averaged in order to blur occasional peaks. At this point the roundtrip times of the clients in each common location were averaged, and then the deviance of the roundtrip times at each of these locations were calculated.
-
-All network experiments were executed using a single server located in Edinburgh and in each experiment all clients were connected and communicating to that server simultaneously.
-
-\section{Results}
-\subsection{Controlled Network Results}
-\subsubsection{Concurrent Connections}
-The following experiment evaluates the server performance with regard to the number of clients.
 
 \begin{center}
 \begin{figure}
@@ -407,8 +391,23 @@ When the CPU usage is above 70 percent, the user may experience lag. Such high C
 \end{center}
 
 
-\subsubsection{Message Broadcasting Performance}
+\subsection{Message Broadcasting Performance}
 The following experiment evaluates the number of messages that can be handled by the server simultaneously, and considers how this affects the fairness in response-time of the individual clients.
+
+\paragraph*{Environment Setup}
+\begin{itemize}
+\item 5000 concurrent connections (10 instances each simulating at most 500 clients).
+\item Each package that is sent has a size of 8 bytes.
+\item Each client sends packages at regular time intervals, causing the server to handle n messages every second.
+\item Each client measures the roundtrip time of its package to the server.
+\end{itemize}
+
+\paragraph*{Dependent variables}
+\begin{itemize}
+\item Mean roundtrip time between all clients
+\item Variance of the roundtrip time between all clients
+\item Standard Deviation of the roundtrip time between all clients
+\end{itemize}
 
 \begin{center}
 
@@ -442,11 +441,16 @@ The following experiment evaluates the number of messages that can be handled by
 
 
 
-\subsection{Real Network Results}
-\subsubsection{Location-wise Delay Fairness}
+\section{Real Network Results}
+The network was consistently running with a 54.0Mb/s download and 3.0Mb/s upload speed.
+\paragraph*{}Multiple tests were executed with clients being located at specified locations. In each case, the clients were sending 8-byte messages to the server at a regular interval of 1 second for 2 minutes. The 120 roundtrip times for each client were then averaged in order to blur occasional peaks. At this point the roundtrip times of the clients in each common location were averaged, and then the deviance of the roundtrip times at each of these locations were calculated.
+
+All network experiments were executed using a single server located in Edinburgh and in each experiment all clients were connected and communicating to that server simultaneously.
+
+\subsection{Location-wise Delay Fairness}
 The following experiment evaluates the effect of the geographical distance between groups of clients and the server with respect to fairness in response-time from the server to the clients.
 
-\paragraph{Test cases:}
+\paragraph*{Test cases:}
 \begin{enumerate}
 \item Local network setting: Five clients physically located in the same local home network.
 
@@ -460,7 +464,7 @@ The following experiment evaluates the effect of the geographical distance betwe
 
 \end{enumerate}
 
-\paragraph{Results:}Average roundtrip times per location:
+\paragraph*{Results:}Average roundtrip times per location:
 \begin{center}
   \begin{tabular}{ r | l }
 Location		& Average RTT \\ \hline\hline
@@ -499,6 +503,8 @@ Average roundtrip times per test:
 \subsection{Comparison of the Extended GameMaker Functionality with Related Work}
 \subsection{Criticism on the Implementation and Design Decisions}
 %make clear connection with the evaluation
+\section{Note to developers}
+%Note: add reminder that developers can setup peer-to-peer network by using the extension to serve as both server and client in their client application, but that these tests specifically consider the strength of each individual application acting as server.
 
 \section{Future Improvements}
 
