@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>done=0;
+            <string>/*done=0;
 
 http_dll_init();
 
@@ -71,7 +71,7 @@ httprequest_connect(httpoffline, "http://www.rendonan.com/gameonline.php", true)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if httpoffline!=-1 {
+            <string>/*if httpoffline!=-1 {
     httprequest_destroy(httpoffline);
 }
 </string>
@@ -96,7 +96,7 @@ httprequest_connect(httpoffline, "http://www.rendonan.com/gameonline.php", true)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// step event
+            <string>/*// step event
 var st;
 if httpoffline!=-1 {
     httprequest_update(httpoffline);
@@ -139,7 +139,7 @@ if httpoffline!=-1 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// room end event
+            <string>/* room end event
 if httpoffline!=-1 {
     httprequest_destroy(httpoffline);
 }
@@ -166,7 +166,7 @@ if httpoffline!=-1 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if httpoffline!=-1 {
+            <string>/*if httpoffline!=-1 {
     httprequest_destroy(httpoffline);
 }
 

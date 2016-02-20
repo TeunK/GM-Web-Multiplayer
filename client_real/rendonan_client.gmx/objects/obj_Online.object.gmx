@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>http_dll_init();
+            <string>/*http_dll_init();
 
 //var httprequest, st;
 httponline = httprequest_create();
@@ -69,7 +69,7 @@ httprequest_connect(httponline, "http://www.rendonan.com/gameonline.php", true);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if httponline!=-1 {
+            <string>/*if httponline!=-1 {
     httprequest_destroy(httponline);
 }
 </string>
@@ -94,7 +94,7 @@ httprequest_connect(httponline, "http://www.rendonan.com/gameonline.php", true);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// step event
+            <string>/*step event
 var st;
 if httponline!=-1 {
     httprequest_update(httponline);
@@ -136,7 +136,7 @@ if httponline!=-1 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// room end event
+            <string>/* room end event
 if httponline!=-1 {
     httprequest_destroy(httponline);
 }

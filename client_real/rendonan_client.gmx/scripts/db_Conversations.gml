@@ -1,9 +1,6 @@
 //conversations that are longer than one popup box
 
 //Chat with Granny, scr_IntRoomTown1 line 30
-if conversation=0
-{}
-
 if conversation=1
 {
  if part=1 {text="Everybody loves grannies cookies :)"}

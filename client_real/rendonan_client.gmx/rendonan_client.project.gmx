@@ -7,8 +7,8 @@
     <extension index="0">extensions\GMWebNET</extension>
   </NewExtensions>
   <sounds name="sound">
-    <sound>sound\snd_nothing</sound>
     <sound>sound\snd_Thunder</sound>
+    <sound>sound\snd_nothing</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="UID">
@@ -387,6 +387,21 @@
       <background>background\bg_Title</background>
       <background>background\tile_MenuHolder</background>
     </backgrounds>
+    <backgrounds name="imports">
+      <background>background\LoginBG</background>
+      <background>background\bgIntro</background>
+      <background>background\bg_Cave1</background>
+      <background>background\bg_FloorMap1</background>
+      <background>background\bg_FloorMap2</background>
+      <background>background\bg_FloorMap3</background>
+      <background>background\bg_FloorMap4</background>
+      <background>background\bg_FloorMap5</background>
+      <background>background\bg_FloorP1</background>
+      <background>background\bg_FloorP2</background>
+      <background>background\bg_Grass1</background>
+      <background>background\bg_Platform1</background>
+      <background>background\bg_Sand1</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -513,7 +528,6 @@
     </scripts>
     <scripts name="httpDllScripts">
       <script>scripts\http_dll_init.gml</script>
-      <script>scripts\buffer_create.gml</script>
       <script>scripts\buffer_destroy.gml</script>
       <script>scripts\buffer_exists.gml</script>
       <script>scripts\buffer_to_string.gml</script>

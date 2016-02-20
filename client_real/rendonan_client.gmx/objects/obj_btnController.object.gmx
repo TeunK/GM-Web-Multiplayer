@@ -28,10 +28,10 @@
             <string>/***************************************************
   This object/script imports all external sound files found from the installer
  ***************************************************/
-/*
+
 if global.musicdefined=0
 {
-    
+    /*    
     SS_Init();
      
      //music
@@ -198,9 +198,41 @@ if global.musicdefined=0
         global.fx_LevelUp = snd_nothing
         show_message("Not all sound effect files were found, playing without sound effects.");
     }
+    */
     
+    global.FloorTown1 = bg_FloorMap1
+    global.FloorMap1 = bg_FloorMap2
+    global.FloorMap2 = bg_FloorMap3
+    global.FloorMap3 = bg_FloorMap4
+    global.FloorMap4 = bg_FloorMap5
+    global.FloorMap5 = bg_FloorP2
+    global.FloorCave1 = bg_Cave1
+    global.Platform1 = bg_Platform1
+    global.bg_pIntro = bgIntro
+    global.bg_Login = LoginBG
+    
+    global.fx_Boom = snd_nothing
+    global.fx_BossState = snd_nothing
+    global.fx_HeavySlide = snd_nothing
+    global.fx_Hoowh = snd_nothing
+    global.fx_Nature = snd_nothing
+    global.fx_Peew1 = snd_nothing
+    global.fx_Pickup = snd_nothing
+    global.fx_Potion = snd_nothing
+    global.fx_Rwawr = snd_nothing
+    global.fx_SlideShut = snd_nothing
+    global.fx_Smash1 = snd_nothing
+    global.fx_Smash2 = snd_nothing
+    global.fx_Splash = snd_nothing
+    global.fx_Sweep1 = snd_nothing
+    global.fx_Sweep2 = snd_nothing
+    global.fx_Wavez = snd_nothing
+    global.fx_ReverseWavez = snd_nothing
+    global.fx_Spawn = snd_nothing
+    global.fx_LevelUp = snd_nothing
     
     //FLOORS / BACKGROUNDS
+    /*
     if file_exists(program_directory+"\graphics\maps\FloorMap1.jpg")
     &amp;&amp; file_exists(program_directory+"\graphics\maps\FloorMap2.jpg")
     &amp;&amp; file_exists(program_directory+"\graphics\maps\FloorMap3.jpg")
@@ -250,10 +282,11 @@ if global.musicdefined=0
         show_message("Backgrounds not found, use the installer to fix these files.")
         game_end();
     }
-    
+    */
+        
     global.musicdefined=1;
 }
-*/
+
 </string>
           </argument>
         </arguments>
@@ -287,9 +320,10 @@ if room=MainMenu
 
 
 //Volume Status
-if show_question("Mute Game?") global.volume=0 else global.volume=0.4; //also defined later by obj_controller create event 2nd script
+//if show_question("Mute Game?") global.volume=0 else global.volume=0.4; //also defined later by obj_controller create event 2nd script
 //sound_global_volume(power(global.volume,0.3));
-SS_SetSoundVolAll(10000*power(global.volume,0.3));
+//SS_SetSoundVolAll(10000*power(global.volume,0.3));
+global.volume=0
 volumeset=0
 volumeamount=100
 
@@ -345,10 +379,13 @@ if (keyboard_check_pressed(ord('W')) || keyboard_check_pressed(vk_up))
     if timer &lt;=0 {if selected="Exit" {selected="Credits"; timer=2}}
    }
 
-if selected="Play"    {obj_btnPlay.mouse=1; obj_btnLoad.mouse=0; obj_btnCredits.mouse=0; obj_btnExit.mouse=0; }
-if selected="Load"    {obj_btnPlay.mouse=0; obj_btnLoad.mouse=1; obj_btnCredits.mouse=0; obj_btnExit.mouse=0; }
-if selected="Credits" {obj_btnPlay.mouse=0; obj_btnLoad.mouse=0; obj_btnCredits.mouse=1; obj_btnExit.mouse=0; }
-if selected="Exit"    {obj_btnPlay.mouse=0; obj_btnLoad.mouse=0; obj_btnCredits.mouse=0; obj_btnExit.mouse=1; }
+if instance_exists(obj_btnPlay) &amp;&amp; instance_exists(obj_btnCredits) &amp;&amp; instance_exists(obj_btnExit)
+{
+if selected="Play"    {obj_btnPlay.mouse=1; obj_btnCredits.mouse=0; obj_btnExit.mouse=0; }
+if selected="Load"    {obj_btnPlay.mouse=0; obj_btnCredits.mouse=0; obj_btnExit.mouse=0; }
+if selected="Credits" {obj_btnPlay.mouse=0; obj_btnCredits.mouse=1; obj_btnExit.mouse=0; }
+if selected="Exit"    {obj_btnPlay.mouse=0; obj_btnCredits.mouse=0; obj_btnExit.mouse=1; }
+}
 </string>
           </argument>
         </arguments>

@@ -56,95 +56,95 @@ client=200;           //last client used by player
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*
-
-countdown=20;
+            <string>countdown=20;
 
 
 //get variables
-    gameclient=obj_Login.gameclient;   //this client (from this file)
-    login=obj_Login.login;
-    
-    name=obj_Login.name;
-    client=obj_Login.client;           //last client used by player
-    admin=obj_Login.admin;
-    map=obj_Login.map;
-    money=obj_Login.money;
-    
-    ComeFromTutorial=obj_Login.ComeFromTutorial;
-    ownhealthtotal=obj_Login.ownhealthtotal;
-    ownhealth=obj_Login.ownhealth;
-    s_hp=obj_Login.s_hp;
-    ownsptotal=obj_Login.ownsptotal;
-    ownsp=obj_Login.ownsp;
-    s_sp=obj_Login.s_sp;
-    ownstrength=obj_Login.ownstrength;
-    s_str=obj_Login.s_str;
-    attackrange=obj_Login.attackrange;
-    s_range=obj_Login.s_range;
-    agility=obj_Login.agility;
-    s_agility=obj_Login.s_agility;
-    defence=obj_Login.defence;
-    s_def=obj_Login.s_def;
-    ownexptotal=obj_Login.ownexptotal;
-    ownexp=obj_Login.ownexp;
-    level=obj_Login.level;
-    ownskillpoint=obj_Login.ownskillpoint;
-    ownskillpointused=obj_Login.ownskillpointused;
-    ownstatpoint=obj_Login.ownstatpoint;
-    ownstatpointused=obj_Login.ownstatpointused;
-    weapondamage=obj_Login.weapondamage;
-    attackspeed=obj_Login.attackspeed;
-    leanchain1=obj_Login.leanchain1;
-    questscomplete=obj_Login.questscomplete;
-    questmax=obj_Login.questmax;
-    Questactive1=obj_Login.Questactive1;
-    Questpart1=obj_Login.Questpart1;
-    Questactive2=obj_Login.Questactive2;
-    Questpart2=obj_Login.Questpart2;
-    Questactive3=obj_Login.Questactive3;
-    Questpart3=obj_Login.Questpart3;
-    Questactive4=obj_Login.Questactive4;
-    Questpart4=obj_Login.Questpart4;
-    Questactive5=obj_Login.Questactive5;
-    Questpart5=obj_Login.Questpart5;
-    Questactive6=obj_Login.Questactive6;
-    Questpart6=obj_Login.Questpart6;
-    Questactive7=obj_Login.Questactive7;
-    Questpart7=obj_Login.Questpart7;
-    Questactive8=obj_Login.Questactive8;
-    Questpart8=obj_Login.Questpart8;
-    Questactive9=obj_Login.Questactive9;
-    Questpart9=obj_Login.Questpart9;
-    Questactive10=obj_Login.Questactive10;
-    Questpart10=obj_Login.Questpart10;
-    Questactive11=obj_Login.Questactive11;
-    Questpart11=obj_Login.Questpart11;
-    Questactive12=obj_Login.Questactive12;
-    Questpart12=obj_Login.Questpart12;
-    Questactive13=obj_Login.Questactive13;
-    Questpart13=obj_Login.Questpart13;
-    Questactive14=obj_Login.Questactive14;
-    Questactive15=obj_Login.Questactive15;
-    Questpart15=obj_Login.Questpart15;
-    Questactive16=obj_Login.Questactive16;
-    Questpart16=obj_Login.Questpart16;
-    Questactive17=obj_Login.Questactive17;
-    Questpart17=obj_Login.Questpart17;
-    Questactive18=obj_Login.Questactive18;
-    Questpart18=obj_Login.Questpart18;
-    Questactive19=obj_Login.Questactive19;
-    Questpart19=obj_Login.Questpart19;
-    quest1reward=obj_Login.quest1reward;
-    quest2reward=obj_Login.quest2reward;
-    quest3reward=obj_Login.quest3reward;
-    quest4reward=obj_Login.quest4reward;
-    quest5reward=obj_Login.quest5reward;
-    quest6reward=obj_Login.quest6reward;
-    quest7reward=obj_Login.quest7reward;
-    quest8reward=obj_Login.quest8reward;
-    armor_top=obj_Login.armor_top;
-    Boss1respawn=obj_Login.Boss1respawn;
+
+gameclient=200;
+
+username=obj_LProceed.username;
+password=obj_LProceed.password;
+name = username;
+
+admin=0
+map=room_Town1
+money=0
+
+ComeFromTutorial=1
+ownhealthtotal=1000
+ownhealth=1000
+s_hp=1000
+ownsptotal=1000
+ownsp=1000
+s_sp=1000
+ownstrength=10
+s_str=10
+attackrange=30
+s_range=30
+agility=5
+s_agility=5
+defence=0
+s_def=0
+ownexptotal=0
+ownexp=0
+level=0
+ownskillpoint=7
+ownskillpointused=0
+ownstatpoint=0
+ownstatpointused=0
+weapondamage=0
+attackspeed=1
+leanchain1=1
+questscomplete=0
+questmax=0
+Questactive1=0
+Questpart1=0
+Questactive2=0
+Questpart2=0
+Questactive3=0
+Questpart3=0
+Questactive4=0
+Questpart4=0
+Questactive5=0
+Questpart5=0
+Questactive6=0
+Questpart6=0
+Questactive7=0
+Questpart7=0
+Questactive8=0
+Questpart8=0
+Questactive9=0
+Questpart9=0
+Questactive10=0
+Questpart10=0
+Questactive11=0
+Questpart11=0
+Questactive12=0
+Questpart12=0
+Questactive13=0
+Questpart13=0
+Questactive14=0
+Questactive15=0
+Questpart15=0
+Questactive16=0
+Questpart16=0
+Questactive17=0
+Questpart17=0
+Questactive18=0
+Questpart18=0
+Questactive19=0
+Questpart19=0
+quest1reward=0
+quest2reward=0
+quest3reward=0
+quest4reward=0
+quest5reward=0
+quest6reward=0
+quest7reward=0
+quest8reward=0
+armor_top=1
+Boss1respawn=0
 
 
 </string>
@@ -194,6 +194,7 @@ if countdown&lt;=0
     else
     {
         instance_destroy();
+        show_message("Login Failed: Did not log in");
     }
 }
 

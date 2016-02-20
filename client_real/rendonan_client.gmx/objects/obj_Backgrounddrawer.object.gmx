@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if room=room_Login {draw_background(global.bg_Login,0,0);}
+            <string>draw_set_alpha(1)
+if room=room_Login {draw_background(global.bg_Login,0,0);}
 if room=room_Tutorial1 {draw_background(global.FloorTown1,0,0);}
 if room=room_Town1 {draw_background(global.FloorTown1,0,0);}
 if room=room_Path1 {draw_background(global.FloorMap1,0,0);}

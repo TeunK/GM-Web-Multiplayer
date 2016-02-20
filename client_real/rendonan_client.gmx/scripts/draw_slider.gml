@@ -65,5 +65,5 @@ for (i=0; i<2*dotamount; i+=1)
 for (i=0; i<2*dotamount; i+=1)
 {
     draw_set_color(argument9)
-    draw_rectangle(argument0+0.1.66*argument11-0.5*dotamount*argument10+argument10*i,argument1+2*lineheight,argument0+0.1.66*argument11+1-0.5*dotamount*argument10+argument10*i,argument1+3*lineheight,0)
+    draw_rectangle(argument0+0.166*argument11-0.5*dotamount*argument10+argument10*i,argument1+2*lineheight,argument0+0.166*argument11+1-0.5*dotamount*argument10+argument10*i,argument1+3*lineheight,0)
 }

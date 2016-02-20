@@ -29,6 +29,9 @@
 {
     instance_create(x,y,obj_Offline);
 }*/
+quit=0
+instance_destroy();
+/*
 
 done=0;
 
@@ -639,7 +642,7 @@ if quit=1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>game_end();
+            <string>/*game_end();
 
 timer-=1
 
@@ -737,7 +740,8 @@ if upload!=-1 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(c_black)
+            <string>/*
+draw_set_color(c_black)
 draw_set_font(ft_NPC);
 draw_rectangle(view_xview[0]+10,view_yview[0]+20,view_xview[0]+string_width("Connecting to server . . ."),view_yview[0]+20+string_height("C"),0);
 draw_set_color(c_white)

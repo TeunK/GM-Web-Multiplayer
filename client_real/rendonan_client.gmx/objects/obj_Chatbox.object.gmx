@@ -57,6 +57,7 @@ width=300                //width of box
 delay=10                 //Delay before next action
 
 part=1
+partmax = 1
 
 colorspec=c_orange       //Changable NPC text color (makes MOD seem special)
 
@@ -83,8 +84,8 @@ roomtown1=0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>db_Conversations();
-db_Questrewards();
+            <string>//db_Conversations();
+//db_Questrewards();
 
 //if Finished talking
 if keyboard_check_pressed(ord('J')) &amp;&amp; delay=0 &amp;&amp; (part &gt;= partmax)
@@ -143,10 +144,12 @@ draw_set_alpha(1)
 draw_set_halign(fa_center)
 draw_set_font(ft_menu3)
 draw_text(view_xview[0]+650,view_yview[0]+420,string(part) +string("/") +string(partmax));
-draw_text_ext(view_xview[0]+500,view_yview[0]+445,text,-1,350);
+//draw_text_ext(view_xview[0]+500,view_yview[0]+445,text,-1,350);
+draw_text_ext(view_xview[0]+500,view_yview[0]+445,"Content not available",-1,350);
 
 draw_set_color(colorspec)
-draw_text(view_xview[0]+500,view_yview[0]+435,global.npc)
+//draw_text(view_xview[0]+500,view_yview[0]+435,global.npc)
+draw_text(view_xview[0]+500,view_yview[0]+435,"NPC")
 
 draw_set_alpha(0.7)
 draw_set_color(c_orange)

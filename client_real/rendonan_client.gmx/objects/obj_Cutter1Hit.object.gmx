@@ -81,7 +81,7 @@ if alpha &lt;=0 {instance_destroy();}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x+xx,y+yy,1+string_width(hurt),1,0,c_white,alpha);
+            <string>draw_sprite_ext(sprite_index,image_index,x+xx,y+yy,1+0.1*string_width(string(hurt)),1,0,c_white,alpha);
 draw_set_color(c_red);
 draw_set_font(ft_Hit);
 draw_set_halign(fa_center);

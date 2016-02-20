@@ -80,21 +80,25 @@ connecting=0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if  mouse_x &gt; 300  &amp;&amp;
-    mouse_x &lt; 300 + sprite_get_width(sprite_index) &amp;&amp;
-    mouse_y &gt; 390 &amp;&amp;
-    mouse_y &lt; 390 + sprite_get_height(sprite_index)
+            <string>//LOGIN SCRIPT
+if  mouse_x &gt; 423  &amp;&amp;
+    mouse_x &lt; 710  &amp;&amp;
+    mouse_y &gt; 325  &amp;&amp;
+    mouse_y &lt; 343 
 {
-    if !instance_exists(obj_Login) &amp;&amp; !instance_exists(obj_Verifier)
-    {
-        if username != "" &amp;&amp; password != ""
-        {
-            create=instance_create(x,y,obj_Login);
-            create.username=username;
-            create.password=password;
-            connecting=1;
-        }
-    }
+    select="username";
+    keyboard_string=username
+    blink=0;
+}
+    
+if  mouse_x &gt; 423  &amp;&amp;
+    mouse_x &lt; 710  &amp;&amp;
+    mouse_y &gt; 355  &amp;&amp;
+    mouse_y &lt; 373 
+{
+    select="password";
+    keyboard_string=password
+    blink=0;
 }
 </string>
           </argument>
@@ -116,25 +120,21 @@ connecting=0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//LOGIN SCRIPT
-if  mouse_x &gt; 423  &amp;&amp;
-    mouse_x &lt; 710  &amp;&amp;
-    mouse_y &gt; 325  &amp;&amp;
-    mouse_y &lt; 343 
+            <string>if  mouse_x &gt; 300  &amp;&amp;
+    mouse_x &lt; 300 + sprite_get_width(sprite_index) &amp;&amp;
+    mouse_y &gt; 390 &amp;&amp;
+    mouse_y &lt; 390 + sprite_get_height(sprite_index)
 {
-    select="username";
-    keyboard_string=username
-    blink=0;
-}
-    
-if  mouse_x &gt; 423  &amp;&amp;
-    mouse_x &lt; 710  &amp;&amp;
-    mouse_y &gt; 355  &amp;&amp;
-    mouse_y &lt; 373 
-{
-    select="password";
-    keyboard_string=password
-    blink=0;
+    if !instance_exists(obj_Login) &amp;&amp; !instance_exists(obj_Verifier)
+    {
+        if username != "" 
+        {
+            create=instance_create(x,y,obj_Verifier);
+            //create.username=username;
+            //create.password=password;
+            connecting=1;
+        }
+    }
 }
 </string>
           </argument>
@@ -219,7 +219,12 @@ if select="password"
 }
 
 
-passhide=string_length(password)*"x";
+//passhide=string(string_length(string(password))*"x");
+passhide="";
+for (i=0; i&lt;string_length(password); i+=1)
+{
+    passhide += "x";
+}
 
 //draw text
 draw_set_color(c_black);

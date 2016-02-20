@@ -8,6 +8,7 @@
 //argument7 = direction (0=horizontal / 1=vertical)
 //argument8 = grain length
 
+var amt = argument5
 
 if argument7 = 0
 {

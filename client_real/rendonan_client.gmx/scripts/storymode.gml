@@ -3,10 +3,11 @@
 //argument2=string font;
 //argument3=alpha
 //argument4=break after width in pixels (600 suggested)
-
+var font = argument2
+font = ft_Intro;
 
 draw_set_color(argument1);
-draw_set_font(ft_Intro);
+draw_set_font(font);
 draw_set_halign(fa_center);
 draw_set_valign(fa_center);
 draw_set_alpha(argument3);

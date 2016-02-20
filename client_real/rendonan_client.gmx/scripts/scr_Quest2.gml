@@ -1,5 +1,4 @@
-obj_NPCtrainerTown1.QStart=1;
-                    obj_NPCtrainerTown1.QUpdate=0;
+
 
 if room=room_Town1
 {

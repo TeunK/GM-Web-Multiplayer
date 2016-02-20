@@ -1058,7 +1058,7 @@ if instance_exists(obj_InventoryBG)
                                         }
                                         else if (item_info(equipment,itemlevel) &gt; obj_Controller.ownlevel)
                                         {
-                                            saypc("Your level is too low to equip this.");
+                                            saypc("Your level is too low to equip this.", c_orange);
                                         }
                                     
                                         
@@ -1154,7 +1154,7 @@ if keyboard_check_pressed(vk_enter)
                         a = ds_list_find_value(inv,i*8+ii)
                         aa = ds_map_find_value(invQ,a)
                         itemid = a
-                        item_database();
+                        item_database(itemid);
                         
                         
                         //test if selected and released slots are identical
@@ -1455,8 +1455,8 @@ y Bottom:             view_yview[0]+121+(32*i)
                         //Find longest string and return in character amount (value)
                         var longest, totalheight;                        
                     
-                        longest=max(string_width(itemname), string_width(itemtype), string_width(itemlevel), string_width(iteminfo));
-                        highest=max(string_height(itemname), string_height(itemtype), string_height(itemlevel), string_height(iteminfo));
+                        longest=max(string_width(itemname), string_width(itemtype), string_width(string(itemlevel)), string_width(iteminfo));
+                        highest=max(string_height(itemname), string_height(itemtype), string_height(string(itemlevel)), string_height(iteminfo));
                         
                         //draw_sprite(spr_INVitem,variable_local_get("slot["+string(i*8+ii)+"]"),view_xview[0]+743+(32*ii),view_yview[0]+89+(32*i));
                         draw_sprite(spr_INVitem,0,view_xview[0]+743+(32*ii),view_yview[0]+89+(32*i));
