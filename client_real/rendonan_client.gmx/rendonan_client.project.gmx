@@ -675,6 +675,10 @@
     <scripts name="db_functions">
       <script>scripts\md5_encrypt.gml</script>
     </scripts>
+    <scripts name="multiplayer">
+      <script>scripts\set_updates_per_second.gml</script>
+      <script>scripts\wn_msgtype.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\ft_NPC</font>
@@ -951,6 +955,7 @@
         <object>objects\obj_Multiplayer</object>
         <object>objects\obj_remoteplayer</object>
       </objects>
+      <object>objects\obj_Network_controller</object>
     </objects>
     <objects name="Rooms">
       <objects name="Initials">
