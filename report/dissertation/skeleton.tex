@@ -13,8 +13,14 @@
     urlcolor={blue!80!black}
 }
 \usepackage[T1]{fontenc} %fix < > characters
+\usepackage[russian]{babel}
 \usepackage{footnote} %footnotes in tables
 %\renewcommand{\familydefault}{\sfdefault}
+\usepackage{fontspec} % loaded by polyglossia, but included here for transparency 
+\usepackage{polyglossia}
+\setmainlanguage{english} 
+\setotherlanguage{russian}
+\newfontfamily\russianfont[Script=Cyrillic]{Linux Libertine}
 
 \begin{document}
 
@@ -94,6 +100,7 @@ My sincere gratitude to my family, friends, the Dutch Gamemaker community and th
 \item LAN - Local Area Network
 \item GUI - Graphical User Interface
 \item IDE - Integrated Development Environment
+\item IETF - The Internet Engineering Task Force
 \end{itemize}
 
 \tableofcontents
@@ -129,18 +136,24 @@ Having that said, one must consider the technical aspect of the network: if the 
 
 In a typical networked game, game clients are described by a \textbf{limited set of parameters} received by a server. These parameters represent the "game state". \textbf{When due to delay between the clients and server the game state is desynchronised, fairness is reduced}\cite{Fairness_and_Playability}.
 
-\subsection{TCP versus UDP}
-%TODO explain what is tcp and udp before mentioning which one is better when. because.. what do they do??
-\textit{TODO: explain what is tcp and udp before mentioning which one is better when. because.. what are they? what do they do?}
+\subsection{TCP}
+TCP is a highly reliable connection-oriented and error-free host-to-host data transmission protocol. After establishing a connection using an event referred to as the "three way handshake" \footnote{http://www.inetdaemon.com/tutorials/internet/tcp/3-way\_handshake.shtml}, it keeps the connection open \footnote{https://tools.ietf.org/html/rfc793}. It automatically takes care of handling retransmission of dropped packets and acknowledgement of arrived packets. For this reason it is one of the most common transmission protocols in applications that require reliable data transmissions. One down-side however is that due to the additional error-handling, the packets are relatively large and thus cause some overhead.
 
-Choosing the right protocol to handle the data transmissions is therefore crucial. Transmission protocols are one of the contributors that will heavily characterise the network.
- 
-Generally speaking, TCP is a form of reliable data transmission but contains therefore extra overhead, making it therefore known to be slightly slower than UDP when the network has little packet loss.
+\subsection{UDP}
+UDP is a connectionless transmission protocol that, unlike TCP, provides a "minimal, unreliable, best-effort message-passing transport to applications" \footnote{http://www.erg.abdn.ac.uk/users/gorry/course/inet-pages/udp.html}. It provides no guarantees for delivery and no protection from duplication. Despite this clear down-side, due to the small header size it may often be useful for applications that value the speed of the connection above reliability of the content.
+\subsubsection{NAT traversal}
+Due to the limitation of IPv4 addresses, networks often consist of local networks; groups of devices that are mapped to the same global IP address. Network address translation (NAT) is a mechanism that takes care of assigning IP addresses to local devices within the network, whilst maintaining the same global IP to identify the local network as a whole.
 
-\subsubsection{Socket.io}
+As UDP does not maintain an open connection between the hosts, packets have to pass the NAT repeatedly, and can easily be blocked by the firewall. 
+NAT traversal techniques such as "hole punching" are therefore established, Although they are not applicable in all NAT devices or situations \footnote{https://tools.ietf.org/html/rfc5128\#page-11}.
+
+\subsection{WebSocket}
+WebSocket is a protocol that "provides a method to push messages from client to server efficiently and with a simple syntax" \cite{WebSocket}. It was standardized by the IETF in December 2011, providing a full-duplex (two-way) communication between client and server through a single TCP connection. The goal is to "provide a mechanism for browser-based applications that need two-way communication with servers that does not rely on opening multiple HTTP connections" \footnote{https://tools.ietf.org/html/rfc6455}.
+
+\subsection{Socket.io}
 Socket.io is an event-driven JavaScript library that can be used both on the client's browser, and a server\cite{Socketio}. It supports features that allow sending and receiving data using the WebSocket protocol built in 2011 (which is handled through TCP), without interruption of the code flow\cite{Socketio_Benchmark}\cite{Socketio_TCP_Benchmark}. For this reason, it is \textbf{often used in combination with Node.js}.
 
-\subsubsection{WebRTC}
+\subsection{WebRTC}
 As aforementioned, Websocket is a protocol built on TCP. However, it has a little sister: WebRTC. WebRTC built on UDP, but is still vaguely "under construction"\cite{Browser_Networking}. Although certain web applications have already been created with WebRTC (mainly for P2P video streaming \cite{P2P_Video_Streaming_HTML5_WebRTC}), no proper standards are out yet\cite{Web_Apps_Superior}.
 
 This, combined with requirement of manually specifying the rules of communication, as well as the fact that WebRTC has to circumvent network security and privacy in order to allow web browsers to transmit data over UDP\cite{P2P_Video_Streaming_HTML5_WebRTC}, makes UDP many times \textbf{more complicated} for developers to handle efficiently.
@@ -192,12 +205,13 @@ Table \ref{table:Related_Tools} was carefully constructed by combining the best 
 \centering
   \begin{tabular}{ | r || c | c | c | c | c | c | }
   	\hline
-  	\textbf{Tool}			& \textbf{Score}		& \textbf{Voters}& \textbf{Mozilla}\footnote{Advertised at developer.mozilla.org: \url{developer.mozilla.org https://developer.mozilla.org/en-US/docs/Games/Tools/Engines\_and\_tools}} 	& \textbf{Gamepix}\footnote{Advertised at \url{http://www.gamepix.com/blog/the-big-list-of-2d-html5-games-engines/}} 	& \textbf{Native GUI}\\ \hline\hline
+  	\textbf{Tool}			& \textbf{Score}		& \textbf{Voters}& \textbf{Mozilla}\footnote{Advertised at developer.mozilla.org: \url{https://developer.mozilla.org/en-US/docs/Games/Tools/Engines\_and\_tools}} 	& \textbf{Gamepix}\footnote{Advertised at \url{http://www.gamepix.com/blog/the-big-list-of-2d-html5-games-engines/}} 	& \textbf{Native GUI}\\ \hline\hline
     Pixi.js			& 5.0 / 5	& 50	& yes	& yes	& no	\\ \hline
     Phaser			& 4.5 / 5	& 129	& yes	& yes	& yes	\\ \hline
     EaselJS			& 4.5 / 5	& 63	& no	& yes	& no	\\ \hline
     Crafty.js		& 4.5 / 5	& 18	& yes	& yes	& no	\\ \hline
     Construct 2		& 4.0 / 5	& 136	& yes	& yes	& yes	\\ \hline
+    GameMaker		& 4.0 / 5	& 59	& no	& yes	& yes	\\ \hline
    	Quintus			& 4.5 / 5	& 29	& no	& yes	& no	\\ \hline
   	Unity			& n/a		& n/a	& yes	& yes	& yes	\\ \hline
   \end{tabular}
@@ -308,12 +322,16 @@ The functions inside the extension should be easily callable from within the Gam
 \paragraph*{Server tasks:}
 The server must to mimic the architectural structure of the client. It has to keep track of the state of each of the connected clients. it should also act as centralized controller that allows instances to interact with other instances. These instances are synchronized with those on the clients. Therefore, a change in the instance on the server should trigger a change for its representative instance in the clients.
 
-
+\paragraph*{Socket.io versus WebRTC}
+Choosing the right protocol to handle the data transmissions is therefore crucial. Transmission protocols are one of the contributors that will heavily characterise the network.
+ 
+Generally speaking, TCP is a form of reliable data transmission but contains therefore extra overhead, making it therefore known to be slightly slower than UDP when the network has little packet loss.
 
 
 \subsection{Server and Client}
 %how do applications communicate
 %IMPORTANT: State why there is no need for testing fairness between different bandwidths for web applications. (ie. games and web-apps only really need to send small variables, no big data is transported)
+
 \subsubsection{Good Coding Practices}
 \subsubsection{Interaction}
 %Mapping from GML to the extension
@@ -546,6 +564,8 @@ Average roundtrip times per test:
 \cite{SE_7_Principles}
 \cite{Software_Engineering}
 \cite{Construct2_Multiplayer_Tutorial}
+\cite{WebSocket}
+\cite{NAT}
 % <<<< REMOVE THIS BLOCK
 
 %TODO change style to apa before submission. ignore "errors", it should still work after a few retries

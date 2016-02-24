@@ -27,6 +27,12 @@ Jeremy Brun, Farzad Safaei, and Paul Boustead.
 \newblock {\em Fairness and playability in online multiplayer games}.
 \newblock PhD thesis, University of Wollongong, 2006.
 
+\bibitem{WebSocket}
+David Walsh.
+\newblock Websocket and socket.io.
+\newblock \url{https://davidwalsh.name/websocket}, 29 November 2010.
+\newblock [Accessed: 2016-02-24].
+
 \bibitem{Socketio}
 socket.io.
 \newblock \url{http://socket.io/}.
@@ -185,5 +191,11 @@ Klaus Pohl, Gunter Bockle, and Frank van~der Frank.
 \newblock {\em Software Product Line Engineering: Foundations, Principles and
   Techniques}.
 \newblock Springer, Springer-Verlag Berlin Heidelberg, 2005.
+
+\bibitem{NAT}
+Yevhen Shylo.
+\newblock Network address translation.
+\newblock {\em Материалы научно-технической
+  конференции}, 3(1):79, November 2015.
 
 \end{thebibliography}
