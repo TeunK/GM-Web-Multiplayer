@@ -13,20 +13,14 @@
     urlcolor={blue!80!black}
 }
 \usepackage[T1]{fontenc} %fix < > characters
-\usepackage[russian]{babel}
 \usepackage{footnote} %footnotes in tables
 %\renewcommand{\familydefault}{\sfdefault}
-\usepackage{fontspec} % loaded by polyglossia, but included here for transparency 
-\usepackage{polyglossia}
-\setmainlanguage{english} 
-\setotherlanguage{russian}
-\newfontfamily\russianfont[Script=Cyrillic]{Linux Libertine}
 
 \begin{document}
 
 \title{A Network Extension for GameMaker HTML5}
 
-\author{Teun Kokke}
+\author{Teun Kokke\\s1242775}
 \course{Software Engineering} 
 \project{Undergraduate Dissertation} % CS&E, E&SE, AI&L
 
@@ -94,7 +88,7 @@ My sincere gratitude to my family, friends, the Dutch Gamemaker community and th
 \item W3C - World Wide Web Consortium
 \item P2P - Peer-to-Peer
 \item RTT - Roundtrip Time
-\item RSS - Resident Set Size
+\item RSS - Resident Set Size: the portion of the process's memory held in RAM
 \item CPU - Central Processing Unit
 \item RAM - Random Access Memory
 \item LAN - Local Area Network
@@ -124,15 +118,11 @@ One of many developer tools that aims for exactly these two ideals is GameMaker 
 
 This paper therefore investigates the quality of related software. It also demonstrates how an extension can be added to GameMaker, one that will add networking features to HTML5 games and applications. Additionally, the server's behaviour will be assessed based on the specified setup, and suggestions will be added based on other literature in order to improve this further.
 
-\chapter{Background and Related Work}
+\chapter{Background}
 \section{Background}
-\subsection{Networks in Applications}
-%include minimal requirements
-%which criteria to consider when testing a network
-Humans are naturally social beings, are found to be more drawn into games when this social aspect is being provided, and are therefore more likely to return in the future\cite{Browser_Games}. When allowed, we can share a sense of community, develop our own social identity within the application, and regularly seek social support from peer users, even about non-related and real-life topics\cite{Community_Social_Psychology}. Users of networked applications are \textbf{more likely to advertise} the application in their social circles than they are for non-networked applications.
 
 \subsection{Network Fairness}
-Having that said, one must consider the technical aspect of the network: if the application is in the form of a game, \textbf{playability and fairness are crucial for an enjoyable gameplay}. This is especially true for games containing elements where speed or response time is important\cite{Fairness_and_Playability}.
+Different applications often have different demands from the network. One must therefore consider the technical aspect of the network: if the application is in the form of a game, \textbf{playability and fairness are crucial for an enjoyable gameplay}. This is especially true for games containing elements where speed or response time is important\cite{Fairness_and_Playability}.
 
 In a typical networked game, game clients are described by a \textbf{limited set of parameters} received by a server. These parameters represent the "game state". \textbf{When due to delay between the clients and server the game state is desynchronised, fairness is reduced}\cite{Fairness_and_Playability}.
 
@@ -148,18 +138,18 @@ As UDP does not maintain an open connection between the hosts, packets have to p
 NAT traversal techniques such as "hole punching" are therefore established, Although they are not applicable in all NAT devices or situations \footnote{https://tools.ietf.org/html/rfc5128\#page-11}.
 
 \subsection{WebSocket}
-WebSocket is a protocol that "provides a method to push messages from client to server efficiently and with a simple syntax" \cite{WebSocket}. It was standardized by the IETF in December 2011, providing a full-duplex (two-way) communication between client and server through a single TCP connection. The goal is to "provide a mechanism for browser-based applications that need two-way communication with servers that does not rely on opening multiple HTTP connections" \footnote{https://tools.ietf.org/html/rfc6455}.
+WebSocket is a protocol that "provides a method to push messages from client to server efficiently and with a simple syntax" \cite{WebSocket}. It was standardized by the IETF in December 2011, providing a full-duplex (two-way) communication between client and server through a single TCP connection. The goal is to "provide a mechanism for browser-based applications that need two-way communication with servers that does not rely on opening multiple HTTP connections" \footnote{https://tools.ietf.org/html/rfc6455}. This is done by setting up a socket, which is essentially a door that leads to a specific host, through which data can be sent.
 
 \subsection{Socket.io}
-Socket.io is an event-driven JavaScript library that can be used both on the client's browser, and a server\cite{Socketio}. It supports features that allow sending and receiving data using the WebSocket protocol built in 2011 (which is handled through TCP), without interruption of the code flow\cite{Socketio_Benchmark}\cite{Socketio_TCP_Benchmark}. For this reason, it is \textbf{often used in combination with Node.js}.
+Socket.io is an event-driven JavaScript library that can be used both on the client's browser, and a server\cite{Socketio}. It supports features that allow sending and receiving data using the WebSocket protocol, without interruption of the code flow\cite{Socketio_Benchmark}\cite{Socketio_TCP_Benchmark}. For this reason, it is \textbf{often used in combination with Node.js}.
 
 \subsection{WebRTC}
-As aforementioned, Websocket is a protocol built on TCP. However, it has a little sister: WebRTC. WebRTC built on UDP, but is still vaguely "under construction"\cite{Browser_Networking}. Although certain web applications have already been created with WebRTC (mainly for P2P video streaming \cite{P2P_Video_Streaming_HTML5_WebRTC}), no proper standards are out yet\cite{Web_Apps_Superior}.
+As aforementioned, Websocket is a protocol built on TCP. However, it has a sibling: WebRTC. WebRTC is built on UDP, allowing scalable and fast networking opportunities, but is still vaguely "under construction"\cite{Browser_Networking}. Although certain web applications have already been created with WebRTC (mainly for P2P video streaming \cite{P2P_Video_Streaming_HTML5_WebRTC}), no proper standards are out yet\cite{Web_Apps_Superior}.
 
 This, combined with requirement of manually specifying the rules of communication, as well as the fact that WebRTC has to circumvent network security and privacy in order to allow web browsers to transmit data over UDP\cite{P2P_Video_Streaming_HTML5_WebRTC}, makes UDP many times \textbf{more complicated} for developers to handle efficiently.
 
 \subsection{HTML5}
-\paragraph{}HTML5 is a raising web standard released in 2014 by the W3C. It is designed to be \textbf{cross-platform} and runs on most modern web browsers such as Google Chrome, Mozilla Firefox, Apple Safari, and Opera \footnote{HTML5 supported browsers are found at \url{https://html5test.com/results/desktop.html}}. Also mobile web browsers that come preinstalled on iPhones, iPads and Android phones support HTML5.
+HTML5 is a raising web standard released in 2014 by the W3C. It is designed to be \textbf{cross-platform} and runs on most modern web browsers such as Google Chrome, Mozilla Firefox, Apple Safari, and Opera \footnote{HTML5 supported browsers are found at \url{https://html5test.com/results/desktop.html}}. Also mobile web browsers that come preinstalled on iPhones, iPads and Android phones support HTML5.
 
 It superseeds its predecessors HTML4 and XHTML1.1 with the aim to reduce the dependence of functionality from third-party plugins such as Flash and Java applets, which are either deprecated or entirely unsupported by most devices \cite{Death_Flash_Java}.
 
@@ -179,22 +169,29 @@ In short, new client connections get allocated to a heap in the memory and clien
 %include its evolution and typical target audience
 %explain the types of target audience, who do the developers of an application using the extension intend to target. How does this affect the demands on the network
 %focus on location of users
-GameMaker by YoYoGames is a software creation tool with the aim to simplify and speed up game and app development. There have been several hits on the market for games developed with Gamemaker such as "Reflections", "Rick O'Shea" and "Simply Solitaire" \cite{Gamemaker_DnD}.
+GameMaker by YoYoGames is a software creation tool with the aim to simplify and speed up game and application development. There have been several hits on the market for games developed with Gamemaker such as "Reflections", "Rick O'Shea" and "Simply Solitaire" \cite{Gamemaker_DnD}.
 
 Developing applications and games in GameMaker is cheap, simple to learn and flexible to use, making the software demanded by small teams, professionals and novice developers \cite{Mark_Overmars}. Sandy Duncan, the founder and former chief executive officer of YoYoGames stated in a phone interview that they have never lost money on a game that they developed with their technology\cite{Gamemaker_DnD}.
 
 During the rise of HTML5 and the growing popularity of Gamemaker, YoyoGames has provided the functionality to export any application to a JavaScript program that can be executed directly in the browser\cite{GameMaker_Studio}.
 
-Some of the features are normally supported by GameMaker are however lost during the transition to a web application. One of these features is the networking functionality. Thus far since the update to export GameMaker applications to HTML5 in September 2011, YoYoGames has never included this feature\footnote{http://docs.yoyogames.com/source/dadiospice/002\_reference/networking/index.html}. Several attempts have been made by the YoYoGames community, however all known versions are considered to be in alpha stage and are regularly found to fail to be used by other developers\footnote{https://github.com/amorri40/39js}. %TODO stronger argument WHY it doesnt work
+Some of the features that are normally supported by GameMaker are however lost during the transition to a web application. One of these features is the networking functionality. Thus far since the update to export GameMaker applications to HTML5 in September 2011, YoYoGames has never included this feature\footnote{http://docs.yoyogames.com/source/dadiospice/002\_reference/networking/index.html}. An attempt was made by a member of the YoYoGames community, however it is considered to be in alpha stage and fails to be used by other developers\footnote{https://github.com/amorri40/39js}. It is a basic setup that merely broadcasts messages as they come in.%TODO stronger argument WHY it doesnt work
 
-The main GameMaker community forum is hosted directly by YoYoGames\footnote{http://gmc.yoyogames.com/}, serving 280.000 registered users recorded in January 2016, with a combined total of 220.000 topics and 3.480.000 posts. There also exists a notable GameMaker forum in the Netherlands\footnote{http://www.game-maker.nl/forums/} which hosts an additional 557.000 posts for 56.000 topics for almost 18.000 members.
+The main GameMaker community forum is hosted directly by YoYoGames\footnote{http://gmc.yoyogames.com/}, serving 280,000 registered users recorded in January 2016, with a combined total of 220,000 topics and 3,480,000 posts. There also exists a notable GameMaker forum in the Netherlands\footnote{http://www.game-maker.nl/forums/} which hosts an additional 557,000 posts for 56,000 topics for almost 18,000 members.
 
-\section{Related Work}
+\section{Fairnesss and Playability in Online Multiplayer Games}
+
+more detail on Network Fairness, causes and fixes to unfairness
+
+\section{Multiplayer Networking in Modern Game Engines}
+game state maintained through a limited set of parameters
+
+\chapter{Related Work}
 Being a cross-platform game development tool primarily for 2D graphically oriented games, GameMaker has many competitors. It is therefore sensible for developers to first consider using game developing tools that support networking features natively. Although, looking for "the best" development tool is unreasonable, as this is a matter of personal preference. Before being able to investigate pros and cons between gamemaker and related game development tools, appropriate competitors must first be identified.
 
 Note that GameMaker does natively support networking functionality for non-browser games. However we must remind ourselves of the aim of this project: creating a networking extension to improve GameMaker's functionality \textbf{for developing 2D browser games}. For this reason, this paper will consider GameMaker to be a development tool for browser games.
 
-In order to find the most related software for these purposes, assistance was found from online third-party instances. These instances collect user feedback for the browser-game development tools. Their ratings were established by allowing users to criticise tools based on their personal experience, and apply a score. The review system of html5gameengine.com\footnote{https://html5gameengine.com/} represents that of the Google Play Store\cite{Google_Play_Store} and the Apple App Store\cite{Apple_App_Store}, and may therefore be a somewhat reasonable method for finding the more commonly used tools.
+Unbiased sources were used in order to find the most related software for these purposes. These sources collect user feedback for the browser-game development tools. Their ratings were established by allowing users to criticise tools based on their personal experience, and apply a score. The review system of html5gameengine.com\footnote{https://html5gameengine.com/} represents that of the Google Play Store\cite{Google_Play_Store} and the Apple App Store\cite{Apple_App_Store}, and may therefore be a somewhat reasonable method for finding the more commonly used tools.
 
 developer.mozilla.org\footnote{https://developer.mozilla.org/en-US/docs/Games/Tools/Engines\_and\_tools} (world rank 198 by alexa.com\footnote{http://www.alexa.com/}) hosts a list of tools titled "HTML5 game engines", and holds suggestions by 26 developers each with different backgrounds in 2D browser game development. gamepix.com\footnote{http://www.gamepix.com/blog/the-big-list-of-2d-html5-games-engines/} hosts a list of similar tools, but is less detailed about their sources.
 
@@ -246,7 +243,7 @@ Although the five tools assist in the development, they do not compare with Game
 
 
 \subsection{Construct 2}
-Construct 2 is one of the main contenders. It provides its own GUI and shares similar ideals as those of gamemaker: simplifying the development for novice programmers. This is done by supporting inbuilt D\&D features. Code programming can also be used after installing a required extension. It is a generally well known tool with a community of over 204.000 registered users, responsible for more than 529.000 posts for 103.000 topics\footnote{https://www.scirra.com/forum/}.
+Construct 2 is one of the main contenders. It provides its own GUI and shares similar ideals as those of gamemaker: simplifying the development for novice programmers. This is done by supporting inbuilt D\&D features. Code programming can also be used after installing a required extension. It is a generally well known tool with a community of over 204,000 registered users, responsible for more than 529,000 posts for 103,000 topics\footnote{https://www.scirra.com/forum/}.
 
 In April 2014, release r164 to r168 updated the engine with networking features by allowing users to create a said "network object"\footnote{https://www.scirra.com/manual/174/multiplayer}. This object is pre-defined with "features to develop real-time online multiplayer games", provided using WebRTC DataChannels (UDP) for P2P connections. 
 
@@ -260,13 +257,13 @@ In the world of browser-game development, Unity is by far the most acknowledged 
 
 Networking features are supported as a D\&D class\footnote{http://docs.unity3d.com/ScriptReference/Network.html}, but can also be used by installing the "WebSocket-Sharp" plugin in C\#\footnote{https://github.com/sta/websocket-sharp}.
 
-Currently there are roughly 4.500.000 users registered to the Unity forum\footnote{http://forum.unity3d.com/forums}, however only a small percentage of this is active in 2D development as this only hosts 5600 topics\footnote{http://forum.unity3d.com/forums/2d.53/}. 
+Currently there are roughly 4,500,000 users registered to the Unity forum\footnote{http://forum.unity3d.com/forums}, however only a small percentage of this is active in 2D development as this only hosts 5,600 topics\footnote{http://forum.unity3d.com/forums/2d.53/}. 
 
 This is most likely due to the fact that Unity is aimed towards experienced 3D game-developers and offers much overhead when only using its 2D capabilities. In the poorly populated 2D section of the forum, replies such as "have you considered using GameMaker?"\footnote{http://forum.unity3d.com/threads/where-to-start-2d-toolkit-or-platformer-pro.380770/} are therefore a common response.
 
 https://unity3d.com/public-relations
 
-4.500.000 registered users
+4,500,000 registered users
 
 http://forum.unity3d.com/forums/2d.53/
 
@@ -274,31 +271,6 @@ http://forum.unity3d.com/forums/2d.53/
 
 licenses http://unity3d.com/unity/licenses
 cost https://store.unity3d.com/products/pricing
-
-
-
-
-
-% -----------------------
-\chapter{Literature Review}
-
-\section{Getting Users to Advertise Your Application}
-literature related to networking applications in order to connect users such that they will want to invite their social circles to the game.
-
-\section{Fairnesss and Playability in Online Multiplayer Games}
-more detail on Network Fairness, causes and fixes to unfairness (see background section)
-
-\section{Multiplayer Networking in Modern Game Engines}
-game state maintained through a limited set of parameters
-
-\section{Details Why WebRTC is Complicated to Handle Efficiently}
-how does WebRTC work, why it is not suggested for the implementation and why it otherwise would
-
-\section{Drawing Graphics with the HTML5 Canvas API}
-basics to drawing graphics in html5 <canvas> element
-
-\section{Creating Extensions for GameMaker Studio}
-how to create an extension to GameMaker
 
 
 
@@ -338,8 +310,81 @@ Generally speaking, TCP is a form of reliable data transmission but contains the
 
 \section{Implementation}
 \subsection{Server}
+The server is written in JavaScript, using Node.js in order to support a large number of concurrent client connections without overloading the memory (RAM).
+
+As one of the main requirements of the project is to keep the development of networked browser applications as simple as possible, Socket.io is used in order to handle the send and receiving of messages. This way, the developer does not need to worry about complications that would otherwise arise when building the system with WebRTC such as difficulty during the implementation, packet loss and error handling, and UDP NAT traversal.
+
+The core functionality of the server that takes care of incoming messages and connection requests is written in only a few lines and in simple terms functions as follows:
+
+\begin{enumerate}
+\item On an incoming connection request, a client instance is created in which initially the client's socket and client\_id will be stored. The socket will be connected directly to the client machine that sent the connection request.
+\item This instance is added to the list of already-tracked clients on the server
+\item If at any time the server receives a message from this client, the server will read the purpose of this message (message\_code e.g. ping, send-message, update-user)
+\item The message\_codes are directly mapped to an associated action
+\item Depending on the action, the client instance will receive a function call that handles the message appropriately.
+\end{enumerate}
+
+The client class is made to be synchronized with the state of its corresponding client, such that any change in the actual client application will also modify the representative client state in the server. This way, the developer no longer needs to worry about redundantly transmitting all variables to all other clients, including those variables that never changed since a previous transmission, because the server will still have these in memory. Another benefit to this is that the client is allowed to send smaller messages.
+
+The server already has a template set-up, supporting features such as updating the client's state on the server, informing other clients with this client's state and broadcasting messages. These features can easily be modified and extended without with new functionality depending on any specific need the developer may have.
+
+As the server keeps track of all the clients that are connected to it, clients can easily message specific clients simply by triggering a function call between any clients. Also the effect of the function is to inform the actual client with a message.
+
 \subsection{Client}
 \subsection{The Extension}
+GameMaker is unable to use native support for establishing a connection to other hosts. This is where the extension comes in play.
+It is a set of JavaScript functions that can be called from inside the GameMaker GUI and provide the actual networking functionality.
+It consists of three components:
+\begin{enumerate}
+\item An MIT-licensed opensource socket.io JavaScript library provided by LearnBoost: socket.io.js (documentation \footnote{https://docs.omniref.com/js/npm/socket.io/0.8.4})
+\item A set of networking functions, located in GMWebNet.js
+\item A mapping from GML functions to the networking functions
+\end{enumerate}
+
+\paragraph*{The socket.io library}
+is used for providing the core networking functionality. This is required by the networking functions in order to do the transmission and receiving of packets.
+
+\paragraph*{GMWebNet.js}
+contains a set of networking functions and is made to run in parallel with the GameMaker application. 
+It is designed to take care of its own socket details, memory buffer and incoming messages. Developers do not need to modify this file. It merely provides the foundation on top of which any application-layered implementation can be built.
+
+A simple connection function \texttt{connect(server\_ip, server\_port)} opens a socket connection with the server located at a given IP address and port number.
+This socket is immediately used in order to send a SYN request to the server, to which the server is expected to respond with a uniquely assigned client-id for the client. This unique client-id is received in the callback and will be caught in GameMaker as soon as it arrives.
+The function also returns this socket so that it can be used for communication with the server after initialization.
+
+Its disconnection counterpart \texttt{disconnect(socket, value)} sends a message to the server, informing it that the socket is disconnecting. The server is expected to interpret this message as a user that is leaving.
+After sending the message, the socket is disconnected on the client-side and removed from the memory.
+
+The function \texttt{send\_message(socket)} sends whatever packet is stored in the buffer through the socket to the server.
+This packet can be pushed onto by using the \texttt{buffer\_write(value)} function.
+
+When a message arrives, it gets automatically stored in the messages array. \texttt{receive\_message(socket)} stores this message into the buffer. And the buffer content can then be read from by the application when calling \texttt{buffer\_read()}.
+
+When at any time, the buffer needs to be reused for sending a new message, \texttt{buffer\_clear()} must first be called to clear the content in the buffer. 
+
+\paragraph*{mapping}
+Creating a mapping can be done directly in the GUI of GameMaker as displayed in figure \ref{fig:extension_folder}. After creating a new extension setup in the extensions directory, the previously specified extension files can be referenced. In each of the files, functions can be added that map GML functions to extension functions. Figure \ref{fig:xml_mapping} is part of the mapping xml file that displays how it looks in detail.
+
+\begin{figure}[H]
+\centering
+% \centering% default with `floatrow`
+\includegraphics[scale=1.2]{images/extensions_folder.png}
+\caption{View inside the GUI that visualises the extension function mapping setup.}
+\label{fig:extension_folder}
+\vspace{1em}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+% \centering% default with `floatrow`
+\includegraphics[scale=1.2]{images/xml_mapping.png}
+\caption{External function from JavaScript extension file located in GMWebNet.js, mapped to a GML function located in the client client application. The function takes 2 arguments, each of type String (id = 1), and returns a Double type (id = 2)}
+\label{fig:xml_mapping}
+\vspace{1em}
+\end{figure}
+
+
 \section{Applications Developed with the Extension}
 %Explain about ownmade application using the extension, how it tests the given benchmarks (eg. delay, data, equality)
 \subsection{Benchmark Application}
@@ -357,29 +402,25 @@ Generally speaking, TCP is a form of reliable data transmission but contains the
 %description of experiments, presentation + (directly including) interpretation of the data
 
 \section{Controlled Network}
-The controlled experiments were conducted in order to predict server behaviour when loaded under similar pressure in future occasions. 
+Controlled experiments were conducted in order allow prediction of server behaviour when loaded under similar pressure in future occasions.
 
 Experiments were executed on a Windows 7 64-bit platform with 12.6GB available physical memory and an Intel(R) Core(TM) i7-2600K CPU @ 3.40GHz processor. The software included Node v0.12.3 and Socket.io v1.3.7 in order to handle the networking operations.
 
-The network was controlled using Dummynet, using a below-average UK household network setup \footnote{http://www.ispreview.co.uk/index.php/2015/02/ofcom-average-uk-home-broadband-speeds-slowly-reach-23mbps.html}. This involves an upload speed of 5Mbit/s, and a download speed of 1Mbit/, although no packet loss was set in order to ensure consistency throughout the controlled network experiments.
+The network was controlled using Dummynet, using a below-average UK household network bandwidth \footnote{http://www.ispreview.co.uk/index.php/2015/02/ofcom-average-uk-home-broadband-speeds-slowly-reach-23mbps.html}. This involves an upload speed of 5Mbit/s, and a download speed of 1Mbit/, although no packet loss was set in order to ensure consistency throughout the controlled network experiments.
 
 \subsection{Concurrent Connections}
-The following experiment evaluates the server performance with regard to the number of clients.
+It is important to know how many clients a server can host simultaneously. The following experiments evaluate the server performance in terms of server CPU usage, CPU time and RSS with regard to the number of concurrently connected clients.
 
-\paragraph*{Environment Setup}
+\paragraph*{Setup}
 \begin{itemize}
 \item Variable number of concurrent connections cc, up to 15 instances with each simulating at most 500 clients.
 \item Clients do not contact the server after establishing a connection.
-\item The CPU usage, time and RSS (Resident set size) are recorded after each every time another group of 100 clients connect to the server.
-\end{itemize}
-\paragraph*{Dependent variables}
-\begin{itemize}
-\item CPU usage on the server
-\item CPU time on the server
-\item RSS on the server
+\item The resulting values are averaged over a 2-minute run duration.
+\item After each run, the number of clients simultaneously connected to the server increases by 100.
 \end{itemize}
 
-\begin{center}
+
+
 \begin{figure}
 \centering
 % \centering% default with `floatrow`
@@ -387,8 +428,9 @@ The following experiment evaluates the server performance with regard to the num
 \caption{Displaying the CPU usage for the server process in percent.}
 \label{fig:cpu_usage}
 \vspace{1em}
-When the CPU usage is above 70 percent, the user may experience lag. Such high CPU usage indicates insufficient processing power. Either the CPU needs to be upgraded, or the user experience reduced.
 \end{figure}
+
+Figure \ref{fig:cpu_usage} indicates a logarithmic trend in the CPU usage on the server. When the CPU usage reaches over 80 percent, the user may experience lag. Such high CPU usage indicates insufficient processing power. Either the CPU needs to be upgraded, or the user experience reduced.
 
 \begin{figure}
 \centering
@@ -398,6 +440,8 @@ When the CPU usage is above 70 percent, the user may experience lag. Such high C
 \label{fig:cpu_time}
 \end{figure}
 
+
+
 \begin{figure}
 \centering
 % \centering% default with `floatrow`
@@ -406,7 +450,8 @@ When the CPU usage is above 70 percent, the user may experience lag. Such high C
 \label{fig:cpu_rss}
 \end{figure}
 
-\end{center}
+Due to The server stores connection details for each client directly in the RAM.
+
 
 
 \subsection{Message Broadcasting Performance}
@@ -437,14 +482,6 @@ The following experiment evaluates the number of messages that can be handled by
 \label{fig:broadcast_rtt_mean}
 \end{figure}
 
-
-\begin{figure}
-\centering
-% \centering% default with `floatrow`
-\includegraphics[scale=0.32]{images/test_SERVER_RTTvariance.jpg}
-\caption{The variance of the roundtrip times, showing the fairness between clients decreases significantly when the server receives messages faster than it can broadcast.}
-\label{fig:broadcast_rtt_variance}
-\end{figure}
 
 
 \begin{figure}
@@ -508,7 +545,6 @@ Average roundtrip times per test:
     \hline
     Test case 		& 1 		& 2 		& 3 		& 4 		& 5 		\\ \hline\hline
     Mean RTT 		& 32.1ms 	& 54.8ms 	& 62.7ms 	& 70.6ms 	& 107.5ms	\\ \hline
-    Variance RTT 	& 1.3ms 	& 8.2ms 	& 46.3ms 	& 11.3ms 	& 1900.9ms	\\ \hline
     Std RTT			& 0.4ms		& 2.9ms		& 6.8ms		& 3.36ms	& 43.6ms	\\ \hline
   \end{tabular}
 \end{center}
