@@ -83,32 +83,34 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Server}{22}{subsection.4.2.1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Client}{23}{subsection.4.2.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}The Extension}{23}{subsection.4.2.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces View inside the GUI that visualises the extension function mapping setup.\relax }}{24}{figure.caption.17}}
-\newlabel{fig:extension_folder}{{4.1}{24}{View inside the GUI that visualises the extension function mapping setup.\relax }{figure.caption.17}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces External function from JavaScript extension file located in GMWebNet.js, mapped to a GML function located in the client client application. The function takes 2 arguments, each of type String (id = 1), and returns a Double type (id = 2)\relax }}{25}{figure.caption.18}}
-\newlabel{fig:xml_mapping}{{4.2}{25}{External function from JavaScript extension file located in GMWebNet.js, mapped to a GML function located in the client client application. The function takes 2 arguments, each of type String (id = 1), and returns a Double type (id = 2)\relax }{figure.caption.18}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Applications Developed with the Extension}{25}{section.4.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Benchmark Application}{25}{subsection.4.3.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Real Game Application}{25}{subsection.4.3.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Developer Template}{25}{subsection.4.3.3}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Network Extension Evaluation}{27}{chapter.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces View inside the GUI that visualises the extension function mapping setup.\relax }}{25}{figure.caption.18}}
+\newlabel{fig:extension_folder}{{4.1}{25}{View inside the GUI that visualises the extension function mapping setup.\relax }{figure.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces External function \texttt  {connect} from JavaScript extension file located in GMWebNet.js, mapped to a GML function \texttt  {wn\_connect} located in the client application. The function takes 2 arguments, each of type String (id = 1), and returns a Double type (id = 2)\relax }}{25}{figure.caption.19}}
+\newlabel{fig:xml_mapping}{{4.2}{25}{External function \texttt {connect} from JavaScript extension file located in GMWebNet.js, mapped to a GML function \texttt {wn\_connect} located in the client application. The function takes 2 arguments, each of type String (id = 1), and returns a Double type (id = 2)\relax }{figure.caption.19}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Applications Developed with the Extension}{26}{section.4.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Benchmark Application}{26}{subsection.4.3.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Real Game Application}{26}{subsection.4.3.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Developer Template}{26}{subsection.4.3.3}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Function Translations from natively supported functions to browser-supported functions. Notice that the extension itself takes care of implementation details for the buffer, buffer size and the connection type (TCP).\relax }}{27}{table.caption.20}}
+\newlabel{table:function_translations}{{4.1}{27}{Function Translations from natively supported functions to browser-supported functions. Notice that the extension itself takes care of implementation details for the buffer, buffer size and the connection type (TCP).\relax }{table.caption.20}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Network Extension Evaluation}{29}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Controlled Network}{27}{section.5.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Concurrent Connections}{27}{subsection.5.1.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Displaying the CPU usage for the server process in percent.\relax }}{28}{figure.caption.20}}
-\newlabel{fig:cpu_usage}{{5.1}{28}{Displaying the CPU usage for the server process in percent.\relax }{figure.caption.20}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Message Broadcasting Performance}{28}{subsection.5.1.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces CPU time in milliseconds, displaying the amount of time required for the server to process the clients.\relax }}{29}{figure.caption.21}}
-\newlabel{fig:cpu_time}{{5.2}{29}{CPU time in milliseconds, displaying the amount of time required for the server to process the clients.\relax }{figure.caption.21}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Resident set size in Megabit, showing the portion of RAM that is occupied by the server process.\relax }}{29}{figure.caption.22}}
-\newlabel{fig:cpu_rss}{{5.3}{29}{Resident set size in Megabit, showing the portion of RAM that is occupied by the server process.\relax }{figure.caption.22}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces The mean roundtrip time of all the messages that pass through the server. As expected, with few concurrent clients connected to the server, the server manages to broadcast many more messages.\relax }}{30}{figure.caption.25}}
-\newlabel{fig:broadcast_rtt_mean}{{5.4}{30}{The mean roundtrip time of all the messages that pass through the server. As expected, with few concurrent clients connected to the server, the server manages to broadcast many more messages.\relax }{figure.caption.25}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Real Network Results}{30}{section.5.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Standard deviation of the message roundtrip times.\relax }}{30}{figure.caption.26}}
-\newlabel{fig:broadcast_rtt_std}{{5.5}{30}{Standard deviation of the message roundtrip times.\relax }{figure.caption.26}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Location-wise Delay Fairness}{31}{subsection.5.2.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Controlled Network}{29}{section.5.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Concurrent Connections}{29}{subsection.5.1.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Displaying the CPU usage for the server process in percent.\relax }}{30}{figure.caption.22}}
+\newlabel{fig:cpu_usage}{{5.1}{30}{Displaying the CPU usage for the server process in percent.\relax }{figure.caption.22}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Message Broadcasting Performance}{30}{subsection.5.1.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces CPU time in milliseconds, displaying the amount of time required for the server to process the clients.\relax }}{31}{figure.caption.23}}
+\newlabel{fig:cpu_time}{{5.2}{31}{CPU time in milliseconds, displaying the amount of time required for the server to process the clients.\relax }{figure.caption.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Resident set size in Megabit, showing the portion of RAM that is occupied by the server process.\relax }}{31}{figure.caption.24}}
+\newlabel{fig:cpu_rss}{{5.3}{31}{Resident set size in Megabit, showing the portion of RAM that is occupied by the server process.\relax }{figure.caption.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces The mean roundtrip time of all the messages that pass through the server. As expected, with few concurrent clients connected to the server, the server manages to broadcast many more messages.\relax }}{32}{figure.caption.27}}
+\newlabel{fig:broadcast_rtt_mean}{{5.4}{32}{The mean roundtrip time of all the messages that pass through the server. As expected, with few concurrent clients connected to the server, the server manages to broadcast many more messages.\relax }{figure.caption.27}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Real Network Results}{32}{section.5.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Standard deviation of the message roundtrip times.\relax }}{32}{figure.caption.28}}
+\newlabel{fig:broadcast_rtt_std}{{5.5}{32}{Standard deviation of the message roundtrip times.\relax }{figure.caption.28}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Location-wise Delay Fairness}{33}{subsection.5.2.1}}
 \citation{Multiplayer_Networking_modern_engine}
 \citation{Fairness_and_Playability}
 \citation{Pro_HTML5_Programming}
@@ -142,46 +144,48 @@
 \citation{Construct2_Multiplayer_Tutorial}
 \citation{WebSocket}
 \citation{NAT}
+\citation{Where_WebRTC}
 \bibstyle{unsrt}
 \bibdata{mybibfile}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{33}{chapter.6}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{35}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Conclusion}{33}{section.6.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}Comparison of the Extended GameMaker Functionality with Related Work}{33}{subsection.6.1.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Criticism on the Implementation and Design Decisions}{33}{subsection.6.1.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Note to developers}{33}{section.6.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Future Improvements}{33}{section.6.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Conclusion}{35}{section.6.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}Comparison of the Extended GameMaker Functionality with Related Work}{35}{subsection.6.1.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Criticism on the Implementation and Design Decisions}{35}{subsection.6.1.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Note to developers}{35}{section.6.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Future Improvements}{35}{section.6.3}}
 \bibcite{Web_Apps_Superior}{1}
-\bibcite{Browser_Games}{2}
-\bibcite{Community_Social_Psychology}{3}
-\bibcite{Fairness_and_Playability}{4}
-\bibcite{WebSocket}{5}
-\bibcite{Socketio}{6}
-\bibcite{Socketio_Benchmark}{7}
-\bibcite{Socketio_TCP_Benchmark}{8}
-\bibcite{Browser_Networking}{9}
-\bibcite{P2P_Video_Streaming_HTML5_WebRTC}{10}
-\bibcite{Death_Flash_Java}{11}
-\bibcite{HTML5_Up_and_Running}{12}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{35}{chapter*.30}}
-\bibcite{Canvas_API}{13}
-\bibcite{Why_Nodejs}{14}
-\bibcite{Node_Stress_Test}{15}
-\bibcite{NodeJS_Image}{16}
-\bibcite{Gamemaker_DnD}{17}
-\bibcite{Mark_Overmars}{18}
-\bibcite{GameMaker_Studio}{19}
-\bibcite{Google_Play_Store}{20}
-\bibcite{Apple_App_Store}{21}
-\bibcite{Construct2_Multiplayer_Tutorial}{22}
-\bibcite{Multiplayer_Networking_modern_engine}{23}
-\bibcite{Pro_HTML5_Programming}{24}
-\bibcite{Friendly_Programming}{25}
-\bibcite{Why_MMOG}{26}
+\bibcite{Fairness_and_Playability}{2}
+\bibcite{WebSocket}{3}
+\bibcite{Socketio}{4}
+\bibcite{Socketio_Benchmark}{5}
+\bibcite{Socketio_TCP_Benchmark}{6}
+\bibcite{Browser_Networking}{7}
+\bibcite{P2P_Video_Streaming_HTML5_WebRTC}{8}
+\bibcite{Death_Flash_Java}{9}
+\bibcite{HTML5_Up_and_Running}{10}
+\bibcite{Canvas_API}{11}
+\bibcite{Why_Nodejs}{12}
+\bibcite{Node_Stress_Test}{13}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{37}{chapter*.32}}
+\bibcite{NodeJS_Image}{14}
+\bibcite{Gamemaker_DnD}{15}
+\bibcite{Mark_Overmars}{16}
+\bibcite{GameMaker_Studio}{17}
+\bibcite{Google_Play_Store}{18}
+\bibcite{Apple_App_Store}{19}
+\bibcite{Construct2_Multiplayer_Tutorial}{20}
+\bibcite{Multiplayer_Networking_modern_engine}{21}
+\bibcite{Pro_HTML5_Programming}{22}
+\bibcite{Friendly_Programming}{23}
+\bibcite{Community_Social_Psychology}{24}
+\bibcite{Why_MMOG}{25}
+\bibcite{Browser_Games}{26}
 \bibcite{Optimizing_Multiplayer_3D_Game_Synch}{27}
 \bibcite{Optimizing_WebSockets_Bandwidth}{28}
 \bibcite{HTML5_Game_Dev_Gamemaker}{29}
 \bibcite{SE_7_Principles}{30}
 \bibcite{Software_Engineering}{31}
 \bibcite{NAT}{32}
+\bibcite{Where_WebRTC}{33}

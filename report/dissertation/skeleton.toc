@@ -27,20 +27,20 @@
 \contentsline {subsection}{\numberline {4.2.1}Server}{22}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Client}{23}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}The Extension}{23}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}Applications Developed with the Extension}{25}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Benchmark Application}{25}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Real Game Application}{25}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Developer Template}{25}{subsection.4.3.3}
-\contentsline {chapter}{\numberline {5}Network Extension Evaluation}{27}{chapter.5}
-\contentsline {section}{\numberline {5.1}Controlled Network}{27}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Concurrent Connections}{27}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Message Broadcasting Performance}{28}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}Real Network Results}{30}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Location-wise Delay Fairness}{31}{subsection.5.2.1}
-\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{33}{chapter.6}
-\contentsline {section}{\numberline {6.1}Conclusion}{33}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Comparison of the Extended GameMaker Functionality with Related Work}{33}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Criticism on the Implementation and Design Decisions}{33}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Note to developers}{33}{section.6.2}
-\contentsline {section}{\numberline {6.3}Future Improvements}{33}{section.6.3}
-\contentsline {chapter}{Bibliography}{35}{chapter*.30}
+\contentsline {section}{\numberline {4.3}Applications Developed with the Extension}{26}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Benchmark Application}{26}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Real Game Application}{26}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Developer Template}{26}{subsection.4.3.3}
+\contentsline {chapter}{\numberline {5}Network Extension Evaluation}{29}{chapter.5}
+\contentsline {section}{\numberline {5.1}Controlled Network}{29}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Concurrent Connections}{29}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Message Broadcasting Performance}{30}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Real Network Results}{32}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Location-wise Delay Fairness}{33}{subsection.5.2.1}
+\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{35}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclusion}{35}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Comparison of the Extended GameMaker Functionality with Related Work}{35}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Criticism on the Implementation and Design Decisions}{35}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Note to developers}{35}{section.6.2}
+\contentsline {section}{\numberline {6.3}Future Improvements}{35}{section.6.3}
+\contentsline {chapter}{Bibliography}{37}{chapter*.32}

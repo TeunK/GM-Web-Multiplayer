@@ -291,14 +291,24 @@ The code needs to be coherent and follow software design principles where-ever a
 The client has to be executable in the browser. It should be an application or game which uses the extension in order to interact with other existing clients.
 \paragraph*{Extension tasks:}
 The functions inside the extension should be easily callable from within the GameMaker interface. They should keep the "networking" knowledge requirement of the developer to a minimum. The extension also has to be able to execute in the browser as part of the client, and execute socket send- and receive commands while doing so.
+
+Optimally, the networking functions should be similar to those of the native networking functions that would be supported on non-browser applications. This way developers merely need to translate the networking functions without having to re-think, re-structure or entirely  re-write the functionality of their original code if they have already built an application that supports networking on different platforms.
+
+
 \paragraph*{Server tasks:}
 The server must to mimic the architectural structure of the client. It has to keep track of the state of each of the connected clients. it should also act as centralized controller that allows instances to interact with other instances. These instances are synchronized with those on the clients. Therefore, a change in the instance on the server should trigger a change for its representative instance in the clients.
 
+\paragraph*{Version Control:}
+A vital part of this project that may not be ignored is to keep track of progress. During the development I have been subject to travelling and using a large variety of devices. The project is a combination of many smaller projects, and the progress of each of these needs to be carefully organised and controlled.
+
+Therefore, ensuring consistency in these areas was taken care of by the choice of using a form of version control. A private Github\footnote{https://github.com/} repository was therefore setup.
+
 \paragraph*{Socket.io versus WebRTC}
-Choosing the right protocol to handle the data transmissions is therefore crucial. Transmission protocols are one of the contributors that will heavily characterise the network.
+Transmission protocols are one of the contributors that will heavily characterise the network. Choosing the right system to handle the data transmissions is therefore crucial. 
  
 Generally speaking, TCP is a form of reliable data transmission but contains therefore extra overhead, making it therefore known to be slightly slower than UDP when the network has little packet loss.
 
+The main focus in the extension is to match GameMaker's primary intention: making game development as fast and simple as possible. Focusing purely on this aspect leads to believe that using Socket.io is the best solution as it provides the most reliable form of communication. In contrast to WebRTC, developers will not have to worry about their packets being blocked at the firewall. They do will not need to worry about dealing with packet loss or having a shuffled order of packet arrival in their applications, and can instead purely focus on what it is they store into the packets that travels between the hosts.
 
 \subsection{Server and Client}
 %how do applications communicate
@@ -374,15 +384,83 @@ Creating a mapping can be done directly in the GUI of GameMaker as displayed in 
 \vspace{1em}
 \end{figure}
 
-
 \begin{figure}[H]
 \centering
 % \centering% default with `floatrow`
 \includegraphics[scale=1.2]{images/xml_mapping.png}
-\caption{External function from JavaScript extension file located in GMWebNet.js, mapped to a GML function located in the client client application. The function takes 2 arguments, each of type String (id = 1), and returns a Double type (id = 2)}
+\caption{External function \texttt{connect} from JavaScript extension file located in GMWebNet.js, mapped to a GML function \texttt{wn\_connect} located in the client application. The function takes 2 arguments, each of type String (id = 1), and returns a Double type (id = 2)}
 \label{fig:xml_mapping}
 \vspace{1em}
 \end{figure}
+
+The natively supported networking functions can easily be translated into the the browser-compatible functions defined by the extension as displayed in table \ref{table:function_translations}. The following purposes are included:
+\begin{itemize}
+\item initiating a connection
+\item creating a packet in the buffer
+\item sending a packet
+\item spot incoming messages
+\item read incoming messages
+\item disconnect hosts
+\end{itemize} 
+\begin{center}
+\begin{table}
+  \begin{tabular}{ | l | }
+  \hline
+\textbf{Function Translations} \\
+
+\hline
+\textit{Creating a socket and connecting to a server}	\\
+  \begin{tabular}{ l }
+	\\ Native \\
+	\texttt{socket = network\_create\_socket(network\_socket\_tcp);} \\
+	\texttt{network\_connect(socket, ip\_address, port);} \\
+	\\ Extension \\
+	\texttt{socket = wn\_connect(ip\_address, port);}
+  \end{tabular}
+  \\\\
+  
+\hline
+\textit{Creating a new packet in the buffer and sending it}	\\
+  \begin{tabular}{ l }
+	\\ Native \\
+	\texttt{buffer = buffer\_create(size, type, byte\_alignment);} \\
+	\texttt{buffer\_write(buffer, buffer\_size, value);} \\
+	\texttt{network\_send\_packet(socket, buffer, buffer\_get\_size(buffer));} \\
+	\\ Extension \\
+	\texttt{wn\_buffer\_clear()} \\
+	\texttt{wn\_buffer\_write(value)} \\
+	\texttt{wn\_send\_message(socket)}
+  \end{tabular}
+  \\\\
+
+\hline
+\textit{Spot an incoming packet and start reading it}	\\
+  \begin{tabular}{ l }
+	\\ Native \\
+	\texttt{new\_messages = socket\_read\_message(socket, buffer)} \\
+	\texttt{if (new\_message) \{message = buffer\_read\_uint8(buffer);\}}\\
+	\\ Extension \\
+	\texttt{new\_messages = wn\_receive\_message(socket)} \\
+	\texttt{if (new\_message) \{message = wn\_buffer\_read();\}}
+  \end{tabular}
+  \\\\
+
+\hline
+\textit{Disconnecting the hosts}	\\
+  \begin{tabular}{ l }
+	\\ Native \\
+	\texttt{network\_destroy(socket);}\\
+	\\ Extension \\
+	\texttt{wn\_disconnect(socket, disconnect\_message\_id)}
+  \end{tabular}
+  \\\\
+
+	\hline
+  \end{tabular}
+  \caption{Function Translations from natively supported functions to browser-supported functions. Notice that the extension itself takes care of implementation details for the buffer, buffer size and the connection type (TCP).}
+  \label{table:function_translations}
+  \end{table}
+\end{center}
 
 
 \section{Applications Developed with the Extension}
@@ -602,6 +680,7 @@ Average roundtrip times per test:
 \cite{Construct2_Multiplayer_Tutorial}
 \cite{WebSocket}
 \cite{NAT}
+\cite{Where_WebRTC}
 % <<<< REMOVE THIS BLOCK
 
 %TODO change style to apa before submission. ignore "errors", it should still work after a few retries
