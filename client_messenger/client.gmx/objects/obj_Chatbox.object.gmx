@@ -81,7 +81,7 @@ if (keyboard_check_released(vk_enter))
         {
             with (obj_Network_controller)
             {
-                wn_clear_buffer();
+                wn_buffer_clear();
                 wn_buffer_write(wn_msgtype("C2S","chat_message"));
                 wn_buffer_write(keyboard_string);
                 wn_send_message(server_socket);

@@ -99,7 +99,7 @@ if (connected &amp;&amp; !instance_exists(obj_Chatbox)) instance_create(x,y,obj_
             client_id = wn_buffer_read();
             
             //respond with our username
-            wn_clear_buffer();
+            wn_buffer_clear();
             wn_buffer_write(wn_msgtype("C2S", "initial_client_details"));
             wn_buffer_write(obj_Controller.username);
             wn_send_message(server_socket)
@@ -199,7 +199,7 @@ if (connected &amp;&amp; !instance_exists(obj_Chatbox)) instance_create(x,y,obj_
             }
             else
             {
-                wn_clear_buffer();
+                wn_buffer_clear();
             }
             break;
     }
@@ -210,7 +210,7 @@ if (connected &amp;&amp; client_clock mod update_speed == 0)
 {
     if (instance_exists(obj_Player) &amp;&amp; instance_exists(obj_Controller))
     {
-        wn_clear_buffer();
+        wn_buffer_clear();
         
         //update message type
         wn_buffer_write(wn_msgtype("C2S", "update_user"));

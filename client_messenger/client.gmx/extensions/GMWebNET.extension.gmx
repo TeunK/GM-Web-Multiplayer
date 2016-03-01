@@ -85,7 +85,7 @@
           </args>
         </function>
         <function>
-          <name>wn_clear_buffer</name>
+          <name>wn_buffer_clear</name>
           <externalName>clear_buffer</externalName>
           <kind>11</kind>
           <help>wn_clear_buffer() -- clear buffer </help>
