@@ -33,26 +33,8 @@ summarising the report\\
 \maketitle
 
 % REMOVE THESE >>>>
-\section*{Questions to Dr. Lee}
-\begin{itemize}
-\item what to do with the footnotes? make them regular reference? if yes, just the url? or are there specific standards.
-\end{itemize}
-
-\section*{COMPLETED}
-\begin{itemize}
-\item planning the project
-\item general research on the topic, ie. answer the question: "where to start?"
-\item developing the implementation
-\item develop application using the working extension to test if it works (both locally and online)
-\item evaluation: assessing the limits of the implementation (given a specific server specification).  Both locally and online (different distances to server, different cities? countries? continents?)
-\item write networking extension implementation
-\item execute experiments to evaluate the implementation
-\end{itemize}
-
 \section*{TODO}
-February
 \begin{itemize}
-\item give definition for server-reponse time
 \item in section "fairness depending on location", add world map with tested locations and their average mean
 \item Consider actual playability in a game OR add assumption how RTT affects atual usage of an application (find reference?)
 \item write literature review and development section
@@ -60,9 +42,6 @@ February
 \item Write down details about implementation, design decisions must be well justified according to literature
 \item Possibly add new implementation features / clean up existing implementations.
 \item explain the evaluation results
-\end{itemize}
-March
-\begin{itemize}
 \item clarify thesis and write intro
 \item Record video of working implementation
 \item Create proper template for other developers to use + writing down a guide how to use it, where to start etc.
@@ -127,18 +106,18 @@ Different applications often have different demands from the network. One must t
 In a typical networked game, game clients are described by a \textbf{limited set of parameters} received by a server. These parameters represent the "game state". \textbf{When due to delay between the clients and server the game state is desynchronised, fairness is reduced}\cite{Fairness_and_Playability}.
 
 \subsection{TCP}
-TCP is a highly reliable connection-oriented and error-free host-to-host data transmission protocol. After establishing a connection using an event referred to as the "three way handshake" \footnote{http://www.inetdaemon.com/tutorials/internet/tcp/3-way\_handshake.shtml}, it keeps the connection open \footnote{https://tools.ietf.org/html/rfc793}. It automatically takes care of handling retransmission of dropped packets and acknowledgement of arrived packets. For this reason it is one of the most common transmission protocols in applications that require reliable data transmissions. One down-side however is that due to the additional error-handling, the packets are relatively large and thus cause some overhead.
+TCP is a highly reliable connection-oriented and error-free host-to-host data transmission protocol. After establishing a connection using an event referred to as the "three way handshake" \cite{handshake}, it keeps the connection open \cite{tcp_open_connection}. It automatically takes care of handling retransmission of dropped packets and acknowledgement of arrived packets. For this reason it is one of the most common transmission protocols in applications that require reliable data transmissions. One down-side however is that due to the additional error-handling, the packets are relatively large and thus cause some overhead.
 
 \subsection{UDP}
-UDP is a connectionless transmission protocol that, unlike TCP, provides a "minimal, unreliable, best-effort message-passing transport to applications" \footnote{http://www.erg.abdn.ac.uk/users/gorry/course/inet-pages/udp.html}. It provides no guarantees for delivery and no protection from duplication. Despite this clear down-side, due to the small header size it may often be useful for applications that value the speed of the connection above reliability of the content.
+UDP is a connectionless transmission protocol that, unlike TCP, provides a "minimal, unreliable, best-effort message-passing transport to applications" \cite{udp_connectionless}. It provides no guarantees for delivery and no protection from duplication. Despite this clear down-side, due to the small header size it may often be useful for applications that value the speed of the connection above reliability of the content.
 \subsubsection{NAT traversal}
 Due to the limitation of IPv4 addresses, networks often consist of local networks; groups of devices that are mapped to the same global IP address. Network address translation (NAT) is a mechanism that takes care of assigning IP addresses to local devices within the network, whilst maintaining the same global IP to identify the local network as a whole.
 
 As UDP does not maintain an open connection between the hosts, packets have to pass the NAT repeatedly, and can easily be blocked by the firewall. 
-NAT traversal techniques such as "hole punching" are therefore established, Although they are not applicable in all NAT devices or situations \footnote{https://tools.ietf.org/html/rfc5128\#page-11}.
+NAT traversal techniques such as "hole punching" are therefore established, Although they are not applicable in all NAT devices or situations \cite{udp_holepunching}.
 
 \subsection{WebSocket}
-WebSocket is a protocol that "provides a method to push messages from client to server efficiently and with a simple syntax" \cite{WebSocket}. It was standardized by the IETF in December 2011, providing a full-duplex (two-way) communication between client and server through a single TCP connection. The goal is to "provide a mechanism for browser-based applications that need two-way communication with servers that does not rely on opening multiple HTTP connections" \footnote{https://tools.ietf.org/html/rfc6455}. This is done by setting up a socket, which is essentially a door that leads to a specific host, through which data can be sent.
+WebSocket is a protocol that "provides a method to push messages from client to server efficiently and with a simple syntax" \cite{WebSocket}. It was standardized by the IETF in December 2011, providing a full-duplex (two-way) communication between client and server through a single TCP connection. The goal is to "provide a mechanism for browser-based applications that need two-way communication with servers that does not rely on opening multiple HTTP connections" \cite{websocket_communication}. This is done by setting up a socket, which is essentially a door that leads to a specific host, through which data can be sent.
 
 \subsection{Socket.io}
 Socket.io is an event-driven JavaScript library that can be used both on the client's browser, and a server\cite{Socketio}. It supports features that allow sending and receiving data using the WebSocket protocol, without interruption of the code flow\cite{Socketio_Benchmark}\cite{Socketio_TCP_Benchmark}. For this reason, it is \textbf{often used in combination with Node.js}.
@@ -175,9 +154,9 @@ Developing applications and games in GameMaker is cheap, simple to learn and fle
 
 During the rise of HTML5 and the growing popularity of Gamemaker, YoyoGames has provided the functionality to export any application to a JavaScript program that can be executed directly in the browser\cite{GameMaker_Studio}.
 
-Some of the features that are normally supported by GameMaker are however lost during the transition to a web application. One of these features is the networking functionality. Thus far since the update to export GameMaker applications to HTML5 in September 2011, YoYoGames has never included this feature\footnote{http://docs.yoyogames.com/source/dadiospice/002\_reference/networking/index.html}. An attempt was made by a member of the YoYoGames community, however it is considered to be in alpha stage and fails to be used by other developers\footnote{https://github.com/amorri40/39js}. It is a basic setup that merely broadcasts messages as they come in.%TODO stronger argument WHY it doesnt work
+Some of the features that are normally supported by GameMaker are however lost during the transition to a web application. One of these features is the networking functionality. Thus far since the update to export GameMaker applications to HTML5 in September 2011, YoYoGames has never included this feature \cite{gamemaker_missing_networking}. An attempt was made by a member of the YoYoGames community, however it is considered to be in alpha stage and fails to be used by other developers \cite{gamemaker_networking_attempt}. It is a basic setup that merely broadcasts messages as they come in.%TODO stronger argument WHY it doesnt work
 
-The main GameMaker community forum is hosted directly by YoYoGames\footnote{http://gmc.yoyogames.com/}, serving 280,000 registered users recorded in January 2016, with a combined total of 220,000 topics and 3,480,000 posts. There also exists a notable GameMaker forum in the Netherlands\footnote{http://www.game-maker.nl/forums/} which hosts an additional 557,000 posts for 56,000 topics for almost 18,000 members.
+The main GameMaker community forum is hosted directly by YoYoGames \cite{yoyogames_forum}, serving 280,000 registered users recorded in January 2016, with a combined total of 220,000 topics and 3,480,000 posts. There also exists a notable GameMaker forum in the Netherlands\cite{dutch_gamemaker_forum} which hosts an additional 557,000 posts for 56,000 topics for almost 18,000 members.
 
 \section{Fairnesss and Playability in Online Multiplayer Games}
 
@@ -191,9 +170,9 @@ Being a cross-platform game development tool primarily for 2D graphically orient
 
 Note that GameMaker does natively support networking functionality for non-browser games. However we must remind ourselves of the aim of this project: creating a networking extension to improve GameMaker's functionality \textbf{for developing 2D browser games}. For this reason, this paper will consider GameMaker to be a development tool for browser games.
 
-Unbiased sources were used in order to find the most related software for these purposes. These sources collect user feedback for the browser-game development tools. Their ratings were established by allowing users to criticise tools based on their personal experience, and apply a score. The review system of html5gameengine.com\footnote{https://html5gameengine.com/} represents that of the Google Play Store\cite{Google_Play_Store} and the Apple App Store\cite{Apple_App_Store}, and may therefore be a somewhat reasonable method for finding the more commonly used tools.
+Unbiased sources were used in order to find the most related software for these purposes. These sources collect user feedback for the browser-game development tools. Their ratings were established by allowing users to criticise tools based on their personal experience, and apply a score. The review system of html5gameengine.com \cite{html5_gamedev_tools} represents that of the Google Play Store\cite{Google_Play_Store} and the Apple App Store\cite{Apple_App_Store}, and may therefore be a somewhat reasonable method for finding the more commonly used tools.
 
-developer.mozilla.org\footnote{https://developer.mozilla.org/en-US/docs/Games/Tools/Engines\_and\_tools} (world rank 198 by alexa.com\footnote{http://www.alexa.com/}) hosts a list of tools titled "HTML5 game engines", and holds suggestions by 26 developers each with different backgrounds in 2D browser game development. gamepix.com\footnote{http://www.gamepix.com/blog/the-big-list-of-2d-html5-games-engines/} hosts a list of similar tools, but is less detailed about their sources.
+developer.mozilla.org \cite{html5_mozilla} (world rank 198 by alexa.com \cite{alexa_ranking}) hosts a list of tools titled "HTML5 game engines", and holds suggestions by 26 developers each with different backgrounds in 2D browser game development. gamepix.com \cite{gamepix_engines} hosts a list of similar tools, but is less detailed about their sources.
 
 Table \ref{table:Related_Tools} was carefully constructed by combining the best rated 2D browser-supported game developing tools as advertised by the communities for the instances mentioned above.
 
@@ -243,9 +222,9 @@ Although the five tools assist in the development, they do not compare with Game
 
 
 \subsection{Construct 2}
-Construct 2 is one of the main contenders. It provides its own GUI and shares similar ideals as those of gamemaker: simplifying the development for novice programmers. This is done by supporting inbuilt D\&D features. Code programming can also be used after installing a required extension. It is a generally well known tool with a community of over 204,000 registered users, responsible for more than 529,000 posts for 103,000 topics\footnote{https://www.scirra.com/forum/}.
+Construct 2 is one of the main contenders. It provides its own GUI and shares similar ideals as those of gamemaker: simplifying the development for novice programmers. This is done by supporting inbuilt D\&D features. Code programming can also be used after installing a required extension. It is a generally well known tool with a community of over 204,000 registered users, responsible for more than 529,000 posts for 103,000 topics \cite{scirra_forum}.
 
-In April 2014, release r164 to r168 updated the engine with networking features by allowing users to create a said "network object"\footnote{https://www.scirra.com/manual/174/multiplayer}. This object is pre-defined with "features to develop real-time online multiplayer games", provided using WebRTC DataChannels (UDP) for P2P connections. 
+In April 2014, release r164 to r168 updated the engine with networking features by allowing users to create a said "network object" \cite{construct2_multiplayer}. This object is pre-defined with "features to develop real-time online multiplayer games", provided using WebRTC DataChannels (UDP) for P2P connections. 
 
 It is a very well established update with optimisation support included, eg. by providing preliminary setups for "NAT traversal to connect through common router/network setups", "Interpolation and extrapolation modes to ensure smooth in-game motion", "Support for lag compensation" and more. Administrator at Scirra, Ashley G. states however that "even though Construct 2's Multiplayer object takes care of many of the complexities, ..., it is important to understand how multiplayer online games fundamentally work"\cite{Construct2_Multiplayer_Tutorial}.
 
@@ -253,13 +232,13 @@ It is a very well established update with optimisation support included, eg. by 
 %TODO explain cost
 
 \subsection{Unity}
-In the world of browser-game development, Unity is by far the most acknowledged tool. It comes with a professional GUI, allowing developers to create games using D\&D as well as with programming languages C\# and JavaScript\footnote{http://docs.unity3d.com/ScriptReference/index.html}.
+In the world of browser-game development, Unity is by far the most acknowledged tool. It comes with a professional GUI, allowing developers to create games using D\&D as well as with programming languages C\# and JavaScript \cite{unity_support}.
 
-Networking features are supported as a D\&D class\footnote{http://docs.unity3d.com/ScriptReference/Network.html}, but can also be used by installing the "WebSocket-Sharp" plugin in C\#\footnote{https://github.com/sta/websocket-sharp}.
+Networking features are supported as a D\&D class \cite{unity_networking}, but can also be used by installing the "WebSocket-Sharp" plugin in C\# \cite{unity_websocket_sharp}.
 
-Currently there are roughly 4,500,000 users registered to the Unity forum\footnote{http://forum.unity3d.com/forums}, however only a small percentage of this is active in 2D development as this only hosts 5,600 topics\footnote{http://forum.unity3d.com/forums/2d.53/}. 
+Currently there are roughly 4,500,000 users registered to the Unity forum \cite{unity_forum}, however only a small percentage of this is active in 2D development as this only hosts 5,600 topics \cite{unity_forum_2d}. 
 
-This is most likely due to the fact that Unity is aimed towards experienced 3D game-developers and offers much overhead when only using its 2D capabilities. In the poorly populated 2D section of the forum, replies such as "have you considered using GameMaker?"\footnote{http://forum.unity3d.com/threads/where-to-start-2d-toolkit-or-platformer-pro.380770/} are therefore a common response.
+This is most likely due to the fact that Unity is aimed towards experienced 3D game-developers and offers much overhead when only using its 2D capabilities. In the poorly populated 2D section of the forum, replies such as "have you considered using GameMaker?" \cite{unity_suggests_gamemaker} are therefore a common response.
 
 https://unity3d.com/public-relations
 
@@ -301,7 +280,7 @@ The server must to mimic the architectural structure of the client. It has to ke
 \paragraph*{Version Control:}
 A vital part of this project that may not be ignored is to keep track of progress. During the development I have been subject to travelling and using a large variety of devices. The project is a combination of many smaller projects, and the progress of each of these needs to be carefully organised and controlled.
 
-Therefore, ensuring consistency in these areas was taken care of by the choice of using a form of version control. A private Github\footnote{https://github.com/} repository was therefore setup.
+Therefore, ensuring consistency in these areas was taken care of by the choice of using a form of version control. A private Github \cite{github} repository was therefore setup.
 
 \paragraph*{Socket.io versus WebRTC}
 Transmission protocols are one of the contributors that will heavily characterise the network. Choosing the right system to handle the data transmissions is therefore crucial. 
@@ -346,7 +325,7 @@ GameMaker is unable to use native support for establishing a connection to other
 It is a set of JavaScript functions that can be called from inside the GameMaker GUI and provide the actual networking functionality.
 It consists of three components:
 \begin{enumerate}
-\item An MIT-licensed opensource socket.io JavaScript library provided by LearnBoost: socket.io.js (documentation \footnote{https://docs.omniref.com/js/npm/socket.io/0.8.4})
+\item An MIT-licensed opensource socket.io JavaScript library provided by LearnBoost: socket.io.js (documentation \cite{socketiojs})
 \item A set of networking functions, located in GMWebNet.js
 \item A mapping from GML functions to the networking functions
 \end{enumerate}
@@ -466,6 +445,41 @@ The natively supported networking functions can easily be translated into the th
 \section{Applications Developed with the Extension}
 %Explain about ownmade application using the extension, how it tests the given benchmarks (eg. delay, data, equality)
 \subsection{Benchmark Application}
+The benchmark application was the first application created using the networking extension. It initially consisted of a single instance repeatedly sending a ping request to the server at a fixed interval, out of which the RTT could be calculated.
+
+Since then, it has evolved into supporting a variety of instances (virtual clients), each being connected to the server through their own private connection. This way, it would allow for evaluation with many clients without being limited to a small amount of physical devices. The virtual clients are set to send messages at fixed intervals (ticks).
+
+As the benchmarking application supports more than one virtual client that connects to the server, the benchmarker keeps track of the values of each of its virtual clients, calculating the averages, displaying these in a graph and creating logs for later evaluation.
+
+On the top-left of the figure \ref{fig:benchmark_gui} the global data can be seen. This data only regards the virtual clients (not all clients that may be running on other devices). 
+
+The \texttt{CPU} value indicates the speed at which the CPU processes the code at runtime. This had to remain at a steady 60 in order to ensure no external variabilities would interfere with the experiments. Similarly, the \texttt{FPS} had to remain at a steady 30fps. This was the frame rate at which the application is drawing the GUI. If at any point the CPU or FPS would drop, this would indicate an external factor is affecting the program execution and will potentially corrupt the test results. Therefore, values that were collected when these values dropped would automatically be discarded.
+
+The \texttt{clients} variable indicates the number of virtual clients the application has created. 
+
+\texttt{real\_clients} indicates the number of clients that have successfully established a private connection to the server.
+
+\texttt{global\_clients} shows the user how many physical and virtual clients are connected to the server globally. This includes clients that are connected through other devices. This number is only updated on request by the user, as it depends on a request to the server and could reduce the accuracy of the experiments. Upon receiving this request, the server has to reply with the number of clients it is serving at that given time.
+
+\texttt{average} and \texttt{deviation} refer to the average RTT and RTT deviation of the most recently sent 8-byte messages by each of the virtual clients.
+
+\texttt{ping-rate/s} is the amount of 8-byte messages that are sent by each virtual client every second.
+
+The \texttt{total req/sec} therefore indicates how many messages are sent out to the server every second by all of the virtual clients collectively.
+
+\texttt{ping count} describes the size of the message history. 40 means that the graph will display the last 40 ticks worth of average RTTs of all the virtual clients.
+
+This application was used in the evaluation experiments in order to test the system's capabilities, such as the applied stress on the server with different varieties of concurrent connections, certain amounts of messages that need to be processed simultaneously, as well as recording the effect on the RTT when the client is located in different areas in the world.
+
+\begin{figure}
+\centering
+% \centering% default with `floatrow`
+\includegraphics[scale=0.4]{images/benchmarker.jpg}
+\caption{Displaying the GUI of the benchmarking application. On the left top the global data is available for the client. The table below displays the virtual clients and their 5 most recent roundtrip values. The graph on the top-right displays the average RTT over time for these clients. The colors of the image are inverted from the actual interface.}
+\label{fig:benchmark_gui}
+\vspace{1em}
+\end{figure}
+
 \subsection{Real Game Application}
 \subsection{Developer Template}
 
@@ -482,9 +496,9 @@ The natively supported networking functions can easily be translated into the th
 \section{Controlled Network}
 Controlled experiments were conducted in order allow prediction of server behaviour when loaded under similar pressure in future occasions.
 
-Experiments were executed on a Windows 7 64-bit platform with 12.6GB available physical memory and an Intel(R) Core(TM) i7-2600K CPU @ 3.40GHz processor. The software included Node v0.12.3 and Socket.io v1.3.7 in order to handle the networking operations.
+Experiments were executed on a Windows 7 64-bit platform with 12.6GB available physical memory and an Intel(R) Core(TM) i7-2600K CPU @ 3.40GHz processor. The software entailed Node v0.12.3 and Socket.io v1.3.7 in order to handle the networking operations.
 
-The network was controlled using Dummynet, using a below-average UK household network bandwidth \footnote{http://www.ispreview.co.uk/index.php/2015/02/ofcom-average-uk-home-broadband-speeds-slowly-reach-23mbps.html}. This involves an upload speed of 5Mbit/s, and a download speed of 1Mbit/, although no packet loss was set in order to ensure consistency throughout the controlled network experiments.
+The network was controlled using Dummynet, using a below-average UK household network bandwidth \cite{household_bandwidth}. This involves an upload speed of 5Mbit/s, and a download speed of 1Mbit/, although no packet loss was set in order to ensure consistency throughout the controlled network experiments.
 
 \subsection{Concurrent Connections}
 It is important to know how many clients a server can host simultaneously. The following experiments evaluate the server performance in terms of server CPU usage, CPU time and RSS with regard to the number of concurrently connected clients.
@@ -492,7 +506,7 @@ It is important to know how many clients a server can host simultaneously. The f
 \paragraph*{Setup}
 \begin{itemize}
 \item Variable number of concurrent connections cc, up to 15 instances with each simulating at most 500 clients.
-\item Clients do not contact the server after establishing a connection.
+\item Clients do \emph{not} contact the server after establishing a connection.
 \item The resulting values are averaged over a 2-minute run duration.
 \item After each run, the number of clients simultaneously connected to the server increases by 100.
 \end{itemize}
@@ -578,7 +592,7 @@ The following experiment evaluates the number of messages that can be handled by
 The network was consistently running with a 54.0Mb/s download and 3.0Mb/s upload speed.
 \paragraph*{}Multiple tests were executed with clients being located at specified locations. In each case, the clients were sending 8-byte messages to the server at a regular interval of 1 second for 2 minutes. The 120 roundtrip times for each client were then averaged in order to blur occasional peaks. At this point the roundtrip times of the clients in each common location were averaged, and then the deviance of the roundtrip times at each of these locations were calculated.
 
-All network experiments were executed using a single server located in Edinburgh and in each experiment all clients were connected and communicating to that server simultaneously.
+All network experiments were executed using a single server located in Edinburgh and in each experiment all clients were connected and communicating to that server simultaneously. During the experiments, logs were saved at the clients. After each experiment, these logs were forwarded for post-processing purposes. The roundtrip times represent the delay times between the packet-send event, and the packet-receive event by the same client for the same packet.
 
 \subsection{Location-wise Delay Fairness}
 The following experiment evaluates the effect of the geographical distance between groups of clients and the server with respect to fairness in response-time from the server to the clients.
@@ -681,6 +695,33 @@ Average roundtrip times per test:
 \cite{WebSocket}
 \cite{NAT}
 \cite{Where_WebRTC}
+
+\cite{handshake}
+\cite{tcp_open_connection}
+\cite{udp_connectionless}
+\cite{udp_holepunching}
+\cite{websocket_communication}
+\cite{gamemaker_missing_networking}
+\cite{gamemaker_networking_attempt}
+\cite{yoyogames_forum}
+\cite{dutch_gamemaker_forum}
+\cite{html5_gamedev_tools}
+\cite{html5_mozilla}
+\cite{alexa_ranking}
+\cite{gamepix_engines}
+\cite{scirra_forum}
+\cite{construct2_multiplayer}
+\cite{unity_support}
+\cite{unity_networking}
+\cite{unity_websocket_sharp}
+\cite{unity_forum}
+\cite{unity_forum_2d}
+\cite{unity_suggests_gamemaker}
+\cite{github}
+\cite{socketiojs}
+\cite{household_bandwidth}
+
+
 % <<<< REMOVE THIS BLOCK
 
 %TODO change style to apa before submission. ignore "errors", it should still work after a few retries

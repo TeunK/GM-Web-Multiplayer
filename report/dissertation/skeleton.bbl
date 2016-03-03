@@ -13,11 +13,38 @@ Jeremy Brun, Farzad Safaei, and Paul Boustead.
 \newblock {\em Fairness and playability in online multiplayer games}.
 \newblock PhD thesis, University of Wollongong, 2006.
 
+\bibitem{handshake}
+Tcp 3-way handshake.
+\newblock
+  \url{http://www.inetdaemon.com/tutorials/internet/tcp/3-way\_handshake.shtml}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{tcp_open_connection}
+Tcp open connection.
+\newblock \url{https://tools.ietf.org/html/rfc793}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{udp_connectionless}
+Udp connectionless.
+\newblock
+  \url{http://www.erg.abdn.ac.uk/users/gorry/course/inet-pages/udp.html}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{udp_holepunching}
+Udp holepunching.
+\newblock \url{https://tools.ietf.org/html/rfc5128\#page-11}.
+\newblock Accessed: 2016-03-02.
+
 \bibitem{WebSocket}
 David Walsh.
 \newblock Websocket and socket.io.
 \newblock \url{https://davidwalsh.name/websocket}, 29 November 2010.
 \newblock [Accessed: 2016-02-24].
+
+\bibitem{websocket_communication}
+Websocket two-way communication.
+\newblock \url{https://tools.ietf.org/html/rfc6455}.
+\newblock Accessed: 2016-03-02.
 
 \bibitem{Socketio}
 socket.io.
@@ -107,6 +134,32 @@ Llopis Noel.
 \newblock Gamemaker studio v1.1.7.
 \newblock {\em Game Developer}, 20(1):40, January 2013.
 
+\bibitem{gamemaker_missing_networking}
+Missing networking feature for browser export.
+\newblock
+  \url{http://docs.yoyogames.com/source/dadiospice/002\_reference/networking/index.html}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{gamemaker_networking_attempt}
+Browser networking attempt for gamemaker html5.
+\newblock \url{https://github.com/amorri40/39js}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{yoyogames_forum}
+Yoyogames community, forum.
+\newblock \url{http://gmc.yoyogames.com/}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{dutch_gamemaker_forum}
+Dutch gamemaker community, forum.
+\newblock \url{http://www.game-maker.nl/forums/}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{html5_gamedev_tools}
+Review system for html5 game development tools.
+\newblock \url{https://html5gameengine.com/}.
+\newblock Accessed: 2016-03-02.
+
 \bibitem{Google_Play_Store}
 Bin Fu, Jialiu Lin, Lei Li, Christos Faloutsos, Jason Hong, and Norman Sadeh.
 \newblock Why people hate your app: making sense of user feedback in a mobile
@@ -121,6 +174,33 @@ Jin~Hyung Kim, Inchan Kim, and Ho~Geun Lee.
   model framework.
 \newblock {\em PACIS Conference Proceedings}, 2010.
 
+\bibitem{html5_mozilla}
+Suggested html5 game engines through developer.mozilla.org.
+\newblock
+  \url{https://developer.mozilla.org/en-US/docs/Games/Tools/Engines\_and\_tools}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{alexa_ranking}
+Alexa: Website rank indexing service.
+\newblock \url{http://www.alexa.com/}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{gamepix_engines}
+Gamepix: Html5 game engine developer suggestions.
+\newblock
+  \url{http://www.gamepix.com/blog/the-big-list-of-2d-html5-games-engines/}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{scirra_forum}
+Scirra forums.
+\newblock \url{https://www.scirra.com/forum/}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{construct2_multiplayer}
+Scirra: Construct 2 multiplayer features.
+\newblock \url{https://www.scirra.com/manual/174/multiplayer}.
+\newblock Accessed: 2016-03-02.
+
 \bibitem{Construct2_Multiplayer_Tutorial}
 Ashley Gullen.
 \newblock Multiplayer tutorial.
@@ -128,6 +208,53 @@ Ashley Gullen.
   \url{https://www.scirra.com/tutorials/892/multiplayer-tutorial-1-concepts/page-1},
   March 2014.
 \newblock Scirra, creators of Construct 2.
+
+\bibitem{unity_support}
+Unity supported features.
+\newblock \url{http://docs.unity3d.com/ScriptReference/index.html}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{unity_networking}
+Unity networking feature support.
+\newblock \url{http://docs.unity3d.com/ScriptReference/Network.html}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{unity_websocket_sharp}
+Websocket-sharp plugin for unity.
+\newblock \url{https://github.com/sta/websocket-sharp}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{unity_forum}
+Unity forums.
+\newblock \url{http://forum.unity3d.com/forums}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{unity_forum_2d}
+Unity 2d development forum section.
+\newblock \url{http://forum.unity3d.com/forums/2d.53/}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{unity_suggests_gamemaker}
+Suggestion: Gamemaker instead of unity.
+\newblock
+  \url{http://forum.unity3d.com/threads/where-to-start-2d-toolkit-or-platformer-pro.380770/}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{github}
+Version control: Github.
+\newblock \url{https://github.com/}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{socketiojs}
+Documentation: socket.io.js.
+\newblock \url{https://docs.omniref.com/js/npm/socket.io/0.8.4}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{household_bandwidth}
+Average household network bandwidth in the united kingdom.
+\newblock
+  \url{http://www.ispreview.co.uk/index.php/2015/02/ofcom-average-uk-home-broadband-speeds-slowly-reach-23mbps.html}.
+\newblock Accessed: 2016-03-02.
 
 \bibitem{Multiplayer_Networking_modern_engine}
 Alan Edwardes.

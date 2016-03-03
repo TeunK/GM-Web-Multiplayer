@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  1 MAR 2016 01:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  2 MAR 2016 21:44
 entering extended mode
 **./skeleton.tex
 (skeleton.tex
@@ -427,17 +427,19 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 15.55188pt on input line 36.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 38.
- [4]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5]
-[6]
+ [4]
+[5] [6
+
+]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 100.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 79.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 100.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 79.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 100.
+(Font)              scaled to size 22.39185pt on input line 79.
  (skeleton.toc
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
@@ -465,9 +467,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
- [7
-
-])
+ [7])
 \tf@toc=\write4
 \openout4 = `skeleton.toc'.
 
@@ -481,182 +481,187 @@ Chapter 1.
 ]
 Chapter 2.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 124.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 103.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 124.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 103.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 124.
+(Font)              scaled to size 12.9599pt on input line 103.
+[11] [12]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 130.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 131.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 130.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 131.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 130.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 131.
 
-Underfull \vbox (badness 2042) has occurred while \output is active []
-
- [11]
-[12]
-Overfull \hbox (8.331pt too wide) in paragraph at lines 162--163
+Overfull \hbox (8.331pt too wide) in paragraph at lines 141--142
 \T1/ptm/m/n/12 ca-pa-bil-ity" al-low-ing de-vel-op-ers to work in the "non-bloc
 king event-driven I/O paradigm"
  []
 
 [13]
-Overfull \hbox (16.21097pt too wide) in paragraph at lines 182--182
+Overfull \hbox (3.30437pt too wide) in paragraph at lines 159--160
+\T1/ptm/m/n/12 ing 280,000 reg-is-tered users recorded in Jan-uary 2016, with a
+ com-bined to-tal of 220,000
+ []
+
+
+Overfull \hbox (16.21097pt too wide) in paragraph at lines 161--161
 []\T1/phv/b/n/17.28 Fairnesss and Playa-bil-ity in On-line Mul-ti-player Games 
 
  []
 
-[14] [15] [16
-
-]
+[14]
 Chapter 3.
 
-Overfull \hbox (12.3196pt too wide) in paragraph at lines 196--197
-[]\T1/ptm/m/n/12 developer.mozilla.org[][][][][] (world rank 198 by alexa.com[]
-[][][][]) hosts a list of tools ti-tled "HTML5
- []
-
-
-Overfull \hbox (5.38289pt too wide) in paragraph at lines 205--205
+Overfull \hbox (5.38289pt too wide) in paragraph at lines 184--184
 [][]\T1/ptm/m/n/10 Advertised at [][]$\T1/pcr/m/n/10 http : / / www . gamepix .
  com / blog / the-[]big-[]list-[]of-[]2d-[]html5-[]games-[]engines/$[][]| 
  []
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 220.
+(hyperref)                than one, level fixed on input line 199.
 
-[17]
-Overfull \hbox (6.57562pt too wide) in paragraph at lines 228--237
+[15
+
+]
+Overfull \hbox (6.57562pt too wide) in paragraph at lines 207--216
  [][] 
  []
 
 
-Overfull \hbox (2.91953pt too wide) in paragraph at lines 242--243
+Overfull \hbox (2.91953pt too wide) in paragraph at lines 221--222
 []\T1/ptm/m/n/12 Although the five tools as-sist in the de-vel-op-ment, they do
  not com-pare with GameMaker
  []
 
-[18] [19]
-Overfull \hbox (11.9533pt too wide) in paragraph at lines 272--274
+[16]
+Overfull \hbox (11.9533pt too wide) in paragraph at lines 251--253
 []\T1/ptm/m/n/12 licenses http://unity3d.com/unity/licenses cost https://store.
 unity3d.com/products/pricing 
  []
 
-[20]
+[17] [18
+
+]
 Chapter 4.
 
-Overfull \hbox (4.94669pt too wide) in paragraph at lines 289--290
+Overfull \hbox (4.94669pt too wide) in paragraph at lines 268--269
 \T1/ptm/m/n/12 sign prin-ci-ples where-ever ap-pli-ca-ble in or-der to sup-port
  ro-bust-ness, re-li-a-bil-ity, reusabil-
  []
 
-[21
-
-] [22] [23]
-Overfull \hbox (65.64426pt too wide) in paragraph at lines 368--370
+[19] [20] [21]
+Overfull \hbox (65.64426pt too wide) in paragraph at lines 347--349
 \T1/ptm/m/n/12 through the socket to the server. This packet can be pushed onto
  by us-ing the \T1/pcr/m/n/12 buffer_write(value)
  []
 
 
-Overfull \hbox (83.55856pt too wide) in paragraph at lines 371--372
+Overfull \hbox (83.55856pt too wide) in paragraph at lines 350--351
 []\T1/ptm/m/n/12 When a mes-sage ar-rives, it gets au-to-mat-i-cally stored in 
 the mes-sages ar-ray. \T1/pcr/m/n/12 receive_message(socket)
  []
 
 
-Overfull \hbox (29.1521pt too wide) in paragraph at lines 373--374
+Overfull \hbox (29.1521pt too wide) in paragraph at lines 352--353
 []\T1/ptm/m/n/12 When at any time, the buffer needs to be reused for send-ing a
  new mes-sage, \T1/pcr/m/n/12 buffer_clear()
  []
 
-<images/extensions_folder.png, id=468, 160.80075pt x 135.50626pt>
+<images/extensions_folder.png, id=443, 160.80075pt x 135.50626pt>
 File: images/extensions_folder.png Graphic file (type png)
 
 <use images/extensions_folder.png>
-Package pdftex.def Info: images/extensions_folder.png used on input line 381.
+Package pdftex.def Info: images/extensions_folder.png used on input line 360.
 (pdftex.def)             Requested size: 192.95992pt x 162.60666pt.
- [24]
-<images/xml_mapping.png, id=483, 345.08925pt x 181.8795pt>
+ [22]
+<images/xml_mapping.png, id=456, 345.08925pt x 181.8795pt>
 File: images/xml_mapping.png Graphic file (type png)
 
 <use images/xml_mapping.png>
-Package pdftex.def Info: images/xml_mapping.png used on input line 390.
+Package pdftex.def Info: images/xml_mapping.png used on input line 369.
 (pdftex.def)             Requested size: 414.10503pt x 218.25429pt.
 
-Overfull \hbox (1.54005pt too wide) in paragraph at lines 390--391
+Overfull \hbox (1.54005pt too wide) in paragraph at lines 369--370
  [][] 
  []
 
 
-Overfull \hbox (10.9112pt too wide) in paragraph at lines 396--397
+Overfull \hbox (10.9112pt too wide) in paragraph at lines 375--376
 []\T1/ptm/m/n/12 The na-tively sup-ported net-work-ing func-tions can eas-ily b
 e trans-lated into the the browser-
  []
 
-[25 <./images/extensions_folder.png> <./images/xml_mapping.png>]
-Underfull \hbox (badness 1286) in paragraph at lines 460--460
+[23 <./images/extensions_folder.png> <./images/xml_mapping.png>]
+Underfull \hbox (badness 1286) in paragraph at lines 439--439
 []\T1/phv/m/n/12 Table 4.1: |Func-tion Trans-la-tions from na-tively sup-ported
  func-tions to browser-
  []
 
-[26] [27] [28
+[24] [25] <images/benchmarker.jpg, id=476, 1061.9675pt x 493.845pt>
+File: images/benchmarker.jpg Graphic file (type jpg)
 
-]
-Chapter 5.
+<use images/benchmarker.jpg>
+Package pdftex.def Info: images/benchmarker.jpg used on input line 477.
+(pdftex.def)             Requested size: 424.77948pt x 197.53448pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--487
-[][][]\T1/ptm/m/n/10 http://www.ispreview.co.uk/index.php/2015/02/ofcom-average
--uk-home-broadband-speeds-
+Overfull \hbox (12.21451pt too wide) in paragraph at lines 477--478
+ [][] 
  []
 
-[29] <images/test_CLIENT_CPUusage.jpg, id=512, 481.8pt x 290.08376pt>
+[26 <./images/benchmarker.jpg>]
+Chapter 5.
+<images/test_CLIENT_CPUusage.jpg, id=482, 481.8pt x 290.08376pt>
 File: images/test_CLIENT_CPUusage.jpg Graphic file (type jpg)
 
 <use images/test_CLIENT_CPUusage.jpg>
-Package pdftex.def Info: images/test_CLIENT_CPUusage.jpg used on input line 505
+Package pdftex.def Info: images/test_CLIENT_CPUusage.jpg used on input line 519
 .
 (pdftex.def)             Requested size: 361.3491pt x 217.56227pt.
+ [27
 
-<images/test_CLIENT_CPUtime.jpg, id=514, 481.8pt x 290.08376pt>
+]
+<images/test_CLIENT_CPUtime.jpg, id=490, 481.8pt x 290.08376pt>
 File: images/test_CLIENT_CPUtime.jpg Graphic file (type jpg)
 
 <use images/test_CLIENT_CPUtime.jpg>
-Package pdftex.def Info: images/test_CLIENT_CPUtime.jpg used on input line 516.
+Package pdftex.def Info: images/test_CLIENT_CPUtime.jpg used on input line 530.
 
 (pdftex.def)             Requested size: 361.3491pt x 217.56227pt.
 
-<images/test_CLIENT_RSS.jpg, id=515, 481.8pt x 290.08376pt>
+<images/test_CLIENT_RSS.jpg, id=491, 481.8pt x 290.08376pt>
 File: images/test_CLIENT_RSS.jpg Graphic file (type jpg)
 
 <use images/test_CLIENT_RSS.jpg>
-Package pdftex.def Info: images/test_CLIENT_RSS.jpg used on input line 526.
+Package pdftex.def Info: images/test_CLIENT_RSS.jpg used on input line 540.
 (pdftex.def)             Requested size: 361.3491pt x 217.56227pt.
- [30 <./images/test_CLIENT_CPUusage.jpg>]
-[31 <./images/test_CLIENT_CPUtime.jpg> <./images/test_CLIENT_RSS.jpg>]
-<images/test_SERVER_RTTmean.jpg, id=530, 1255.69125pt x 488.82625pt>
+ [28 <./images/test_CLIENT_CPUusage.jpg>]
+[29 <./images/test_CLIENT_CPUtime.jpg> <./images/test_CLIENT_RSS.jpg>]
+<images/test_SERVER_RTTmean.jpg, id=505, 1255.69125pt x 488.82625pt>
 File: images/test_SERVER_RTTmean.jpg Graphic file (type jpg)
 
 <use images/test_SERVER_RTTmean.jpg>
-Package pdftex.def Info: images/test_SERVER_RTTmean.jpg used on input line 558.
+Package pdftex.def Info: images/test_SERVER_RTTmean.jpg used on input line 572.
 
 (pdftex.def)             Requested size: 401.8294pt x 156.42758pt.
 
-<images/test_SERVER_RTTstd.jpg, id=531, 1257.69875pt x 484.81125pt>
+<images/test_SERVER_RTTstd.jpg, id=506, 1257.69875pt x 484.81125pt>
 File: images/test_SERVER_RTTstd.jpg Graphic file (type jpg)
 
 <use images/test_SERVER_RTTstd.jpg>
-Package pdftex.def Info: images/test_SERVER_RTTstd.jpg used on input line 568.
+Package pdftex.def Info: images/test_SERVER_RTTstd.jpg used on input line 582.
 (pdftex.def)             Requested size: 402.47182pt x 155.14276pt.
- [32 <./images/test_SERVER_RTTmean.jpg> <./images/test_SERVER_RTTstd.jpg>] [33]
- [34]
-Chapter 6.
-(skeleton.bbl [35
+ [30 <./images/test_SERVER_RTTmean.jpg> <./images/test_SERVER_RTTstd.jpg>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] [36
+ [31]
+[32]
+Chapter 6.
+(skeleton.bbl [33
+
+] [34
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 4--10
@@ -676,73 +681,132 @@ esktop-[]apps . html$[][]\T1/ptm/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 1874) in paragraph at lines 17--21
+Underfull \hbox (badness 1874) in paragraph at lines 39--43
 []\T1/ptm/m/n/12 David Walsh.  Web-socket and socket.io.  [][]$\T1/pcr/m/n/12 h
 ttps : / / davidwalsh . name /$
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 34--41
+Underfull \hbox (badness 4518) in paragraph at lines 45--48
+[]\T1/ptm/m/n/12 Websocket two-way com-mu-ni-ca-tion.  [][]$\T1/pcr/m/n/12 http
+s : / / tools . ietf . org / html /$
+ []
+
+
+Underfull \hbox (badness 1910) in paragraph at lines 61--68
 \T1/ptm/m/n/12 socket-io-0-8-7-0-7-11-and-0-6-17-and-nodes-native-tcp/, 2011.  
 [Ac-cessed:
  []
 
-[37]
-Underfull \hbox (badness 10000) in paragraph at lines 89--94
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 116--121
 []\T1/ptm/m/n/12 Alejandro Her-nan-dez.  Init.js: A guide to the why and how
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--94
+Underfull \hbox (badness 10000) in paragraph at lines 116--121
 \T1/ptm/m/n/12 of full-stack javascript.  [][]$\T1/pcr/m/n/12 http : / / www . 
 toptal . com / javascript /$
  []
 
-[38]
-Underfull \hbox (badness 10000) in paragraph at lines 196--201
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--162
+[]\T1/ptm/m/n/12 Review sys-tem for html5 game de-vel-op-ment tools.  [][]$\T1/
+pcr/m/n/12 https : / /$
+ []
+
+[36]
+Underfull \hbox (badness 1242) in paragraph at lines 178--182
+[]\T1/ptm/m/n/12 Suggested html5 game en-gines through de-vel-oper.mozilla.org.
+  [][]$\T1/pcr/m/n/12 https : / /$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--182
+$\T1/pcr/m/n/12 developer . mozilla . org / en-[]US / docs / Games / Tools / En
+gines _ and _ tools$[][]\T1/ptm/m/n/12 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--221
+[]\T1/ptm/m/n/12 Unity net-work-ing fea-ture sup-port.  [][]$\T1/pcr/m/n/12 htt
+p : / / docs . unity3d . com /$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--226
+[]\T1/ptm/m/n/12 Websocket-sharp plu-gin for unity.  [][]$\T1/pcr/m/n/12 https 
+: / / github . com / sta /$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 238--242
+$\T1/pcr/m/n/12 threads / where-[]to-[]start-[]2d-[]toolkit-[]or-[]platformer-[
+]pro . 380770/$[][]\T1/ptm/m/n/12 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--258
+[]\T1/ptm/m/n/12 Average house-hold net-work band-width in the united king-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--258
+\T1/ptm/m/n/12 dom.  [][]$\T1/pcr/m/n/12 http : / / www . ispreview . co . uk /
+ index . php / 2015 / 02 /$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--258
+$\T1/pcr/m/n/12 ofcom-[]average-[]uk-[]home-[]broadband-[]speeds-[]slowly-[]rea
+ch-[]23mbps .$
+ []
+
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 323--328
 []\T1/ptm/m/n/12 Yevhen Shylo.  Net-work ad-dress trans-la-tion.  \T1/ptm/m/it/
 12 Sci-en-tific Re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--201
+Underfull \hbox (badness 10000) in paragraph at lines 323--328
 \T1/ptm/m/it/12 port - Tech-no-log-i-cal Con-fer-ence\T1/ptm/m/n/12 , 3(1):79, 
 Novem-ber 2015.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--209
+Underfull \hbox (badness 10000) in paragraph at lines 330--336
 []\T1/ptm/m/n/12 Phil Ed-holm.  Where are the real we-brtc apps?  [][]$\T1/pcr/
 m/n/12 http :$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--209
+Underfull \hbox (badness 10000) in paragraph at lines 330--336
 $\T1/pcr/m/n/12 / / www . webrtcworld . com / topics / from-[]the-[]experts / a
 rticles /$
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 690.
- [39]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 690.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 731.
+ [38]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 731.
  (skeleton.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 690.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 690.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 731.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 731.
 Package rerunfilecheck Info: File `skeleton.out' has not changed.
-(rerunfilecheck)             Checksum: 6A2931745CEA09AD9AEFD41A1EA4DBC2;2982.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 690.
+(rerunfilecheck)             Checksum: 8966D2A0205FC5EDCB6ECFBAE9B81690;2982.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 731.
  ) 
 Here is how much of TeX's memory you used:
- 8125 strings out of 493634
- 121238 string characters out of 3141302
- 217877 words of memory out of 3000000
- 11203 multiletter control sequences out of 15000+200000
+ 8153 strings out of 493634
+ 122062 string characters out of 3141302
+ 217213 words of memory out of 3000000
+ 11232 multiletter control sequences out of 15000+200000
  76535 words of font info for 96 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 43i,16n,47p,756b,531s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not ex
-ist, replaced by a fixed one
+ 43i,16n,47p,686b,531s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exi
+st, replaced by a fixed one
 
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fi
@@ -753,9 +817,9 @@ s/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/
 utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on skeleton.pdf (39 pages, 748945 bytes).
+Output written on skeleton.pdf (38 pages, 832095 bytes).
 PDF statistics:
- 714 PDF objects out of 1000 (max. 8388607)
- 191 named destinations out of 1000 (max. 500000)
- 380 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 759 PDF objects out of 1000 (max. 8388607)
+ 189 named destinations out of 1000 (max. 500000)
+ 385 words of extra memory for PDF output out of 10000 (max. 10000000)
 
