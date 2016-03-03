@@ -31,7 +31,7 @@ clients = 1;
 connected = 0;
 
 //details for clients
-server_ip      = "82.39.79.35"; 
+server_ip      = "127.0.0.1"//"82.39.79.35"; 
 server_port    = 24000;
 req_rate_ping  = 30
 
@@ -139,8 +139,8 @@ with (obj_Network_controller)
             <kind>1</kind>
             <string>while(wn_receive_message(server_socket))
 {
-    var msg_type=wn_msgtype("S2C",wn_read_byte());
-    var sender_name = wn_read_string();
+    var msg_type=wn_msgtype("S2C",wn_buffer_read());
+    var sender_name = wn_buffer_read();
     
     switch(msg_type)
     {
@@ -154,8 +154,8 @@ with (obj_Network_controller)
                 {
                     var server_socket = obj_Controller.server_socket
                     wn_clear_buffer();
-                    wn_write_byte(wn_msgtype("C2S", "initial_client_details"));
-                    wn_write_string(client_name);
+                    wn_buffer_write(wn_msgtype("C2S", "initial_client_details"));
+                    wn_buffer_write(client_name);
                     wn_send_message(server_socket)
                 }
             }
@@ -164,7 +164,7 @@ with (obj_Network_controller)
         case "chat_message":
             var senderid
             senderid = ds_map_find_value(nodes,sender_name)
-            var chat_message = wn_read_string();
+            var chat_message = wn_buffer_read();
             if instance_exists(senderid)
             {
                 with (senderid)
@@ -178,7 +178,7 @@ with (obj_Network_controller)
         case "ping":
             var senderid
             senderid = ds_map_find_value(nodes,sender_name)
-            var ping_starttime = wn_read_string();
+            var ping_starttime = wn_buffer_read();
             if instance_exists(senderid)
             {
                 with (senderid)
@@ -198,12 +198,12 @@ with (obj_Network_controller)
             break;
             
         case "client_count":
-            client_count = wn_read_byte();
+            client_count = wn_buffer_read();
                         
             break;
             
         case "request_count":
-            request_count = wn_read_string();
+            request_count = wn_buffer_read();
             
             break;
     }

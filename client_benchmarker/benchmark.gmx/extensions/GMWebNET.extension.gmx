@@ -3,7 +3,7 @@
   <name>GMWebNET</name>
   <version>1.0.0</version>
   <packageID></packageID>
-  <author>Teun Kokke</author>
+  <ProductID></ProductID>
   <date>06/08/15</date>
   <license>Free to use, also for commercial games.</license>
   <description></description>
@@ -17,6 +17,7 @@
   <androidsourcedir></androidsourcedir>
   <macsourcedir></macsourcedir>
   <maclinkerflags></maclinkerflags>
+  <maccompilerflags></maccompilerflags>
   <androidinject></androidinject>
   <iosSystemFrameworks/>
   <iosThirdPartyFrameworks/>
@@ -29,11 +30,13 @@
       <init></init>
       <final></final>
       <kind>5</kind>
+      <uncompress>0</uncompress>
       <ConfigOptions>
         <Config name="Default">
           <CopyToMask>9223372036854775807</CopyToMask>
         </Config>
       </ConfigOptions>
+      <ProxyFiles/>
       <functions>
         <function>
           <name>wn_connect</name>
@@ -51,10 +54,11 @@
           <name>wn_disconnect</name>
           <externalName>disconnect</externalName>
           <kind>11</kind>
-          <help>wn_disconnect(socket) -- Disconnect the socket connected to the server</help>
-          <returnType>2</returnType>
-          <argCount>1</argCount>
+          <help>wn_disconnect(socket, msg_type_disconnect) -- Disconnect the socket connected to the server</help>
+          <returnType>1</returnType>
+          <argCount>2</argCount>
           <args>
+            <arg>1</arg>
             <arg>1</arg>
           </args>
         </function>
@@ -90,10 +94,10 @@
           <args/>
         </function>
         <function>
-          <name>wn_write_short</name>
-          <externalName>write_short</externalName>
+          <name>wn_buffer_write</name>
+          <externalName>buffer_write</externalName>
           <kind>11</kind>
-          <help>wn_write_short(value) -- write short type</help>
+          <help>wn_buffer_write(value) -- write to buffer queue</help>
           <returnType>2</returnType>
           <argCount>1</argCount>
           <args>
@@ -101,115 +105,11 @@
           </args>
         </function>
         <function>
-          <name>wn_write_ushort</name>
-          <externalName>write_ushort</externalName>
+          <name>wn_buffer_read</name>
+          <externalName>buffer_read</externalName>
           <kind>11</kind>
-          <help>wn_write_ushort(value) -- write unsigned short type (allow negative values)</help>
-          <returnType>2</returnType>
-          <argCount>0</argCount>
-          <args/>
-        </function>
-        <function>
-          <name>wn_write_int</name>
-          <externalName>write_int</externalName>
-          <kind>11</kind>
-          <help>wn_write_int(value) -- write integer type</help>
-          <returnType>2</returnType>
-          <argCount>1</argCount>
-          <args>
-            <arg>1</arg>
-          </args>
-        </function>
-        <function>
-          <name>wn_write_uint</name>
-          <externalName>write_uint</externalName>
-          <kind>11</kind>
-          <help>wn_write_uint(value) -- write unsigned integer type (allow negative values)</help>
-          <returnType>2</returnType>
-          <argCount>1</argCount>
-          <args>
-            <arg>1</arg>
-          </args>
-        </function>
-        <function>
-          <name>wn_write_float</name>
-          <externalName>write_float</externalName>
-          <kind>11</kind>
-          <help>wn_write_float(value) -- write float type</help>
-          <returnType>2</returnType>
-          <argCount>1</argCount>
-          <args>
-            <arg>1</arg>
-          </args>
-        </function>
-        <function>
-          <name>wn_write_double</name>
-          <externalName>write_double</externalName>
-          <kind>11</kind>
-          <help>wn_write_double(value) -- write double type</help>
-          <returnType>2</returnType>
-          <argCount>1</argCount>
-          <args>
-            <arg>1</arg>
-          </args>
-        </function>
-        <function>
-          <name>wn_write_chars</name>
-          <externalName>write_chars</externalName>
-          <kind>11</kind>
-          <help>wn_write_chars(value) -- write character type</help>
-          <returnType>2</returnType>
-          <argCount>1</argCount>
-          <args>
-            <arg>1</arg>
-          </args>
-        </function>
-        <function>
-          <name>wn_write_byte</name>
-          <externalName>write_byte</externalName>
-          <kind>11</kind>
-          <help>wn_write_byte(value) -- write byte type</help>
-          <returnType>2</returnType>
-          <argCount>1</argCount>
-          <args>
-            <arg>2</arg>
-          </args>
-        </function>
-        <function>
-          <name>wn_write_string</name>
-          <externalName>write_string</externalName>
-          <kind>11</kind>
-          <help>wn_write_string(value) -- write string type</help>
-          <returnType>2</returnType>
-          <argCount>1</argCount>
-          <args>
-            <arg>1</arg>
-          </args>
-        </function>
-        <function>
-          <name>wn_read_short</name>
-          <externalName>read_short</externalName>
-          <kind>11</kind>
-          <help>wn_read_short() -- read short type</help>
-          <returnType>2</returnType>
-          <argCount>0</argCount>
-          <args/>
-        </function>
-        <function>
-          <name>wn_read_string</name>
-          <externalName>read_string</externalName>
-          <kind>11</kind>
-          <help>wn_read_string() -- read string type</help>
+          <help>wn_buffer_read() -- read from buffer queue</help>
           <returnType>1</returnType>
-          <argCount>0</argCount>
-          <args/>
-        </function>
-        <function>
-          <name>wn_read_byte</name>
-          <externalName>read_byte</externalName>
-          <kind>11</kind>
-          <help>wn_read_byte() -- read byte type</help>
-          <returnType>2</returnType>
           <argCount>0</argCount>
           <args/>
         </function>
@@ -222,11 +122,13 @@
       <init></init>
       <final></final>
       <kind>5</kind>
+      <uncompress>0</uncompress>
       <ConfigOptions>
         <Config name="Default">
           <CopyToMask>9223372036854775807</CopyToMask>
         </Config>
       </ConfigOptions>
+      <ProxyFiles/>
       <functions/>
       <constants/>
     </file>

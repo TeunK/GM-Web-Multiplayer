@@ -59,8 +59,8 @@ global_clients_limit = 60
 
 //inform server about joining
 wn_clear_buffer();
-wn_write_byte(wn_msgtype("C2S","new_virtual_client"));
-wn_write_string(client_name);
+wn_buffer_write(wn_msgtype("C2S","new_virtual_client"));
+wn_buffer_write(client_name);
 wn_send_message(server_socket);
 </string>
           </argument>
@@ -86,8 +86,8 @@ wn_send_message(server_socket);
             <kind>1</kind>
             <string>//inform server about leaving
 wn_clear_buffer();
-wn_write_byte(wn_msgtype("C2S","remove_virtual_client"));
-wn_write_string(client_name);
+wn_buffer_write(wn_msgtype("C2S","remove_virtual_client"));
+wn_buffer_write(client_name);
 wn_send_message(server_socket);
 </string>
           </argument>
@@ -182,9 +182,9 @@ req_rate_ping       = obj_Controller.req_rate_ping //send x pings per second
 if ((client_clock mod req_rate_ping) == 0)
 {   
     wn_clear_buffer();
-    wn_write_byte(wn_msgtype("C2S","ping"));
-    wn_write_string(client_name);
-    wn_write_string(string(get_timer()/1000)); //write current client time in ms
+    wn_buffer_write(wn_msgtype("C2S","ping"));
+    wn_buffer_write(client_name);
+    wn_buffer_write(string(get_timer()/1000)); //write current client time in ms
     wn_send_message(server_socket);
 }
 
@@ -194,8 +194,8 @@ if (client_id == 1)
     if global_clients_timer mod global_clients_limit == 0
     {
         wn_clear_buffer();
-        wn_write_byte(wn_msgtype("C2S","client_count"));
-        wn_write_string(username);
+        wn_buffer_write(wn_msgtype("C2S","client_count"));
+        wn_buffer_write(username);
         wn_send_message(server_socket);
     }
 }
@@ -274,9 +274,9 @@ client_clock += 1;
             <kind>1</kind>
             <string>//send disconnect-client msg
 show_message("disconnect client");
-wn_write_byte(wn_msgtype("C2S", "client_disconnects"));
+wn_buffer_write(wn_msgtype("C2S", "client_disconnects"));
 wn_send_message(server_socket)
-wn_disconnect(server_socket);
+//wn_disconnect(server_socket);
 </string>
           </argument>
         </arguments>
