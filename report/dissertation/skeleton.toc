@@ -43,4 +43,4 @@
 \contentsline {subsection}{\numberline {6.1.2}Criticism on the Implementation and Design Decisions}{33}{subsection.6.1.2}
 \contentsline {section}{\numberline {6.2}Note to developers}{33}{section.6.2}
 \contentsline {section}{\numberline {6.3}Future Improvements}{33}{section.6.3}
-\contentsline {chapter}{Bibliography}{35}{chapter*.31}
+\contentsline {chapter}{Bibliography}{35}{chapter*.32}

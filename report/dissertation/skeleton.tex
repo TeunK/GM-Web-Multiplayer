@@ -35,7 +35,6 @@ summarising the report\\
 % REMOVE THESE >>>>
 \section*{TODO}
 \begin{itemize}
-\item in section "fairness depending on location", add world map with tested locations and their average mean
 \item Consider actual playability in a game OR add assumption how RTT affects atual usage of an application (find reference?)
 \item write literature review and development section
 \item transform details of experiment setup in text format (+ write additional details if details are missing)
@@ -511,7 +510,9 @@ It is important to know how many clients a server can host simultaneously. The f
 \item After each run, the number of clients simultaneously connected to the server increases by 100.
 \end{itemize}
 
+Figure \ref{fig:cpu_usage} indicates a logarithmic trend in the CPU usage on the server. This seems strange. Although this effect may be explained when combined with the CPU time in figure \ref{fig:cpu_time}. 
 
+The system aims to run the process at an optimal amount for CPU usage. As soon as it reaches this point, it will attempt to balance the usage by allowing more processing time for the process.
 
 \begin{figure}
 \centering
@@ -522,8 +523,6 @@ It is important to know how many clients a server can host simultaneously. The f
 \vspace{1em}
 \end{figure}
 
-Figure \ref{fig:cpu_usage} indicates a logarithmic trend in the CPU usage on the server. When the CPU usage reaches over 80 percent, the user may experience lag. Such high CPU usage indicates insufficient processing power. Either the CPU needs to be upgraded, or the user experience reduced.
-
 \begin{figure}
 \centering
 % \centering% default with `floatrow`
@@ -532,8 +531,6 @@ Figure \ref{fig:cpu_usage} indicates a logarithmic trend in the CPU usage on the
 \label{fig:cpu_time}
 \end{figure}
 
-
-
 \begin{figure}
 \centering
 % \centering% default with `floatrow`
@@ -541,9 +538,6 @@ Figure \ref{fig:cpu_usage} indicates a logarithmic trend in the CPU usage on the
 \caption{Resident set size in Megabit, showing the portion of RAM that is occupied by the server process.}
 \label{fig:cpu_rss}
 \end{figure}
-
-Due to The server stores connection details for each client directly in the RAM.
-
 
 
 \subsection{Message Broadcasting Performance}
@@ -605,7 +599,7 @@ The following experiment evaluates the effect of the geographical distance betwe
 
 \item Same country: Three clients physically located in Scotland: Edinburgh, Glasgow and Dundee.
 
-\item Europe: Five clients physically located in the United Kingdom, Hungary, France, Germany and the Netherlands.
+\item Europe: Six clients physically located in the United Kingdom, Hungary, France, Germany, Sweden and the Netherlands.
 
 \item Inter-continental: Eight clients physically located in South Africa, California (USA), India, Thailand, Germany, Hungary, United Kingdom and the Netherlands.
 
@@ -622,6 +616,7 @@ Germany			& 67ms	\\
 Glasgow			& 68ms	\\
 France			& 69ms	\\
 the Netherlands	& 70ms	\\
+Sweden			& 70ms	\\
 United Kingdom	& 71ms	\\
 Hungary			& 76ms	\\
 India			& 103ms	\\
@@ -630,6 +625,14 @@ California (USA)& 158ms	\\
 Thailand		& 171ms	\\
   \end{tabular}
 \end{center}
+
+\begin{figure}
+\centering
+% \centering% default with `floatrow`
+\includegraphics[scale=0.5]{images/worldmap.jpg}
+\caption{Worldmap displaying the tested locations and their according average recorded roundtrip times}
+\label{fig:worldmap}
+\end{figure}
 
 Average roundtrip times per test:
 \begin{center}
@@ -661,6 +664,7 @@ Average roundtrip times per test:
 
 % -----------------------
 % >>>> REMOVE THIS BLOCK
+proper citations\\
 \cite{Multiplayer_Networking_modern_engine} %unused
 \cite{Fairness_and_Playability}
 \cite{Pro_HTML5_Programming} %unused
@@ -696,6 +700,7 @@ Average roundtrip times per test:
 \cite{NAT}
 \cite{Where_WebRTC}
 
+web url referrals\\
 \cite{handshake}
 \cite{tcp_open_connection}
 \cite{udp_connectionless}
