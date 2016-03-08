@@ -74,6 +74,7 @@ My sincere gratitude to my family, friends, the Dutch Gamemaker community and th
 \item GUI - Graphical User Interface
 \item IDE - Integrated Development Environment
 \item IETF - The Internet Engineering Task Force
+\item D\&D - Drag and Drop
 \end{itemize}
 
 \tableofcontents
@@ -98,43 +99,42 @@ One of many developer tools that aims for exactly these two ideals is GameMaker 
 This paper therefore investigates the quality of related software. It also demonstrates how an extension can be added to GameMaker, one that will add networking features to HTML5 games and applications. Additionally, the server's behaviour will be assessed based on the specified setup, and suggestions will be added based on other literature in order to improve this further.
 
 \chapter{Background}
-\section{Background}
 
-\subsection{Network Fairness}
+\section{Network Fairness}
 Different applications often have different demands from the network. One must therefore consider the technical aspect of the network: if the application is in the form of a game, \textbf{playability and fairness are crucial for an enjoyable gameplay}. This is especially true for games containing elements where speed or response time is important\cite{Fairness_and_Playability}.
 
 In a typical networked game, game clients are described by a \textbf{limited set of parameters} received by a server. These parameters represent the "game state". \textbf{When due to delay between the clients and server the game state is desynchronised, fairness is reduced}\cite{Fairness_and_Playability}.
 
-\subsection{TCP}
+\section{TCP}
 TCP is a highly reliable connection-oriented and error-free host-to-host data transmission protocol. After establishing a connection using an event referred to as the "three way handshake" \cite{handshake}, it keeps the connection open \cite{tcp_open_connection}. It automatically takes care of handling retransmission of dropped packets and acknowledgement of arrived packets. For this reason it is one of the most common transmission protocols in applications that require reliable data transmissions. One down-side however is that due to the additional error-handling, the packets are relatively large and thus cause some overhead.
 
-\subsection{UDP}
+\section{UDP}
 UDP is a connectionless transmission protocol that, unlike TCP, provides a "minimal, unreliable, best-effort message-passing transport to applications" \cite{udp_connectionless}. It provides no guarantees for delivery and no protection from duplication. Despite this clear down-side, due to the small header size it may often be useful for applications that value the speed of the connection above reliability of the content.
-\subsubsection{NAT traversal}
+\section{NAT traversal}
 Due to the limitation of IPv4 addresses, networks often consist of local networks; groups of devices that are mapped to the same global IP address. Network address translation (NAT) is a mechanism that takes care of assigning IP addresses to local devices within the network, whilst maintaining the same global IP to identify the local network as a whole.
 
 As UDP does not maintain an open connection between the hosts, packets have to pass the NAT repeatedly, and can easily be blocked by the firewall. 
 NAT traversal techniques such as "hole punching" are therefore established, Although they are not applicable in all NAT devices or situations \cite{udp_holepunching}.
 
-\subsection{WebSocket}
+\section{WebSocket}
 WebSocket is a protocol that "provides a method to push messages from client to server efficiently and with a simple syntax" \cite{WebSocket}. It was standardized by the IETF in December 2011, providing a full-duplex (two-way) communication between client and server through a single TCP connection. The goal is to "provide a mechanism for browser-based applications that need two-way communication with servers that does not rely on opening multiple HTTP connections" \cite{websocket_communication}. This is done by setting up a socket, which is essentially a door that leads to a specific host, through which data can be sent.
 
-\subsection{Socket.io}
+\section{Socket.io}
 Socket.io is an event-driven JavaScript library that can be used both on the client's browser, and a server\cite{Socketio}. It supports features that allow sending and receiving data using the WebSocket protocol, without interruption of the code flow\cite{Socketio_Benchmark}\cite{Socketio_TCP_Benchmark}. For this reason, it is \textbf{often used in combination with Node.js}.
 
-\subsection{WebRTC}
+\section{WebRTC}
 As aforementioned, Websocket is a protocol built on TCP. However, it has a sibling: WebRTC. WebRTC is built on UDP, allowing scalable and fast networking opportunities, but is still vaguely "under construction"\cite{Browser_Networking}. Although certain web applications have already been created with WebRTC (mainly for P2P video streaming \cite{P2P_Video_Streaming_HTML5_WebRTC}), no proper standards are out yet\cite{Web_Apps_Superior}.
 
 This, combined with requirement of manually specifying the rules of communication, as well as the fact that WebRTC has to circumvent network security and privacy in order to allow web browsers to transmit data over UDP\cite{P2P_Video_Streaming_HTML5_WebRTC}, makes UDP many times \textbf{more complicated} for developers to handle efficiently.
 
-\subsection{HTML5}
+\section{HTML5}
 HTML5 is a raising web standard released in 2014 by the W3C. It is designed to be \textbf{cross-platform} and runs on most modern web browsers such as Google Chrome, Mozilla Firefox, Apple Safari, and Opera \footnote{HTML5 supported browsers are found at \url{https://html5test.com/results/desktop.html}}. Also mobile web browsers that come preinstalled on iPhones, iPads and Android phones support HTML5.
 
 It superseeds its predecessors HTML4 and XHTML1.1 with the aim to reduce the dependence of functionality from third-party plugins such as Flash and Java applets, which are either deprecated or entirely unsupported by most devices \cite{Death_Flash_Java}.
 
 Scripting is replaced in HTML5 by markup where possible, causing the world of browser-gaming to change rapidly. One of the the newly introduced features is the <canvas> element, which is defined as "a resolution-dependent bitmap canvas which can be used for rendering graphs, game graphics or other visual images on the fly"\cite{HTML5_Up_and_Running}. \textbf{The element can thus be used to draw graphics in JavaScript with the "Canvas API"}\cite{Canvas_API}.
 
-\subsection{Node.js}
+\section{Node.js}
 %include socket.io %benchmarks for socket.io made by other developers
 Traditionally, servers create a separate thread for each client, therefore rapidly running out of RAM and keeping clients on hold until memory for a new thread is released\cite{Why_Nodejs}.
 
@@ -143,7 +143,7 @@ Node.js is a JavaScript interface with the aim to create "real-time websites wit
 In short, new client connections get allocated to a heap in the memory and client events are handled on a single thread by the server's operating system without choking the (Node.js) event loop. \textbf{This therefore allows servers running Node.js to maintain thousands of concurrent connections without running out of RAM memory}\cite{Node_Stress_Test}\cite{NodeJS_Image}, as opposed to the traditional, less scalable servers.
 
 
-\subsection{GameMaker}
+\section{GameMaker}
 %TODO explain the use of the GUI, support fast development, maintainable hierachy / structure and design principles (+references)
 %include its evolution and typical target audience
 %explain the types of target audience, who do the developers of an application using the extension intend to target. How does this affect the demands on the network
@@ -166,6 +166,7 @@ more detail on Network Fairness, causes and fixes to unfairness
 game state maintained through a limited set of parameters
 
 \chapter{Related Work}
+\section{Identifying competitors to GameMaker}
 Being a cross-platform game development tool primarily for 2D graphically oriented games, GameMaker has many competitors. It is therefore sensible for developers to first consider using game developing tools that support networking features natively. Although, looking for "the best" development tool is unreasonable, as this is a matter of personal preference. Before being able to investigate pros and cons between gamemaker and related game development tools, appropriate competitors must first be identified.
 
 Note that GameMaker does natively support networking functionality for non-browser games. However we must remind ourselves of the aim of this project: creating a networking extension to improve GameMaker's functionality \textbf{for developing 2D browser games}. For this reason, this paper will consider GameMaker to be a development tool for browser games.
@@ -177,32 +178,54 @@ developer.mozilla.org \cite{html5_mozilla} (world rank 198 by alexa.com \cite{al
 Table \ref{table:Related_Tools} was carefully constructed by combining the best rated 2D browser-supported game developing tools as advertised by the communities for the instances mentioned above.
 
 \begin{savenotes}
-\begin{table}
+\begin{table}[H]
 \centering
   \begin{tabular}{ | r || c | c | c | c | c | c | }
   	\hline
   	\textbf{Tool}			& \textbf{Score}		& \textbf{Voters}& \textbf{Mozilla}\footnote{Advertised at developer.mozilla.org: \url{https://developer.mozilla.org/en-US/docs/Games/Tools/Engines\_and\_tools}} 	& \textbf{Gamepix}\footnote{Advertised at \url{http://www.gamepix.com/blog/the-big-list-of-2d-html5-games-engines/}} 	& \textbf{Native GUI}\\ \hline\hline
+	GameMaker		& 4.0 / 5	& 59	& no	& yes	& yes	\\ \hline
+    Construct 2		& 4.0 / 5	& 136	& yes	& yes	& yes	\\ \hline    
+    Unity			& n/a		& n/a	& yes	& yes	& yes	\\ \hline
     Pixi.js			& 5.0 / 5	& 50	& yes	& yes	& no	\\ \hline
-    Phaser			& 4.5 / 5	& 129	& yes	& yes	& yes	\\ \hline
     EaselJS			& 4.5 / 5	& 63	& no	& yes	& no	\\ \hline
+    Quintus			& 4.5 / 5	& 29	& no	& yes	& no	\\ \hline
     Crafty.js		& 4.5 / 5	& 18	& yes	& yes	& no	\\ \hline
-    Construct 2		& 4.0 / 5	& 136	& yes	& yes	& yes	\\ \hline
-    GameMaker		& 4.0 / 5	& 59	& no	& yes	& yes	\\ \hline
-   	Quintus			& 4.5 / 5	& 29	& no	& yes	& no	\\ \hline
-  	Unity			& n/a		& n/a	& yes	& yes	& yes	\\ \hline
+    Phaser			& 4.5 / 5	& 129	& yes	& yes	& yes	\\ \hline
   \end{tabular}
   \caption{Some of the highest rated and most promoted 2D browser-game development tools}
   \label{table:Related_Tools}
 \end{table}%
 \end{savenotes}
 
-\subsection{Pixi.js, EaselJS, Quintus, Crafty.js and Phaser}
+\section{Construct 2}
+Construct 2 is one of the main contenders. It provides its own GUI and shares similar ideals as those of gamemaker: simplifying the development for novice programmers. This is done by supporting inbuilt D\&D features. Code programming can also be used after installing a required extension. It is a generally well known tool with a community of over 204,000 registered users, responsible for more than 529,000 posts in 103,000 topics \cite{scirra_forum}.
+
+In April 2014, release r164 to r168 updated the engine with networking features by allowing users to create a said "network object" \cite{construct2_multiplayer}. This object is pre-defined with "features to develop real-time online multiplayer games", provided using WebRTC DataChannels (UDP) for P2P connections. 
+
+It is a very well established update with optimisation support included, eg. by providing preliminary setups for "NAT traversal to connect through common router/network setups", "Interpolation and extrapolation modes to ensure smooth in-game motion", "Support for lag compensation" and more. Administrator at Scirra, Ashley G. states however that "even though Construct 2's Multiplayer object takes care of many of the complexities, ..., it is important to understand how multiplayer online games fundamentally work"\cite{Construct2_Multiplayer_Tutorial}.
+
+%TODO explain down-sides, why gamemaker still worth updating
+%TODO explain cost
+
+\section{Unity}
+In the world of browser-game development, Unity is by far the most acknowledged tool. It comes with a professional GUI, allowing developers to create games using D\&D as well as with programming languages C\# and JavaScript \cite{unity_support}.
+
+Networking features are supported as a D\&D class \cite{unity_networking}, but can also be used by installing the "WebSocket-Sharp" plugin in C\# \cite{unity_websocket_sharp}.
+
+Currently there are roughly 4,500,000 users registered \cite{unity_stats} to the Unity forum \cite{unity_forum}, however only a small percentage of this is active in 2D development as this only hosts 5,600 topics \cite{unity_forum_2d}. 
+
+This is most likely due to the fact that Unity is aimed towards more experienced 3D game-developers and provides much overhead when only using its 2D capabilities. In the (poorly populated) 2D section of the forum, replies such as "have you considered using GameMaker?" \cite{unity_suggests_gamemaker} are therefore a common response.
+
+licenses http://unity3d.com/unity/licenses
+cost https://store.unity3d.com/products/pricing
+
+\section{Pixi.js, EaselJS, Quintus, Crafty.js and Phaser}
 Despite Pixi.js, EaselJS, Crafty.js, Phaser and Quintus being legitimate tools for developing games, they are merely JavaScript frameworks and libraries to assist developers when creating raw JavaScript games. Therefore, if networking is expected to be part of a browser game, these tools will also require additional resources such as WebSocket for implementing this feature.
 
 Their community is relatively small and scattered across the web. The forums for these tools are hosted on third-party websites and make it therefore difficult to measure their size and activity accurately (see table \ref{table:JS_Framework_Libraries}).
 
 \begin{savenotes}
-\begin{table}
+\begin{table}[H]
 \centering
   \begin{tabular}{ | r || c | l | }
   \hline
@@ -219,38 +242,6 @@ Their community is relatively small and scattered across the web. The forums for
 \end{savenotes}
 
 Although the five tools assist in the development, they do not compare with GameMaker as their user base is many times smaller. A GUI is also not provided, forcing developers to use a standard programming IDE.
-
-
-\subsection{Construct 2}
-Construct 2 is one of the main contenders. It provides its own GUI and shares similar ideals as those of gamemaker: simplifying the development for novice programmers. This is done by supporting inbuilt D\&D features. Code programming can also be used after installing a required extension. It is a generally well known tool with a community of over 204,000 registered users, responsible for more than 529,000 posts for 103,000 topics \cite{scirra_forum}.
-
-In April 2014, release r164 to r168 updated the engine with networking features by allowing users to create a said "network object" \cite{construct2_multiplayer}. This object is pre-defined with "features to develop real-time online multiplayer games", provided using WebRTC DataChannels (UDP) for P2P connections. 
-
-It is a very well established update with optimisation support included, eg. by providing preliminary setups for "NAT traversal to connect through common router/network setups", "Interpolation and extrapolation modes to ensure smooth in-game motion", "Support for lag compensation" and more. Administrator at Scirra, Ashley G. states however that "even though Construct 2's Multiplayer object takes care of many of the complexities, ..., it is important to understand how multiplayer online games fundamentally work"\cite{Construct2_Multiplayer_Tutorial}.
-
-%TODO explain down-sides, why gamemaker still worth updating
-%TODO explain cost
-
-\subsection{Unity}
-In the world of browser-game development, Unity is by far the most acknowledged tool. It comes with a professional GUI, allowing developers to create games using D\&D as well as with programming languages C\# and JavaScript \cite{unity_support}.
-
-Networking features are supported as a D\&D class \cite{unity_networking}, but can also be used by installing the "WebSocket-Sharp" plugin in C\# \cite{unity_websocket_sharp}.
-
-Currently there are roughly 4,500,000 users registered to the Unity forum \cite{unity_forum}, however only a small percentage of this is active in 2D development as this only hosts 5,600 topics \cite{unity_forum_2d}. 
-
-This is most likely due to the fact that Unity is aimed towards experienced 3D game-developers and offers much overhead when only using its 2D capabilities. In the poorly populated 2D section of the forum, replies such as "have you considered using GameMaker?" \cite{unity_suggests_gamemaker} are therefore a common response.
-
-https://unity3d.com/public-relations
-
-4,500,000 registered users
-
-http://forum.unity3d.com/forums/2d.53/
-
-5,595 topics
-
-licenses http://unity3d.com/unity/licenses
-cost https://store.unity3d.com/products/pricing
-
 
 
 % -----------------------
@@ -471,7 +462,7 @@ The \texttt{total req/sec} therefore indicates how many messages are sent out to
 
 This application was used in the evaluation experiments in order to test the system's capabilities, such as the applied stress on the server with different varieties of concurrent connections, certain amounts of messages that need to be processed simultaneously, as well as recording the effect on the RTT when the client is located in different areas in the world.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 % \centering% default with `floatrow`
 \includegraphics[scale=0.4]{images/benchmarker.jpg}
@@ -505,7 +496,7 @@ It is important to know how many clients a server can host simultaneously. The f
 
 \paragraph*{Setup}
 \begin{itemize}
-\item Variable number of concurrent connections cc, up to 15 instances with each simulating at most 500 clients.
+\item Variable number of concurrent connections, up to 15 instances with each simulating at most 500 clients.
 \item Clients do \emph{not} contact the server after establishing a connection.
 \item The resulting values are averaged over a 2-minute run duration.
 \item After each run, the number of clients simultaneously connected to the server increases by 100.
@@ -513,7 +504,7 @@ It is important to know how many clients a server can host simultaneously. The f
 
 
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 % \centering% default with `floatrow`
 \includegraphics[scale=0.75]{images/test_CLIENT_CPUusage.jpg}
@@ -524,7 +515,7 @@ It is important to know how many clients a server can host simultaneously. The f
 
 Figure \ref{fig:cpu_usage} indicates a logarithmic trend in the CPU usage on the server. When the CPU usage reaches over 80 percent, the user may experience lag. Such high CPU usage indicates insufficient processing power. Either the CPU needs to be upgraded, or the user experience reduced.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 % \centering% default with `floatrow`
 \includegraphics[scale=0.75]{images/test_CLIENT_CPUtime.jpg}
@@ -534,7 +525,7 @@ Figure \ref{fig:cpu_usage} indicates a logarithmic trend in the CPU usage on the
 
 
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 % \centering% default with `floatrow`
 \includegraphics[scale=0.75]{images/test_CLIENT_RSS.jpg}
@@ -566,7 +557,7 @@ The following experiment evaluates the number of messages that can be handled by
 
 \begin{center}
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 % \centering% default with `floatrow`
 \includegraphics[scale=0.32]{images/test_SERVER_RTTmean.jpg}
@@ -576,7 +567,7 @@ The following experiment evaluates the number of messages that can be handled by
 
 
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 % \centering% default with `floatrow`
 \includegraphics[scale=0.32]{images/test_SERVER_RTTstd.jpg}
@@ -720,7 +711,7 @@ Average roundtrip times per test:
 \cite{github}
 \cite{socketiojs}
 \cite{household_bandwidth}
-
+\cite{unity_stats}
 
 % <<<< REMOVE THIS BLOCK
 
