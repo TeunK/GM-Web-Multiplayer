@@ -14,6 +14,7 @@
 }
 \usepackage[T1]{fontenc} %fix < > characters
 \usepackage{footnote} %footnotes in tables
+\usepackage{tabularx} %tables with fixed width
 %\renewcommand{\familydefault}{\sfdefault}
 
 \begin{document}
@@ -114,7 +115,7 @@ UDP is a connectionless transmission protocol that, unlike TCP, provides a "mini
 Due to the limitation of IPv4 addresses, networks often consist of local networks; groups of devices that are mapped to the same global IP address. Network address translation (NAT) is a mechanism that takes care of assigning IP addresses to local devices within the network, whilst maintaining the same global IP to identify the local network as a whole.
 
 As UDP does not maintain an open connection between the hosts, packets have to pass the NAT repeatedly, and can easily be blocked by the firewall. 
-NAT traversal techniques such as "hole punching" are therefore established, Although they are not applicable in all NAT devices or situations \cite{udp_holepunching}.
+NAT traversal techniques such as "hole punching" are therefore established, although they are not applicable in all NAT devices or situations \cite{udp_holepunching}.
 
 \section{WebSocket}
 WebSocket is a protocol that "provides a method to push messages from client to server efficiently and with a simple syntax" \cite{WebSocket}. It was standardized by the IETF in December 2011, providing a full-duplex (two-way) communication between client and server through a single TCP connection. The goal is to "provide a mechanism for browser-based applications that need two-way communication with servers that does not rely on opening multiple HTTP connections" \cite{websocket_communication}. This is done by setting up a socket, which is essentially a door that leads to a specific host, through which data can be sent.
@@ -149,15 +150,34 @@ In short, new client connections get allocated to a heap in the memory and clien
 %include its evolution and typical target audience
 %explain the types of target audience, who do the developers of an application using the extension intend to target. How does this affect the demands on the network
 %focus on location of users
-GameMaker by YoYoGames is a software creation tool with the aim to simplify and speed up game and application development. There have been several hits on the market for games developed with Gamemaker such as "Reflections", "Rick O'Shea" and "Simply Solitaire" \cite{Gamemaker_DnD}.
+GameMaker by YoYoGames is a software creation tool, primarily with the aim to simplify, teach, and speed up game and application development for novice software developers and programmers. There have been several hits on the market for games developed with Gamemaker such as "Reflections", "Rick O'Shea" and "Simply Solitaire" \cite{Gamemaker_DnD}.
 
-Developing applications and games in GameMaker is cheap, simple to learn and flexible to use, making the software demanded by small teams, professionals and novice developers \cite{Mark_Overmars}. Sandy Duncan, the founder and former chief executive officer of YoYoGames stated in a phone interview that they have never lost money on a game that they developed with their technology \cite{Gamemaker_DnD}.
+Developing applications and games in GameMaker is cheap, simple to learn and flexible to use, making the software demanded by small teams, novice developers and even professionals \cite{Mark_Overmars}. Sandy Duncan, the founder and former chief executive officer of YoYoGames stated in a phone interview that they have never lost money on a game that they developed with their technology \cite{Gamemaker_DnD}.
 
 During the rise of HTML5 and the growing popularity of Gamemaker, YoyoGames has provided the functionality to export any application to a JavaScript program that can be executed directly in the browser \cite{GameMaker_Studio}.
 
 Some of the features that are normally supported by GameMaker are however lost during the transition to a web application. One of these features is the networking functionality. Thus far since the update to export GameMaker applications to HTML5 in September 2011, YoYoGames has never included this feature \cite{gamemaker_missing_networking}. An attempt was made by a member of the YoYoGames community, however it is considered to be in alpha stage and fails to be used by other developers \cite{gamemaker_networking_attempt}. It is a basic setup that merely broadcasts messages as they come in.%TODO stronger argument WHY it doesnt work
 
 The main GameMaker community forum is hosted directly by YoYoGames \cite{yoyogames_forum}, serving 280,000 registered users recorded in January 2016, with a combined total of 220,000 topics and 3,480,000 posts. There also exists a notable GameMaker forum in the Netherlands \cite{dutch_gamemaker_forum} which hosts an additional 557,000 posts for 56,000 topics for almost 18,000 members.
+
+\section{Quality Attributes}
+Quality attributes are factors that represent non-functional requirements of a software system. This entails performance details on how the software behaves at run-time and terms of how well is designed. Definitions to some quality attributes that are especially important to this project are listed in table \ref{table:quality_attributes}.
+ 
+\begin{table}[H]
+\centering
+  \begin{tabularx}{\textwidth}{r X}
+	\textbf{performance:} & An indication of the responsiveness of a system to execute any action within a given time interval.\\
+	\textbf{managability:} & How easy it is to manage the application.\\
+	\textbf{reusability:} & The capability for components and sybsystems to be suitable for use in other applications and scenarios.\\
+	\textbf{maintainability:} & The ability to undergo changes such as changing features and functionality with a degree of ease.\\
+	\textbf{Conceptual Integrity:} & The consistency and coherence of the overall design, including the way that components or modules are designed, as well as coding style and variable naming.\\
+	\textbf{Reliability:} & The probability that a system will not fail to perform its intended functions. \\
+	\textbf{Security:} & The capability of a system to prevent malicious or accidental actions outside of the designed usage. \\
+	\textbf{Scalability:} & The ability to handle increases in load without impact on the performance on the system. \\
+  \end{tabularx}
+  \caption{Quality attributes with their definition as described by Microsoft \cite{quality_attributes}.}
+\label{table:quality_attributes}
+\end{table}
 
 \section{Fairnesss and Playability in Online Multiplayer Games}
 
@@ -166,7 +186,7 @@ more detail on Network Fairness, causes and fixes to unfairness
 \section{Multiplayer Networking in Modern Game Engines}
 game state maintained through a limited set of parameters
 
-\chapter{Related Work}
+\chapter{Related Tools}
 \section{Identifying competitors to GameMaker}
 Being a cross-platform game development tool primarily for 2D graphically oriented games, GameMaker has many competitors. It is therefore sensible for developers to first consider using game developing tools that support networking features natively. Although, looking for "the best" development tool is unreasonable, as this is a matter of personal preference. Before being able to investigate pros and cons between gamemaker and related game development tools, appropriate competitors must first be identified.
 
@@ -225,7 +245,7 @@ Despite Pixi.js, EaselJS, Crafty.js, Phaser and Quintus being legitimate tools f
 
 Their community is relatively small and scattered across the web. The forums for these tools are hosted on third-party websites and make it therefore difficult to measure their size and activity accurately (see table \ref{table:JS_Framework_Libraries}).
 
-\begin{savenotes}
+
 \begin{table}[H]
 \centering
   \begin{tabular}{ | r || c | l | }
@@ -240,7 +260,7 @@ Their community is relatively small and scattered across the web. The forums for
   \caption{Displaying the community activeness for each of the mentioned tools, along with their corresponding location.}
 \label{table:JS_Framework_Libraries}
 \end{table}
-\end{savenotes}
+
 
 Although the five tools assist in the development, they do not compare with GameMaker as their user base is many times smaller. A GUI is also not provided, forcing developers to use a standard programming IDE.
 
@@ -250,51 +270,60 @@ Although the five tools assist in the development, they do not compare with Game
 %discussion of work undertaken, sub-problems, solutions, difficulties
 %\\- concentrated discussions for implementation principles and aspects
 %\\- clarify WHAT WAS COMPLETED, and what wasnt.
-\section{Design}
+
 %about the high level design ideas / structure and templates for other developers, make clear connection with literature review
-\subsection{Prior Considerations}
+\section{Prior Considerations and Design Decisions}
 %How to make it easy for other developers to create applications with the extension. eg. Creating templates
 %project layout (modularisation / separation of concerns). client, server, benchmark application, equality application, user experience
 %TODO Add background research section explaining: Software design principles, robustness, reliability, reusability, understandability.
-\paragraph*{Software Design Principles:}
-The code needs to be coherent and follow software design principles where-ever applicable in order to support robustness, reliability, reusability, and understandability. This because it needs to be easily readable and understood by other developers that want to use the extension. It also needs to be maintainable for use by others and easily extendable whenever needed.
+
+\paragraph*{Version Control:}
+A vital part of this project is to keep track of progress. During the development I have been subject to travelling and using a large variety of devices. The project is a combination of many smaller projects, and the progress of each of these needs to be carefully organised and controlled.
+
+Therefore, ensuring consistency in these areas was taken care of by making the choice of using a version control system. A private Github \cite{github} repository was therefore setup.
+
+\subsection{Non-Functional Requirements and Desirable Quality Attributes}
+The project consists of a client, networking extension and server. Each of these systems has to conform to and prioritize certain non-functional requirements (see table \ref{table:quality_attributes}).
+
+\paragraph*{The client:}
+The client performance is only of secondary value in the project as the aim with the extension is that other developers can develop their own client applications. The only thing that is expected to be the same with the client written in this project is the way the networking functions are called. However, managability, reusability and conceptual integrity are all very important for the developer to be able to understand, modify and extend the client, transforming it into their own version.
+
+\paragraph*{The extension:}
+For the extension, performance becomes crucial as it connects the client and the server. It is therefore important to measure how well the extension performs in terms of the networking capabilities it needs to provide. It is not expected to be read or modified by any developer, as it already supports all features required to make a live networked application to run. Any modification involving further optimization for the network would potentially complicate the system to the point where a different game development tool should be considered. Reliability is also an important attribute, as when the extension fails to transmit or receive messages, the developer would have to learn about the underlying networking systems. This would contradict the main goal of the project: keeping the GameMaker simple to learn and flexible to use, even for novice developers.
+
+\paragraph*{The server:}
+The server matches the desired qualities of both the client and the extension, in the sense that it needs to be easily understood by the developer. The developer should be able to manage and modify the server settings, maintain the functionality and reuse existing methods without having to fear breaking the core structure. It needs to be scalable as the performance might decrease when large numbers of clients may wish to be connected. 
+
+Also security becomes an important aspect of the server as it may receive unintended or malicious requests, it is however not considered to be of primary importance in this project and developers may prefer to implement their own sercurity features at the application level. Such feature could involve including secret keys in the interaction messages between the client and server in order to ensure authenticity of these messages and their senders.
+
+\subsection{Functional Requirements and Tasks}
 \paragraph*{Client tasks:}
-The client has to be executable in the browser. It should be an application or game which uses the extension in order to interact with other existing clients.
+The client has to be executable in the browser. It should be an application or game which uses the extension in order to interact with other existing clients. The interaction consists of transmitting and receiving small messages containing variables, due to which the network bandwidth is not counted as an important factor.
+
 \paragraph*{Extension tasks:}
-The functions inside the extension should be easily callable from within the GameMaker interface. They should keep the "networking" knowledge requirement of the developer to a minimum. The extension also has to be able to execute in the browser as part of the client, and execute socket send- and receive commands while doing so.
+The functions inside the extension should be easily callable from within the GameMaker interface. They should keep the "networking knowledge" requirement of the developer to a minimum. The extension also has to be able to execute in the browser as part of the client, and execute socket send- and receive commands while doing so.
 
 Optimally, the networking functions should be similar to those of the native networking functions that would be supported on non-browser applications. This way developers merely need to translate the networking functions without having to re-think, re-structure or entirely  re-write the functionality of their original code if they have already built an application that supports networking on different platforms.
 
-
 \paragraph*{Server tasks:}
-The server must to mimic the architectural structure of the client. It has to keep track of the state of each of the connected clients. it should also act as centralized controller that allows instances to interact with other instances. These instances are synchronized with those on the clients. Therefore, a change in the instance on the server should trigger a change for its representative instance in the clients.
+The server must mimic the architectural structure of the client. It has to keep track of the state of each of the connected clients. it should also act as centralized controller that allows instances to interact with other instances. These instances should in turn be synchronized with their referenced instances on the clients. Therefore, a change in the instance on the server should trigger a change for its representative instance in the clients.
 
-\paragraph*{Version Control:}
-A vital part of this project that may not be ignored is to keep track of progress. During the development I have been subject to travelling and using a large variety of devices. The project is a combination of many smaller projects, and the progress of each of these needs to be carefully organised and controlled.
 
-Therefore, ensuring consistency in these areas was taken care of by the choice of using a form of version control. A private Github \cite{github} repository was therefore setup.
+\subsection{Further considerations}
+\paragraph*{Server Technology}
+Using the right server technology is of crucial importance. Games and browser applications are often subject to large volumes of concurrently connected clients. In this scenario, scalability is therefore one of the most important non-functional requirements. 
+
+Node.js is especially well known to do exactly that: supporting a large number of concurrent client connections without overloading the memory (RAM). Using JavaScript combined with Node.js is therefore considered to be the best option for the server-side to be written in.
 
 \paragraph*{Socket.io versus WebRTC}
 Transmission protocols are one of the contributors that will heavily characterise the network. Choosing the right system to handle the data transmissions is therefore crucial. 
  
 Generally speaking, TCP is a form of reliable data transmission but contains therefore extra overhead, making it therefore known to be slightly slower than UDP when the network has little packet loss.
 
-The main focus in the extension is to match GameMaker's primary intention: making game development as fast and simple as possible. Focusing purely on this aspect leads to believe that using Socket.io is the best solution as it provides the most reliable form of communication. In contrast to WebRTC, developers will not have to worry about their packets being blocked at the firewall. They do will not need to worry about dealing with packet loss or having a shuffled order of packet arrival in their applications, and can instead purely focus on what it is they store into the packets that travels between the hosts.
-
-\subsection{Server and Client}
-%how do applications communicate
-%IMPORTANT: State why there is no need for testing fairness between different bandwidths for web applications. (ie. games and web-apps only really need to send small variables, no big data is transported)
-
-\subsubsection{Good Coding Practices}
-\subsubsection{Interaction}
-%Mapping from GML to the extension
+The main focus in the extension is to match GameMaker's primary intention: making game development as fast and simple as possible. Focusing primarily on this aspect leads to believe that using Socket.io is the best solution as it provides the most reliable form of communication. In contrast to WebRTC, developers will not have to worry about their packets being blocked at the firewall. They do will not need to worry about dealing with UDP NAT traversal, packet loss, error handling or having a shuffled order of packet arrival in their applications, and can instead focus directly on what it is they store into the packets that travels between the hosts.
 
 \section{Implementation}
 \subsection{Server}
-The server is written in JavaScript, using Node.js in order to support a large number of concurrent client connections without overloading the memory (RAM).
-
-As one of the main requirements of the project is to keep the development of networked browser applications as simple as possible, Socket.io is used in order to handle the send and receiving of messages. This way, the developer does not need to worry about complications that would otherwise arise when building the system with WebRTC such as difficulty during the implementation, packet loss and error handling, and UDP NAT traversal.
-
 The core functionality of the server that takes care of incoming messages and connection requests is written in only a few lines and in simple terms functions as follows:
 
 \begin{enumerate}
@@ -463,10 +492,10 @@ The \texttt{total req/sec} therefore indicates how many messages are sent out to
 
 This application was used in the evaluation experiments in order to test the system's capabilities, such as the applied stress on the server with different varieties of concurrent connections, certain amounts of messages that need to be processed simultaneously, as well as recording the effect on the RTT when the client is located in different areas in the world.
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 % \centering% default with `floatrow`
-\includegraphics[scale=0.4]{images/benchmarker.jpg}
+\includegraphics[scale=0.55, angle=90]{images/benchmarker.jpg}
 \caption{Displaying the GUI of the benchmarking application. On the left top the global data is available for the client. The table below displays the virtual clients and their 5 most recent roundtrip values. The graph on the top-right displays the average RTT over time for these clients. The colors of the image are inverted from the actual interface.}
 \label{fig:benchmark_gui}
 \vspace{1em}
@@ -723,6 +752,7 @@ web url referrals\\
 \cite{socketiojs}
 \cite{household_bandwidth}
 \cite{unity_stats}
+\cite{quality_attributes}
 
 % <<<< REMOVE THIS BLOCK
 

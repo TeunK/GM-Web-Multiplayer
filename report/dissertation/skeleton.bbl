@@ -155,6 +155,12 @@ Dutch gamemaker community, forum.
 \newblock \url{http://www.game-maker.nl/forums/}.
 \newblock Accessed: 2016-03-02.
 
+\bibitem{quality_attributes}
+Quality attributes.
+\newblock
+  \url{https://msdn.microsoft.com/en-us/library/ee658094.aspx#Reusability}.
+\newblock Accessed: 2016-03-02.
+
 \bibitem{html5_gamedev_tools}
 Review system for html5 game development tools.
 \newblock \url{https://html5gameengine.com/}.
@@ -246,12 +252,12 @@ Suggestion: Gamemaker instead of unity.
 \newblock Accessed: 2016-03-02.
 
 \bibitem{github}
-Version control: Github.
+Github, version control system.
 \newblock \url{https://github.com/}.
 \newblock Accessed: 2016-03-02.
 
 \bibitem{socketiojs}
-Documentation: socket.io.js.
+socket.io.js documentation.
 \newblock \url{https://docs.omniref.com/js/npm/socket.io/0.8.4}.
 \newblock Accessed: 2016-03-02.
 
