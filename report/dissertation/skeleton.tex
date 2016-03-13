@@ -122,7 +122,7 @@ WebSocket is a protocol that "provides a method to push messages from client to 
 
 
 \section{Socket.io}
-Socket.io is an event-driven JavaScript library that can be used both on the client's browser, and a server \cite{Socketio}. It supports features that allow sending and receiving data using the WebSocket protocol, without interruption of the code flow \cite{Socketio_Benchmark} \cite{Socketio_TCP_Benchmark}. For this reason, it is \textbf{often used in combination with Node.js}.
+Socket.io is an event-driven JavaScript library that can be used both on the client's browser, and a server \cite{Socketio}. It supports features that allow sending and receiving data using the WebSocket protocol, without interruption of the code flow \cite{Socketio_Benchmark, Socketio_TCP_Benchmark}. For this reason, it is \textbf{often used in combination with Node.js}.
 
 \section{WebRTC}
 As aforementioned, Websocket is a protocol built on TCP. However, it has a sibling: WebRTC. WebRTC is built on UDP, allowing scalable and fast networking opportunities, but is still vaguely "under construction" \cite{Browser_Networking}. Although certain web applications have already been created with WebRTC (mainly for P2P video streaming \cite{P2P_Video_Streaming_HTML5_WebRTC}), no proper standards are out yet \cite{Web_Apps_Superior}.
@@ -142,7 +142,7 @@ Traditionally, servers create a separate thread for each client, therefore rapid
 
 Node.js is a JavaScript interface with the aim to create "real-time websites with push capability" allowing developers to work in the "non-blocking event-driven I/O paradigm" \cite{Why_Nodejs}. This means that developers can use it to create real-time web applications where a server and client can both initiate communication, and that both can exchange data freely without repeatedly having to refresh the webpage.
 
-In short, new client connections get allocated to a heap in the memory and client events are handled on a single thread by the server's operating system without choking the (Node.js) event loop. \textbf{This therefore allows servers running Node.js to maintain thousands of concurrent connections without running out of RAM memory} \cite{Node_Stress_Test} \cite{NodeJS_Image}, as opposed to the traditional, less scalable servers.
+In short, new client connections get allocated to a heap in the memory and client events are handled on a single thread by the server's operating system without choking the (Node.js) event loop. \textbf{This therefore allows servers running Node.js to maintain thousands of concurrent connections without running out of RAM memory} \cite{Node_Stress_Test, NodeJS_Image}, as opposed to the traditional, less scalable servers.
 
 
 \section{GameMaker}
