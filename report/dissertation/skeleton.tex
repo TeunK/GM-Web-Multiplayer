@@ -289,7 +289,7 @@ The project consists of a client, networking extension and server. Each of these
 The client performance is only of secondary value in the project as the aim with the extension is that other developers can develop their own client applications. The only thing that is expected to be the same with the client written in this project is the way the networking functions are called. However, managability, reusability and conceptual integrity are all very important for the developer to be able to understand, modify and extend the client, transforming it into their own version.
 
 \paragraph*{The extension:}
-For the extension, performance becomes crucial as it connects the client and the server. It is therefore important to measure how well the extension performs in terms of the networking capabilities it needs to provide. It is not expected to be read or modified by any developer, as it already supports all features required to make a live networked application to run. Any modification involving further optimization for the network would potentially complicate the system to the point where a different game development tool should be considered. Reliability is also an important attribute, as when the extension fails to transmit or receive messages, the developer would have to learn about the underlying networking systems. This would contradict the main goal of the project: keeping the GameMaker simple to learn and flexible to use, even for novice developers.
+Performance is an important aspect for the extension, without which user satisfaction could be decreased. For this reason, we will measure how well the extension performs in terms of the networking capabilities it needs to provide. It is not expected to be modified by any developer, as it already supports all features required to make a live networked application run. Any modification involving further optimization for the network would potentially complicate the system to the point where a different game development tool should be considered. Reliability is also an important attribute, as when the extension fails to transmit or receive messages, the developer would have to learn about the underlying networking systems. This would contradict the main goal of the project: keeping the GameMaker simple to learn and flexible to use, even for novice developers.
 
 \paragraph*{The server:}
 The server matches the desired qualities of both the client and the extension, in the sense that it needs to be easily understood by the developer. The developer should be able to manage and modify the server settings, maintain the functionality and reuse existing methods without having to fear breaking the core structure. It needs to be scalable as the performance might decrease when large numbers of clients may wish to be connected. 
@@ -355,7 +355,7 @@ In code, the server logic behaves as follows:
 \begin{figure}[H]
 % \centering% default with `floatrow`
 \includegraphics[scale=0.60]{images/server_actions.jpg}
-\caption{A dictionary storing actions for a player instance to perform.}
+\caption{Dictionary storing the high-level actions for a specified player instance to perform.}
 \label{fig:server_actions}
 \vspace{1em}
 \end{figure}
@@ -393,16 +393,25 @@ As the server keeps track of all the clients that are connected to it, clients c
 \subsection{Client}
 \subsection{The Extension}
 GameMaker is unable to use native support for establishing a connection to other hosts. This is where the extension comes in play.
-It is a set of JavaScript functions that can be called from inside the GameMaker GUI and provide the actual networking functionality.
-It consists of three components:
+It is essentially a set of JavaScript functions that can be called externally from inside the GameMaker GUI in GameMaker's native programming language "GameMaker Language" (GML). These functions in turn provide the networking functionality.
+The extension consists of three components:
 \begin{enumerate}
-\item An MIT-licensed opensource socket.io JavaScript library provided by LearnBoost: socket.io.js (documentation \cite{socketiojs})
+\item An MIT-licensed opensource socket.io JavaScript library provided by LearnBoost: socket.io.js (documentation ref. \cite{socketiojs})
 \item A set of networking functions, located in GMWebNet.js
-\item A mapping from GML functions to the networking functions
+\item A mapping from GML functions to the external networking functions
 \end{enumerate}
 
-\paragraph*{The socket.io library}
-is used for providing the core networking functionality. This is required by the networking functions in order to do the transmission and receiving of packets.
+\begin{figure}[H]
+% \centering% default with `floatrow`
+\includegraphics[scale=0.50]{images/extension_flow.jpg}
+\caption{The extension flow chart, indicating where the components are located. The client executes in the user's browser. The mapper provides functions in GML which corresponds to the external functions located in GMWebNet.js with a matching number of arguments and argument types. These external functions are closely coupled with socket.io.js, which is responsible for the interaction from and to the server.}
+\label{fig:extension_flow}
+\vspace{1em}
+\end{figure}
+
+
+\paragraph*{socket.io.js}
+is used for providing the core networking functionality, transmitting and receiving packets as it supports the most important quality attributes for typical applications developed with GameMaker. It offers underlying reliability and stability by using TCP to transmit the messages and guarantees a successful traversal of any NAT devices without demanding additional attention from the developer.
 
 \paragraph*{GMWebNet.js}
 contains a set of networking functions and is made to run in parallel with the GameMaker application. 
