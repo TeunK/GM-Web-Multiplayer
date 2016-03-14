@@ -69,18 +69,18 @@ function Player(client_id, socket_id) {
 
     // This object represents a player in the game.
     // Make sure the variables match those of the client player object that you want to track.
-    this.client_username = null;
-    this.client_spriteID = null;
-    this.x = null;
-    this.y = null;
-    this.hspeed = null;
-    this.vspeed = null;
-    this.mouse_x = null;
-    this.mouse_y = null;
-    this.td_direction = null;
-    this.room_name = null;
-    this.armor_top = null;
-    this.level = null;
+    this.client_username = null;    //user name
+    this.client_spriteID = null;    //user appearance
+    this.x = null;                  //x coordinate of user character
+    this.y = null;                  //y coordinate of user character
+    this.hspeed = null;             //horizontal speed of user
+    this.vspeed = null;             //vertical speed of user
+    this.mouse_x = null;            //user mouse x-coordinate
+    this.mouse_y = null;            //user mouse y-coordinate
+    this.td_direction = null;       //direction to which user is looking
+    this.room_name = null;          //room the user is in
+    this.armor_top = null;          //equipment user is wearing
+    this.level = null;              //level of the user
 
     _initial_reply();
 
@@ -139,7 +139,6 @@ Player.prototype.broadcast_player_data = function() {
     broadcast();
 };
 Player.prototype.disconnect = function() {
-    console.log("USER "+this.client_id.toString()+" tried to LOGOUT");
     msg_type = MESSAGES['S2C'].client_disconnected;
     clearbuffer();
     bufferwrite(msg_type);
@@ -147,7 +146,6 @@ Player.prototype.disconnect = function() {
     broadcast();
 };
 Player.prototype.send_message = function(message) {
-    console.log("message: "+message);
     msg_type = MESSAGES['S2C'].chat_message;
     clearbuffer();
     bufferwrite(msg_type);

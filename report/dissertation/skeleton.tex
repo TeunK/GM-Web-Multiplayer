@@ -324,19 +324,69 @@ The main focus in the extension is to match GameMaker's primary intention: makin
 
 \section{Implementation}
 \subsection{Server}
-The core functionality of the server that takes care of incoming messages and connection requests is written in only a few lines and in simple terms functions as follows:
+The core functionality of the server that takes care of incoming messages and connection requests is written in only a few components. The general interaction flow is displayed in figure \ref{fig:server_sequence_diagram}. Each component is aimed to be easily maintained by assigning it with only a single responsibility. These responsibilities are clarified directly in the naming of the variables and methods in order to support conceptual integrity of the code.
+
+\begin{figure}[H]
+% \centering% default with `floatrow`
+\includegraphics[scale=0.60]{images/server_sequence_diagram.jpg}
+\caption{Sequence diagram displaying the general server logic. Note that clients can asynchronously and repeatedly send messages to the server after having received their server acknowledgement (ACK) packet. The \texttt{Msg\_Type} can be anything such as \texttt{chat\_message}, \texttt{update\_user} and \texttt{client\_disconnected}, and the action taken by the server is specified by the player object method, referenced by the action dictionary on the server.}
+\label{fig:server_sequence_diagram}
+\vspace{1em}
+\end{figure}
+
+In code, the server logic behaves as follows:
 
 \begin{enumerate}
-\item On an incoming connection request, a client instance is created in which initially the client's socket and client\_id will be stored. The socket will be connected directly to the client machine that sent the connection request.
-\item This instance is added to the list of already-tracked clients on the server
-\item If at any time the server receives a message from this client, the server will read the purpose of this message (message\_code e.g. ping, send-message, update-user)
-\item The message\_codes are directly mapped to an associated action
-\item Depending on the action, the client instance will receive a function call that handles the message appropriately.
+\item On an incoming connection request, a client instance is created in which initially the client's socket and client\_id will be stored. The socket will be connected directly to the client machine that sent the connection request. (figure \ref{fig:server_core})
+\item This instance is added to the list of already-tracked clients on the server (figure \ref{fig:server_core})
+\item If at any time the server receives a message from this client \footnote{Message types are defined in fig. \ref{fig:server_message_tags}}, the server will read the purpose of this message (message\_code e.g. ping, send-message, update-user) (figure \ref{fig:server_core})
+\item The message\_codes are directly mapped to an associated action (figure \ref{fig:server_core})
+\item Depending on the action (figure \ref{fig:server_actions} defined in \ref{fig:server_message_tags}), the client instance will receive a function call that handles the message appropriately. (figure \ref{fig:server_player_functions})
 \end{enumerate}
 
-The client class is made to be synchronized with the state of its corresponding client, such that any change in the actual client application will also modify the representative client state in the server. This way, the developer no longer needs to worry about redundantly transmitting all variables to all other clients, including those variables that never changed since a previous transmission, because the server will still have these in memory. Another benefit to this is that the client is allowed to send smaller messages.
+\begin{figure}[H]
+% \centering% default with `floatrow`
+\includegraphics[scale=0.60]{images/server_code.jpg}
+\caption{Core functionality of the server network setup, responsible for connecting new clients, creating reference instances with their details connection details (1, 2), listening to their incoming messages on the server (3) and handling them accordingly (4, messages codes are defined in messages.js. see figure \ref{fig:server_message_tags}). }
+\label{fig:server_core}
+\vspace{1em}
+\end{figure}
 
-The server already has a template set-up, supporting features such as updating the client's state on the server, informing other clients with this client's state and broadcasting messages. These features can easily be modified and extended without with new functionality depending on any specific need the developer may have.
+\begin{figure}[H]
+% \centering% default with `floatrow`
+\includegraphics[scale=0.60]{images/server_actions.jpg}
+\caption{A dictionary storing actions for a player instance to perform.}
+\label{fig:server_actions}
+\vspace{1em}
+\end{figure}
+
+\begin{figure}[H]
+% \centering% default with `floatrow`
+\includegraphics[scale=0.60]{images/server_player_functions.jpg}
+\caption{Low level methods the player instance on the server can perform. These methods are called by the incoming message block (figure \ref{fig:server_core} point 4), defined in the action dictionary (figure \ref{fig:server_actions})}
+\label{fig:server_player_functions}
+\vspace{1em}
+\end{figure}
+
+The client class (Player) is made to be synchronized with the state of its corresponding client, such that any change in the actual client application will also modify the representative client state in the server (figure \ref{fig:server_player_construct}). This way, the developer no longer needs to worry about redundantly transmitting all variables to all other clients, including those variables that never changed since a previous transmission, because the server will still have these in memory. Another benefit to this is that the client is allowed to send smaller messages.
+
+The server has a template set-up, supporting features such as updating the client's state on the server, informing other clients with this client's state and broadcasting messages. These features can easily be modified and extended without with new functionality depending on any specific need the developer may have.
+
+\begin{figure}[H]
+% \centering% default with `floatrow`
+\includegraphics[scale=0.55]{images/server_player_construct.jpg}
+\caption{Player class matching variables of the GameMaker client player object class. Upon instantiation, the constructor automatically returns a message to the referenced client with it's unique identity defined by the server.}
+\label{fig:server_player_construct}
+\vspace{1em}
+\end{figure}
+
+\begin{figure}[H]
+% \centering% default with `floatrow`
+\includegraphics[scale=0.55]{images/server_message_tags.jpg}
+\caption{Server specified message tags. C2S refers to "Client-to-Server" and S2C refers to "Server-to-Client" messages.}
+\label{fig:server_message_tags}
+\vspace{1em}
+\end{figure}
 
 As the server keeps track of all the clients that are connected to it, clients can easily message specific clients simply by triggering a function call between any clients. Also the effect of the function is to inform the actual client with a message.
 
