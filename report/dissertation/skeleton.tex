@@ -36,12 +36,8 @@ summarising the report\\
 % REMOVE THESE >>>>
 \section*{TODO}
 \begin{itemize}
-\item Consider actual playability in a game OR add assumption how RTT affects atual usage of an application (find reference?)
 \item write literature review and development section
-\item transform details of experiment setup in text format (+ write additional details if details are missing)
-\item Write down details about implementation, design decisions must be well justified according to literature
 \item Possibly add new implementation features / clean up existing implementations.
-\item explain the evaluation results
 \item clarify thesis and write intro
 \item Record video of working implementation
 \item Create proper template for other developers to use + writing down a guide how to use it, where to start etc.
@@ -100,17 +96,19 @@ One of many developer tools that aims for exactly these two ideals is GameMaker 
 This paper therefore investigates the quality of related software. It also demonstrates how an extension can be added to GameMaker, one that will add networking features to HTML5 games and applications. Additionally, the server's behaviour will be assessed based on the specified setup, and suggestions will be added based on other literature in order to improve this further.
 
 \chapter{Background}
+In a typical networked game scenario, game clients are described by the server as a set of parameters. These parameters represent the "game state". Clients keep pinging and updating the server with their own state. When due to delay, between the clients and server the game state become desynchronised, fairness is diminished \cite{Fairness_and_Playability} and the user experience of the game may be impaired.
 
-\section{Network Fairness}
-Different applications often have different demands from the network. One must therefore consider the technical aspect of the network: if the application is in the form of a game, \textbf{playability and fairness are crucial for an enjoyable gameplay}. This is especially true for games containing elements where speed or response time is important \cite{Fairness_and_Playability}.
+\section{Network Demands}
+Different applications often have different demands from the network. One must therefore consider the technical aspect of the network. For example, fairness in a game is crucial for an enjoyable gameplay. This is especially true for games containing elements where speed or response time is important \cite{Fairness_and_Playability}. Servers in modern high-end multiplayer games are typically loaded from several hundreds, to a few thousand simultaneously connected clients, depending on the level of interaction between the clients.
 
-In a typical networked game, game clients are described by a \textbf{limited set of parameters} received by a server. These parameters represent the "game state". \textbf{When due to delay between the clients and server the game state is desynchronised, fairness is reduced} \cite{Fairness_and_Playability}.
+On various games, clients may automatically get disconnected from the server when their ping or roundtrip time (RTT) reaches beyond a certain threshold as these clients potentially disrupt the gameplay. This threshold can vary depending on the game. Fast-paced games such as Call of Duty and Battlefield tend to have this threshold set around 150ms - 200ms.
 
 \section{TCP}
-TCP is a highly reliable connection-oriented and error-free host-to-host data transmission protocol. After establishing a connection using an event referred to as the "three way handshake" \cite{handshake}, it keeps the connection open \cite{tcp_open_connection}. It automatically takes care of handling retransmission of dropped packets and acknowledgement of arrived packets. For this reason it is one of the most common transmission protocols in applications that require reliable data transmissions. One down-side however is that due to the additional error-handling, the packets are relatively large and thus cause some overhead.
+Protocols play a big part in deciding the properties of the network speed and quality. TCP is a highly reliable connection-oriented and error-free host-to-host data transmission protocol. After establishing a connection using an event referred to as the "three way handshake" \cite{handshake}, it keeps the connection open \cite{tcp_open_connection}. It automatically takes care of handling retransmission of dropped packets and acknowledgement of arrived packets. For this reason it is one of the most common transmission protocols in applications that require reliable data transmissions. One down-side however is that due to the additional error-handling, the packets are relatively large and thus cause some overhead.
 
 \section{UDP}
 UDP is a connectionless transmission protocol that, unlike TCP, provides a "minimal, unreliable, best-effort message-passing transport to applications" \cite{udp_connectionless}. It provides no guarantees for delivery and no protection from duplication. Despite this clear down-side, due to the small header size it may often be useful for applications that value the speed of the connection above reliability of the content.
+
 \section{NAT traversal}
 Due to the limitation of IPv4 addresses, networks often consist of local networks; groups of devices that are mapped to the same global IP address. Network address translation (NAT) is a mechanism that takes care of assigning IP addresses to local devices within the network, whilst maintaining the same global IP to identify the local network as a whole.
 
@@ -119,7 +117,6 @@ NAT traversal techniques such as "hole punching" are therefore established, alth
 
 \section{WebSocket}
 WebSocket is a protocol that "provides a method to push messages from client to server efficiently and with a simple syntax" \cite{WebSocket}. It was standardized by the IETF in December 2011, providing a full-duplex (two-way) communication between client and server through a single TCP connection. The goal is to "provide a mechanism for browser-based applications that need two-way communication with servers that does not rely on opening multiple HTTP connections" \cite{websocket_communication}. This is done by setting up a socket, which is essentially a door that leads to a specific host, through which data can be sent.
-
 
 \section{Socket.io}
 Socket.io is an event-driven JavaScript library that can be used both on the client's browser, and a server \cite{Socketio}. It supports features that allow sending and receiving data using the WebSocket protocol, without interruption of the code flow \cite{Socketio_Benchmark, Socketio_TCP_Benchmark}. For this reason, it is \textbf{often used in combination with Node.js}.
@@ -137,31 +134,28 @@ It superseeds its predecessors HTML4 and XHTML1.1 with the aim to reduce the dep
 Scripting is replaced in HTML5 by markup where possible, causing the world of browser-gaming to change rapidly. One of the the newly introduced features is the <canvas> element, which is defined as "a resolution-dependent bitmap canvas which can be used for rendering graphs, game graphics or other visual images on the fly" \cite{HTML5_Up_and_Running}. \textbf{The element can thus be used to draw graphics in JavaScript with the "Canvas API"} \cite{Canvas_API}.
 
 \section{Node.js}
-%include socket.io %benchmarks for socket.io made by other developers
 Traditionally, servers create a separate thread for each client, therefore rapidly running out of RAM and keeping clients on hold until memory for a new thread is released \cite{Why_Nodejs}.
 
 Node.js is a JavaScript interface with the aim to create "real-time websites with push capability" allowing developers to work in the "non-blocking event-driven I/O paradigm" \cite{Why_Nodejs}. This means that developers can use it to create real-time web applications where a server and client can both initiate communication, and that both can exchange data freely without repeatedly having to refresh the webpage.
 
-In short, new client connections get allocated to a heap in the memory and client events are handled on a single thread by the server's operating system without choking the (Node.js) event loop. \textbf{This therefore allows servers running Node.js to maintain thousands of concurrent connections without running out of RAM memory} \cite{Node_Stress_Test, NodeJS_Image}, as opposed to the traditional, less scalable servers.
+In short, new client connections get allocated to a heap in the memory and client events are handled on a single thread by the server's operating system without choking the (Node.js) event loop. This therefore allows servers running Node.js to maintain thousands of concurrent connections without running out of RAM memory \cite{Node_Stress_Test, NodeJS_Image}, as opposed to the traditional, less scalable servers.
 
 
 \section{GameMaker}
-%TODO explain the use of the GUI, support fast development, maintainable hierachy / structure and design principles (+references)
-%include its evolution and typical target audience
-%explain the types of target audience, who do the developers of an application using the extension intend to target. How does this affect the demands on the network
-%focus on location of users
 GameMaker by YoYoGames is a software creation tool, primarily with the aim to simplify, teach, and speed up game and application development for novice software developers and programmers. There have been several hits on the market for games developed with Gamemaker such as "Reflections", "Rick O'Shea" and "Simply Solitaire" \cite{Gamemaker_DnD}.
 
 Developing applications and games in GameMaker is cheap, simple to learn and flexible to use, making the software demanded by small teams, novice developers and even professionals \cite{Mark_Overmars}. Sandy Duncan, the founder and former chief executive officer of YoYoGames stated in a phone interview that they have never lost money on a game that they developed with their technology \cite{Gamemaker_DnD}.
 
 During the rise of HTML5 and the growing popularity of Gamemaker, YoyoGames has provided the functionality to export any application to a JavaScript program that can be executed directly in the browser \cite{GameMaker_Studio}.
 
-Some of the features that are normally supported by GameMaker are however lost during the transition to a web application. One of these features is the networking functionality. Thus far since the update to export GameMaker applications to HTML5 in September 2011, YoYoGames has never included this feature \cite{gamemaker_missing_networking}. An attempt was made by a member of the YoYoGames community, however it is considered to be in alpha stage and fails to be used by other developers \cite{gamemaker_networking_attempt}. It is a basic setup that merely broadcasts messages as they come in.%TODO stronger argument WHY it doesnt work
+Some of the features that are normally supported by GameMaker are however lost during the transition to a web application. One of these features is the networking functionality. Thus far since the update to export GameMaker applications to HTML5 in September 2011, YoYoGames has never included this feature \cite{gamemaker_missing_networking}.
 
-The main GameMaker community forum is hosted directly by YoYoGames \cite{yoyogames_forum}, serving 280,000 registered users recorded in January 2016, with a combined total of 220,000 topics and 3,480,000 posts. There also exists a notable GameMaker forum in the Netherlands \cite{dutch_gamemaker_forum} which hosts an additional 557,000 posts for 56,000 topics for almost 18,000 members.
+An attempt (and in fact a well established blueprint for this project) was developed by a member of the YoYoGames community. It is however a discontinued project, considered to be in alpha stage and fails to be used by certain developers \cite{gamemaker_networking_attempt} as the setup contains errors and provides no guidance towards a fix. It is a basic setup that attempts to broadcasts messages as they come in without providing any further underlying structure.
+
+\paragraph*{The main GameMaker community forum} is hosted directly by YoYoGames \cite{yoyogames_forum}, serving 280,000 registered users recorded in January 2016, with a combined total of 220,000 topics and 3,480,000 posts. There also exists a notable GameMaker forum in the Netherlands \cite{dutch_gamemaker_forum} which hosts an additional 557,000 posts for 56,000 topics for almost 18,000 members.
 
 \section{Quality Attributes}
-Quality attributes are factors that represent non-functional requirements of a software system. This entails performance details on how the software behaves at run-time and terms of how well is designed. Definitions to some quality attributes that are especially important to this project are listed in table \ref{table:quality_attributes}.
+Despite having considered the basics of some underlying functional requirements and technologies, there also other aspects that need to be considered when developing a piece of software, namely the "quality attributes". Quality attributes are factors that represent non-functional requirements of a software system. This entails performance details on how the software behaves at run-time and terms of how well is designed. Definitions to some quality attributes that are especially important to this project and will be referred back to in the future are listed in table \ref{table:quality_attributes} below.
  
 \begin{table}[H]
 \centering
@@ -179,15 +173,8 @@ Quality attributes are factors that represent non-functional requirements of a s
 \label{table:quality_attributes}
 \end{table}
 
-\section{Fairnesss and Playability in Online Multiplayer Games}
-
-more detail on Network Fairness, causes and fixes to unfairness
-
-\section{Multiplayer Networking in Modern Game Engines}
-game state maintained through a limited set of parameters
 
 \chapter{Related Tools}
-\section{Identifying competitors to GameMaker}
 Being a cross-platform game development tool primarily for 2D graphically oriented games, GameMaker has many competitors. It is therefore sensible for developers to first consider using game developing tools that support networking features natively. Although, looking for "the best" development tool is unreasonable, as this is a matter of personal preference. Before being able to investigate pros and cons between gamemaker and related game development tools, appropriate competitors must first be identified.
 
 Note that GameMaker does natively support networking functionality for non-browser games. However we must remind ourselves of the aim of this project: creating a networking extension to improve GameMaker's functionality \textbf{for developing 2D browser games}. For this reason, this paper will consider GameMaker to be a development tool for browser games.
@@ -310,12 +297,12 @@ The server must mimic the architectural structure of the client. It has to keep 
 
 
 \subsection{Further considerations}
-\paragraph*{Server Technology}
+\paragraph*{Server Technology:}
 Using the right server technology is of crucial importance. Games and browser applications are often subject to large volumes of concurrently connected clients. In this scenario, scalability is therefore one of the most important non-functional requirements. 
 
 Node.js is especially well known to do exactly that: supporting a large number of concurrent client connections without overloading the memory (RAM). Using JavaScript combined with Node.js is therefore considered to be the best option for the server-side to be written in.
 
-\paragraph*{Socket.io versus WebRTC}
+\paragraph*{Socket.io versus WebRTC:}
 Transmission protocols are one of the contributors that will heavily characterise the network. Choosing the right system to handle the data transmissions is therefore crucial. 
  
 Generally speaking, TCP is a form of reliable data transmission but contains therefore extra overhead, making it therefore known to be slightly slower than UDP when the network has little packet loss.
@@ -324,48 +311,43 @@ The main focus in the extension is to match GameMaker's primary intention: makin
 
 \section{Implementation}
 \subsection{Server}
-The core functionality of the server that takes care of incoming messages and connection requests is written in only a few components. The general interaction flow is displayed in figure \ref{fig:server_sequence_diagram}. Each component is aimed to be easily maintained by assigning it with only a single responsibility. These responsibilities are clarified directly in the naming of the variables and methods in order to support conceptual integrity of the code.
+The core functionality of the server that takes care of incoming messages and connection requests is written in only a few components. The general interaction flow is displayed in figure \ref{fig:server_sequence_diagram}. Each component is aimed to be easily maintained by assigning it with only a single responsibility. These responsibilities are clarified directly in the naming of the variables and methods which contributes to the conceptual integrity of the code.
 
 \begin{figure}[H]
 % \centering% default with `floatrow`
 \includegraphics[scale=0.60]{images/server_sequence_diagram.jpg}
-\caption{Sequence diagram displaying the general server logic. Note that clients can asynchronously and repeatedly send messages to the server after having received their server acknowledgement (ACK) packet. The \texttt{Msg\_Type} can be anything such as \texttt{chat\_message}, \texttt{update\_user} and \texttt{client\_disconnected}, and the action taken by the server is specified by the player object method, referenced by the action dictionary on the server.}
+\caption{Sequence diagram displaying the overall server logic. Note that clients can asynchronously and repeatedly send messages to the server after having received their server acknowledgement (ACK) packet. The \texttt{Msg\_Type} can be anything such as \texttt{chat\_message}, \texttt{update\_user} or \texttt{client\_disconnected}, and the action taken by the server is specified by the player object method, referenced by the action dictionary on the server.}
 \label{fig:server_sequence_diagram}
-\vspace{1em}
 \end{figure}
 
-In code, the server logic behaves as follows:
-
+More detailed, the server logic behaves as follows:
 \begin{enumerate}
-\item On an incoming connection request, a client instance is created in which initially the client's socket and client\_id will be stored. The socket will be connected directly to the client machine that sent the connection request. (figure \ref{fig:server_core})
-\item This instance is added to the list of already-tracked clients on the server (figure \ref{fig:server_core})
-\item If at any time the server receives a message from this client \footnote{Message types are defined in fig. \ref{fig:server_message_tags}}, the server will read the purpose of this message (message\_code e.g. ping, send-message, update-user) (figure \ref{fig:server_core})
+\item Upon receiving an incoming connection request, the server instantiates a client in which initially the client's socket and client\_id is stored. The socket will be connected directly to the client machine that sent the connection request. (figure \ref{fig:server_core})
+\item This instance is then added to the list of already-tracked clients on the server (figure \ref{fig:server_core})
+\item If at any time the server receives a message from this (or any known) client\footnote{Message types are defined in fig. \ref{fig:server_message_tags}}, the server will read the first line from the buffer containing the purpose of this message and store it as message\_code (e.g. ping, send-message, update-user) (figure \ref{fig:server_core})
 \item The message\_codes are directly mapped to an associated action (figure \ref{fig:server_core})
-\item Depending on the action (figure \ref{fig:server_actions} defined in \ref{fig:server_message_tags}), the client instance will receive a function call that handles the message appropriately. (figure \ref{fig:server_player_functions})
+\item Depending on the action (figure \ref{fig:server_actions} defined in \ref{fig:server_message_tags}), the client instance will receive a function call that handles the message. (figure \ref{fig:server_player_functions})
 \end{enumerate}
 
 \begin{figure}[H]
 % \centering% default with `floatrow`
-\includegraphics[scale=0.60]{images/server_code.jpg}
+\includegraphics[scale=0.72]{images/server_code.jpg}
 \caption{Core functionality of the server network setup, responsible for connecting new clients, creating reference instances with their details connection details (1, 2), listening to their incoming messages on the server (3) and handling them accordingly (4, messages codes are defined in messages.js. see figure \ref{fig:server_message_tags}). }
 \label{fig:server_core}
-\vspace{1em}
 \end{figure}
 
 \begin{figure}[H]
 % \centering% default with `floatrow`
-\includegraphics[scale=0.60]{images/server_actions.jpg}
+\includegraphics[scale=0.72]{images/server_actions.jpg}
 \caption{Dictionary storing the high-level actions for a specified player instance to perform.}
 \label{fig:server_actions}
-\vspace{1em}
 \end{figure}
 
 \begin{figure}[H]
 % \centering% default with `floatrow`
-\includegraphics[scale=0.60]{images/server_player_functions.jpg}
+\includegraphics[scale=0.75]{images/server_player_functions.jpg}
 \caption{Low level methods the player instance on the server can perform. These methods are called by the incoming message block (figure \ref{fig:server_core} point 4), defined in the action dictionary (figure \ref{fig:server_actions})}
 \label{fig:server_player_functions}
-\vspace{1em}
 \end{figure}
 
 The client class (Player) is made to be synchronized with the state of its corresponding client, such that any change in the actual client application will also modify the representative client state in the server (figure \ref{fig:server_player_construct}). This way, the developer no longer needs to worry about redundantly transmitting all variables to all other clients, including those variables that never changed since a previous transmission, because the server will still have these in memory. Another benefit to this is that the client is allowed to send smaller messages.
@@ -374,7 +356,7 @@ The server has a template set-up, supporting features such as updating the clien
 
 \begin{figure}[H]
 % \centering% default with `floatrow`
-\includegraphics[scale=0.55]{images/server_player_construct.jpg}
+\includegraphics[scale=0.75]{images/server_player_construct.jpg}
 \caption{Player class matching variables of the GameMaker client player object class. Upon instantiation, the constructor automatically returns a message to the referenced client with it's unique identity defined by the server.}
 \label{fig:server_player_construct}
 \vspace{1em}
@@ -382,7 +364,7 @@ The server has a template set-up, supporting features such as updating the clien
 
 \begin{figure}[H]
 % \centering% default with `floatrow`
-\includegraphics[scale=0.55]{images/server_message_tags.jpg}
+\includegraphics[scale=0.75]{images/server_message_tags.jpg}
 \caption{Server specified message tags. C2S refers to "Client-to-Server" and S2C refers to "Server-to-Client" messages.}
 \label{fig:server_message_tags}
 \vspace{1em}
@@ -431,8 +413,8 @@ When a message arrives, it gets automatically stored in the messages array. \tex
 
 When at any time, the buffer needs to be reused for sending a new message, \texttt{buffer\_clear()} must first be called to clear the content in the buffer. 
 
-\paragraph*{mapping}
-Creating a mapping can be done directly in the GUI of GameMaker as displayed in figure \ref{fig:extension_folder}. After creating a new extension setup in the extensions directory, the previously specified extension files can be referenced. In each of the files, functions can be added that map GML functions to extension functions. Figure \ref{fig:xml_mapping} is part of the mapping xml file that displays how it looks in detail.
+\paragraph*{Creating a mapping}
+can be done directly in the GUI of GameMaker as displayed in figure \ref{fig:extension_folder}. After creating a new extension setup in the extensions directory, the previously specified extension files can be referenced. In each of the files, functions can be added that map GML functions to extension functions. Figure \ref{fig:xml_mapping} is part of the mapping xml file that displays how it looks in detail.
 
 \begin{figure}[H]
 \centering
@@ -554,8 +536,8 @@ This application was used in the evaluation experiments in order to test the sys
 \begin{figure}
 \centering
 % \centering% default with `floatrow`
-\includegraphics[scale=0.55, angle=90]{images/benchmarker.jpg}
-\caption{Displaying the GUI of the benchmarking application. On the left top the global data is available for the client. The table below displays the virtual clients and their 5 most recent roundtrip values. The graph on the top-right displays the average RTT over time for these clients. The colors of the image are inverted from the actual interface.}
+\includegraphics[scale=0.75, angle=90]{images/benchmarker.jpg}
+\caption{Displaying the GUI of the benchmarking application (flipped 90 degrees). On the left top the global data is available for the client. The table on the top-right displays the virtual clients and their 5 most recent roundtrip values. The graph on the bottom displays the average RTT over time for these clients. The colors of the image are inverted from the actual interface and the font size is slightly modified to enhance readability on paper.}
 \label{fig:benchmark_gui}
 \vspace{1em}
 \end{figure}
@@ -574,107 +556,104 @@ This application was used in the evaluation experiments in order to test the sys
 %description of experiments, presentation + (directly including) interpretation of the data
 
 \section{Controlled Network}
-Controlled experiments were conducted in order allow prediction of server behaviour when loaded under similar pressure in future occasions.
+Controlled experiments were conducted in order allow making predictions of server behaviour when loaded under similar pressure in future occasions.
 
-Experiments were executed on a Windows 7 64-bit platform with 12.6GB available physical memory and an Intel(R) Core(TM) i7-2600K CPU @ 3.40GHz processor. The software entailed Node v0.12.3 and Socket.io v1.3.7 in order to handle the networking operations.
+These experiments were executed on a Windows 7 64-bit platform with 12.6GB available physical memory and an Intel(R) Core(TM) i7-2600K CPU @ 3.40GHz processor. The software entailed Node v0.12.3 and Socket.io v1.3.7 in order to handle the networking operations.
 
 The network was controlled using Dummynet, using a below-average UK household network bandwidth \cite{household_bandwidth}. This involves an upload speed of 5Mbit/s, and a download speed of 1Mbit/, although no packet loss was set in order to ensure consistency throughout the controlled network experiments.
 
 \subsection{Concurrent Connections}
-It is important to know how many clients a server can host simultaneously. The following experiments evaluate the server performance in terms of server CPU usage, CPU time and RSS with regard to the number of concurrently connected clients.
+It is important to know how many clients a server can host simultaneously and how well it scales before it runs out of resources such as memory and processing power. The following experiments evaluate the server performance in terms of server CPU usage, CPU time and RSS with regard to the number of concurrently connected clients.
 
-\paragraph*{Setup}
-\begin{itemize}
-\item Variable number of concurrent connections, up to 15 instances with each simulating at most 500 clients.
-\item Clients do \emph{not} contact the server after establishing a connection.
-\item The resulting values are averaged over a 2-minute run duration.
-\item After each run, the number of clients simultaneously connected to the server increases by 100.
-\end{itemize}
-
-Figure \ref{fig:cpu_usage} indicates a logarithmic trend in the CPU usage on the server. This seems strange. Although this effect may be explained when combined with the CPU time in figure \ref{fig:cpu_time}. 
-
-The system aims to run the process at an optimal amount for CPU usage. As soon as it reaches this point, it will attempt to balance the usage by allowing more processing time for the process.
+\paragraph*{The setup} includes a variable number of concurrent connections consisting of up to 15 physical instances with each simulating at most 500 clients. These clients  do not contact the server after establishing a connection. The resulting values are averaged over 2-minute run duration periods, and each after 2-minute period the experiment restarts, having the number of clients that attempt to connect simultaneously increased by 100.
 
 \begin{figure}[H]
 \centering
 % \centering% default with `floatrow`
-\includegraphics[scale=0.75]{images/test_CLIENT_CPUusage.jpg}
-\caption{Displaying the CPU usage for the server process in percent.}
+\includegraphics[scale=0.5]{images/test_CLIENT_CPUusage.jpg}
+\caption{Displaying the CPU usage for the server process handling a variable number of client connection attempts in percent.}
 \label{fig:cpu_usage}
 \vspace{1em}
 \end{figure}
 
-
-Figure \ref{fig:cpu_usage} indicates a logarithmic trend in the CPU usage on the server. When the CPU usage reaches over 80 percent, the user may experience lag. Such high CPU usage indicates insufficient processing power. Either the CPU needs to be upgraded, or the user experience reduced.
-
 \begin{figure}[H]
 \centering
 % \centering% default with `floatrow`
-\includegraphics[scale=0.75]{images/test_CLIENT_CPUtime.jpg}
-\caption{CPU time in milliseconds, displaying the amount of time required for the server to process the clients.}
+\includegraphics[scale=0.5]{images/test_CLIENT_CPUtime.jpg}
+\caption{CPU time in milliseconds, displaying the amount of time required for the server to process the connection requests of all clients.}
 \label{fig:cpu_time}
 \end{figure}
 
-
 \begin{figure}[H]
 \centering
 % \centering% default with `floatrow`
-\includegraphics[scale=0.75]{images/test_CLIENT_RSS.jpg}
+\includegraphics[scale=0.5]{images/test_CLIENT_RSS.jpg}
 \caption{Resident set size in Megabit, showing the portion of RAM that is occupied by the server process.}
 \label{fig:cpu_rss}
 \end{figure}
 
+Figure \ref{fig:cpu_usage} indicates a logarithmic trend in the CPU usage on the server. This seems strange. Although this effect may be explained when combined with the CPU time in figure \ref{fig:cpu_time}. 
+
+The system aims to run the process at an optimal CPU usage amount, which can be noticed by the sudden change at a CPU usage of roughly 60\%. As soon as the server processor reaches this point, it will attempt to balance the usage by allowing more processing time for connecting the clients. The connection request processing time scales in a near-linear fashion, indicating clients to be connected one at a time. Occasional peaks and the slight increase in the trend of the CPU time may indicate the processor demanding extra time to process the increased number of connecting clients.
+
+Due to the connection handling mechanism of Node.js, where each new client connection is offloaded to a heap using constant memory space, the RSS scales up in an almost linear fashion. This property makes it easy to predict the amount of memory required for a certain expected load. For example, in the observed scenario, each client uses roughly 5KiloBytes. Therefore when expecting 10.000 clients to connect to the server, they will be using up around 50 megabyte (slightly higher due to the trend not being exactly linear). Similar experiments have found similar behaviour, where 16GigaByte is consumed to record a total of 1 million concurrent connections \cite{modejs_1m_connections}.
+
 
 \subsection{Message Broadcasting Performance}
-The following experiment evaluates the number of messages that can be handled by the server simultaneously, and considers how this affects the fairness in response-time of the individual clients.
+The concurrent connections experiments have indicated that the system scales well within the expected demands of an average multiplayer game in terms of client concurrency. The following experiment evaluates what happens when these clients start interacting. It observes the number of messages that can be handled by the server simultaneously, and considers how this affects the fairness in response-time of the individual clients.
 
-\paragraph*{Environment Setup}
-\begin{itemize}
-\item 5000 concurrent connections (10 instances each simulating at most 500 clients).
-\item Each package that is sent has a size of 8 bytes.
-\item Each client sends packages at regular time intervals, causing the server to handle n messages every second.
-\item Each client measures the roundtrip time of its package to the server.
-\end{itemize}
+\paragraph*{The setup}involves up to 5000 concurrently connected clients (10 physical instances simulating at most 500 clients each) all located within the same network. Clients can send 8-Byte packets, and each client sends these packets at regular time intervals. Each client measures the roundtrip time of the packet, and for each interval these roundtrip times are averaged.
 
-\paragraph*{Dependent variables}
-\begin{itemize}
-\item Mean roundtrip time between all clients
-\item Variance of the roundtrip time between all clients
-\item Standard Deviation of the roundtrip time between all clients
-\end{itemize}
+The values in graph \ref{fig:mean_rtt} were generated by modifying the rate at which each client transmits messages to the server (a sending higher rate resulting in more incoming messages per second at the server), for a fixed number of clients: 50, 100, 500, 1000, 2500 and 5000.
 
-\begin{center}
+Each time when the average RTT exceeds 200ms, the experiment is stopped. Beyond this point, the server appears to receive messages faster than it can handle, causing it to temporarily store the messages in a queue for later. However as clients keep sending packets at the same constant rate, resulting in a vicious cycle that causes the memory to eventually overflow.
 
 \begin{figure}[H]
 \centering
 % \centering% default with `floatrow`
-\includegraphics[scale=0.32]{images/test_SERVER_RTTmean.jpg}
-\caption{The mean roundtrip time of all the messages that pass through the server. As expected, with few concurrent clients connected to the server, the server manages to broadcast many more messages.}
+\includegraphics[scale=0.46]{images/mean_rtt.jpg}
+\caption{The general case scenario indicating the observed mean 8-byte message roundtrip time, depending on the total number of messages incoming to the server at every second.}
+\label{fig:mean_rtt}
+\end{figure}
+
+From graph \ref{fig:mean_rtt}, it can be observed that the messages maintain a stable 32ms roundtrip time until the server receives around 5000 messages per second. Beyond this point, the roundtrip time grows exponentially until it reaches >200ms, which is when the experiment is terminated.
+
+Note that after receiving, these messages were broadcasted to all other clients. In order to further visualise the effect of broadcasting messages from each client to every other client, the mean RTT results are displayed separately in graph \ref{fig:broadcast_rtt_mean}, as well as their corresponding standard deviation in graph \ref{fig:broadcast_rtt_std}.
+
+\begin{figure}[H]
+\centering
+% \centering% default with `floatrow`
+\includegraphics[scale=0.46]{images/test_SERVER_RTTmean.jpg}
+\caption{The mean roundtrip time of all the messages that pass through the server, for different numbers of specified clients (50, 100, 500, 1000, 2500 and 5000). Each client sending messages at a variable rate per second.}
 \label{fig:broadcast_rtt_mean}
 \end{figure}
 
-
-
 \begin{figure}[H]
 \centering
 % \centering% default with `floatrow`
-\includegraphics[scale=0.32]{images/test_SERVER_RTTstd.jpg}
-\caption{Standard deviation of the message roundtrip times.}
+\includegraphics[scale=0.46]{images/test_SERVER_RTTstd.jpg}
+\caption{The standard deviation of the message roundtrip times as displayed in fig. \ref{fig:broadcast_rtt_mean} for all messages that pass through the server, for different numbers of specified clients (50, 100, 500, 1000, 2500 and 5000). Each client sending messages at a variable rate per second.}
 \label{fig:broadcast_rtt_std}
 \end{figure}
 
-\end{center}
+The graphs in fig. \ref{fig:broadcast_rtt_mean} and fig. \ref{fig:broadcast_rtt_std} indicate as expected that with few concurrently connected clients and the same send rate per client, the server manages to broadcast many more messages (as fewer clients will be sending messages). It is important to remember that broadcasting is an intensive task with a complexity of O($n^{n}$) for n clients, as every client sends a message to every other client.
 
+Therefore, if n = 100 clients are connected to the server, and each wants to broadcast 100 messages per second, the server receives $100 \times 100$ (= 10,000) messages per second, and has to send $100 \times 100 \times 100$ (=1,000,000) messages every second (although the sender technically does not need to re-receive its own message, this difference is negligible).
+
+For n = 1000 clients, a maximum sending rate of 10 per second is observed. At this point the server receives $10 \times 1000$ (=10,000) messages per second, and has to send $10 \times 1000 \times 10$ (=100,000) messages per second.
+
+These results are very interesting as they indicate that the average RTT is not necessarily affected by the number of messages the server has to send\footnote{By considering that sending 100,000 messages results in a similar average message RTT as when sending 1,000,000, given that the amount of actually handled messages remains the same}, but rather by the amount of messages the server has to receive and control in the message-handling logic.
 
 
 \section{Real Network Results}
-The network was consistently running with a 54.0Mb/s download and 3.0Mb/s upload speed.
-\paragraph*{}Multiple tests were executed with clients being located at specified locations. In each case, the clients were sending 8-byte messages to the server at a regular interval of 1 second for 2 minutes. The 120 roundtrip times for each client were then averaged in order to blur occasional peaks. At this point the roundtrip times of the clients in each common location were averaged, and then the deviance of the roundtrip times at each of these locations were calculated.
+During the real network experiments, the network at the server was observed to running at a rather consistent 54Mb/s download and 3Mb/s upload speed.
 
-All network experiments were executed using a single server located in Edinburgh and in each experiment all clients were connected and communicating to that server simultaneously. During the experiments, logs were saved at the clients. After each experiment, these logs were forwarded for post-processing purposes. The roundtrip times represent the delay times between the packet-send event, and the packet-receive event by the same client for the same packet.
+\paragraph*{}Multiple tests were executed with clients located at specified locations. In each case, the clients were again sending 8-byte messages to the server, at a regular interval of 1 second for 2 minutes. The 120 roundtrip times for each client were then averaged in order to blur occasional peaks caused by inconsistencies in the network. The roundtrip times of the clients in each common location were averaged, and the deviation of the roundtrip times within the 2-minute time frame for each of these locations were calculated.
 
-\subsection{Location-wise Delay Fairness}
-The following experiment evaluates the effect of the geographical distance between groups of clients and the server with respect to fairness in response-time from the server to the clients.
+All network experiments were executed using a single server located in Edinburgh and in each experiment all clients were connected and communicating to that server simultaneously. During the experiments, in order to prevent data transmission to affect the results, logs were saved at the clients. Only after each experiment was complete, these logs were forwarded for processing purposes. The roundtrip times represent the delay times between the packet-send event in the browser client, and the packet-receive event by the same client for the same packet.
+
+\subsection{Location-based Delay Fairness}
+The following experiments evaluate the effect of the geographical distance between groups of clients and the server with respect to fairness in response-time from the server to the clients.
 
 \paragraph*{Test cases:}
 \begin{enumerate}
@@ -687,29 +666,49 @@ The following experiment evaluates the effect of the geographical distance betwe
 \item Europe: Six clients physically located in the United Kingdom, Hungary, France, Germany, Sweden and the Netherlands.
 
 \item Inter-continental: Eight clients physically located in South Africa, California (USA), India, Thailand, Germany, Hungary, United Kingdom and the Netherlands.
-
 \end{enumerate}
 
-\paragraph*{Results:}Average roundtrip times per location:
-\begin{center}
-  \begin{tabular}{ r | l }
-Location		& Average RTT \\ \hline\hline
-LAN				& 32ms	\\
-Edinburgh		& 55ms	\\
-Dundee			& 65ms	\\
-Germany			& 67ms	\\
-Glasgow			& 68ms	\\
-France			& 69ms	\\
-the Netherlands	& 70ms	\\
-Sweden			& 70ms	\\
-United Kingdom	& 71ms	\\
-Hungary			& 76ms	\\
-India			& 103ms	\\
-South Africa	& 144ms	\\
-California (USA)& 158ms	\\
-Thailand		& 171ms	\\
+\begin{table}[H]
+\centering
+  \begin{tabular}{ | r || c | c | c | c | c |}
+    \hline
+    Test case 		& 1 		& 2 		& 3 		& 4 		& 5 		\\ \hline\hline
+    Mean RTT 		& 32.1ms 	& 54.8ms 	& 62.7ms 	& 70.6ms 	& 107.5ms	\\ \hline
+    Std RTT			& 0.4ms		& 2.9ms		& 6.8ms		& 3.36ms	& 43.6ms	\\ \hline
   \end{tabular}
-\end{center}
+  \caption{Average roundtrip times per test}
+  \label{table:geo_avg_roundtrip}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+  \begin{tabular}{ r | l | l }
+Location		& Average RTT	& Server Distance \\ \hline\hline
+LAN				& 32ms			&0km\\
+Edinburgh		& 55ms			&0km\\
+Dundee			& 65ms			&63km\\
+Germany			& 67ms			&977km\\
+Glasgow			& 68ms			&67km\\
+France			& 69ms			&1165km\\
+the Netherlands	& 70ms			&698km\\
+Sweden			& 70ms			&1238km\\
+United Kingdom	& 71ms			&66km\\
+Hungary			& 76ms			&1881km\\
+India			& 103ms			&7582km\\
+South Africa	& 144ms			&9760km\\
+California (USA)& 158ms			&8065km\\
+Thailand		& 171ms			&9438km\\
+  \end{tabular}
+  \caption{Average roundtrip times per location, along with their overall geographical distance from the server.}
+  \label{table:geo_avg_location}
+\end{table}
+
+Clients located within the local network have the fastest roundtrip time, as expected since packets can travel. After this point, Clients located anywhere within Europe have an overall roundtrip time between 55ms and 76ms. These values are reasonable depending on the purpose of the game that is created with the extension, but complicated to omit. A general rule of thumb for ping values is that anything below 100ms is acceptable, even for high-end shootergames such as Battlefield and Call of Duty, where clients may automatically get kicked when their roundtrip time exceeds 150ms or 200ms potentially disrupting the gameplay.
+
+Table \ref{table:geo_avg_roundtrip} and table \ref{table:geo_avg_location} show the average roundtrip times observed by clients located at different locations on earth. These RTT for these locations may differ due to factors such as the connection speed, ISP quality and firewall settings. But the experiment shows that the major contributor to unfairness in the network appears to be directly affected by the distance to the server, as the average RTT for each of the locations significantly increases as the distance increases. Figure \ref{fig:worldmap} visualises the connection between the observed roundtrip times and the corresponding distance between the client and the server. 
+
+Assuming the added delay is caused by the implied distance and packet-switching, the only real solution to the problem involves modifying the physical link between the client and the server or locating the server closer to the intended clients.
 
 \begin{figure}
 \centering
@@ -719,21 +718,17 @@ Thailand		& 171ms	\\
 \label{fig:worldmap}
 \end{figure}
 
-Average roundtrip times per test:
-\begin{center}
-  \begin{tabular}{ | r || c | c | c | c | c |}
-    \hline
-    Test case 		& 1 		& 2 		& 3 		& 4 		& 5 		\\ \hline\hline
-    Mean RTT 		& 32.1ms 	& 54.8ms 	& 62.7ms 	& 70.6ms 	& 107.5ms	\\ \hline
-    Std RTT			& 0.4ms		& 2.9ms		& 6.8ms		& 3.36ms	& 43.6ms	\\ \hline
-  \end{tabular}
-\end{center}
+
 
 
 
 % -----------------------
 \chapter{Conclusion and Future Work}
 \section{Conclusion}
+Number of total concurrently connected clients is insignificant compared to the effect the clients exert on the server by having constant interactions.
+
+Based on the experiments, developers can now keep in mind how to develop their application in an optimal way: which features mostly affect the network qualities.
+
 \subsection{Comparison of the Extended GameMaker Functionality with Related Work}
 \subsection{Criticism on the Implementation and Design Decisions}
 %make clear connection with the evaluation
@@ -812,7 +807,7 @@ web url referrals\\
 \cite{household_bandwidth}
 \cite{unity_stats}
 \cite{quality_attributes}
-
+\cite{modejs_1m_connections}
 % <<<< REMOVE THIS BLOCK
 
 %TODO change style to apa before submission. ignore "errors", it should still work after a few retries

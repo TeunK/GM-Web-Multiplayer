@@ -267,6 +267,12 @@ Average household network bandwidth in the united kingdom.
   \url{http://www.ispreview.co.uk/index.php/2015/02/ofcom-average-uk-home-broadband-speeds-slowly-reach-23mbps.html}.
 \newblock Accessed: 2016-03-02.
 
+\bibitem{modejs_1m_connections}
+Node.js: 1 million concurrent connections.
+\newblock
+  \url{http://blog.caustik.com/2012/08/19/node-js-w1m-concurrent-connections/}.
+\newblock Accessed: 2016-03-19.
+
 \bibitem{Multiplayer_Networking_modern_engine}
 Alan Edwardes.
 \newblock Multiplayer networking in a modern game engine.

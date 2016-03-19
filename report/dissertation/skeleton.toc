@@ -1,23 +1,20 @@
 \contentsline {chapter}{\numberline {1}Introduction}{9}{chapter.1}
 \contentsline {chapter}{\numberline {2}Background}{11}{chapter.2}
-\contentsline {section}{\numberline {2.1}Network Fairness}{11}{section.2.1}
+\contentsline {section}{\numberline {2.1}Network Demands}{11}{section.2.1}
 \contentsline {section}{\numberline {2.2}TCP}{11}{section.2.2}
-\contentsline {section}{\numberline {2.3}UDP}{11}{section.2.3}
+\contentsline {section}{\numberline {2.3}UDP}{12}{section.2.3}
 \contentsline {section}{\numberline {2.4}NAT traversal}{12}{section.2.4}
 \contentsline {section}{\numberline {2.5}WebSocket}{12}{section.2.5}
 \contentsline {section}{\numberline {2.6}Socket.io}{12}{section.2.6}
-\contentsline {section}{\numberline {2.7}WebRTC}{12}{section.2.7}
+\contentsline {section}{\numberline {2.7}WebRTC}{13}{section.2.7}
 \contentsline {section}{\numberline {2.8}HTML5}{13}{section.2.8}
 \contentsline {section}{\numberline {2.9}Node.js}{13}{section.2.9}
 \contentsline {section}{\numberline {2.10}GameMaker}{14}{section.2.10}
-\contentsline {section}{\numberline {2.11}Quality Attributes}{14}{section.2.11}
-\contentsline {section}{\numberline {2.12}Fairnesss and Playability in Online Multiplayer Games}{15}{section.2.12}
-\contentsline {section}{\numberline {2.13}Multiplayer Networking in Modern Game Engines}{15}{section.2.13}
+\contentsline {section}{\numberline {2.11}Quality Attributes}{15}{section.2.11}
 \contentsline {chapter}{\numberline {3}Related Tools}{17}{chapter.3}
-\contentsline {section}{\numberline {3.1}Identifying competitors to GameMaker}{17}{section.3.1}
-\contentsline {section}{\numberline {3.2}Construct 2}{18}{section.3.2}
-\contentsline {section}{\numberline {3.3}Unity}{18}{section.3.3}
-\contentsline {section}{\numberline {3.4}Pixi.js, EaselJS, Quintus, Crafty.js and Phaser}{19}{section.3.4}
+\contentsline {section}{\numberline {3.1}Construct 2}{18}{section.3.1}
+\contentsline {section}{\numberline {3.2}Unity}{18}{section.3.2}
+\contentsline {section}{\numberline {3.3}Pixi.js, EaselJS, Quintus, Crafty.js and Phaser}{19}{section.3.3}
 \contentsline {chapter}{\numberline {4}Development}{21}{chapter.4}
 \contentsline {section}{\numberline {4.1}Prior Considerations and Design Decisions}{21}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Non-Functional Requirements and Desirable Quality Attributes}{21}{subsection.4.1.1}
@@ -29,18 +26,18 @@
 \contentsline {subsection}{\numberline {4.2.3}The Extension}{28}{subsection.4.2.3}
 \contentsline {section}{\numberline {4.3}Applications Developed with the Extension}{31}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Benchmark Application}{31}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Real Game Application}{33}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Developer Template}{33}{subsection.4.3.3}
-\contentsline {chapter}{\numberline {5}Network Extension Evaluation}{35}{chapter.5}
-\contentsline {section}{\numberline {5.1}Controlled Network}{35}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Concurrent Connections}{35}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Message Broadcasting Performance}{37}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}Real Network Results}{39}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Location-wise Delay Fairness}{39}{subsection.5.2.1}
-\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{41}{chapter.6}
-\contentsline {section}{\numberline {6.1}Conclusion}{41}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Comparison of the Extended GameMaker Functionality with Related Work}{41}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Criticism on the Implementation and Design Decisions}{41}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Note to developers}{41}{section.6.2}
-\contentsline {section}{\numberline {6.3}Future Improvements}{41}{section.6.3}
-\contentsline {chapter}{Bibliography}{43}{chapter*.43}
+\contentsline {subsection}{\numberline {4.3.2}Real Game Application}{35}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Developer Template}{35}{subsection.4.3.3}
+\contentsline {chapter}{\numberline {5}Network Extension Evaluation}{37}{chapter.5}
+\contentsline {section}{\numberline {5.1}Controlled Network}{37}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Concurrent Connections}{37}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Message Broadcasting Performance}{39}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Real Network Results}{41}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Location-based Delay Fairness}{42}{subsection.5.2.1}
+\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{45}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclusion}{45}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Comparison of the Extended GameMaker Functionality with Related Work}{45}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Criticism on the Implementation and Design Decisions}{45}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Note to developers}{45}{section.6.2}
+\contentsline {section}{\numberline {6.3}Future Improvements}{45}{section.6.3}
+\contentsline {chapter}{Bibliography}{47}{chapter*.45}
