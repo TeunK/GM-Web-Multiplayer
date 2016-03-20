@@ -36,6 +36,7 @@ summarising the report\\
 % REMOVE THESE >>>>
 \section*{TODO}
 \begin{itemize}
+\item signposting: in this section blabalala
 \item write literature review and development section
 \item Possibly add new implementation features / clean up existing implementations.
 \item clarify thesis and write intro
@@ -636,7 +637,7 @@ Note that after receiving, these messages were broadcasted to all other clients.
 \label{fig:broadcast_rtt_std}
 \end{figure}
 
-The graphs in fig. \ref{fig:broadcast_rtt_mean} and fig. \ref{fig:broadcast_rtt_std} indicate as expected that with few concurrently connected clients and the same send rate per client, the server manages to broadcast many more messages (as fewer clients will be sending messages). It is important to remember that broadcasting is an intensive task with a complexity of O($n^{n}$) for n clients, as every client sends a message to every other client.
+The graphs in fig. \ref{fig:broadcast_rtt_mean} and fig. \ref{fig:broadcast_rtt_std} indicate as expected that with few concurrently connected clients and the same send rate per client, the server manages to broadcast many more messages (as fewer clients will be sending messages). It is important to remember that broadcasting is an intensive task with a complexity of O($n^{2}$) for n clients, as every client sends a message to every other client.
 
 Therefore, if n = 100 clients are connected to the server, and each wants to broadcast 100 messages per second, the server receives $100 \times 100$ (= 10,000) messages per second, and has to send $100 \times 100 \times 100$ (=1,000,000) messages every second (although the sender technically does not need to re-receive its own message, this difference is negligible).
 
