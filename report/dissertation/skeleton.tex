@@ -36,7 +36,6 @@ summarising the report\\
 % REMOVE THESE >>>>
 \section*{TODO}
 \begin{itemize}
-\item signposting: in this section blabalala
 \item write literature review and development section
 \item Possibly add new implementation features / clean up existing implementations.
 \item clarify thesis and write intro
@@ -97,7 +96,9 @@ One of many developer tools that aims for exactly these two ideals is GameMaker 
 This paper therefore investigates the quality of related software. It also demonstrates how an extension can be added to GameMaker, one that will add networking features to HTML5 games and applications. Additionally, the server's behaviour will be assessed based on the specified setup, and suggestions will be added based on other literature in order to improve this further.
 
 \chapter{Background}
-In a typical networked game scenario, game clients are described by the server as a set of parameters. These parameters represent the "game state". Clients keep pinging and updating the server with their own state. When due to delay, between the clients and server the game state become desynchronised, fairness is diminished \cite{Fairness_and_Playability} and the user experience of the game may be impaired.
+The following chapter covers underlying knowledge that needs to be understood and considered when developing an extension for GameMaker. It explains basic demands of typical game networks, protocols and mechanisms for data communication through a network, facts about GameMaker and quality attributes that are central throughout the development of this project.
+
+In a typical networked game scenario, game clients are described by the server as a set of parameters. These parameters represent the "game state". Clients keep pinging and updating the server with their own state. When the clients and server the game state become desynchronised, fairness is diminished \cite{Fairness_and_Playability} and the user experience of the game may be impaired.
 
 \section{Network Demands}
 Different applications often have different demands from the network. One must therefore consider the technical aspect of the network. For example, fairness in a game is crucial for an enjoyable gameplay. This is especially true for games containing elements where speed or response time is important \cite{Fairness_and_Playability}. Servers in modern high-end multiplayer games are typically loaded from several hundreds, to a few thousand simultaneously connected clients, depending on the level of interaction between the clients.
@@ -176,6 +177,8 @@ Despite having considered the basics of some underlying functional requirements 
 
 
 \chapter{Related Tools}
+In this chapter, we identify competitors to GameMaker. We discover how they, despite offering many valuable features, GameMaker remains one of the better tools for novice developers that wish to create 2D browser games at a fast pace.
+
 Being a cross-platform game development tool primarily for 2D graphically oriented games, GameMaker has many competitors. It is therefore sensible for developers to first consider using game developing tools that support networking features natively. Although, looking for "the best" development tool is unreasonable, as this is a matter of personal preference. Before being able to investigate pros and cons between gamemaker and related game development tools, appropriate competitors must first be identified.
 
 Note that GameMaker does natively support networking functionality for non-browser games. However we must remind ourselves of the aim of this project: creating a networking extension to improve GameMaker's functionality \textbf{for developing 2D browser games}. For this reason, this paper will consider GameMaker to be a development tool for browser games.
@@ -258,6 +261,9 @@ Although the five tools assist in the development, they do not compare with Game
 %discussion of work undertaken, sub-problems, solutions, difficulties
 %\\- concentrated discussions for implementation principles and aspects
 %\\- clarify WHAT WAS COMPLETED, and what wasnt.
+The following chapter describes the development process of three components: the extension, along with a matching client and server. The chapter gives a brief outline of both functional and non-functional requirements of each of these components, as well as the decisions made on how these are actualised.
+
+We then dive deeper into the actual implementation details, with the aim to teach the reader how the extension can be utilised, modified and expanded. Interaction patterns and sample code snippets are provided for each of the components, after which the actual resulting programs are displayed.
 
 %about the high level design ideas / structure and templates for other developers, make clear connection with literature review
 \section{Prior Considerations and Design Decisions}
@@ -555,6 +561,11 @@ This application was used in the evaluation experiments in order to test the sys
 % -----------------------
 \chapter{Network Extension Evaluation}
 %description of experiments, presentation + (directly including) interpretation of the data
+In the following chapter, the extension is evaluated in terms of fairness and performance. The server manages to maintain few thousands of concurrent connections, and handle roughly 5000 messages per second over a long-time period before the packet round-trip time starts to visibly increase. 
+
+These results are considered to be sufficient for any ordinary multiplayer browser game as most servers are required to host in a range of few hundreds to low thousands of players. 
+
+Long-distance connections are the main contributor to unfairness, but for this issue apart from distributing multiple servers across the globe or optimizing the physical link between the endpoints, no real solution is known. Any distance up to a few thousand kilometers is however found to provide an acceptable average roundtrip time of less than 100ms.
 
 \section{Controlled Network}
 Controlled experiments were conducted in order allow making predictions of server behaviour when loaded under similar pressure in future occasions.
