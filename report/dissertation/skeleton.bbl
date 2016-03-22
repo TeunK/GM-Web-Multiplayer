@@ -8,6 +8,63 @@ Vinny Lingham.
   2007.
 \newblock [Accessed: 2016-01-16].
 
+\bibitem{Death_Flash_Java}
+Ian Elliot.
+\newblock Death of flash and java.
+\newblock
+  \url{http://i-programmer.info/news/86-browsers/8783-death-of-flash-and-java.html},
+  14 July 2015.
+\newblock [Accessed: 2016-01-16].
+
+\bibitem{HTML5_Up_and_Running}
+Mark Pilgrim.
+\newblock {\em HTML5: Up and Running}.
+\newblock O'Reilly Media Inc., 1005 Gravenstein Highway North, Sebastopol, CA
+  95472., 2010.
+
+\bibitem{Canvas_API}
+Mozilla~Developer Network.
+\newblock Canvas api.
+\newblock \url{https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API},
+  2015.
+\newblock [Accessed: 2016-01-16].
+
+\bibitem{Gamemaker_DnD}
+Thomas Claburn.
+\newblock Gamemaker promises drag-n-drop game creation.
+\newblock {\em Informationweek}, May 2012.
+
+\bibitem{Mark_Overmars}
+Mark Overmars.
+\newblock Teaching computer science through game design.
+\newblock {\em Journal Computer}, 37(4):81--83, April 2004.
+
+\bibitem{GameMaker_Studio}
+Llopis Noel.
+\newblock Gamemaker studio v1.1.7.
+\newblock {\em Game Developer}, 20(1):40, January 2013.
+
+\bibitem{gamemaker_missing_networking}
+Missing networking feature for browser export.
+\newblock
+  \url{http://docs.yoyogames.com/source/dadiospice/002\_reference/networking/index.html}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{gamemaker_networking_attempt}
+Browser networking attempt for gamemaker html5.
+\newblock \url{https://github.com/amorri40/39js}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{yoyogames_forum}
+Yoyogames community, forum.
+\newblock \url{http://gmc.yoyogames.com/}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{dutch_gamemaker_forum}
+Dutch gamemaker community, forum.
+\newblock \url{http://www.game-maker.nl/forums/}.
+\newblock Accessed: 2016-03-02.
+
 \bibitem{Fairness_and_Playability}
 Jeremy Brun, Farzad Safaei, and Paul Boustead.
 \newblock {\em Fairness and playability in online multiplayer games}.
@@ -78,27 +135,6 @@ Martin~Kirkholt Melhus.
 \newblock PhD thesis, Norwegian University of Science and Technology,
   Trondheim, June 2015.
 
-\bibitem{Death_Flash_Java}
-Ian Elliot.
-\newblock Death of flash and java.
-\newblock
-  \url{http://i-programmer.info/news/86-browsers/8783-death-of-flash-and-java.html},
-  14 July 2015.
-\newblock [Accessed: 2016-01-16].
-
-\bibitem{HTML5_Up_and_Running}
-Mark Pilgrim.
-\newblock {\em HTML5: Up and Running}.
-\newblock O'Reilly Media Inc., 1005 Gravenstein Highway North, Sebastopol, CA
-  95472., 2010.
-
-\bibitem{Canvas_API}
-Mozilla~Developer Network.
-\newblock Canvas api.
-\newblock \url{https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API},
-  2015.
-\newblock [Accessed: 2016-01-16].
-
 \bibitem{Why_Nodejs}
 Tomislav Capan.
 \newblock Why the hell would i use node.js.
@@ -118,42 +154,6 @@ Alejandro Hernandez.
 \newblock
   \url{http://www.toptal.com/javascript/guide-to-full-stack-javascript-initjs}.
 \newblock [Accessed: 2016-01-16].
-
-\bibitem{Gamemaker_DnD}
-Thomas Claburn.
-\newblock Gamemaker promises drag-n-drop game creation.
-\newblock {\em Informationweek}, May 2012.
-
-\bibitem{Mark_Overmars}
-Mark Overmars.
-\newblock Teaching computer science through game design.
-\newblock {\em Journal Computer}, 37(4):81--83, April 2004.
-
-\bibitem{GameMaker_Studio}
-Llopis Noel.
-\newblock Gamemaker studio v1.1.7.
-\newblock {\em Game Developer}, 20(1):40, January 2013.
-
-\bibitem{gamemaker_missing_networking}
-Missing networking feature for browser export.
-\newblock
-  \url{http://docs.yoyogames.com/source/dadiospice/002\_reference/networking/index.html}.
-\newblock Accessed: 2016-03-02.
-
-\bibitem{gamemaker_networking_attempt}
-Browser networking attempt for gamemaker html5.
-\newblock \url{https://github.com/amorri40/39js}.
-\newblock Accessed: 2016-03-02.
-
-\bibitem{yoyogames_forum}
-Yoyogames community, forum.
-\newblock \url{http://gmc.yoyogames.com/}.
-\newblock Accessed: 2016-03-02.
-
-\bibitem{dutch_gamemaker_forum}
-Dutch gamemaker community, forum.
-\newblock \url{http://www.game-maker.nl/forums/}.
-\newblock Accessed: 2016-03-02.
 
 \bibitem{quality_attributes}
 Quality attributes.

@@ -1,10 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  21 MAR 2016 00:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  23 MAR 2016 00:38
 entering extended mode
 **./skeleton.tex
 (skeleton.tex
 LaTeX2e <2015/10/01> patch level 2
 Babel <3.9m> and hyphenation patterns for 69 languages loaded.
-(infthesis.cls
+(styles/infthesis.cls
+
+LaTeX Warning: You have requested document class `styles/infthesis',
+               but the document class provides `infthesis'.
+
 Document Class: infthesis 2011/02/02 v3.5 School of Informatics Thesis Class
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
@@ -41,9 +45,6 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
-
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
@@ -66,12 +67,14 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count82
 ))
-\Gin@req@height=\dimen110
-\Gin@req@width=\dimen111
-)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\xspace.sty"
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
-) (eushield.sty
+)
+(styles/logos/eushield.sty
+
+LaTeX Warning: You have requested package `styles/logos/eushield',
+               but the package provides `eushield'.
+
 Package: eushield 2006/08/28\ v1.1\ Commands for including the EU shield graphi
 c
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\report.cls"
@@ -90,42 +93,7 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \c@table=\count91
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
-\bibindent=\dimen112
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pslatex\pslatex.sty"
-Package: pslatex 1996/07/24 v1.2 pslatex emulation (DPC)
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 65.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/ptmcm/m/n on input line 65.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/ptmcm/m/n on input line 65.
-LaTeX Font Info:    Redeclaring symbol font `letters' on input line 66.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
-(Font)                  OML/cmm/m/it --> OML/ptmcm/m/it on input line 66.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/cmm/b/it --> OML/ptmcm/m/it on input line 66.
-LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 67.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> OMS/pzccm/m/n on input line 67.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> OMS/pzccm/m/n on input line 67.
-LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 68.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 68.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 68.
-\symbold=\mathgroup4
-\symitalic=\mathgroup5
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 74.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 74.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 74.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 75.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 75.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 75.
+\bibindent=\dimen110
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\sectsty\sectsty.sty"
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
@@ -137,13 +105,13 @@ Package: caption 2015/09/17 v3.3-111 Customizing captions (AR)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2015/09/20 v1.7-115 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen113
-\captionmargin@=\dimen114
-\captionwidth=\dimen115
-\caption@tempdima=\dimen116
-\caption@indent=\dimen117
-\caption@parindent=\dimen118
-\caption@hangindent=\dimen119
+\captionmargin=\dimen111
+\captionmargin@=\dimen112
+\captionwidth=\dimen113
+\caption@tempdima=\dimen114
+\caption@indent=\dimen115
+\caption@parindent=\dimen116
+\caption@hangindent=\dimen117
 )
 \c@ContinuedFloat=\count92
 ))
@@ -210,7 +178,7 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen120
+\@linkdim=\dimen118
 \Hy@linkcounter=\count94
 \Hy@pagecounter=\count95
 
@@ -236,10 +204,10 @@ Package hyperref Info: Bookmarks ON on input line 4688.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen121
+\XeTeXLinkMargin=\dimen119
 \Fld@menulength=\count98
-\Field@Width=\dimen122
-\Fld@charsize=\dimen123
+\Field@Width=\dimen120
+\Fld@charsize=\dimen121
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -285,8 +253,345 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 14.
+Package hyperref Info: Option `colorlinks' set `true' on input line 15.
 
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen122
+\Gin@req@width=\dimen123
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks18
+\inpenc@posthook=\toks19
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2015/09/07 v1.1p UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+File: omsenc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen124
+\extrarowheight=\dimen125
+\NC@list=\toks20
+\extratabsurround=\skip44
+\backup@length=\skip45
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen126
+\lightrulewidth=\dimen127
+\cmidrulewidth=\dimen128
+\belowrulesep=\dimen129
+\belowbottomsep=\dimen130
+\aboverulesep=\dimen131
+\abovetopsep=\dimen132
+\cmidrulesep=\dimen133
+\cmidrulekern=\dimen134
+\defaultaddspace=\dimen135
+\@cmidla=\count104
+\@cmidlb=\count105
+\@aboverulesep=\dimen136
+\@belowrulesep=\dimen137
+\@thisruleclass=\count106
+\@lastruleclass=\count107
+\@thisrulewidth=\dimen138
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip46
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks21
+\ex@=\dimen139
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen140
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count108
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count109
+\leftroot@=\count110
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count111
+\DOTSCASE@=\count112
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count113
+\c@MaxMatrixCols=\count114
+\dotsspace@=\muskip11
+\c@parentequation=\count115
+\dspbrk@lvl=\count116
+\tag@help=\toks22
+\row@=\count117
+\column@=\count118
+\maxfields@=\count119
+\andhelp@=\toks23
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks24
+\multlinegap=\skip47
+\multlinetaggap=\skip48
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
@@ -296,50 +601,40 @@ LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\mdwtools\footnote.sty"
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
-\fn@notes=\box28
-\fn@width=\dimen124
+\fn@notes=\box30
+\fn@width=\dimen148
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
 Package: tabularx 2014/10/28 v2.10 `tabularx' package (DPC)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
-Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen125
-\extrarowheight=\dimen126
-\NC@list=\toks18
-\extratabsurround=\skip44
-\backup@length=\skip45
+\TX@col@width=\dimen149
+\TX@old@table=\dimen150
+\TX@old@col=\dimen151
+\TX@target=\dimen152
+\TX@delta=\dimen153
+\TX@cols=\count120
+\TX@ftn=\toks26
 )
-\TX@col@width=\dimen127
-\TX@old@table=\dimen128
-\TX@old@col=\dimen129
-\TX@target=\dimen130
-\TX@delta=\dimen131
-\TX@cols=\count104
-\TX@ftn=\toks19
-) (skeleton.aux)
+(skeleton.aux)
 \openout1 = `skeleton.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 20.
-LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 20
-.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omspzccm.fd"
-File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 39.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1ppl.fd"
+File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -376,75 +671,72 @@ LaTeX Font Info:    ... okay on input line 20.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count105
-\scratchdimen=\dimen132
-\scratchbox=\box29
-\nofMPsegments=\count106
-\nofMParguments=\count107
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count108
-\MPscratchDim=\dimen133
-\MPnumerator=\count109
-\makeMPintoPDFobject=\count110
-\everyMPtoPDFconversion=\toks21
+\scratchcounter=\count121
+\scratchdimen=\dimen154
+\scratchbox=\box31
+\nofMPsegments=\count122
+\nofMParguments=\count123
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count124
+\MPscratchDim=\dimen155
+\MPnumerator=\count125
+\makeMPintoPDFobject=\count126
+\everyMPtoPDFconversion=\toks28
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring ON on input line 20.
+\AtBeginShipoutBox=\box32
+Package hyperref Info: Link coloring ON on input line 39.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count111
+\c@section@level=\count127
 )
-LaTeX Info: Redefining \ref on input line 20.
-LaTeX Info: Redefining \pageref on input line 20.
-LaTeX Info: Redefining \nameref on input line 20.
+LaTeX Info: Redefining \ref on input line 39.
+LaTeX Info: Redefining \pageref on input line 39.
+LaTeX Info: Redefining \nameref on input line 39.
 
 (skeleton.out) (skeleton.out)
 \@outlinefile=\write3
 \openout3 = `skeleton.out'.
 
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 35.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 35.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 18.66588pt on input line 35.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 46.
+
+<styles/logos/eushield-normal.pdf, id=183, 369.38pt x 373.395pt>
+File: styles/logos/eushield-normal.pdf Graphic file (type pdf)
+
+<use styles/logos/eushield-normal.pdf>
+Package pdftex.def Info: styles/logos/eushield-normal.pdf used on input line 46
+.
+(pdftex.def)             Requested size: 369.37909pt x 373.39409pt.
  [1
 
-{C:/Users/Gebruiker/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
+{C:/Users/Gebruiker/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./style
+s/logos/eushield-normal.pdf>] [2
 
 ]
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 35.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 35.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 35.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 46.
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--35
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
 
  []
 
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 35.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 10.79993pt on input line 35.
 [3]
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 37.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 37.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 15.55188pt on input line 37.
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 39.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 48.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 50.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsppl.fd"
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -452,173 +744,161 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [5] [6
 
 ]
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 78.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 78.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 78.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 87.
  (skeleton.toc
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
-LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 3.
+LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptmcm.fd"
-File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 3.
+LaTeX Font Info:    Try loading font information for U+msb on input line 3.
 
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omlptmcm.fd"
-File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
-)
-LaTeX Font Info:    Try loading font information for OMX+psycm on input line 3.
-
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omxpsycm.fd"
-File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
-)
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
- [7])
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [7])
 \tf@toc=\write4
 \openout4 = `skeleton.toc'.
 
-
-[8]
+ [8]
 Chapter 1.
+
+Overfull \hbox (11.29474pt too wide) in paragraph at lines 104--105
+[]\T1/ppl/m/n/12 One of many de-vel-oper tools that aims for ex-actly these two
+ ide-als is GameMaker
+ []
+
 [9
 
 ] [10
 
 ]
 Chapter 2.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 113.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 114.
 
-Underfull \vbox (badness 6825) has occurred while \output is active []
-
- [11]
-[12]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 133.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 133.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 133.
-
-Underfull \vbox (badness 1661) has occurred while \output is active []
-
- [13]
-Overfull \hbox (8.331pt too wide) in paragraph at lines 142--143
-\T1/ptm/m/n/12 ca-pa-bil-ity" al-low-ing de-vel-op-ers to work in the "non-bloc
-king event-driven I/O paradigm"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Overfull \hbox (1.63506pt too wide) in paragraph at lines 114--115
+\T1/ppl/m/n/12 that come pre-in-stalled on iPhones, iPads and An-droid phones s
+up-port HTML5. 
  []
 
-[14] [15] [16
+[11] [12] [13] [14]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-]
+ [15]
+[16]
 Chapter 3.
 
-Overfull \hbox (5.38289pt too wide) in paragraph at lines 198--198
-[][]\T1/ptm/m/n/10 Advertised at [][]$\T1/pcr/m/n/10 http : / / www . gamepix .
- com / blog / the-[]big-[]list-[]of-[]2d-[]html5-[]games-[]engines/$[][]| 
+Overfull \hbox (0.32605pt too wide) in paragraph at lines 201--202
+[]\T1/ppl/m/n/12 Note that GameMaker does na-tively sup-port net-work-ing func-
+tion-al-ity for non-
  []
 
-[17] [18]
-Overfull \hbox (11.9533pt too wide) in paragraph at lines 232--234
-[]\T1/ptm/m/n/12 licenses http://unity3d.com/unity/licenses cost https://store.
+
+Overfull \hbox (14.71417pt too wide) in paragraph at lines 205--206
+\T1/ppl/m/n/12 each with dif-fer-ent back-grounds in 2D browser game de-vel-op-
+ment. gamepix.com
+ []
+
+
+Underfull \hbox (badness 1237) in paragraph at lines 214--214
+[][]\T1/ppl/m/n/10 Advertised at de-vel-oper.mozilla.org: [][]$\T1/cmtt/m/n/10 
+https : / / developer . mozilla . org / en-[]US / docs /$
+ []
+
+
+Overfull \hbox (22.2484pt too wide) in paragraph at lines 214--214
+[][]\T1/ppl/m/n/10 Advertised at [][]$\T1/cmtt/m/n/10 http : / / www . gamepix 
+. com / blog / the-[]big-[]list-[]of-[]2d-[]html5-[]games-[]engines/$[][]| 
+ []
+
+[17
+
+] [18]
+Overfull \hbox (86.8206pt too wide) in paragraph at lines 248--250
+[]\T1/ppl/m/n/12 licenses http://unity3d.com/unity/licenses cost https://store.
 unity3d.com/products/pricing 
  []
 
 
-Overfull \hbox (8.57559pt too wide) in paragraph at lines 243--252
+Overfull \hbox (47.56346pt too wide) in paragraph at lines 259--268
  [][] 
- []
-
-
-Overfull \hbox (2.91953pt too wide) in paragraph at lines 257--258
-[]\T1/ptm/m/n/12 Although the five tools as-sist in the de-vel-op-ment, they do
- not com-pare with GameMaker
  []
 
 [19] [20
 
 ]
 Chapter 4.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 280.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 280.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 280.
 
-Overfull \hbox (10.53236pt too wide) in paragraph at lines 280--280
-[]\T1/phv/b/n/14.4 Non-Functional Re-quire-ments and De-sir-able Qual-ity At-tr
-ibutes 
+Overfull \hbox (0.1102pt too wide) in paragraph at lines 281--282
+\T1/ppl/m/n/12 The fol-low-ing chap-ter de-scribes the de-vel-op-ment pro-cess 
+of three com-po-nents:
  []
 
-[21] [22]
-Underfull \vbox (badness 3049) has occurred while \output is active []
+[21]
+Overfull \hbox (1.0292pt too wide) in paragraph at lines 310--310
+[]\T1/ppl/b/n/14.4 Non-Functional Re-quire-ments and De-sir-able Qual-ity At-
+ []
 
- [23]
-<images/server_sequence_diagram.jpg, id=451, 756.8275pt x 483.8075pt>
+[22] [23]
+<images/server_sequence_diagram.jpg, id=463, 756.8275pt x 483.8075pt>
 File: images/server_sequence_diagram.jpg Graphic file (type jpg)
 
 <use images/server_sequence_diagram.jpg>
 Package pdftex.def Info: images/server_sequence_diagram.jpg used on input line 
-326.
+344.
 (pdftex.def)             Requested size: 454.1pt x 290.28674pt.
 
-Overfull \hbox (41.53503pt too wide) in paragraph at lines 326--327
+Overfull \hbox (41.53503pt too wide) in paragraph at lines 344--345
 [][] 
  []
 
 [24 <./images/server_sequence_diagram.jpg>]
-<images/server_code.jpg, id=468, 602.25pt x 293.095pt>
+<images/server_code.jpg, id=479, 602.25pt x 293.095pt>
 File: images/server_code.jpg Graphic file (type jpg)
 
 <use images/server_code.jpg>
-Package pdftex.def Info: images/server_code.jpg used on input line 342.
+Package pdftex.def Info: images/server_code.jpg used on input line 359.
 (pdftex.def)             Requested size: 433.61966pt x 211.02823pt.
 
-Overfull \hbox (21.05469pt too wide) in paragraph at lines 342--343
+Overfull \hbox (21.05469pt too wide) in paragraph at lines 359--360
 [][] 
  []
 
-<images/server_actions.jpg, id=471, 464.73625pt x 458.71375pt>
+<images/server_actions.jpg, id=482, 464.73625pt x 458.71375pt>
 File: images/server_actions.jpg Graphic file (type jpg)
 
 <use images/server_actions.jpg>
-Package pdftex.def Info: images/server_actions.jpg used on input line 349.
+Package pdftex.def Info: images/server_actions.jpg used on input line 366.
 (pdftex.def)             Requested size: 334.60983pt x 330.27365pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25 <./images/server_code.jpg>]
-<images/server_player_functions.jpg, id=485, 379.4175pt x 406.51875pt>
+<images/server_player_functions.jpg, id=498, 379.4175pt x 406.51875pt>
 File: images/server_player_functions.jpg Graphic file (type jpg)
 
 <use images/server_player_functions.jpg>
 Package pdftex.def Info: images/server_player_functions.jpg used on input line 
-356.
+373.
 (pdftex.def)             Requested size: 284.56242pt x 304.8883pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [26 <./images/server_actions.jpg>]
-<images/server_player_construct.jpg, id=495, 718.685pt x 517.935pt>
+<images/server_player_construct.jpg, id=508, 718.685pt x 517.935pt>
 File: images/server_player_construct.jpg Graphic file (type jpg)
 
 <use images/server_player_construct.jpg>
 Package pdftex.def Info: images/server_player_construct.jpg used on input line 
-367.
+384.
 (pdftex.def)             Requested size: 539.01242pt x 388.45029pt.
 
-Overfull \hbox (126.44745pt too wide) in paragraph at lines 367--368
+Overfull \hbox (126.44745pt too wide) in paragraph at lines 384--385
 [][] 
  []
 
@@ -626,61 +906,55 @@ Overfull \hbox (126.44745pt too wide) in paragraph at lines 367--368
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27 <./images/server_player_functions.jpg>]
-<images/server_message_tags.jpg, id=501, 280.04625pt x 405.515pt>
+<images/server_message_tags.jpg, id=514, 280.04625pt x 405.515pt>
 File: images/server_message_tags.jpg Graphic file (type jpg)
 
 <use images/server_message_tags.jpg>
-Package pdftex.def Info: images/server_message_tags.jpg used on input line 375.
+Package pdftex.def Info: images/server_message_tags.jpg used on input line 392.
 
 (pdftex.def)             Requested size: 210.03415pt x 304.13548pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [28 <./images/server_player_construct.jpg>]
-<images/extension_flow.jpg, id=507, 972.63374pt x 565.11125pt>
+Overfull \hbox (14.59334pt too wide) in paragraph at lines 405--406
+[]\T1/ppl/m/n/12 An MIT-licensed open-source socket.io JavaScript li-brary pro-
+vided by Learn-
+ []
+
+<images/extension_flow.jpg, id=520, 972.63374pt x 565.11125pt>
 File: images/extension_flow.jpg Graphic file (type jpg)
 
 <use images/extension_flow.jpg>
-Package pdftex.def Info: images/extension_flow.jpg used on input line 396.
+Package pdftex.def Info: images/extension_flow.jpg used on input line 412.
 (pdftex.def)             Requested size: 486.31567pt x 282.55493pt.
 
-Overfull \hbox (73.7507pt too wide) in paragraph at lines 396--397
+Overfull \hbox (73.7507pt too wide) in paragraph at lines 412--413
 [][] 
  []
 
-[29 <./images/server_message_tags.jpg>] [30 <./images/extension_flow.jpg>]
-Overfull \hbox (65.64426pt too wide) in paragraph at lines 417--419
-\T1/ptm/m/n/12 through the socket to the server. This packet can be pushed onto
- by us-ing the \T1/pcr/m/n/12 buffer_write(value)
+[29 <./images/server_message_tags.jpg>]
+Overfull \hbox (12.9658pt too wide) in paragraph at lines 426--429
+[]\T1/ppl/m/n/12 A sim-ple con-nec-tion func-tion \T1/cmtt/m/n/12 connect(serve
+r_ip, server_port) \T1/ppl/m/n/12 opens a socket
  []
 
-
-Overfull \hbox (83.55856pt too wide) in paragraph at lines 420--421
-[]\T1/ptm/m/n/12 When a mes-sage ar-rives, it gets au-to-mat-i-cally stored in 
-the mes-sages ar-ray. \T1/pcr/m/n/12 receive_message(socket)
- []
-
-
-Overfull \hbox (29.1521pt too wide) in paragraph at lines 422--423
-[]\T1/ptm/m/n/12 When at any time, the buffer needs to be reused for send-ing a
- new mes-sage, \T1/pcr/m/n/12 buffer_clear()
- []
-
-<images/extensions_folder.png, id=525, 160.80075pt x 135.50626pt>
+[30 <./images/extension_flow.jpg>]
+<images/extensions_folder.png, id=538, 160.80075pt x 135.50626pt>
 File: images/extensions_folder.png Graphic file (type png)
 
 <use images/extensions_folder.png>
-Package pdftex.def Info: images/extensions_folder.png used on input line 430.
+Package pdftex.def Info: images/extensions_folder.png used on input line 446.
 (pdftex.def)             Requested size: 192.95992pt x 162.60666pt.
 
-<images/xml_mapping.png, id=527, 345.08925pt x 181.8795pt>
+<images/xml_mapping.png, id=540, 345.08925pt x 181.8795pt>
 File: images/xml_mapping.png Graphic file (type png)
 
 <use images/xml_mapping.png>
-Package pdftex.def Info: images/xml_mapping.png used on input line 439.
+Package pdftex.def Info: images/xml_mapping.png used on input line 455.
 (pdftex.def)             Requested size: 414.10503pt x 218.25429pt.
 
-Overfull \hbox (1.54005pt too wide) in paragraph at lines 439--440
+Overfull \hbox (1.54005pt too wide) in paragraph at lines 455--456
  [][] 
  []
 
@@ -688,284 +962,345 @@ Overfull \hbox (1.54005pt too wide) in paragraph at lines 439--440
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [31 <./images/extensions_folder.png>]
-Overfull \hbox (10.9112pt too wide) in paragraph at lines 445--446
-[]\T1/ptm/m/n/12 The na-tively sup-ported net-work-ing func-tions can eas-ily b
-e trans-lated into the the browser-
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32 <./images/xml_mapping.png>] [33]
+Overfull \hbox (0.56567pt too wide) in paragraph at lines 548--549
+[]\T1/ppl/m/n/12 Since then, it has evolved into sup-port-ing a va-ri-ety of in
+-stances (vir-tual clients),
  []
 
-
-Underfull \hbox (badness 1286) in paragraph at lines 509--509
-[]\T1/phv/m/n/12 Table 4.1: |Func-tion Trans-la-tions from na-tively sup-ported
- func-tions to browser-
- []
-
-[32 <./images/xml_mapping.png>] [33]
-<images/benchmarker.jpg, id=549, 817.0525pt x 447.6725pt>
+[34] <images/benchmarker.jpg, id=567, 817.0525pt x 447.6725pt>
 File: images/benchmarker.jpg Graphic file (type jpg)
 
 <use images/benchmarker.jpg>
-Package pdftex.def Info: images/benchmarker.jpg used on input line 547.
+Package pdftex.def Info: images/benchmarker.jpg used on input line 575.
 (pdftex.def)             Requested size: 612.78789pt x 335.75354pt.
+ [35]
+Overfull \vbox (47.45755pt too high) has occurred while \output is active []
 
 
-LaTeX Warning: Float too large for page by 47.45755pt on input line 551.
-
-[34] [35 <./images/benchmarker.jpg>] [36]
-Chapter 5.
-
-Underfull \vbox (badness 1117) has occurred while \output is active []
-
- [37
+[36 <./images/benchmarker.jpg>] [37] [38
 
 ]
-<images/test_CLIENT_CPUusage.jpg, id=570, 764.8575pt x 326.21875pt>
+Chapter 5.
+
+Overfull \hbox (11.72652pt too wide) in paragraph at lines 595--596
+[]\T1/ppl/m/n/12 These re-sults are con-sid-ered to be suf-fi-cient for any or-
+di-nary mul-ti-player browser
+ []
+
+
+Overfull \hbox (0.75887pt too wide) in paragraph at lines 604--605
+\T1/ppl/m/n/12 house-hold net-work band-width [[]]. This in-volves an up-load s
+peed of 5Mbit/s,
+ []
+
+[39] <images/test_CLIENT_CPUusage.jpg, id=592, 764.8575pt x 326.21875pt>
 File: images/test_CLIENT_CPUusage.jpg Graphic file (type jpg)
 
 <use images/test_CLIENT_CPUusage.jpg>
-Package pdftex.def Info: images/test_CLIENT_CPUusage.jpg used on input line 586
+Package pdftex.def Info: images/test_CLIENT_CPUusage.jpg used on input line 614
 .
 (pdftex.def)             Requested size: 382.42781pt x 163.10896pt.
 
-<images/test_CLIENT_CPUtime.jpg, id=571, 755.82375pt x 321.2pt>
+<images/test_CLIENT_CPUtime.jpg, id=593, 755.82375pt x 321.2pt>
 File: images/test_CLIENT_CPUtime.jpg Graphic file (type jpg)
 
 <use images/test_CLIENT_CPUtime.jpg>
-Package pdftex.def Info: images/test_CLIENT_CPUtime.jpg used on input line 595.
+Package pdftex.def Info: images/test_CLIENT_CPUtime.jpg used on input line 623.
 
 (pdftex.def)             Requested size: 377.91095pt x 160.59961pt.
 
-<images/test_CLIENT_RSS.jpg, id=572, 756.8275pt x 319.1925pt>
+<images/test_CLIENT_RSS.jpg, id=594, 756.8275pt x 319.1925pt>
 File: images/test_CLIENT_RSS.jpg Graphic file (type jpg)
 
 <use images/test_CLIENT_RSS.jpg>
-Package pdftex.def Info: images/test_CLIENT_RSS.jpg used on input line 603.
+Package pdftex.def Info: images/test_CLIENT_RSS.jpg used on input line 631.
 (pdftex.def)             Requested size: 378.41283pt x 159.59586pt.
- [38 <./images/test_CLIENT_CPUusage.jpg> <./images/test_CLIENT_CPUtime.jpg>] [3
-9 <./images/test_CLIENT_RSS.jpg>]
-<images/mean_rtt.jpg, id=590, 896.34875pt x 366.36874pt>
+ [40 <./images/test_CLIENT_CPUusage.jpg> <./images/test_CLIENT_CPUtime.jpg>] [4
+1 <./images/test_CLIENT_RSS.jpg>]
+<images/mean_rtt.jpg, id=612, 896.34875pt x 366.36874pt>
 File: images/mean_rtt.jpg Graphic file (type jpg)
 
 <use images/mean_rtt.jpg>
-Package pdftex.def Info: images/mean_rtt.jpg used on input line 627.
+Package pdftex.def Info: images/mean_rtt.jpg used on input line 655.
 (pdftex.def)             Requested size: 412.32544pt x 168.53166pt.
 
-<images/test_SERVER_RTTmean.jpg, id=594, 946.53625pt x 373.395pt>
+<images/test_SERVER_RTTmean.jpg, id=616, 946.53625pt x 373.395pt>
 File: images/test_SERVER_RTTmean.jpg Graphic file (type jpg)
 
 <use images/test_SERVER_RTTmean.jpg>
-Package pdftex.def Info: images/test_SERVER_RTTmean.jpg used on input line 639.
+Package pdftex.def Info: images/test_SERVER_RTTmean.jpg used on input line 667.
 
 (pdftex.def)             Requested size: 435.41197pt x 171.76378pt.
 
-Overfull \hbox (22.847pt too wide) in paragraph at lines 639--640
+Overfull \hbox (22.847pt too wide) in paragraph at lines 667--668
  [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [40 <./images/mean_rtt.jpg>]
-<images/test_SERVER_RTTstd.jpg, id=603, 1012.78375pt x 396.48125pt>
+ [42 <./images/mean_rtt.jpg>]
+<images/test_SERVER_RTTstd.jpg, id=625, 1012.78375pt x 396.48125pt>
 File: images/test_SERVER_RTTstd.jpg Graphic file (type jpg)
 
 <use images/test_SERVER_RTTstd.jpg>
-Package pdftex.def Info: images/test_SERVER_RTTstd.jpg used on input line 647.
+Package pdftex.def Info: images/test_SERVER_RTTstd.jpg used on input line 675.
 (pdftex.def)             Requested size: 465.88618pt x 182.38358pt.
 
-Overfull \hbox (53.32121pt too wide) in paragraph at lines 647--648
+Overfull \hbox (53.32121pt too wide) in paragraph at lines 675--676
  [][] 
  []
 
-[41 <./images/test_SERVER_RTTmean.jpg> <./images/test_SERVER_RTTstd.jpg>]
-[42] [43] <images/worldmap.jpg, id=635, 892.33376pt x 474.77374pt>
+[43 <./images/test_SERVER_RTTmean.jpg> <./images/test_SERVER_RTTstd.jpg>]
+[44] [45]
+Overfull \hbox (21.29054pt too wide) in paragraph at lines 752--753
+[]\T1/ppl/m/n/12 Assuming the added de-lay is caused by the im-plied dis-tance 
+and packet-switching,
+ []
+
+<images/worldmap.jpg, id=660, 892.33376pt x 474.77374pt>
 File: images/worldmap.jpg Graphic file (type jpg)
 
 <use images/worldmap.jpg>
-Package pdftex.def Info: images/worldmap.jpg used on input line 729.
+Package pdftex.def Info: images/worldmap.jpg used on input line 757.
 (pdftex.def)             Requested size: 446.16579pt x 237.38629pt.
 
-Overfull \hbox (33.60081pt too wide) in paragraph at lines 729--730
+Overfull \hbox (33.60081pt too wide) in paragraph at lines 757--758
  [][] 
  []
 
-[44 <./images/worldmap.jpg>]
+[46 <./images/worldmap.jpg>]
 Chapter 6.
-(skeleton.bbl [45
 
-] [46
+Underfull \vbox (badness 1688) has occurred while \output is active []
+
+ [47
 
 ]
+(skeleton.bbl [48]
 Underfull \hbox (badness 10000) in paragraph at lines 4--10
-[]\T1/ptm/m/n/12 Vinny Ling-ham.  Top 20 rea-sons why web apps are su-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--10
-\T1/ptm/m/n/12 pe-rior to desk-top apps.  [][]$\T1/pcr/m/n/12 http : / / www . 
-vinnylingham . com /$
+[]\T1/ppl/m/n/12 Vinny Ling-ham.  Top 20 rea-sons why web apps are su-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--10
-$\T1/pcr/m/n/12 top-[]20-[]reasons-[]why-[]web-[]apps-[]are-[]superior-[]to-[]d
-esktop-[]apps . html$[][]\T1/ptm/m/n/12 ,
+\T1/ppl/m/n/12 pe-rior to desk-top apps.  [][]$\T1/cmtt/m/n/12 http : / / www .
+ vinnylingham . com /$
  []
 
 
-Underfull \hbox (badness 1874) in paragraph at lines 39--43
-[]\T1/ptm/m/n/12 David Walsh.  Web-socket and socket.io.  [][]$\T1/pcr/m/n/12 h
-ttps : / / davidwalsh . name /$
+Underfull \hbox (badness 10000) in paragraph at lines 4--10
+$\T1/cmtt/m/n/12 top-[]20-[]reasons-[]why-[]web-[]apps-[]are-[]superior-[]to-[]
+desktop-[]apps . html$[][]\T1/ppl/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 4518) in paragraph at lines 45--48
-[]\T1/ptm/m/n/12 Websocket two-way com-mu-ni-ca-tion.  [][]$\T1/pcr/m/n/12 http
-s : / / tools . ietf . org / html /$
+Underfull \hbox (badness 5533) in paragraph at lines 48--52
+[]\T1/ppl/m/n/12 Missing net-work-ing fea-ture for browser ex-port.  [][]$\T1/c
+mtt/m/n/12 http : / / docs .$
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 61--68
-\T1/ptm/m/n/12 socket-io-0-8-7-0-7-11-and-0-6-17-and-nodes-native-tcp/, 2011.  
-[Ac-cessed:
- []
-
-[47]
-Underfull \hbox (badness 10000) in paragraph at lines 116--121
-[]\T1/ptm/m/n/12 Alejandro Her-nan-dez.  Init.js: A guide to the why and how
+Underfull \hbox (badness 10000) in paragraph at lines 48--52
+$\T1/cmtt/m/n/12 yoyogames . com / source / dadiospice / 002 _ reference / netw
+orking /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--121
-\T1/ptm/m/n/12 of full-stack javascript.  [][]$\T1/pcr/m/n/12 http : / / www . 
-toptal . com / javascript /$
+Underfull \hbox (badness 10000) in paragraph at lines 74--78
+[]\T1/ppl/m/n/12 Tcp 3-way hand-shake.  [][]$\T1/cmtt/m/n/12 http : / / www . i
+netdaemon . com / tutorials /$
+ []
+
+[49
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 85--89
+[]\T1/ppl/m/n/12 Udp con-nec-tion-less.  [][]$\T1/cmtt/m/n/12 http : / / www . 
+erg . abdn . ac . uk / users / gorry /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--163
-[]\T1/ptm/m/n/12 Quality at-tributes.  [][]$\T1/pcr/m/n/12 https : / / msdn . m
-icrosoft . com / en-[]us / library /$
+Underfull \hbox (badness 10000) in paragraph at lines 118--125
+[]\T1/ppl/m/n/12 Mikito Takada.  Per-for-mance bench-mark-ing socket.io
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--168
-[]\T1/ptm/m/n/12 Review sys-tem for html5 game de-vel-op-ment tools.  [][]$\T1/
-pcr/m/n/12 https : / /$
- []
-
-[48]
-Underfull \hbox (badness 1242) in paragraph at lines 184--188
-[]\T1/ptm/m/n/12 Suggested html5 game en-gines through de-vel-oper.mozilla.org.
-  [][]$\T1/pcr/m/n/12 https : / /$
+Underfull \hbox (badness 10000) in paragraph at lines 118--125
+\T1/ppl/m/n/12 0.8.7, 0.7.11 and 0.6.17 and node's na-tive tcp.
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 118--125
+\T1/ppl/m/n/12 http://blog.mixu.net/2011/11/22/performance-benchmarking-socket-
+
+ []
+
+
+Underfull \hbox (badness 6625) in paragraph at lines 118--125
+\T1/ppl/m/n/12 io-0-8-7-0-7-11-and-0-6-17-and-nodes-native-tcp/, 2011.  [Ac-ces
+sed:
+ []
+
+
+Underfull \hbox (badness 4072) in paragraph at lines 152--157
+[]\T1/ppl/m/n/12 Alejandro Her-nan-dez.  Init.js: A guide to the why and how
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--157
+\T1/ppl/m/n/12 of full-stack javascript.  [][]$\T1/cmtt/m/n/12 http : / / www .
+ toptal . com / javascript /$
+ []
+
+
+Underfull \hbox (badness 7468) in paragraph at lines 159--163
+[]\T1/ppl/m/n/12 Quality at-tributes.  [][]$\T1/cmtt/m/n/12 https : / / msdn . 
+microsoft . com / en-[]us / library /$
+ []
+
+
+Underfull \hbox (badness 5787) in paragraph at lines 165--168
+[]\T1/ppl/m/n/12 Review sys-tem for html5 game de-vel-op-ment tools.  [][]$\T1/
+cmtt/m/n/12 https : / /$
+ []
+
+[50]
 Underfull \hbox (badness 10000) in paragraph at lines 184--188
-$\T1/pcr/m/n/12 developer . mozilla . org / en-[]US / docs / Games / Tools / En
-gines _ and _ tools$[][]\T1/ptm/m/n/12 .
+$\T1/cmtt/m/n/12 developer . mozilla . org / en-[]US / docs / Games / Tools / E
+ngines _ and _ tools$[][]\T1/ppl/m/n/12 .
+ []
+
+
+Underfull \hbox (badness 3189) in paragraph at lines 211--217
+[]\T1/ppl/m/n/12 Ashley Gullen.  Mul-ti-player tu-to-rial.  [][]$\T1/cmtt/m/n/1
+2 https : / / www . scirra . com /$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--217
+$\T1/cmtt/m/n/12 tutorials / 892 / multiplayer-[]tutorial-[]1-[]concepts / page
+-[]1$[][]\T1/ppl/m/n/12 , March
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 224--227
-[]\T1/ptm/m/n/12 Unity net-work-ing fea-ture sup-port.  [][]$\T1/pcr/m/n/12 htt
-p : / / docs . unity3d . com /$
+[]\T1/ppl/m/n/12 Unity net-work-ing fea-ture sup-port.  [][]$\T1/cmtt/m/n/12 ht
+tp : / / docs . unity3d . com /$
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 229--232
-[]\T1/ptm/m/n/12 Websocket-sharp plu-gin for unity.  [][]$\T1/pcr/m/n/12 https 
-: / / github . com / sta /$
+[]\T1/ppl/m/n/12 Websocket-sharp plu-gin for unity.  [][]$\T1/cmtt/m/n/12 https
+ : / / github . com / sta /$
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 234--237
-[]\T1/ptm/m/n/12 Unity statis-tics and pub-lic re-la-tions.  [][]$\T1/pcr/m/n/1
-2 https : / / unity3d . com /$
+[]\T1/ppl/m/n/12 Unity statis-tics and pub-lic re-la-tions.  [][]$\T1/cmtt/m/n/
+12 https : / / unity3d . com /$
+ []
+
+
+Underfull \hbox (badness 1127) in paragraph at lines 244--247
+[]\T1/ppl/m/n/12 Unity 2d de-vel-op-ment fo-rum sec-tion.  [][]$\T1/cmtt/m/n/12
+ http : / / forum . unity3d . com /$
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 249--253
-$\T1/pcr/m/n/12 threads / where-[]to-[]start-[]2d-[]toolkit-[]or-[]platformer-[
-]pro . 380770/$[][]\T1/ptm/m/n/12 .
+$\T1/cmtt/m/n/12 threads / where-[]to-[]start-[]2d-[]toolkit-[]or-[]platformer-
+[]pro . 380770/$[][]\T1/ppl/m/n/12 .
+ []
+
+[51]
+Underfull \hbox (badness 10000) in paragraph at lines 265--269
+[]\T1/ppl/m/n/12 Average house-hold net-work band-width in the united king-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 265--269
-[]\T1/ptm/m/n/12 Average house-hold net-work band-width in the united king-
+\T1/ppl/m/n/12 dom.  [][]$\T1/cmtt/m/n/12 http : / / www . ispreview . co . uk 
+/ index . php / 2015 / 02 /$
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 265--269
-\T1/ptm/m/n/12 dom.  [][]$\T1/pcr/m/n/12 http : / / www . ispreview . co . uk /
- index . php / 2015 / 02 /$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 265--269
-$\T1/pcr/m/n/12 ofcom-[]average-[]uk-[]home-[]broadband-[]speeds-[]slowly-[]rea
-ch-[]23mbps .$
- []
-
-[49]
-Underfull \hbox (badness 10000) in paragraph at lines 340--345
-[]\T1/ptm/m/n/12 Yevhen Shylo.  Net-work ad-dress trans-la-tion.  \T1/ptm/m/it/
-12 Sci-en-tific Re-
+$\T1/cmtt/m/n/12 ofcom-[]average-[]uk-[]home-[]broadband-[]speeds-[]slowly-[]re
+ach-[]23mbps .$
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 340--345
-\T1/ptm/m/it/12 port - Tech-no-log-i-cal Con-fer-ence\T1/ptm/m/n/12 , 3(1):79, 
-Novem-ber 2015.
+[]\T1/ppl/m/n/12 Yevhen Shylo.  Net-work ad-dress trans-la-tion.  \T1/ppl/m/it/
+12 Sci-en-tific
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 340--345
+\T1/ppl/m/it/12 Re-port - Tech-no-log-i-cal Con-fer-ence\T1/ppl/m/n/12 , 3(1):7
+9, Novem-ber 2015.
+ []
+
+[52]
+Underfull \hbox (badness 7030) in paragraph at lines 347--353
+[]\T1/ppl/m/n/12 Phil Ed-holm.  Where are the real we-brtc apps?  [][]$\T1/cmtt
+/m/n/12 http :$
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 347--353
-[]\T1/ptm/m/n/12 Phil Ed-holm.  Where are the real we-brtc apps?  [][]$\T1/pcr/
-m/n/12 http :$
+$\T1/cmtt/m/n/12 / / www . webrtcworld . com / topics / from-[]the-[]experts / 
+articles /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--353
-$\T1/pcr/m/n/12 / / www . webrtcworld . com / topics / from-[]the-[]experts / a
-rticles /$
+Underfull \hbox (badness 1852) in paragraph at lines 347--353
+$\T1/cmtt/m/n/12 375465-[]where-[]the-[]real-[]webrtc-[]apps . htm$[][]\T1/ppl/
+m/n/12 , 2014.  [Ac-cessed: 2016-
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 830.
- [50]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 830.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 862.
+ [53]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 862.
  (skeleton.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 830.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 830.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 862.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 862.
 Package rerunfilecheck Info: File `skeleton.out' has not changed.
-(rerunfilecheck)             Checksum: 60FB17B3D11DA1AAA31A7DE5EC37AF83;2936.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 830.
+(rerunfilecheck)             Checksum: 7E2EEDE481AD7A804D48AB93820622C6;3188.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 862.
  ) 
 Here is how much of TeX's memory you used:
- 8334 strings out of 493634
- 125031 string characters out of 3141302
- 221939 words of memory out of 3000000
- 11367 multiletter control sequences out of 15000+200000
- 77824 words of font info for 100 fonts, out of 3000000 for 9000
+ 9087 strings out of 493634
+ 133631 string characters out of 3141302
+ 236398 words of memory out of 3000000
+ 12078 multiletter control sequences out of 15000+200000
+ 32548 words of font info for 70 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 43i,16n,71p,903b,505s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,16n,71p,936b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exi
 st, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 , replaced by a fixed one
 
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
-/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/
-utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb
->
-Output written on skeleton.pdf (50 pages, 1811721 bytes).
+ <C:\Users\Gebruiker\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
+0\ectt1200.pk> <C:\Users\Gebruiker\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
+appen\ec\dpi600\ectt1000.pk>{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/
+fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+r8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on skeleton.pdf (53 pages, 1862705 bytes).
 PDF statistics:
- 888 PDF objects out of 1000 (max. 8388607)
- 217 named destinations out of 1000 (max. 500000)
- 430 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1020 PDF objects out of 1200 (max. 8388607)
+ 222 named destinations out of 1000 (max. 500000)
+ 451 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,6 +1,7 @@
 % to choose your degree
 % please un-comment just one of the following
-\documentclass[bsc,frontabs,twoside,singlespacing,parskip,deptreport]{infthesis}     % for BSc, BEng etc.
+% \documentclass[bsc,frontabs,twoside,singlespacing,parskip,deptreport]{styles/infthesis}     % for BSc, BEng etc.
+\documentclass[bsc, 12pt, twoside, singlespacing, parskip, abbrevs, notimes, normalheadings, logo]{styles/infthesis}
 % \documentclass[minf,frontabs,twoside,singlespacing,parskip,deptreport]{infthesis}  % for MInf
 
 \usepackage{float} %for image positioning
@@ -12,20 +13,30 @@
     citecolor={blue!50!black},
     urlcolor={blue!80!black}
 }
+
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage[utf8]{inputenc}
+\usepackage{array, booktabs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage[round]{natbib}
+\title{A Network Extension for GameMaker HTML5}
+\author{Teun Kokke}
+\course{Software Engineering} 
+\project{Honours Project Dissertation} % CS&E, E&SE, AI&L
+
+\date{\today}
+
+
 \usepackage[T1]{fontenc} %fix < > characters
 \usepackage{footnote} %footnotes in tables
 \usepackage{tabularx} %tables with fixed width
 %\renewcommand{\familydefault}{\sfdefault}
 
+\renewcommand*\rmdefault{ppl}
+
 \begin{document}
-
-\title{A Network Extension for GameMaker HTML5}
-
-\author{Teun Kokke\\s1242775}
-\course{Software Engineering} 
-\project{Undergraduate Dissertation} % CS&E, E&SE, AI&L
-
-\date{\today}
 
 \abstract{
 summarising the report\\
@@ -36,13 +47,12 @@ summarising the report\\
 % REMOVE THESE >>>>
 \section*{TODO}
 \begin{itemize}
-\item write literature review and development section
-\item Possibly add new implementation features / clean up existing implementations.
-\item clarify thesis and write intro
-\item Record video of working implementation
-\item Create proper template for other developers to use + writing down a guide how to use it, where to start etc.
-\item Release the project to the community
-\item Finalize report
+\item Possibly add new implementation features / clean up existing implementations. (est. 5 hours)
+\item clarify thesis, write conclusion and intro and include definitions to list of acronyms (est. 5 hours)
+\item Record video of working implementation (est. 2 hours)
+\item Create template for other developers to use + writing down a guide how to use it, where to start etc. (est. 3 hours)
+\item Release the project to the community (est. 1 hour)
+\item Finalizing and polishing the report, including transforming images to vector images, fixing alignment and spacing issues, re-reading for fluency and possibly shuffling subsections (est. 8 hours)
 \end{itemize}
 % <<<< REMOVE THESE
 
@@ -96,54 +106,18 @@ One of many developer tools that aims for exactly these two ideals is GameMaker 
 This paper therefore investigates the quality of related software. It also demonstrates how an extension can be added to GameMaker, one that will add networking features to HTML5 games and applications. Additionally, the server's behaviour will be assessed based on the specified setup, and suggestions will be added based on other literature in order to improve this further.
 
 \chapter{Background}
-The following chapter covers underlying knowledge that needs to be understood and considered when developing an extension for GameMaker. It explains basic demands of typical game networks, protocols and mechanisms for data communication through a network, facts about GameMaker and quality attributes that are central throughout the development of this project.
 
-In a typical networked game scenario, game clients are described by the server as a set of parameters. These parameters represent the "game state". Clients keep pinging and updating the server with their own state. When the clients and server the game state become desynchronised, fairness is diminished \cite{Fairness_and_Playability} and the user experience of the game may be impaired.
+\section{Advances in Browser Game Development}
+The following section introduces new features that arise due to advances in web browser technologies, and how these advances contribute to a new era in game development. We will explain what GameMaker is, how it uses these new technologies, and point out its current limitation in terms of creating networked applications for browser games.
 
-\section{Network Demands}
-Different applications often have different demands from the network. One must therefore consider the technical aspect of the network. For example, fairness in a game is crucial for an enjoyable gameplay. This is especially true for games containing elements where speed or response time is important \cite{Fairness_and_Playability}. Servers in modern high-end multiplayer games are typically loaded from several hundreds, to a few thousand simultaneously connected clients, depending on the level of interaction between the clients.
-
-On various games, clients may automatically get disconnected from the server when their ping or roundtrip time (RTT) reaches beyond a certain threshold as these clients potentially disrupt the gameplay. This threshold can vary depending on the game. Fast-paced games such as Call of Duty and Battlefield tend to have this threshold set around 150ms - 200ms.
-
-\section{TCP}
-Protocols play a big part in deciding the properties of the network speed and quality. TCP is a highly reliable connection-oriented and error-free host-to-host data transmission protocol. After establishing a connection using an event referred to as the "three way handshake" \cite{handshake}, it keeps the connection open \cite{tcp_open_connection}. It automatically takes care of handling retransmission of dropped packets and acknowledgement of arrived packets. For this reason it is one of the most common transmission protocols in applications that require reliable data transmissions. One down-side however is that due to the additional error-handling, the packets are relatively large and thus cause some overhead.
-
-\section{UDP}
-UDP is a connectionless transmission protocol that, unlike TCP, provides a "minimal, unreliable, best-effort message-passing transport to applications" \cite{udp_connectionless}. It provides no guarantees for delivery and no protection from duplication. Despite this clear down-side, due to the small header size it may often be useful for applications that value the speed of the connection above reliability of the content.
-
-\section{NAT traversal}
-Due to the limitation of IPv4 addresses, networks often consist of local networks; groups of devices that are mapped to the same global IP address. Network address translation (NAT) is a mechanism that takes care of assigning IP addresses to local devices within the network, whilst maintaining the same global IP to identify the local network as a whole.
-
-As UDP does not maintain an open connection between the hosts, packets have to pass the NAT repeatedly, and can easily be blocked by the firewall. 
-NAT traversal techniques such as "hole punching" are therefore established, although they are not applicable in all NAT devices or situations \cite{udp_holepunching}.
-
-\section{WebSocket}
-WebSocket is a protocol that "provides a method to push messages from client to server efficiently and with a simple syntax" \cite{WebSocket}. It was standardized by the IETF in December 2011, providing a full-duplex (two-way) communication between client and server through a single TCP connection. The goal is to "provide a mechanism for browser-based applications that need two-way communication with servers that does not rely on opening multiple HTTP connections" \cite{websocket_communication}. This is done by setting up a socket, which is essentially a door that leads to a specific host, through which data can be sent.
-
-\section{Socket.io}
-Socket.io is an event-driven JavaScript library that can be used both on the client's browser, and a server \cite{Socketio}. It supports features that allow sending and receiving data using the WebSocket protocol, without interruption of the code flow \cite{Socketio_Benchmark, Socketio_TCP_Benchmark}. For this reason, it is \textbf{often used in combination with Node.js}.
-
-\section{WebRTC}
-As aforementioned, Websocket is a protocol built on TCP. However, it has a sibling: WebRTC. WebRTC is built on UDP, allowing scalable and fast networking opportunities, but is still vaguely "under construction" \cite{Browser_Networking}. Although certain web applications have already been created with WebRTC (mainly for P2P video streaming \cite{P2P_Video_Streaming_HTML5_WebRTC}), no proper standards are out yet \cite{Web_Apps_Superior}.
-
-This, combined with requirement of manually specifying the rules of communication, as well as the fact that WebRTC has to circumvent network security and privacy in order to allow web browsers to transmit data over UDP \cite{P2P_Video_Streaming_HTML5_WebRTC}, makes UDP many times \textbf{more complicated} for developers to handle efficiently.
-
-\section{HTML5}
+\subsection{HTML5}
 HTML5 is a raising web standard released in 2014 by the W3C. It is designed to be \textbf{cross-platform} and runs on most modern web browsers such as Google Chrome, Mozilla Firefox, Apple Safari, and Opera \footnote{HTML5 supported browsers are found at \url{https://html5test.com/results/desktop.html}}. Also mobile web browsers that come preinstalled on iPhones, iPads and Android phones support HTML5.
 
 It superseeds its predecessors HTML4 and XHTML1.1 with the aim to reduce the dependence of functionality from third-party plugins such as Flash and Java applets, which are either deprecated or entirely unsupported by most devices \cite{Death_Flash_Java}.
 
 Scripting is replaced in HTML5 by markup where possible, causing the world of browser-gaming to change rapidly. One of the the newly introduced features is the <canvas> element, which is defined as "a resolution-dependent bitmap canvas which can be used for rendering graphs, game graphics or other visual images on the fly" \cite{HTML5_Up_and_Running}. \textbf{The element can thus be used to draw graphics in JavaScript with the "Canvas API"} \cite{Canvas_API}.
 
-\section{Node.js}
-Traditionally, servers create a separate thread for each client, therefore rapidly running out of RAM and keeping clients on hold until memory for a new thread is released \cite{Why_Nodejs}.
-
-Node.js is a JavaScript interface with the aim to create "real-time websites with push capability" allowing developers to work in the "non-blocking event-driven I/O paradigm" \cite{Why_Nodejs}. This means that developers can use it to create real-time web applications where a server and client can both initiate communication, and that both can exchange data freely without repeatedly having to refresh the webpage.
-
-In short, new client connections get allocated to a heap in the memory and client events are handled on a single thread by the server's operating system without choking the (Node.js) event loop. This therefore allows servers running Node.js to maintain thousands of concurrent connections without running out of RAM memory \cite{Node_Stress_Test, NodeJS_Image}, as opposed to the traditional, less scalable servers.
-
-
-\section{GameMaker}
+\subsection{GameMaker}
 GameMaker by YoYoGames is a software creation tool, primarily with the aim to simplify, teach, and speed up game and application development for novice software developers and programmers. There have been several hits on the market for games developed with Gamemaker such as "Reflections", "Rick O'Shea" and "Simply Solitaire" \cite{Gamemaker_DnD}.
 
 Developing applications and games in GameMaker is cheap, simple to learn and flexible to use, making the software demanded by small teams, novice developers and even professionals \cite{Mark_Overmars}. Sandy Duncan, the founder and former chief executive officer of YoYoGames stated in a phone interview that they have never lost money on a game that they developed with their technology \cite{Gamemaker_DnD}.
@@ -155,6 +129,50 @@ Some of the features that are normally supported by GameMaker are however lost d
 An attempt (and in fact a well established blueprint for this project) was developed by a member of the YoYoGames community. It is however a discontinued project, considered to be in alpha stage and fails to be used by certain developers \cite{gamemaker_networking_attempt} as the setup contains errors and provides no guidance towards a fix. It is a basic setup that attempts to broadcasts messages as they come in without providing any further underlying structure.
 
 \paragraph*{The main GameMaker community forum} is hosted directly by YoYoGames \cite{yoyogames_forum}, serving 280,000 registered users recorded in January 2016, with a combined total of 220,000 topics and 3,480,000 posts. There also exists a notable GameMaker forum in the Netherlands \cite{dutch_gamemaker_forum} which hosts an additional 557,000 posts for 56,000 topics for almost 18,000 members.
+
+\subsection{Network Expectations}
+Applications often have different demands from the network. One must therefore consider the technical aspect of the network. For example, fairness in a game is crucial for an enjoyable gameplay. This is especially true for games containing elements where speed or response time is important \cite{Fairness_and_Playability}. Servers in modern high-end multiplayer games are typically loaded from several hundreds, to a few thousand simultaneously connected clients, depending on the level of interaction between the clients.
+
+On various games, clients may automatically get disconnected from the server when their ping or roundtrip time (RTT) reaches beyond a certain threshold as these clients potentially disrupt the gameplay. This threshold can vary depending on the game. Fast-paced games such as Call of Duty and Battlefield tend to have this threshold set around 150ms - 200ms.
+
+\section{Data Transportation Mechanisms}
+The following section covers underlying knowledge in terms of the transport protocols TCP and UDP, as well as arising issues due to NAT traversal.
+
+\subsection{TCP}
+Protocols play a big part in deciding the properties of the network speed and quality. TCP is a highly reliable connection-oriented and error-free host-to-host data transmission protocol. After establishing a connection using an event referred to as the "three way handshake" \cite{handshake}, it keeps the connection open \cite{tcp_open_connection}. It automatically takes care of handling retransmission of dropped packets and acknowledgement of arrived packets. For this reason it is one of the most common transmission protocols in applications that require reliable data transmissions. One down-side however is that due to the additional error-handling, the packets are relatively large and thus cause some overhead.
+
+\subsection{UDP}
+UDP is a connectionless transmission protocol that, unlike TCP, provides a "minimal, unreliable, best-effort message-passing transport to applications" \cite{udp_connectionless}. It provides no guarantees for delivery and no protection from duplication. Despite this clear down-side, due to the small header size it may often be useful for applications that value the speed of the connection above reliability of the content.
+
+\subsection{NAT traversal}
+Due to the limitation of IPv4 addresses, networks often consist of local networks; groups of devices that are mapped to the same global IP address. Network address translation (NAT) is a mechanism that takes care of assigning IP addresses to local devices within the network, whilst maintaining the same global IP to identify the local network as a whole.
+
+As UDP does not maintain an open connection between the hosts, packets have to pass the NAT repeatedly, and can easily be blocked by the firewall. 
+NAT traversal techniques such as "hole punching" are therefore established, although they are not applicable in all NAT devices or situations \cite{udp_holepunching}.
+
+\section{Networking at the Application Level}
+The following section covers several technologies that can be used by developers to create network applications.
+
+In a typical networked game scenario, game clients are described by the server as a set of parameters. These parameters represent the "game state". Clients keep pinging and updating the server with their own state. When the clients and server the game state become desynchronised, fairness is diminished \cite{Fairness_and_Playability} and the user experience of the game may be impaired.
+
+\subsection{WebSocket}
+WebSocket is a protocol that "provides a method to push messages from client to server efficiently and with a simple syntax" \cite{WebSocket}. It was standardized by the IETF in December 2011, providing a full-duplex (two-way) communication between client and server through a single TCP connection. The goal is to "provide a mechanism for browser-based applications that need two-way communication with servers that does not rely on opening multiple HTTP connections" \cite{websocket_communication}. This is done by setting up a socket, which is essentially a door that leads to a specific host, through which data can be sent.
+
+\subsection{Socket.io}
+Socket.io is an event-driven JavaScript library that can be used both on the client's browser, and a server \cite{Socketio}. It supports features that allow sending and receiving data using the WebSocket protocol, without interruption of the code flow \cite{Socketio_Benchmark, Socketio_TCP_Benchmark}. For this reason, it is \textbf{often used in combination with Node.js}.
+
+\subsection{WebRTC}
+As aforementioned, Websocket is a protocol built on TCP. However, it has a sibling: WebRTC. WebRTC is built on UDP, allowing scalable and fast networking opportunities, but is still vaguely "under construction" \cite{Browser_Networking}. Although certain web applications have already been created with WebRTC (mainly for P2P video streaming \cite{P2P_Video_Streaming_HTML5_WebRTC}), no proper standards are out yet \cite{Web_Apps_Superior}.
+
+This, combined with requirement of manually specifying the rules of communication, as well as the fact that WebRTC has to circumvent network security and privacy in order to allow web browsers to transmit data over UDP \cite{P2P_Video_Streaming_HTML5_WebRTC}, makes UDP many times \textbf{more complicated} for developers to handle efficiently.
+
+\subsection{Node.js}
+Traditionally, servers create a separate thread for each client, therefore rapidly running out of RAM and keeping clients on hold until memory for a new thread is released \cite{Why_Nodejs}.
+
+Node.js is a JavaScript interface with the aim to create "real-time websites with push capability" allowing developers to work in the "non-blocking event-driven I/O paradigm" \cite{Why_Nodejs}. This means that developers can use it to create real-time web applications where a server and client can both initiate communication, and that both can exchange data freely without repeatedly having to refresh the webpage.
+
+In short, new client connections get allocated to a heap in the memory and client events are handled on a single thread by the server's operating system without choking the (Node.js) event loop. This therefore allows servers running Node.js to maintain thousands of concurrent connections without running out of RAM memory \cite{Node_Stress_Test, NodeJS_Image}, as opposed to the traditional, less scalable servers.
+
 
 \section{Quality Attributes}
 Despite having considered the basics of some underlying functional requirements and technologies, there also other aspects that need to be considered when developing a piece of software, namely the "quality attributes". Quality attributes are factors that represent non-functional requirements of a software system. This entails performance details on how the software behaves at run-time and terms of how well is designed. Definitions to some quality attributes that are especially important to this project and will be referred back to in the future are listed in table \ref{table:quality_attributes} below.
@@ -175,13 +193,12 @@ Despite having considered the basics of some underlying functional requirements 
 \label{table:quality_attributes}
 \end{table}
 
-
 \chapter{Related Tools}
 In this chapter, we identify competitors to GameMaker. We discover how they, despite offering many valuable features, GameMaker remains one of the better tools for novice developers that wish to create 2D browser games at a fast pace.
 
 Being a cross-platform game development tool primarily for 2D graphically oriented games, GameMaker has many competitors. It is therefore sensible for developers to first consider using game developing tools that support networking features natively. Although, looking for "the best" development tool is unreasonable, as this is a matter of personal preference. Before being able to investigate pros and cons between gamemaker and related game development tools, appropriate competitors must first be identified.
 
-Note that GameMaker does natively support networking functionality for non-browser games. However we must remind ourselves of the aim of this project: creating a networking extension to improve GameMaker's functionality \textbf{for developing 2D browser games}. For this reason, this paper will consider GameMaker to be a development tool for browser games.
+Note that GameMaker does natively support networking functionality for non-browser games. However we must remind ourselves of the aim of this project: creating a networking extension to improve GameMaker's functionality \textbf{for developing 2D browser games}. For this reason, we will consider GameMaker to be a development tool for browser games.
 
 Unbiased sources were used in order to find the most related software for these purposes. These sources collect user feedback for the browser-game development tools. Their ratings were established by allowing users to criticise tools based on their personal experience, and apply a score. The review system of html5gameengine.com \cite{html5_gamedev_tools} represents that of the Google Play Store \cite{Google_Play_Store} and the Apple App Store \cite{Apple_App_Store}, and may therefore be a somewhat reasonable method for finding the more commonly used tools.
 
@@ -261,9 +278,9 @@ Although the five tools assist in the development, they do not compare with Game
 %discussion of work undertaken, sub-problems, solutions, difficulties
 %\\- concentrated discussions for implementation principles and aspects
 %\\- clarify WHAT WAS COMPLETED, and what wasnt.
-The following chapter describes the development process of three components: the extension, along with a matching client and server. The chapter gives a brief outline of both functional and non-functional requirements of each of these components, as well as the decisions made on how these are actualised.
+The following chapter describes the development process of three components: the extension, a matching client, and the server. The chapter gives a brief outline of both functional and non-functional requirements of each of these components, as well as the decisions that were made made to ensure these requirements are met.
 
-We then dive deeper into the actual implementation details, with the aim to teach the reader how the extension can be utilised, modified and expanded. Interaction patterns and sample code snippets are provided for each of the components, after which the actual resulting programs are displayed.
+We then dive deeper into the actual implementation details, with the aim to teach the reader how the extension can be utilised, modified and expanded in order to create his/her own multiplayer browser game using GameMaker. Interaction patterns and sample code snippets are therefore provided for each of the components, and working applications will be showcased.
 
 %about the high level design ideas / structure and templates for other developers, make clear connection with literature review
 \section{Prior Considerations and Design Decisions}
@@ -275,6 +292,20 @@ We then dive deeper into the actual implementation details, with the aim to teac
 A vital part of this project is to keep track of progress. During the development I have been subject to travelling and using a large variety of devices. The project is a combination of many smaller projects, and the progress of each of these needs to be carefully organised and controlled.
 
 Therefore, ensuring consistency in these areas was taken care of by making the choice of using a version control system. A private Github \cite{github} repository was therefore setup.
+
+
+\subsection{Functional Requirements and Tasks}
+\paragraph*{Client tasks:}
+The client has to be executable in the browser. It should be an application or game which uses the extension in order to interact with other existing clients. The interaction consists of transmitting and receiving small messages containing variables, due to which the network bandwidth is not counted as an important factor.
+
+\paragraph*{Extension tasks:}
+The functions inside the extension should be easily callable from within the GameMaker interface. They should keep the "networking knowledge" requirement of the developer to a minimum. The extension also has to be able to execute in the browser as part of the client, and execute socket send- and receive commands while doing so.
+
+Optimally, the networking functions should be similar to those of the native networking functions that would be supported on non-browser applications. This way developers merely need to translate the networking functions without having to re-think, re-structure or entirely  re-write the functionality of their original code if they have already built an application that supports networking on different platforms.
+
+\paragraph*{Server tasks:}
+The server must mimic the architectural structure of the client. It has to keep track of the state of each of the connected clients. it should also act as centralized controller that allows instances to interact with other instances. These instances should in turn be synchronized with their referenced instances on the clients. Therefore, a change in the instance on the server should trigger a change for its representative instance in the clients.
+
 
 \subsection{Non-Functional Requirements and Desirable Quality Attributes}
 The project consists of a client, networking extension and server. Each of these systems has to conform to and prioritize certain non-functional requirements (see table \ref{table:quality_attributes}).
@@ -289,18 +320,6 @@ Performance is an important aspect for the extension, without which user satisfa
 The server matches the desired qualities of both the client and the extension, in the sense that it needs to be easily understood by the developer. The developer should be able to manage and modify the server settings, maintain the functionality and reuse existing methods without having to fear breaking the core structure. It needs to be scalable as the performance might decrease when large numbers of clients may wish to be connected. 
 
 Also security becomes an important aspect of the server as it may receive unintended or malicious requests, it is however not considered to be of primary importance in this project and developers may prefer to implement their own sercurity features at the application level. Such feature could involve including secret keys in the interaction messages between the client and server in order to ensure authenticity of these messages and their senders.
-
-\subsection{Functional Requirements and Tasks}
-\paragraph*{Client tasks:}
-The client has to be executable in the browser. It should be an application or game which uses the extension in order to interact with other existing clients. The interaction consists of transmitting and receiving small messages containing variables, due to which the network bandwidth is not counted as an important factor.
-
-\paragraph*{Extension tasks:}
-The functions inside the extension should be easily callable from within the GameMaker interface. They should keep the "networking knowledge" requirement of the developer to a minimum. The extension also has to be able to execute in the browser as part of the client, and execute socket send- and receive commands while doing so.
-
-Optimally, the networking functions should be similar to those of the native networking functions that would be supported on non-browser applications. This way developers merely need to translate the networking functions without having to re-think, re-structure or entirely  re-write the functionality of their original code if they have already built an application that supports networking on different platforms.
-
-\paragraph*{Server tasks:}
-The server must mimic the architectural structure of the client. It has to keep track of the state of each of the connected clients. it should also act as centralized controller that allows instances to interact with other instances. These instances should in turn be synchronized with their referenced instances on the clients. Therefore, a change in the instance on the server should trigger a change for its representative instance in the clients.
 
 
 \subsection{Further considerations}
@@ -318,7 +337,7 @@ The main focus in the extension is to match GameMaker's primary intention: makin
 
 \section{Implementation}
 \subsection{Server}
-The core functionality of the server that takes care of incoming messages and connection requests is written in only a few components. The general interaction flow is displayed in figure \ref{fig:server_sequence_diagram}. Each component is aimed to be easily maintained by assigning it with only a single responsibility. These responsibilities are clarified directly in the naming of the variables and methods which contributes to the conceptual integrity of the code.
+The core functionality of the server that takes care of incoming messages and connection requests is written in only a few components. The general interaction flow is displayed in Figure \ref{fig:server_sequence_diagram}. Each component is aimed to be easily maintained by assigning it with only a single responsibility. These responsibilities are clarified directly in the naming of the variables and methods which contributes to the conceptual integrity of the code.
 
 \begin{figure}[H]
 % \centering% default with `floatrow`
@@ -326,20 +345,19 @@ The core functionality of the server that takes care of incoming messages and co
 \caption{Sequence diagram displaying the overall server logic. Note that clients can asynchronously and repeatedly send messages to the server after having received their server acknowledgement (ACK) packet. The \texttt{Msg\_Type} can be anything such as \texttt{chat\_message}, \texttt{update\_user} or \texttt{client\_disconnected}, and the action taken by the server is specified by the player object method, referenced by the action dictionary on the server.}
 \label{fig:server_sequence_diagram}
 \end{figure}
-
 More detailed, the server logic behaves as follows:
 \begin{enumerate}
-\item Upon receiving an incoming connection request, the server instantiates a client in which initially the client's socket and client\_id is stored. The socket will be connected directly to the client machine that sent the connection request. (figure \ref{fig:server_core})
-\item This instance is then added to the list of already-tracked clients on the server (figure \ref{fig:server_core})
-\item If at any time the server receives a message from this (or any known) client\footnote{Message types are defined in fig. \ref{fig:server_message_tags}}, the server will read the first line from the buffer containing the purpose of this message and store it as message\_code (e.g. ping, send-message, update-user) (figure \ref{fig:server_core})
-\item The message\_codes are directly mapped to an associated action (figure \ref{fig:server_core})
-\item Depending on the action (figure \ref{fig:server_actions} defined in \ref{fig:server_message_tags}), the client instance will receive a function call that handles the message. (figure \ref{fig:server_player_functions})
+\item Upon receiving an incoming connection request, the server instantiates a client in which initially the client's socket and client\_id is stored. The socket will be connected directly to the client machine that sent the connection request (Figure \ref{fig:server_core}).
+\item This instance is then added to the list of already-tracked clients on the server (Figure \ref{fig:server_core}).
+\item If at any time the server receives a message from this (or any known) client\footnote{Message types are defined in Figure \ref{fig:server_message_tags}}, the server will read the first line from the buffer containing the purpose of this message and store it as message\_code (e.g. ping, send-message, update-user) (Figure \ref{fig:server_core}).
+\item The message\_codes are directly mapped to an associated action (Figure \ref{fig:server_core}).
+\item Depending on the action (Figure \ref{fig:server_actions} defined in \ref{fig:server_message_tags}), the client instance will receive a function call that handles the message (Figure \ref{fig:server_player_functions}).
 \end{enumerate}
 
 \begin{figure}[H]
 % \centering% default with `floatrow`
 \includegraphics[scale=0.72]{images/server_code.jpg}
-\caption{Core functionality of the server network setup, responsible for connecting new clients, creating reference instances with their details connection details (1, 2), listening to their incoming messages on the server (3) and handling them accordingly (4, messages codes are defined in messages.js. see figure \ref{fig:server_message_tags}). }
+\caption{Core functionality of the server network setup, responsible for connecting new clients, creating reference instances with their details connection details (1, 2), listening to their incoming messages on the server (3) and handling them accordingly (4, messages codes are defined in messages.js. see Figure \ref{fig:server_message_tags}). }
 \label{fig:server_core}
 \end{figure}
 
@@ -353,11 +371,11 @@ More detailed, the server logic behaves as follows:
 \begin{figure}[H]
 % \centering% default with `floatrow`
 \includegraphics[scale=0.75]{images/server_player_functions.jpg}
-\caption{Low level methods the player instance on the server can perform. These methods are called by the incoming message block (figure \ref{fig:server_core} point 4), defined in the action dictionary (figure \ref{fig:server_actions})}
+\caption{Low level methods the player instance on the server can perform. These methods are called by the incoming message block (Figure \ref{fig:server_core} point 4), defined in the action dictionary (Figure \ref{fig:server_actions})}
 \label{fig:server_player_functions}
 \end{figure}
 
-The client class (Player) is made to be synchronized with the state of its corresponding client, such that any change in the actual client application will also modify the representative client state in the server (figure \ref{fig:server_player_construct}). This way, the developer no longer needs to worry about redundantly transmitting all variables to all other clients, including those variables that never changed since a previous transmission, because the server will still have these in memory. Another benefit to this is that the client is allowed to send smaller messages.
+The client class (Player) is made to be synchronized with the state of its corresponding client, such that any change in the actual client application will also modify the representative client state in the server (Figure \ref{fig:server_player_construct}). This way, the developer no longer needs to worry about redundantly transmitting all variables to all other clients, including those variables that never changed since a previous transmission, because the server will still have these in memory. Another benefit to this is that the client is allowed to send smaller messages.
 
 The server has a template set-up, supporting features such as updating the client's state on the server, informing other clients with this client's state and broadcasting messages. These features can easily be modified and extended without with new functionality depending on any specific need the developer may have.
 
@@ -379,7 +397,6 @@ The server has a template set-up, supporting features such as updating the clien
 
 As the server keeps track of all the clients that are connected to it, clients can easily message specific clients simply by triggering a function call between any clients. Also the effect of the function is to inform the actual client with a message.
 
-\subsection{Client}
 \subsection{The Extension}
 GameMaker is unable to use native support for establishing a connection to other hosts. This is where the extension comes in play.
 It is essentially a set of JavaScript functions that can be called externally from inside the GameMaker GUI in GameMaker's native programming language "GameMaker Language" (GML). These functions in turn provide the networking functionality.
@@ -421,7 +438,7 @@ When a message arrives, it gets automatically stored in the messages array. \tex
 When at any time, the buffer needs to be reused for sending a new message, \texttt{buffer\_clear()} must first be called to clear the content in the buffer. 
 
 \paragraph*{Creating a mapping}
-can be done directly in the GUI of GameMaker as displayed in figure \ref{fig:extension_folder}. After creating a new extension setup in the extensions directory, the previously specified extension files can be referenced. In each of the files, functions can be added that map GML functions to extension functions. Figure \ref{fig:xml_mapping} is part of the mapping xml file that displays how it looks in detail.
+can be done directly in the GUI of GameMaker as displayed in Figure \ref{fig:extension_folder}. After creating a new extension setup in the extensions directory, the previously specified extension files can be referenced. In each of the files, functions can be added that map GML functions to extension functions. Figure \ref{fig:xml_mapping} is part of the mapping xml file that displays how it looks in detail.
 
 \begin{figure}[H]
 \centering
@@ -450,8 +467,9 @@ The natively supported networking functions can easily be translated into the th
 \item read incoming messages
 \item disconnect hosts
 \end{itemize} 
+
 \begin{center}
-\begin{table}
+\begin{table}[H]
   \begin{tabular}{ | l | }
   \hline
 \textbf{Function Translations} \\
@@ -511,6 +529,17 @@ The natively supported networking functions can easily be translated into the th
 \end{center}
 
 
+\subsection{Client}
+In order for the networking features to work with any GameMaker client, one simply has to import the  extension \texttt{GMWebNet\_extension.gmez}. This can be done by \texttt{right-clicking the extensions folder $\Rightarrow$ Import Extension}. After selecting the extension file, all networking features will be automatically set-up and ready for use.
+
+Generally, any object can create and send messages to the server using the functions listed in table \ref{table:function_translations}. However it is considered to be good coding practise to create a special object \texttt{obj\_Network\_Controller}, generalized to take care of the single purpose of receiving incoming messages from the network. This object can then easily be re-used by other objects and even in different projects. By managing the single responsibility of this object, we ensure incoming packets are gathered and collected at a single centralized location. It is then also easier for other objects to know where to access this data from. Moreover, by ensuring no other components in the software are collecting data, coupling is decreased and cohesion of the code is increased, which are highly desirable software engineering traits as they make the code more managable.
+
+After initializing the connection using the function \texttt{wn\_connect(ip\_address, port)} provided by the extension, one only has to set-up a socket-listener loop which will respond as soon as a new message arrives. This is done using the function \texttt{wn\_receive\_message(socket)}, and when it returns a non-zero value, the incoming message can be read from the buffer line-by-line using the function \texttt{wn\_msgtype("S2C",wn\_buffer\_read())}.
+
+Exact implementation details can be found in the included GameMaker application files.
+
+After creating a game-like mechanism the application can be exported to the HTML5 target module with GameMaker, which automatically converts the project into a browser-executable javascript file. The extension will be integrated with this file, and continue to take care of handling the network.
+
 \section{Applications Developed with the Extension}
 %Explain about ownmade application using the extension, how it tests the given benchmarks (eg. delay, data, equality)
 \subsection{Benchmark Application}
@@ -520,7 +549,7 @@ Since then, it has evolved into supporting a variety of instances (virtual clien
 
 As the benchmarking application supports more than one virtual client that connects to the server, the benchmarker keeps track of the values of each of its virtual clients, calculating the averages, displaying these in a graph and creating logs for later evaluation.
 
-On the top-left of the figure \ref{fig:benchmark_gui} the global data can be seen. This data only regards the virtual clients (not all clients that may be running on other devices). 
+On the top-left of the Figure \ref{fig:benchmark_gui} the global data can be seen. This data only regards the virtual clients (not all clients that may be running on other devices). 
 
 The \texttt{CPU} value indicates the speed at which the CPU processes the code at runtime. This had to remain at a steady 60 in order to ensure no external variabilities would interfere with the experiments. Similarly, the \texttt{FPS} had to remain at a steady 30fps. This was the frame rate at which the application is drawing the GUI. If at any point the CPU or FPS would drop, this would indicate an external factor is affecting the program execution and will potentially corrupt the test results. Therefore, values that were collected when these values dropped would automatically be discarded.
 
@@ -540,7 +569,7 @@ The \texttt{total req/sec} therefore indicates how many messages are sent out to
 
 This application was used in the evaluation experiments in order to test the system's capabilities, such as the applied stress on the server with different varieties of concurrent connections, certain amounts of messages that need to be processed simultaneously, as well as recording the effect on the RTT when the client is located in different areas in the world.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 % \centering% default with `floatrow`
 \includegraphics[scale=0.75, angle=90]{images/benchmarker.jpg}
@@ -550,10 +579,10 @@ This application was used in the evaluation experiments in order to test the sys
 \end{figure}
 
 \subsection{Real Game Application}
+Short (optional) section explaining how the extension made a real game project have multiplayer capabilities for the browser.
+
 \subsection{Developer Template}
-
-
-
+Short section explaining the general idea about a developer template that provides basic networking features.
 
 
 
@@ -561,11 +590,11 @@ This application was used in the evaluation experiments in order to test the sys
 % -----------------------
 \chapter{Network Extension Evaluation}
 %description of experiments, presentation + (directly including) interpretation of the data
-In the following chapter, the extension is evaluated in terms of fairness and performance. The server manages to maintain few thousands of concurrent connections, and handle roughly 5000 messages per second over a long-time period before the packet round-trip time starts to visibly increase. 
+In the following chapter, the extension is evaluated in terms of fairness and performance. The server manages to maintain few thousands of concurrent connections, and handle roughly 5000 messages per second over a long-time period before the packet round-trip time starts to visibly increase, with an accepted rate of 8500 messages per second before the round-trip time starts to exceed 100ms. 
 
 These results are considered to be sufficient for any ordinary multiplayer browser game as most servers are required to host in a range of few hundreds to low thousands of players. 
 
-Long-distance connections are the main contributor to unfairness, but for this issue apart from distributing multiple servers across the globe or optimizing the physical link between the endpoints, no real solution is known. Any distance up to a few thousand kilometers is however found to provide an acceptable average roundtrip time of less than 100ms.
+Long-distance connections are the main contributor to unfairness, but for this issue apart from distributing multiple servers across the globe or optimizing the physical link between the endpoints, no real solution is known. With a standard server load, any distance up to a few thousand kilometers is however found to provide an acceptable average roundtrip time of less than 100ms.
 
 \section{Controlled Network}
 Controlled experiments were conducted in order allow making predictions of server behaviour when loaded under similar pressure in future occasions.
@@ -604,7 +633,7 @@ It is important to know how many clients a server can host simultaneously and ho
 \label{fig:cpu_rss}
 \end{figure}
 
-Figure \ref{fig:cpu_usage} indicates a logarithmic trend in the CPU usage on the server. This seems strange. Although this effect may be explained when combined with the CPU time in figure \ref{fig:cpu_time}. 
+Figure \ref{fig:cpu_usage} indicates a logarithmic trend in the CPU usage on the server. This seems strange. Although this effect may be explained when combined with the CPU time in Figure \ref{fig:cpu_time}. 
 
 The system aims to run the process at an optimal CPU usage amount, which can be noticed by the sudden change at a CPU usage of roughly 60\%. As soon as the server processor reaches this point, it will attempt to balance the usage by allowing more processing time for connecting the clients. The connection request processing time scales in a near-linear fashion, indicating clients to be connected one at a time. Occasional peaks and the slight increase in the trend of the CPU time may indicate the processor demanding extra time to process the increased number of connecting clients.
 
@@ -616,7 +645,7 @@ The concurrent connections experiments have indicated that the system scales wel
 
 \paragraph*{The setup}involves up to 5000 concurrently connected clients (10 physical instances simulating at most 500 clients each) all located within the same network. Clients can send 8-Byte packets, and each client sends these packets at regular time intervals. Each client measures the roundtrip time of the packet, and for each interval these roundtrip times are averaged.
 
-The values in graph \ref{fig:mean_rtt} were generated by modifying the rate at which each client transmits messages to the server (a sending higher rate resulting in more incoming messages per second at the server), for a fixed number of clients: 50, 100, 500, 1000, 2500 and 5000.
+The values in Figure \ref{fig:mean_rtt} were generated by modifying the rate at which each client transmits messages to the server (a sending higher rate resulting in more incoming messages per second at the server), for a fixed number of clients: 50, 100, 500, 1000, 2500 and 5000.
 
 Each time when the average RTT exceeds 200ms, the experiment is stopped. Beyond this point, the server appears to receive messages faster than it can handle, causing it to temporarily store the messages in a queue for later. However as clients keep sending packets at the same constant rate, resulting in a vicious cycle that causes the memory to eventually overflow.
 
@@ -628,9 +657,9 @@ Each time when the average RTT exceeds 200ms, the experiment is stopped. Beyond 
 \label{fig:mean_rtt}
 \end{figure}
 
-From graph \ref{fig:mean_rtt}, it can be observed that the messages maintain a stable 32ms roundtrip time until the server receives around 5000 messages per second. Beyond this point, the roundtrip time grows exponentially until it reaches >200ms, which is when the experiment is terminated.
+From Figure \ref{fig:mean_rtt}, it can be observed that the messages maintain a stable 32ms roundtrip time until the server receives around 5000 messages per second. Beyond this point, the roundtrip time grows exponentially until it reaches >200ms, which is when the experiment is terminated.
 
-Note that after receiving, these messages were broadcasted to all other clients. In order to further visualise the effect of broadcasting messages from each client to every other client, the mean RTT results are displayed separately in graph \ref{fig:broadcast_rtt_mean}, as well as their corresponding standard deviation in graph \ref{fig:broadcast_rtt_std}.
+Note that after receiving, these messages were broadcasted to all other clients. In order to further visualise the effect of broadcasting messages from each client to every other client, the mean RTT results are displayed separately in Figure \ref{fig:broadcast_rtt_mean}, as well as their corresponding standard deviation in Figure \ref{fig:broadcast_rtt_std}.
 
 \begin{figure}[H]
 \centering
@@ -644,11 +673,11 @@ Note that after receiving, these messages were broadcasted to all other clients.
 \centering
 % \centering% default with `floatrow`
 \includegraphics[scale=0.46]{images/test_SERVER_RTTstd.jpg}
-\caption{The standard deviation of the message roundtrip times as displayed in fig. \ref{fig:broadcast_rtt_mean} for all messages that pass through the server, for different numbers of specified clients (50, 100, 500, 1000, 2500 and 5000). Each client sending messages at a variable rate per second.}
+\caption{The standard deviation of the message roundtrip times as displayed in Figure \ref{fig:broadcast_rtt_mean} for all messages that pass through the server, for different numbers of specified clients (50, 100, 500, 1000, 2500 and 5000). Each client sending messages at a variable rate per second.}
 \label{fig:broadcast_rtt_std}
 \end{figure}
 
-The graphs in fig. \ref{fig:broadcast_rtt_mean} and fig. \ref{fig:broadcast_rtt_std} indicate as expected that with few concurrently connected clients and the same send rate per client, the server manages to broadcast many more messages (as fewer clients will be sending messages). It is important to remember that broadcasting is an intensive task with a complexity of O($n^{2}$) for n clients, as every client sends a message to every other client.
+The graphs in Figure \ref{fig:broadcast_rtt_mean} and Figure \ref{fig:broadcast_rtt_std} indicate as expected that with few concurrently connected clients and the same send rate per client, the server manages to broadcast many more messages (as fewer clients will be sending messages). It is important to remember that broadcasting is an intensive task with a complexity of O($n^{2}$) for n clients, as every client sends a message to every other client.
 
 Therefore, if n = 100 clients are connected to the server, and each wants to broadcast 100 messages per second, the server receives $100 \times 100$ (= 10,000) messages per second, and has to send $100 \times 100 \times 100$ (=1,000,000) messages every second (although the sender technically does not need to re-receive its own message, this difference is negligible).
 
@@ -737,18 +766,21 @@ Assuming the added delay is caused by the implied distance and packet-switching,
 % -----------------------
 \chapter{Conclusion and Future Work}
 \section{Conclusion}
-Number of total concurrently connected clients is insignificant compared to the effect the clients exert on the server by having constant interactions.
+The extension works, and can easily be implemented as its functionality is even more straight-forward than the native GameMaker networking features (which are unsupported by web browsers).
+
+The extension offers a scalable solution when combined with the provided server implementation using Node.js and Socket.io. This is proven by the fact that the number of total concurrently connected clients is insignificant compared to the effect the clients exert on the server by having constant interactions.
 
 Based on the experiments, developers can now keep in mind how to develop their application in an optimal way: which features mostly affect the network qualities.
 
 \subsection{Comparison of the Extended GameMaker Functionality with Related Work}
+Short section.
+
 \subsection{Criticism on the Implementation and Design Decisions}
 %make clear connection with the evaluation
-\section{Note to developers}
-%Note: add reminder that developers can setup peer-to-peer network by using the extension to serve as both server and client in their client application, but that these tests specifically consider the strength of each individual application acting as server.
+Short section.
 
 \section{Future Improvements}
-
+Short section. Mainly specifying that future improvements are expected at the application-level on the server and client without actually affecting the extension itself.
 
 
 
@@ -756,6 +788,7 @@ Based on the experiments, developers can now keep in mind how to develop their a
 
 % -----------------------
 % >>>> REMOVE THIS BLOCK
+Quick list of provided references...\\
 proper citations\\
 \cite{Multiplayer_Networking_modern_engine} %unused
 \cite{Fairness_and_Playability}

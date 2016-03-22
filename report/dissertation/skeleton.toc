@@ -1,43 +1,45 @@
 \contentsline {chapter}{\numberline {1}Introduction}{9}{chapter.1}
 \contentsline {chapter}{\numberline {2}Background}{11}{chapter.2}
-\contentsline {section}{\numberline {2.1}Network Demands}{11}{section.2.1}
-\contentsline {section}{\numberline {2.2}TCP}{12}{section.2.2}
-\contentsline {section}{\numberline {2.3}UDP}{12}{section.2.3}
-\contentsline {section}{\numberline {2.4}NAT traversal}{12}{section.2.4}
-\contentsline {section}{\numberline {2.5}WebSocket}{12}{section.2.5}
-\contentsline {section}{\numberline {2.6}Socket.io}{13}{section.2.6}
-\contentsline {section}{\numberline {2.7}WebRTC}{13}{section.2.7}
-\contentsline {section}{\numberline {2.8}HTML5}{13}{section.2.8}
-\contentsline {section}{\numberline {2.9}Node.js}{14}{section.2.9}
-\contentsline {section}{\numberline {2.10}GameMaker}{14}{section.2.10}
-\contentsline {section}{\numberline {2.11}Quality Attributes}{15}{section.2.11}
+\contentsline {section}{\numberline {2.1}Advances in Browser Game Development}{11}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}HTML5}{11}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}GameMaker}{12}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Network Expectations}{12}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Data Transportation Mechanisms}{13}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}TCP}{13}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}UDP}{13}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}NAT traversal}{13}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Networking at the Application Level}{14}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}WebSocket}{14}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Socket.io}{14}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}WebRTC}{14}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Node.js}{15}{subsection.2.3.4}
+\contentsline {section}{\numberline {2.4}Quality Attributes}{15}{section.2.4}
 \contentsline {chapter}{\numberline {3}Related Tools}{17}{chapter.3}
 \contentsline {section}{\numberline {3.1}Construct 2}{18}{section.3.1}
 \contentsline {section}{\numberline {3.2}Unity}{18}{section.3.2}
 \contentsline {section}{\numberline {3.3}Pixi.js, EaselJS, Quintus, Crafty.js and Phaser}{19}{section.3.3}
 \contentsline {chapter}{\numberline {4}Development}{21}{chapter.4}
 \contentsline {section}{\numberline {4.1}Prior Considerations and Design Decisions}{21}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Non-Functional Requirements and Desirable Quality Attributes}{21}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Functional Requirements and Tasks}{22}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.1}Functional Requirements and Tasks}{21}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Non-Functional Requirements and Desirable Quality Attributes}{22}{subsection.4.1.2}
 \contentsline {subsection}{\numberline {4.1.3}Further considerations}{23}{subsection.4.1.3}
 \contentsline {section}{\numberline {4.2}Implementation}{24}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Server}{24}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Client}{29}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}The Extension}{29}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}Applications Developed with the Extension}{32}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Benchmark Application}{32}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Real Game Application}{36}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Developer Template}{36}{subsection.4.3.3}
-\contentsline {chapter}{\numberline {5}Network Extension Evaluation}{37}{chapter.5}
-\contentsline {section}{\numberline {5.1}Controlled Network}{37}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Concurrent Connections}{38}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Message Broadcasting Performance}{39}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}Real Network Results}{42}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Location-based Delay Fairness}{42}{subsection.5.2.1}
-\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{45}{chapter.6}
-\contentsline {section}{\numberline {6.1}Conclusion}{45}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Comparison of the Extended GameMaker Functionality with Related Work}{45}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Criticism on the Implementation and Design Decisions}{45}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Note to developers}{45}{section.6.2}
-\contentsline {section}{\numberline {6.3}Future Improvements}{45}{section.6.3}
-\contentsline {chapter}{Bibliography}{47}{chapter*.45}
+\contentsline {subsection}{\numberline {4.2.2}The Extension}{29}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Client}{34}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}Applications Developed with the Extension}{34}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Benchmark Application}{34}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Real Game Application}{37}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Developer Template}{37}{subsection.4.3.3}
+\contentsline {chapter}{\numberline {5}Network Extension Evaluation}{39}{chapter.5}
+\contentsline {section}{\numberline {5.1}Controlled Network}{39}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Concurrent Connections}{40}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Message Broadcasting Performance}{41}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Real Network Results}{44}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Location-based Delay Fairness}{44}{subsection.5.2.1}
+\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{47}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclusion}{47}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Comparison of the Extended GameMaker Functionality with Related Work}{47}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Criticism on the Implementation and Design Decisions}{47}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Future Improvements}{48}{section.6.2}
+\contentsline {chapter}{Bibliography}{49}{chapter*.45}
