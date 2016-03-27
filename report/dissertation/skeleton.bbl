@@ -8,6 +8,16 @@ Vinny Lingham.
   2007.
 \newblock [Accessed: 2016-01-16].
 
+\bibitem{gamemaker_studio_homepage}
+Gamemaker studio homepage.
+\newblock \url{https://www.yoyogames.com/gamemaker}.
+\newblock Accessed: 2016-03-26.
+
+\bibitem{github}
+Github, version control system.
+\newblock \url{https://github.com/}.
+\newblock Accessed: 2016-03-02.
+
 \bibitem{Death_Flash_Java}
 Ian Elliot.
 \newblock Death of flash and java.
@@ -39,6 +49,16 @@ Mark Overmars.
 \newblock Teaching computer science through game design.
 \newblock {\em Journal Computer}, 37(4):81--83, April 2004.
 
+\bibitem{yoyogames_forum}
+Yoyogames community, forum.
+\newblock \url{http://gmc.yoyogames.com/}.
+\newblock Accessed: 2016-03-02.
+
+\bibitem{dutch_gamemaker_forum}
+Dutch gamemaker community, forum.
+\newblock \url{http://www.game-maker.nl/forums/}.
+\newblock Accessed: 2016-03-02.
+
 \bibitem{GameMaker_Studio}
 Llopis Noel.
 \newblock Gamemaker studio v1.1.7.
@@ -53,16 +73,6 @@ Missing networking feature for browser export.
 \bibitem{gamemaker_networking_attempt}
 Browser networking attempt for gamemaker html5.
 \newblock \url{https://github.com/amorri40/39js}.
-\newblock Accessed: 2016-03-02.
-
-\bibitem{yoyogames_forum}
-Yoyogames community, forum.
-\newblock \url{http://gmc.yoyogames.com/}.
-\newblock Accessed: 2016-03-02.
-
-\bibitem{dutch_gamemaker_forum}
-Dutch gamemaker community, forum.
-\newblock \url{http://www.game-maker.nl/forums/}.
 \newblock Accessed: 2016-03-02.
 
 \bibitem{Fairness_and_Playability}
@@ -249,11 +259,6 @@ Unity 2d development forum section.
 Suggestion: Gamemaker instead of unity.
 \newblock
   \url{http://forum.unity3d.com/threads/where-to-start-2d-toolkit-or-platformer-pro.380770/}.
-\newblock Accessed: 2016-03-02.
-
-\bibitem{github}
-Github, version control system.
-\newblock \url{https://github.com/}.
 \newblock Accessed: 2016-03-02.
 
 \bibitem{socketiojs}

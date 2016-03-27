@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  23 MAR 2016 00:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  27 MAR 2016 04:23
 entering extended mode
 **./skeleton.tex
 (skeleton.tex
@@ -708,7 +708,7 @@ LaTeX Info: Redefining \nameref on input line 39.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 46.
 
-<styles/logos/eushield-normal.pdf, id=183, 369.38pt x 373.395pt>
+<styles/logos/eushield-normal.pdf, id=179, 369.38pt x 373.395pt>
 File: styles/logos/eushield-normal.pdf Graphic file (type pdf)
 
 <use styles/logos/eushield-normal.pdf>
@@ -741,9 +741,7 @@ LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
-[5] [6
-
-]
+[5] [6]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 87.
  (skeleton.toc
@@ -756,14 +754,16 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 3.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [7])
+) [7
+
+])
 \tf@toc=\write4
 \openout4 = `skeleton.toc'.
 
  [8]
 Chapter 1.
 
-Overfull \hbox (11.29474pt too wide) in paragraph at lines 104--105
+Overfull \hbox (11.29474pt too wide) in paragraph at lines 106--107
 []\T1/ppl/m/n/12 One of many de-vel-oper tools that aims for ex-actly these two
  ide-als is GameMaker
  []
@@ -775,43 +775,51 @@ Overfull \hbox (11.29474pt too wide) in paragraph at lines 104--105
 ]
 Chapter 2.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 113.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 114.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 119.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 120.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (1.63506pt too wide) in paragraph at lines 114--115
+Overfull \hbox (1.63506pt too wide) in paragraph at lines 120--121
 \T1/ppl/m/n/12 that come pre-in-stalled on iPhones, iPads and An-droid phones s
 up-port HTML5. 
  []
 
-[11] [12] [13] [14]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[11]
+Overfull \hbox (1.92303pt too wide) in paragraph at lines 131--132
+\T1/ppl/m/n/12 and the grow-ing pop-u-lar-ity of GameMaker, Yoyo-Games has pro-
+vided the func-
+ []
 
- [15]
-[16]
+[12] [13]
+Overfull \hbox (4.49026pt too wide) in paragraph at lines 156--158
+\T1/ppl/m/n/12 traver-sal tech-niques such as "hole punch-ing" are there-fore e
+s-tab-lished, al-though
+ []
+
+[14] [15] [16]
 Chapter 3.
 
-Overfull \hbox (0.32605pt too wide) in paragraph at lines 201--202
+Overfull \hbox (0.32605pt too wide) in paragraph at lines 207--208
 []\T1/ppl/m/n/12 Note that GameMaker does na-tively sup-port net-work-ing func-
 tion-al-ity for non-
  []
 
 
-Overfull \hbox (14.71417pt too wide) in paragraph at lines 205--206
+Overfull \hbox (14.71417pt too wide) in paragraph at lines 211--212
 \T1/ppl/m/n/12 each with dif-fer-ent back-grounds in 2D browser game de-vel-op-
 ment. gamepix.com
  []
 
 
-Underfull \hbox (badness 1237) in paragraph at lines 214--214
+Underfull \hbox (badness 1237) in paragraph at lines 220--220
 [][]\T1/ppl/m/n/10 Advertised at de-vel-oper.mozilla.org: [][]$\T1/cmtt/m/n/10 
 https : / / developer . mozilla . org / en-[]US / docs /$
  []
 
 
-Overfull \hbox (22.2484pt too wide) in paragraph at lines 214--214
+Overfull \hbox (22.2484pt too wide) in paragraph at lines 220--220
 [][]\T1/ppl/m/n/10 Advertised at [][]$\T1/cmtt/m/n/10 http : / / www . gamepix 
 . com / blog / the-[]big-[]list-[]of-[]2d-[]html5-[]games-[]engines/$[][]| 
  []
@@ -819,13 +827,7 @@ Overfull \hbox (22.2484pt too wide) in paragraph at lines 214--214
 [17
 
 ] [18]
-Overfull \hbox (86.8206pt too wide) in paragraph at lines 248--250
-[]\T1/ppl/m/n/12 licenses http://unity3d.com/unity/licenses cost https://store.
-unity3d.com/products/pricing 
- []
-
-
-Overfull \hbox (47.56346pt too wide) in paragraph at lines 259--268
+Overfull \hbox (47.56346pt too wide) in paragraph at lines 267--276
  [][] 
  []
 
@@ -833,19 +835,16 @@ Overfull \hbox (47.56346pt too wide) in paragraph at lines 259--268
 
 ]
 Chapter 4.
-
-Overfull \hbox (0.1102pt too wide) in paragraph at lines 281--282
-\T1/ppl/m/n/12 The fol-low-ing chap-ter de-scribes the de-vel-op-ment pro-cess 
-of three com-po-nents:
- []
-
 [21]
 Overfull \hbox (1.0292pt too wide) in paragraph at lines 310--310
 []\T1/ppl/b/n/14.4 Non-Functional Re-quire-ments and De-sir-able Qual-ity At-
  []
 
-[22] [23]
-<images/server_sequence_diagram.jpg, id=463, 756.8275pt x 483.8075pt>
+[22]
+Underfull \vbox (badness 1867) has occurred while \output is active []
+
+ [23]
+<images/server_sequence_diagram.jpg, id=468, 756.8275pt x 483.8075pt>
 File: images/server_sequence_diagram.jpg Graphic file (type jpg)
 
 <use images/server_sequence_diagram.jpg>
@@ -858,7 +857,7 @@ Overfull \hbox (41.53503pt too wide) in paragraph at lines 344--345
  []
 
 [24 <./images/server_sequence_diagram.jpg>]
-<images/server_code.jpg, id=479, 602.25pt x 293.095pt>
+<images/server_code.jpg, id=486, 602.25pt x 293.095pt>
 File: images/server_code.jpg Graphic file (type jpg)
 
 <use images/server_code.jpg>
@@ -869,28 +868,23 @@ Overfull \hbox (21.05469pt too wide) in paragraph at lines 359--360
 [][] 
  []
 
-<images/server_actions.jpg, id=482, 464.73625pt x 458.71375pt>
+<images/server_actions.jpg, id=489, 464.73625pt x 458.71375pt>
 File: images/server_actions.jpg Graphic file (type jpg)
 
 <use images/server_actions.jpg>
 Package pdftex.def Info: images/server_actions.jpg used on input line 366.
-(pdftex.def)             Requested size: 334.60983pt x 330.27365pt.
+(pdftex.def)             Requested size: 302.07498pt x 298.1604pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [25 <./images/server_code.jpg>]
-<images/server_player_functions.jpg, id=498, 379.4175pt x 406.51875pt>
+<images/server_player_functions.jpg, id=490, 379.4175pt x 406.51875pt>
 File: images/server_player_functions.jpg Graphic file (type jpg)
 
 <use images/server_player_functions.jpg>
 Package pdftex.def Info: images/server_player_functions.jpg used on input line 
 373.
-(pdftex.def)             Requested size: 284.56242pt x 304.8883pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [26 <./images/server_actions.jpg>]
-<images/server_player_construct.jpg, id=508, 718.685pt x 517.935pt>
+(pdftex.def)             Requested size: 246.61844pt x 264.23404pt.
+ [25 <./images/server_code.jpg>]
+[26 <./images/server_actions.jpg> <./images/server_player_functions.jpg>]
+<images/server_player_construct.jpg, id=514, 718.685pt x 517.935pt>
 File: images/server_player_construct.jpg Graphic file (type jpg)
 
 <use images/server_player_construct.jpg>
@@ -902,11 +896,7 @@ Overfull \hbox (126.44745pt too wide) in paragraph at lines 384--385
 [][] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [27 <./images/server_player_functions.jpg>]
-<images/server_message_tags.jpg, id=514, 280.04625pt x 405.515pt>
+<images/server_message_tags.jpg, id=515, 280.04625pt x 405.515pt>
 File: images/server_message_tags.jpg Graphic file (type jpg)
 
 <use images/server_message_tags.jpg>
@@ -916,13 +906,13 @@ Package pdftex.def Info: images/server_message_tags.jpg used on input line 392.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [28 <./images/server_player_construct.jpg>]
+ [27 <./images/server_player_construct.jpg>]
 Overfull \hbox (14.59334pt too wide) in paragraph at lines 405--406
 []\T1/ppl/m/n/12 An MIT-licensed open-source socket.io JavaScript li-brary pro-
 vided by Learn-
  []
 
-<images/extension_flow.jpg, id=520, 972.63374pt x 565.11125pt>
+<images/extension_flow.jpg, id=521, 972.63374pt x 565.11125pt>
 File: images/extension_flow.jpg Graphic file (type jpg)
 
 <use images/extension_flow.jpg>
@@ -933,21 +923,21 @@ Overfull \hbox (73.7507pt too wide) in paragraph at lines 412--413
 [][] 
  []
 
-[29 <./images/server_message_tags.jpg>]
+[28 <./images/server_message_tags.jpg>]
 Overfull \hbox (12.9658pt too wide) in paragraph at lines 426--429
 []\T1/ppl/m/n/12 A sim-ple con-nec-tion func-tion \T1/cmtt/m/n/12 connect(serve
 r_ip, server_port) \T1/ppl/m/n/12 opens a socket
  []
 
-[30 <./images/extension_flow.jpg>]
-<images/extensions_folder.png, id=538, 160.80075pt x 135.50626pt>
+[29 <./images/extension_flow.jpg>]
+<images/extensions_folder.png, id=539, 160.80075pt x 135.50626pt>
 File: images/extensions_folder.png Graphic file (type png)
 
 <use images/extensions_folder.png>
 Package pdftex.def Info: images/extensions_folder.png used on input line 446.
 (pdftex.def)             Requested size: 192.95992pt x 162.60666pt.
 
-<images/xml_mapping.png, id=540, 345.08925pt x 181.8795pt>
+<images/xml_mapping.png, id=541, 345.08925pt x 181.8795pt>
 File: images/xml_mapping.png Graphic file (type png)
 
 <use images/xml_mapping.png>
@@ -961,126 +951,122 @@ Overfull \hbox (1.54005pt too wide) in paragraph at lines 455--456
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31 <./images/extensions_folder.png>]
+ [30 <./images/extensions_folder.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [32 <./images/xml_mapping.png>] [33]
-Overfull \hbox (0.56567pt too wide) in paragraph at lines 548--549
+ [31 <./images/xml_mapping.png>] [32]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33]
+Overfull \hbox (0.56567pt too wide) in paragraph at lines 553--554
 []\T1/ppl/m/n/12 Since then, it has evolved into sup-port-ing a va-ri-ety of in
 -stances (vir-tual clients),
  []
 
-[34] <images/benchmarker.jpg, id=567, 817.0525pt x 447.6725pt>
-File: images/benchmarker.jpg Graphic file (type jpg)
-
-<use images/benchmarker.jpg>
-Package pdftex.def Info: images/benchmarker.jpg used on input line 575.
-(pdftex.def)             Requested size: 612.78789pt x 335.75354pt.
- [35]
-Overfull \vbox (47.45755pt too high) has occurred while \output is active []
-
-
-[36 <./images/benchmarker.jpg>] [37] [38
+[34] [35] [36
 
 ]
 Chapter 5.
 
-Overfull \hbox (11.72652pt too wide) in paragraph at lines 595--596
-[]\T1/ppl/m/n/12 These re-sults are con-sid-ered to be suf-fi-cient for any or-
-di-nary mul-ti-player browser
- []
-
-
-Overfull \hbox (0.75887pt too wide) in paragraph at lines 604--605
+Overfull \hbox (0.75887pt too wide) in paragraph at lines 598--599
 \T1/ppl/m/n/12 house-hold net-work band-width [[]]. This in-volves an up-load s
 peed of 5Mbit/s,
  []
 
-[39] <images/test_CLIENT_CPUusage.jpg, id=592, 764.8575pt x 326.21875pt>
+[37] <images/test_CLIENT_CPUusage.jpg, id=593, 764.8575pt x 326.21875pt>
 File: images/test_CLIENT_CPUusage.jpg Graphic file (type jpg)
 
 <use images/test_CLIENT_CPUusage.jpg>
-Package pdftex.def Info: images/test_CLIENT_CPUusage.jpg used on input line 614
+Package pdftex.def Info: images/test_CLIENT_CPUusage.jpg used on input line 608
 .
 (pdftex.def)             Requested size: 382.42781pt x 163.10896pt.
 
-<images/test_CLIENT_CPUtime.jpg, id=593, 755.82375pt x 321.2pt>
+<images/test_CLIENT_CPUtime.jpg, id=594, 755.82375pt x 321.2pt>
 File: images/test_CLIENT_CPUtime.jpg Graphic file (type jpg)
 
 <use images/test_CLIENT_CPUtime.jpg>
-Package pdftex.def Info: images/test_CLIENT_CPUtime.jpg used on input line 623.
+Package pdftex.def Info: images/test_CLIENT_CPUtime.jpg used on input line 617.
 
 (pdftex.def)             Requested size: 377.91095pt x 160.59961pt.
 
-<images/test_CLIENT_RSS.jpg, id=594, 756.8275pt x 319.1925pt>
+<images/test_CLIENT_RSS.jpg, id=595, 756.8275pt x 319.1925pt>
 File: images/test_CLIENT_RSS.jpg Graphic file (type jpg)
 
 <use images/test_CLIENT_RSS.jpg>
-Package pdftex.def Info: images/test_CLIENT_RSS.jpg used on input line 631.
+Package pdftex.def Info: images/test_CLIENT_RSS.jpg used on input line 625.
 (pdftex.def)             Requested size: 378.41283pt x 159.59586pt.
- [40 <./images/test_CLIENT_CPUusage.jpg> <./images/test_CLIENT_CPUtime.jpg>] [4
-1 <./images/test_CLIENT_RSS.jpg>]
-<images/mean_rtt.jpg, id=612, 896.34875pt x 366.36874pt>
+
+Underfull \vbox (badness 5388) has occurred while \output is active []
+
+ [38 <./images/test_CLIENT_CPUusage.jpg> <./images/test_CLIENT_CPUtime.jpg>] [3
+9 <./images/test_CLIENT_RSS.jpg>] <images/mean_rtt.jpg, id=613, 896.34875pt x 3
+66.36874pt>
 File: images/mean_rtt.jpg Graphic file (type jpg)
 
 <use images/mean_rtt.jpg>
-Package pdftex.def Info: images/mean_rtt.jpg used on input line 655.
+Package pdftex.def Info: images/mean_rtt.jpg used on input line 649.
 (pdftex.def)             Requested size: 412.32544pt x 168.53166pt.
 
-<images/test_SERVER_RTTmean.jpg, id=616, 946.53625pt x 373.395pt>
+<images/test_SERVER_RTTmean.jpg, id=617, 946.53625pt x 373.395pt>
 File: images/test_SERVER_RTTmean.jpg Graphic file (type jpg)
 
 <use images/test_SERVER_RTTmean.jpg>
-Package pdftex.def Info: images/test_SERVER_RTTmean.jpg used on input line 667.
+Package pdftex.def Info: images/test_SERVER_RTTmean.jpg used on input line 661.
 
 (pdftex.def)             Requested size: 435.41197pt x 171.76378pt.
 
-Overfull \hbox (22.847pt too wide) in paragraph at lines 667--668
+Overfull \hbox (22.847pt too wide) in paragraph at lines 661--662
  [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42 <./images/mean_rtt.jpg>]
-<images/test_SERVER_RTTstd.jpg, id=625, 1012.78375pt x 396.48125pt>
+ [40 <./images/mean_rtt.jpg>]
+<images/test_SERVER_RTTstd.jpg, id=626, 1012.78375pt x 396.48125pt>
 File: images/test_SERVER_RTTstd.jpg Graphic file (type jpg)
 
 <use images/test_SERVER_RTTstd.jpg>
-Package pdftex.def Info: images/test_SERVER_RTTstd.jpg used on input line 675.
+Package pdftex.def Info: images/test_SERVER_RTTstd.jpg used on input line 669.
 (pdftex.def)             Requested size: 465.88618pt x 182.38358pt.
 
-Overfull \hbox (53.32121pt too wide) in paragraph at lines 675--676
+Overfull \hbox (53.32121pt too wide) in paragraph at lines 669--670
  [][] 
  []
 
-[43 <./images/test_SERVER_RTTmean.jpg> <./images/test_SERVER_RTTstd.jpg>]
-[44] [45]
-Overfull \hbox (21.29054pt too wide) in paragraph at lines 752--753
+[41 <./images/test_SERVER_RTTmean.jpg> <./images/test_SERVER_RTTstd.jpg>]
+[42] [43]
+Overfull \hbox (21.29054pt too wide) in paragraph at lines 746--747
 []\T1/ppl/m/n/12 Assuming the added de-lay is caused by the im-plied dis-tance 
 and packet-switching,
  []
 
-<images/worldmap.jpg, id=660, 892.33376pt x 474.77374pt>
+<images/worldmap.jpg, id=661, 892.33376pt x 474.77374pt>
 File: images/worldmap.jpg Graphic file (type jpg)
 
 <use images/worldmap.jpg>
-Package pdftex.def Info: images/worldmap.jpg used on input line 757.
+Package pdftex.def Info: images/worldmap.jpg used on input line 751.
 (pdftex.def)             Requested size: 446.16579pt x 237.38629pt.
 
-Overfull \hbox (33.60081pt too wide) in paragraph at lines 757--758
+Overfull \hbox (33.60081pt too wide) in paragraph at lines 751--752
  [][] 
  []
 
-[46 <./images/worldmap.jpg>]
+[44 <./images/worldmap.jpg>]
 Chapter 6.
 
-Underfull \vbox (badness 1688) has occurred while \output is active []
+Overfull \hbox (5.30614pt too wide) in paragraph at lines 772--775
+\T1/ppl/m/n/12 The eval-u-a-tion meth-ods in-di-cate that the net-work in-deed 
+per-forms well enough
+ []
 
- [47
+
+Underfull \vbox (badness 1728) has occurred while \output is active []
+
+ [45
 
 ]
-(skeleton.bbl [48]
+(skeleton.bbl [46]
 Underfull \hbox (badness 10000) in paragraph at lines 4--10
 []\T1/ppl/m/n/12 Vinny Ling-ham.  Top 20 rea-sons why web apps are su-
  []
@@ -1098,194 +1084,207 @@ desktop-[]apps . html$[][]\T1/ppl/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 5533) in paragraph at lines 48--52
+Underfull \hbox (badness 5533) in paragraph at lines 68--72
 []\T1/ppl/m/n/12 Missing net-work-ing fea-ture for browser ex-port.  [][]$\T1/c
 mtt/m/n/12 http : / / docs .$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--52
+Underfull \hbox (badness 10000) in paragraph at lines 68--72
 $\T1/cmtt/m/n/12 yoyogames . com / source / dadiospice / 002 _ reference / netw
 orking /$
  []
 
+[47
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--78
+]
+Underfull \hbox (badness 10000) in paragraph at lines 84--88
 []\T1/ppl/m/n/12 Tcp 3-way hand-shake.  [][]$\T1/cmtt/m/n/12 http : / / www . i
 netdaemon . com / tutorials /$
  []
 
-[49
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 85--89
+Underfull \hbox (badness 10000) in paragraph at lines 95--99
 []\T1/ppl/m/n/12 Udp con-nec-tion-less.  [][]$\T1/cmtt/m/n/12 http : / / www . 
 erg . abdn . ac . uk / users / gorry /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--125
+Underfull \hbox (badness 10000) in paragraph at lines 128--135
 []\T1/ppl/m/n/12 Mikito Takada.  Per-for-mance bench-mark-ing socket.io
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--125
+Underfull \hbox (badness 10000) in paragraph at lines 128--135
 \T1/ppl/m/n/12 0.8.7, 0.7.11 and 0.6.17 and node's na-tive tcp.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--125
+Underfull \hbox (badness 10000) in paragraph at lines 128--135
 \T1/ppl/m/n/12 http://blog.mixu.net/2011/11/22/performance-benchmarking-socket-
 
  []
 
 
-Underfull \hbox (badness 6625) in paragraph at lines 118--125
+Underfull \hbox (badness 6625) in paragraph at lines 128--135
 \T1/ppl/m/n/12 io-0-8-7-0-7-11-and-0-6-17-and-nodes-native-tcp/, 2011.  [Ac-ces
 sed:
  []
 
 
-Underfull \hbox (badness 4072) in paragraph at lines 152--157
+Underfull \hbox (badness 4072) in paragraph at lines 162--167
 []\T1/ppl/m/n/12 Alejandro Her-nan-dez.  Init.js: A guide to the why and how
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--157
+Underfull \hbox (badness 10000) in paragraph at lines 162--167
 \T1/ppl/m/n/12 of full-stack javascript.  [][]$\T1/cmtt/m/n/12 http : / / www .
  toptal . com / javascript /$
  []
 
 
-Underfull \hbox (badness 7468) in paragraph at lines 159--163
+Underfull \hbox (badness 7468) in paragraph at lines 169--173
 []\T1/ppl/m/n/12 Quality at-tributes.  [][]$\T1/cmtt/m/n/12 https : / / msdn . 
 microsoft . com / en-[]us / library /$
  []
 
 
-Underfull \hbox (badness 5787) in paragraph at lines 165--168
+Underfull \hbox (badness 5787) in paragraph at lines 175--178
 []\T1/ppl/m/n/12 Review sys-tem for html5 game de-vel-op-ment tools.  [][]$\T1/
 cmtt/m/n/12 https : / /$
  []
 
-[50]
-Underfull \hbox (badness 10000) in paragraph at lines 184--188
+[48]
+Underfull \hbox (badness 10000) in paragraph at lines 194--198
 $\T1/cmtt/m/n/12 developer . mozilla . org / en-[]US / docs / Games / Tools / E
 ngines _ and _ tools$[][]\T1/ppl/m/n/12 .
  []
 
 
-Underfull \hbox (badness 3189) in paragraph at lines 211--217
+Underfull \hbox (badness 3189) in paragraph at lines 221--227
 []\T1/ppl/m/n/12 Ashley Gullen.  Mul-ti-player tu-to-rial.  [][]$\T1/cmtt/m/n/1
 2 https : / / www . scirra . com /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--217
+Underfull \hbox (badness 10000) in paragraph at lines 221--227
 $\T1/cmtt/m/n/12 tutorials / 892 / multiplayer-[]tutorial-[]1-[]concepts / page
 -[]1$[][]\T1/ppl/m/n/12 , March
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--227
+Underfull \hbox (badness 10000) in paragraph at lines 234--237
 []\T1/ppl/m/n/12 Unity net-work-ing fea-ture sup-port.  [][]$\T1/cmtt/m/n/12 ht
 tp : / / docs . unity3d . com /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--232
+Underfull \hbox (badness 10000) in paragraph at lines 239--242
 []\T1/ppl/m/n/12 Websocket-sharp plu-gin for unity.  [][]$\T1/cmtt/m/n/12 https
  : / / github . com / sta /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--237
+Underfull \hbox (badness 10000) in paragraph at lines 244--247
 []\T1/ppl/m/n/12 Unity statis-tics and pub-lic re-la-tions.  [][]$\T1/cmtt/m/n/
 12 https : / / unity3d . com /$
  []
 
 
-Underfull \hbox (badness 1127) in paragraph at lines 244--247
+Underfull \hbox (badness 1127) in paragraph at lines 254--257
 []\T1/ppl/m/n/12 Unity 2d de-vel-op-ment fo-rum sec-tion.  [][]$\T1/cmtt/m/n/12
  http : / / forum . unity3d . com /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--253
+Underfull \hbox (badness 10000) in paragraph at lines 259--263
 $\T1/cmtt/m/n/12 threads / where-[]to-[]start-[]2d-[]toolkit-[]or-[]platformer-
 []pro . 380770/$[][]\T1/ppl/m/n/12 .
  []
 
-[51]
-Underfull \hbox (badness 10000) in paragraph at lines 265--269
+[49]
+Underfull \hbox (badness 10000) in paragraph at lines 270--274
 []\T1/ppl/m/n/12 Average house-hold net-work band-width in the united king-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--269
+Underfull \hbox (badness 10000) in paragraph at lines 270--274
 \T1/ppl/m/n/12 dom.  [][]$\T1/cmtt/m/n/12 http : / / www . ispreview . co . uk 
 / index . php / 2015 / 02 /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--269
+Underfull \hbox (badness 10000) in paragraph at lines 270--274
 $\T1/cmtt/m/n/12 ofcom-[]average-[]uk-[]home-[]broadband-[]speeds-[]slowly-[]re
 ach-[]23mbps .$
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 340--345
+[50]
+Underfull \hbox (badness 10000) in paragraph at lines 345--350
 []\T1/ppl/m/n/12 Yevhen Shylo.  Net-work ad-dress trans-la-tion.  \T1/ppl/m/it/
 12 Sci-en-tific
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--345
+Underfull \hbox (badness 10000) in paragraph at lines 345--350
 \T1/ppl/m/it/12 Re-port - Tech-no-log-i-cal Con-fer-ence\T1/ppl/m/n/12 , 3(1):7
 9, Novem-ber 2015.
  []
 
-[52]
-Underfull \hbox (badness 7030) in paragraph at lines 347--353
+
+Underfull \hbox (badness 7030) in paragraph at lines 352--358
 []\T1/ppl/m/n/12 Phil Ed-holm.  Where are the real we-brtc apps?  [][]$\T1/cmtt
 /m/n/12 http :$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--353
+Underfull \hbox (badness 10000) in paragraph at lines 352--358
 $\T1/cmtt/m/n/12 / / www . webrtcworld . com / topics / from-[]the-[]experts / 
 articles /$
  []
 
 
-Underfull \hbox (badness 1852) in paragraph at lines 347--353
+Underfull \hbox (badness 1852) in paragraph at lines 352--358
 $\T1/cmtt/m/n/12 375465-[]where-[]the-[]real-[]webrtc-[]apps . htm$[][]\T1/ppl/
 m/n/12 , 2014.  [Ac-cessed: 2016-
  []
 
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 862.
- [53]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 862.
+) [51] [52
+
+]
+Chapter 7.
+<images/benchmarker.jpg, id=848, 817.0525pt x 447.6725pt>
+File: images/benchmarker.jpg Graphic file (type jpg)
+
+<use images/benchmarker.jpg>
+Package pdftex.def Info: images/benchmarker.jpg used on input line 866.
+(pdftex.def)             Requested size: 612.78789pt x 335.75354pt.
+
+
+LaTeX Warning: Float too large for page by 47.45755pt on input line 870.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 872.
+[53] [54 <./images/benchmarker.jpg>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 872.
  (skeleton.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 862.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 862.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 872.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 872.
 Package rerunfilecheck Info: File `skeleton.out' has not changed.
-(rerunfilecheck)             Checksum: 7E2EEDE481AD7A804D48AB93820622C6;3188.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 862.
+(rerunfilecheck)             Checksum: F1939FDDEAE3630B834C190320F4F705;2973.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 872.
  ) 
 Here is how much of TeX's memory you used:
- 9087 strings out of 493634
- 133631 string characters out of 3141302
- 236398 words of memory out of 3000000
- 12078 multiletter control sequences out of 15000+200000
+ 9099 strings out of 493634
+ 133737 string characters out of 3141302
+ 236458 words of memory out of 3000000
+ 12079 multiletter control sequences out of 15000+200000
  32548 words of font info for 70 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  43i,16n,71p,936b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exi
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exi
 st, replaced by a fixed one
 
-pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
 , replaced by a fixed one
 
  <C:\Users\Gebruiker\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
@@ -1298,9 +1297,9 @@ r8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program
  Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on skeleton.pdf (53 pages, 1862705 bytes).
+Output written on skeleton.pdf (54 pages, 1870213 bytes).
 PDF statistics:
- 1020 PDF objects out of 1200 (max. 8388607)
- 222 named destinations out of 1000 (max. 500000)
- 451 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1039 PDF objects out of 1200 (max. 8388607)
+ 233 named destinations out of 1000 (max. 500000)
+ 443 words of extra memory for PDF output out of 10000 (max. 10000000)
 

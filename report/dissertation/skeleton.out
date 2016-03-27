@@ -3,43 +3,42 @@
 \BOOKMARK [1][-]{section.2.1}{Advances in Browser Game Development}{chapter.2}% 3
 \BOOKMARK [2][-]{subsection.2.1.1}{HTML5}{section.2.1}% 4
 \BOOKMARK [2][-]{subsection.2.1.2}{GameMaker}{section.2.1}% 5
-\BOOKMARK [2][-]{subsection.2.1.3}{Network Expectations}{section.2.1}% 6
-\BOOKMARK [1][-]{section.2.2}{Data Transportation Mechanisms}{chapter.2}% 7
-\BOOKMARK [2][-]{subsection.2.2.1}{TCP}{section.2.2}% 8
-\BOOKMARK [2][-]{subsection.2.2.2}{UDP}{section.2.2}% 9
-\BOOKMARK [2][-]{subsection.2.2.3}{NAT traversal}{section.2.2}% 10
-\BOOKMARK [1][-]{section.2.3}{Networking at the Application Level}{chapter.2}% 11
-\BOOKMARK [2][-]{subsection.2.3.1}{WebSocket}{section.2.3}% 12
-\BOOKMARK [2][-]{subsection.2.3.2}{Socket.io}{section.2.3}% 13
-\BOOKMARK [2][-]{subsection.2.3.3}{WebRTC}{section.2.3}% 14
-\BOOKMARK [2][-]{subsection.2.3.4}{Node.js}{section.2.3}% 15
-\BOOKMARK [1][-]{section.2.4}{Quality Attributes}{chapter.2}% 16
-\BOOKMARK [0][-]{chapter.3}{Related Tools}{}% 17
-\BOOKMARK [1][-]{section.3.1}{Construct 2}{chapter.3}% 18
-\BOOKMARK [1][-]{section.3.2}{Unity}{chapter.3}% 19
-\BOOKMARK [1][-]{section.3.3}{Pixi.js, EaselJS, Quintus, Crafty.js and Phaser}{chapter.3}% 20
-\BOOKMARK [0][-]{chapter.4}{Development}{}% 21
-\BOOKMARK [1][-]{section.4.1}{Prior Considerations and Design Decisions}{chapter.4}% 22
-\BOOKMARK [2][-]{subsection.4.1.1}{Functional Requirements and Tasks}{section.4.1}% 23
-\BOOKMARK [2][-]{subsection.4.1.2}{Non-Functional Requirements and Desirable Quality Attributes}{section.4.1}% 24
-\BOOKMARK [2][-]{subsection.4.1.3}{Further considerations}{section.4.1}% 25
-\BOOKMARK [1][-]{section.4.2}{Implementation}{chapter.4}% 26
-\BOOKMARK [2][-]{subsection.4.2.1}{Server}{section.4.2}% 27
-\BOOKMARK [2][-]{subsection.4.2.2}{The Extension}{section.4.2}% 28
-\BOOKMARK [2][-]{subsection.4.2.3}{Client}{section.4.2}% 29
-\BOOKMARK [1][-]{section.4.3}{Applications Developed with the Extension}{chapter.4}% 30
-\BOOKMARK [2][-]{subsection.4.3.1}{Benchmark Application}{section.4.3}% 31
-\BOOKMARK [2][-]{subsection.4.3.2}{Real Game Application}{section.4.3}% 32
-\BOOKMARK [2][-]{subsection.4.3.3}{Developer Template}{section.4.3}% 33
-\BOOKMARK [0][-]{chapter.5}{Network Extension Evaluation}{}% 34
-\BOOKMARK [1][-]{section.5.1}{Controlled Network}{chapter.5}% 35
-\BOOKMARK [2][-]{subsection.5.1.1}{Concurrent Connections}{section.5.1}% 36
-\BOOKMARK [2][-]{subsection.5.1.2}{Message Broadcasting Performance}{section.5.1}% 37
-\BOOKMARK [1][-]{section.5.2}{Real Network Results}{chapter.5}% 38
-\BOOKMARK [2][-]{subsection.5.2.1}{Location-based Delay Fairness}{section.5.2}% 39
-\BOOKMARK [0][-]{chapter.6}{Conclusion and Future Work}{}% 40
-\BOOKMARK [1][-]{section.6.1}{Conclusion}{chapter.6}% 41
-\BOOKMARK [2][-]{subsection.6.1.1}{Comparison of the Extended GameMaker Functionality with Related Work}{section.6.1}% 42
-\BOOKMARK [2][-]{subsection.6.1.2}{Criticism on the Implementation and Design Decisions}{section.6.1}% 43
-\BOOKMARK [1][-]{section.6.2}{Future Improvements}{chapter.6}% 44
-\BOOKMARK [0][-]{chapter*.45}{Bibliography}{}% 45
+\BOOKMARK [1][-]{section.2.2}{Network Expectations}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.3}{Data Transportation Mechanisms}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.3.1}{TCP and UDP}{section.2.3}% 8
+\BOOKMARK [2][-]{subsection.2.3.2}{NAT traversal}{section.2.3}% 9
+\BOOKMARK [1][-]{section.2.4}{Networking at the Application Level}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.4.1}{WebSocket}{section.2.4}% 11
+\BOOKMARK [2][-]{subsection.2.4.2}{Socket.io}{section.2.4}% 12
+\BOOKMARK [2][-]{subsection.2.4.3}{WebRTC}{section.2.4}% 13
+\BOOKMARK [1][-]{section.2.5}{Node.js}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.6}{Quality Attributes}{chapter.2}% 15
+\BOOKMARK [0][-]{chapter.3}{Related Tools}{}% 16
+\BOOKMARK [1][-]{section.3.1}{Construct 2}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Unity}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.3}{Other tools}{chapter.3}% 19
+\BOOKMARK [0][-]{chapter.4}{Development}{}% 20
+\BOOKMARK [1][-]{section.4.1}{Prior Considerations and Design Decisions}{chapter.4}% 21
+\BOOKMARK [2][-]{subsection.4.1.1}{Functional Requirements and Tasks}{section.4.1}% 22
+\BOOKMARK [2][-]{subsection.4.1.2}{Non-Functional Requirements and Desirable Quality Attributes}{section.4.1}% 23
+\BOOKMARK [2][-]{subsection.4.1.3}{Further considerations}{section.4.1}% 24
+\BOOKMARK [1][-]{section.4.2}{Implementation}{chapter.4}% 25
+\BOOKMARK [2][-]{subsection.4.2.1}{Server}{section.4.2}% 26
+\BOOKMARK [2][-]{subsection.4.2.2}{The Extension}{section.4.2}% 27
+\BOOKMARK [2][-]{subsection.4.2.3}{Client}{section.4.2}% 28
+\BOOKMARK [1][-]{section.4.3}{Applications Developed with the Extension}{chapter.4}% 29
+\BOOKMARK [2][-]{subsection.4.3.1}{Benchmark Application}{section.4.3}% 30
+\BOOKMARK [2][-]{subsection.4.3.2}{Real Game Application}{section.4.3}% 31
+\BOOKMARK [2][-]{subsection.4.3.3}{Developer Template}{section.4.3}% 32
+\BOOKMARK [0][-]{chapter.5}{Network Extension Evaluation}{}% 33
+\BOOKMARK [1][-]{section.5.1}{Controlled Network}{chapter.5}% 34
+\BOOKMARK [2][-]{subsection.5.1.1}{Concurrent Connections}{section.5.1}% 35
+\BOOKMARK [2][-]{subsection.5.1.2}{Message Broadcasting Performance}{section.5.1}% 36
+\BOOKMARK [1][-]{section.5.2}{Real Network Results}{chapter.5}% 37
+\BOOKMARK [2][-]{subsection.5.2.1}{Location-based Delay Fairness}{section.5.2}% 38
+\BOOKMARK [0][-]{chapter.6}{Conclusion, Discussion and Future Work}{}% 39
+\BOOKMARK [1][-]{section.6.1}{Conclusion}{chapter.6}% 40
+\BOOKMARK [1][-]{section.6.2}{Discussion}{chapter.6}% 41
+\BOOKMARK [1][-]{section.6.3}{Future Improvements}{chapter.6}% 42
+\BOOKMARK [0][-]{chapter*.45}{Bibliography}{}% 43
+\BOOKMARK [0][-]{chapter.7}{appendix}{}% 44
