@@ -13,6 +13,7 @@
     citecolor={blue!50!black},
     urlcolor={blue!80!black}
 }
+\usepackage{epstopdf}
 
 \usepackage{graphicx}
 \graphicspath{ {images/} }
@@ -40,12 +41,12 @@
 
 \abstract{
 \vspace{2em}
-GameMaker by YoYoGames is a game development tool that in 2011 released a feature to export its games to the HTML5 web platform. This HTML5-export feature is however missing networking capabilities that can otherwise work in other export platforms supported by GameMaker. This constraint causes developers to use less well-suited browser-game development software that do support networking features. In this paper, we therefore develop a networking extension for GameMaker that can be used by the average (novice) developer in the GameMaker community. 
+GameMaker by YoYoGames is a game development tool that in 2011 released a feature to export its games to the HTML5 web platform. This HTML5-export feature is however missing networking capabilities that can otherwise work in other export platforms supported by GameMaker. This constraint causes developers to use less well-suited browser-game development software that does support networking features. In this paper, we therefore develop a networking extension for GameMaker that can be used by the average (novice) developer in the GameMaker community. 
 
 The extension is written in JavaScript, and uses Socket.io to handle interactions through the network through a TCP connection. This extension comes along with a matching client and server set-up. The client is a GameMaker game, written in GML (GameMaker Language), that makes use of the extension, by mapping the extension's functions to functions in GML.
 The server is written using Node.js in combination with Socket.io, providing reliable communication that remains unobstructed by NAT devices.
 
-We provide an insight how each of the three components are written and can be extended by other developers. The system is evaluated in terms of scalability and performance. The evaluation results indicate that the system performs well by matching it with network properties of other professional multiplayer games. Concurrent connections cause the server performance to scale linearly. The average RTT (RoundTrip Time) remains unaffected by concurrent connections up to 8,500 incoming messages per second, after which it rises beyond 100 milliseconds per packet on average. Client distance also affects the RTT, but only becomes a bottleneck when approaching high 1,000s of kilometers from the server.
+We provide an insight how each of the three components are written and can be extended by other developers. The system is evaluated in terms of scalability and performance. The evaluation results indicate that the system performs well by matching it with network properties of other professional multiplayer games. Concurrent connections cause the server performance to scale linearly. The average RTT (Round-Trip Time) remains unaffected by concurrent connections up to 8,500 incoming messages per second, after which it rises beyond 100 milliseconds per packet on average. Client distance also affects the RTT, but only becomes a bottleneck when approaching high 1,000s of kilometers from the server.
 }
 
 \maketitle
@@ -70,7 +71,9 @@ First of all, I would like to thank my supervisor Dr. Myungjin Lee for guiding m
 I am also grateful to those people across the globe who have assisted me with testing and collecting data for the evalutation experiments.\\
 My sincere gratitude to my family, friends, the Dutch Gamemaker community and the Yoyogames forums, for providing me with assistance, feedback and ideas without which this project would not have been the same.
 
-\pagebreak %remove pagebreak to quick-fix the empty acknowledgements page..
+
+%\pagebreak %remove pagebreak to quick-fix the empty acknowledgements page..
+\vspace{43em}
 \section*{List of Acronyms}
 \begin{itemize}
 \item \textbf{GML} - GameMaker Language: the primary language used in GameMaker. Its syntax is similar to those in the well-known C based language family such as C++, C\# and Java.
@@ -80,7 +83,7 @@ My sincere gratitude to my family, friends, the Dutch Gamemaker community and th
 \item \textbf{UDP} - User Datagram Protocol: a transport protocol that uses a simple connectionless transmission model with a minimum of protocol mechanism. It has no handshaking dialogues, and thus exposes the user's program to any unreliability of the underlying network protocol. There is no guarantee of delivery, ordering, or duplicate protection.
 \item \textbf{W3C} - World Wide Web Consortium: an international community that develops open standards to ensure the long-term growth of the Web.
 \item \textbf{P2P} - Peer-to-Peer: a distributed application architecture that partitions tasks or work loads between peers. Peers are equally privileged, equipotent participants in the application.
-\item \textbf{RTT} - Roundtrip Time: the length of time it takes for a signal to be sent plus the length of time it takes for an acknowledgment of that signal to be received. This time delay therefore consists of the propagation times between the two points of a signal.
+\item \textbf{RTT} - Round-Trip Time: the length of time it takes for a signal to be sent plus the length of time it takes for an acknowledgment of that signal to be received. This time delay therefore consists of the propagation times between the two points of a signal.
 \item \textbf{RSS} - Resident Set Size: the portion of the process's memory held in RAM
 \item \textbf{CPU} - Central Processing Unit: the processor of a computer; an electronic circuitry within a computer that carries out the instructions of a computer program by performing the basic arithmetic, logical, control and input/output (I/O) operations specified by the instructions.
 \item \textbf{RAM} - Random Access Memory: a form of computer data storage. A random-access memory device allows data items to be accessed (read or written) in almost the same amount of time irrespective of the physical location of data inside the memory.\\
@@ -119,9 +122,9 @@ The implementation provides an insight on how every component in the system is u
 
 The functions provided by the extension are made to be easily-translatable to those natively supported by GameMaker. Therefore, also multiplayer games developed with GameMaker that did previously not work in the browser can be translated into a browser-compatible version within a short amount of time.
 
-The implementation is then evaluated by inspecting the server's behaviour when loaded with specified levels of stress, as well as the impact this has on the roundtrip times observed at the application level in each of the clients.
+The implementation is then evaluated by inspecting the server's behaviour when loaded with specified levels of stress, as well as the impact this has on the round-trip times observed at the application level in each of the clients.
 
-In attempt to find out when the system fails at maintaining a roundtrip time below the maximum threshold of 100ms for an average server load, we find that the distance to the server is the most significant bottleneck. For a server located in Edinburgh (UK), clients located in India and South Africa are in the gray zone where the throughput could affect the gameplay. Clients located in California (USA) and Thailand\footnote{Generally countries outside of Europe} would likely be dis-allowed from joining servers in professional multiplayer games, as their level of unfairness breaches the maximum accepted threshold of 150 milliseconds, impairing their own experience and those of others.
+In attempt to find out when the system fails at maintaining a round-trip time below the maximum threshold of 100ms for an average server load, we find that the distance to the server is the most significant bottleneck. For a server located in Edinburgh (UK), clients located in India and South Africa are in the gray zone where the throughput could affect the gameplay. Clients located in California (USA) and Thailand\footnote{Generally countries outside of Europe} would likely be dis-allowed from joining servers in professional multiplayer games, as their level of unfairness breaches the maximum accepted threshold of 150 milliseconds, impairing their own experience and those of others.
 
 We cannot offer a reasonable solution to the distance problem, other than to decrease this distance by distributing servers across the world. This is however arguable as it causes complex situations around synchronizing the servers. These synchronization issues beat the purpose of providing a simple-to-implement extension for the "novice developers who wish to create browser games at a fast rate".
 
@@ -157,7 +160,7 @@ An attempt (and in fact a well established blueprint for the implementation of t
 \section{Network Expectations}
 Applications often have different demands from the network. One must therefore consider the technical aspect of the network. For example, fairness in a game is crucial for an enjoyable gameplay. This is especially true for games containing elements where speed or response time is important \cite{Fairness_and_Playability}. Servers in modern high-end multiplayer games are typically loaded from several hundreds, to a few thousand simultaneously connected clients, depending on the level of interaction between the clients.
 
-On various games, clients may automatically get disconnected from the server when their ping or roundtrip time (RTT) reaches beyond a certain threshold as these clients potentially disrupt the gameplay. This threshold can vary depending on the game. Fast-paced games such as Call of Duty and Battlefield tend to have this threshold set around 150ms - 200ms.
+On various games, clients may automatically get disconnected from the server when their ping or round-trip time (RTT) reaches beyond a certain threshold as these clients potentially disrupt the gameplay. This threshold can vary depending on the game. Fast-paced games such as Call of Duty and Battlefield tend to have this threshold set around 150ms - 200ms.
 
 \section{Data Transportation Mechanisms}
 The following section covers underlying knowledge in terms of the transport protocols TCP (Transmission Control Protocol) and UDP (User Datagram Protocol), as well as arising issues due to NAT (Network Address Translation) traversal.
@@ -258,7 +261,7 @@ In April 2014, release r164 to r168 updated the engine with networking features 
 
 It is a very well established update with optimisation support included, eg. by providing preliminary setups for "NAT traversal to connect through common router/network setups", "Interpolation and extrapolation modes to ensure smooth in-game motion", "Support for lag compensation" and more. Administrator at Scirra, Ashley G. states however that "even though Construct 2's Multiplayer object takes care of many of the complexities, ..., it is important to understand how multiplayer online games fundamentally work" \cite{Construct2_Multiplayer_Tutorial}. 
 
-There are many methods of establishing a network between processes on different hosts, and managing the trade-offs in terms of speed and reliability. For the act of simplifying the game development and demands in terms of understanding "how multiplayer online games fundamentally work" of the developer, we want to provide a pre-set system that "sufficiently"\footnote{i.e. ensured packet delivery and providing roundtrip times below 100ms for at least a few 100s of concurrently active clients} handles both.
+There are many methods of establishing a network between processes on different hosts, and managing the trade-offs in terms of speed and reliability. For the act of simplifying the game development and demands in terms of understanding "how multiplayer online games fundamentally work" of the developer, we want to provide a pre-set system that "sufficiently"\footnote{i.e. ensured packet delivery and providing round-trip times below 100ms for at least a few 100s of concurrently active clients} handles both.
 
 %TODO explain down-sides, why gamemaker still worth updating
 %TODO explain cost
@@ -597,7 +600,7 @@ This application was used in the evaluation experiments in order to test the sys
 \centering
 % \centering% default with `floatrow`
 \includegraphics[scale=0.50, angle=00]{images/benchmarker.jpg}
-\caption{Displaying the GUI of the benchmarking application (flipped 90 degrees). On the left top the global data is available for the client. The table on the top-right displays the virtual clients and their 5 most recent roundtrip values. The graph on the bottom displays the average RTT over time for these clients. The colors of the image are inverted from the actual interface and the font size is slightly modified to enhance readability on paper.}
+\caption{Displaying the GUI of the benchmarking application (flipped 90 degrees). On the left top the global data is available for the client. The table on the top-right displays the virtual clients and their 5 most recent round-trip values. The graph on the bottom displays the average RTT over time for these clients. The colors of the image are inverted from the actual interface and the font size is slightly modified to enhance readability on paper.}
 \label{fig:benchmark_gui}
 \vspace{1em}
 \end{figure}
@@ -608,7 +611,7 @@ This application was used in the evaluation experiments in order to test the sys
 % -----------------------
 \chapter{Network Extension Evaluation}
 %description of experiments, presentation + (directly including) interpretation of the data
-In this chapter, the extension is evaluated in terms of fairness and performance. More specifically, we test how concurrent connections impact the server performance in terms of CPU usage, CPU processing time and Resident Set Size (RSS). We then observe how the server performs and scales based on client interactions, discover how broadcasting messages\footnote{as opposed to one-to-one interaction} does not affect the roundtrip time of messages, and that although large distances do affect the roundtrip time, countries located within Europe maintain a roundtrip time well within the acceptable 100 milliseconds.
+In this chapter, the extension is evaluated in terms of fairness and performance. More specifically, we test how concurrent connections impact the server performance in terms of CPU usage, CPU processing time and Resident Set Size (RSS). We then observe how the server performs and scales based on client interactions, discover how broadcasting messages\footnote{as opposed to one-to-one interaction} does not affect the round-trip time of messages, and that although large distances do affect the round-trip time, countries located within Europe maintain a round-trip time well within the acceptable 100 milliseconds.
 
 \section{Controlled Network}
 Controlled experiments were conducted in order allow making predictions of server behaviour when loaded under similar pressure in future occasions.
@@ -625,7 +628,7 @@ It is important to know how many clients a server can host simultaneously and ho
 \begin{figure}[H]
 \centering
 % \centering% default with `floatrow`
-\includegraphics[scale=0.5]{images/test_CLIENT_CPUusage.jpg}
+\includegraphics[scale=0.9]{images/test_CLIENT_CPUusage.eps}
 \caption{Displaying the CPU usage for the server process handling a variable number of client connection attempts in percent.}
 \label{fig:cpu_usage}
 \vspace{1em}
@@ -634,7 +637,7 @@ It is important to know how many clients a server can host simultaneously and ho
 \begin{figure}[H]
 \centering
 % \centering% default with `floatrow`
-\includegraphics[scale=0.5]{images/test_CLIENT_CPUtime.jpg}
+\includegraphics[scale=0.9]{images/test_CLIENT_CPUtime.eps}
 \caption{CPU time in milliseconds, displaying the amount of time required for the server to process the connection requests of all clients.}
 \label{fig:cpu_time}
 \end{figure}
@@ -642,7 +645,8 @@ It is important to know how many clients a server can host simultaneously and ho
 \begin{figure}[H]
 \centering
 % \centering% default with `floatrow`
-\includegraphics[scale=0.5]{images/test_CLIENT_RSS.jpg}
+\includegraphics[scale=0.9]{images/test_CLIENT_RSS.eps}
+%\includesvg{images/test_CLIENT_RSS}
 \caption{Resident set size in Megabit, showing the portion of RAM that is occupied by the server process.}
 \label{fig:cpu_rss}
 \end{figure}
@@ -657,7 +661,7 @@ Due to the connection handling mechanism of Node.js, where each new client conne
 \subsection{Message Broadcasting Performance}
 The concurrent connections experiments have indicated that the system scales well within the expected demands of an average multiplayer game in terms of client concurrency. The following experiment evaluates what happens when these clients start interacting. It observes the number of messages that can be handled by the server simultaneously, and considers how this affects the fairness in response-time of the individual clients.
 
-\paragraph*{The setup}involves up to 5000 concurrently connected clients (10 physical instances simulating at most 500 clients each) all located within the same network. Clients can send 8-Byte packets, and each client sends these packets at regular time intervals. Each client measures the roundtrip time of the packet, and for each interval these roundtrip times are averaged.
+\paragraph*{The setup}involves up to 5000 concurrently connected clients (10 physical instances simulating at most 500 clients each) all located within the same network. Clients can send 8-Byte packets, and each client sends these packets at regular time intervals. Each client measures the round-trip time of the packet, and for each interval these round-trip times are averaged.
 
 The values in Figure \ref{fig:mean_rtt} were generated by modifying the rate at which each client transmits messages to the server (a sending higher rate resulting in more incoming messages per second at the server), for a fixed number of clients: 50, 100, 500, 1000, 2500 and 5000.
 
@@ -666,28 +670,28 @@ Each time when the average RTT exceeds 200ms, the experiment is stopped. Beyond 
 \begin{figure}[H]
 \centering
 % \centering% default with `floatrow`
-\includegraphics[scale=0.46]{images/mean_rtt.jpg}
-\caption{The general case scenario indicating the observed mean 8-byte message roundtrip time, depending on the total number of messages incoming to the server at every second.}
+\includegraphics[scale=0.86]{images/mean_rtt.eps}
+\caption{The general case scenario indicating the observed mean 8-byte message round-trip time, depending on the total number of messages incoming to the server at every second. Note that the final max-value is biased by the fact that experiments were terminated where the RTT exceeded 200ms.}
 \label{fig:mean_rtt}
 \end{figure}
 
-From Figure \ref{fig:mean_rtt}, it can be observed that the messages maintain a stable 32ms roundtrip time until the server receives around 5000 messages per second. Beyond this point, the roundtrip time grows exponentially until it reaches >200ms, which is when the experiment is terminated.
+From Figure \ref{fig:mean_rtt}, it can be observed that the messages maintain a stable 32ms round-trip time until the server receives around 5000 messages per second. Beyond this point, the round-trip time grows exponentially until it reaches >200ms, which is when the experiment is terminated.
 
 Note that after receiving, these messages were broadcasted to all other clients. In order to further visualise the effect of broadcasting messages from each client to every other client, the mean RTT results are displayed separately in Figure \ref{fig:broadcast_rtt_mean}, as well as their corresponding standard deviation in Figure \ref{fig:broadcast_rtt_std}.
 
 \begin{figure}[H]
 \centering
 % \centering% default with `floatrow`
-\includegraphics[scale=0.42]{images/test_SERVER_RTTmean.jpg}
-\caption{The mean roundtrip time of all the messages that pass through the server, for different numbers of specified clients (50, 100, 500, 1000, 2500 and 5000). Each client sending messages at a variable rate per second.}
+\includegraphics[scale=0.58]{images/test_SERVER_RTTmean.eps}
+\caption{The mean round-trip time of all the messages that pass through the server, for different numbers of specified clients (50, 100, 500, 1000, 2500 and 5000). Each client sending messages at a variable rate per second.}
 \label{fig:broadcast_rtt_mean}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 % \centering% default with `floatrow`
-\includegraphics[scale=0.42]{images/test_SERVER_RTTstd.jpg}
-\caption{The standard deviation of the message roundtrip times as displayed in Figure \ref{fig:broadcast_rtt_mean} for all messages that pass through the server, for different numbers of specified clients (50, 100, 500, 1000, 2500 and 5000). Each client sending messages at a variable rate per second.}
+\includegraphics[scale=0.58]{images/test_SERVER_RTTstd.eps}
+\caption{The standard deviation of the message round-trip times as displayed in Figure \ref{fig:broadcast_rtt_mean} for all messages that pass through the server, for different numbers of specified clients (50, 100, 500, 1000, 2500 and 5000). Each client sending messages at a variable rate per second.}
 \label{fig:broadcast_rtt_std}
 \end{figure}
 
@@ -703,9 +707,9 @@ These results are very interesting as they indicate that the average RTT is not 
 \section{Real Network Results}
 During the real network experiments, the network at the server was observed to running at a rather consistent 54Mb/s download and 3Mb/s upload speed.
 
-\paragraph*{}Multiple tests were executed with clients located at specified locations. In each case, the clients were again sending 8-byte messages to the server, at a regular interval of 1 second for 2 minutes. The 120 roundtrip times for each client were then averaged in order to blur occasional peaks caused by inconsistencies in the network. The roundtrip times of the clients in each common location were averaged, and the deviation of the roundtrip times within the 2-minute time frame for each of these locations were calculated.
+\paragraph*{}Multiple tests were executed with clients located at specified locations. In each case, the clients were again sending 8-byte messages to the server, at a regular interval of 1 second for 2 minutes. The 120 round-trip times for each client were then averaged in order to blur occasional peaks caused by inconsistencies in the network. The round-trip times of the clients in each common location were averaged, and the deviation of the round-trip times within the 2-minute time frame for each of these locations were calculated.
 
-All network experiments were executed using a single server located in Edinburgh and in each experiment all clients were connected and communicating to that server simultaneously. During the experiments, in order to prevent data transmission to affect the results, logs were saved at the clients. Only after each experiment was complete, these logs were forwarded for processing purposes. The roundtrip times represent the delay times between the packet-send event in the browser client, and the packet-receive event by the same client for the same packet.
+All network experiments were executed using a single server located in Edinburgh and in each experiment all clients were connected and communicating to that server simultaneously. During the experiments, in order to prevent data transmission to affect the results, logs were saved at the clients. Only after each experiment was complete, these logs were forwarded for processing purposes. The round-trip times represent the delay times between the packet-send event in the browser client, and the packet-receive event by the same client for the same packet.
 
 \subsection{Location-based Delay Fairness}
 The following experiments evaluate the effect of the geographical distance between groups of clients and the server with respect to fairness in response-time from the server to the clients.
@@ -731,7 +735,7 @@ The following experiments evaluate the effect of the geographical distance betwe
     Mean RTT 		& 32.1ms 	& 54.8ms 	& 62.7ms 	& 70.6ms 	& 107.5ms	\\ \hline
     Std RTT			& 0.4ms		& 2.9ms		& 6.8ms		& 3.36ms	& 43.6ms	\\ \hline
   \end{tabular}
-  \caption{Average roundtrip times per test}
+  \caption{Average round-trip times per test}
   \label{table:geo_avg_roundtrip}
 \end{table}
 
@@ -755,13 +759,13 @@ South Africa	& 144ms			&9760km\\
 California (USA)& 158ms			&8065km\\
 Thailand		& 171ms			&9438km\\
   \end{tabular}
-  \caption{Average roundtrip times per location, along with their overall geographical distance from the server.}
+  \caption{Average round-trip times per location, along with their overall geographical distance from the server.}
   \label{table:geo_avg_location}
 \end{table}
 
-Clients located within the local network have the fastest roundtrip time, as expected since packets can travel. After this point, Clients located anywhere within Europe have an overall roundtrip time between 55ms and 76ms. These values are reasonable depending on the purpose of the game that is created with the extension, but complicated to omit. A general rule of thumb for ping values is that anything below 100ms is acceptable, even for high-end shootergames such as Battlefield and Call of Duty, where clients may automatically get kicked when their roundtrip time exceeds 150ms or 200ms potentially disrupting the gameplay.
+Clients located within the local network have the fastest round-trip time, as expected since packets can travel. After this point, Clients located anywhere within Europe have an overall round-trip time between 55ms and 76ms. These values are reasonable depending on the purpose of the game that is created with the extension, but complicated to omit. A general rule of thumb for ping values is that anything below 100ms is acceptable, even for high-end shootergames such as Battlefield and Call of Duty, where clients may automatically get kicked when their round-trip time exceeds 150ms or 200ms potentially disrupting the gameplay.
 
-Table \ref{table:geo_avg_roundtrip} and table \ref{table:geo_avg_location} show the average roundtrip times observed by clients located at different locations on earth. These RTT for these locations may differ due to factors such as the connection speed, ISP quality and firewall settings. But the experiment shows that the major contributor to unfairness in the network appears to be directly affected by the distance to the server, as the average RTT for each of the locations significantly increases as the distance increases. Figure \ref{fig:worldmap} visualises the connection between the observed roundtrip times and the corresponding distance between the client and the server. 
+Table \ref{table:geo_avg_roundtrip} and table \ref{table:geo_avg_location} show the average round-trip times observed by clients located at different locations on earth. These RTT for these locations may differ due to factors such as the connection speed, ISP quality and firewall settings. But the experiment shows that the major contributor to unfairness in the network appears to be directly affected by the distance to the server, as the average RTT for each of the locations significantly increases as the distance increases. Figure \ref{fig:worldmap} visualises the connection between the observed round-trip times and the corresponding distance between the client and the server. 
 
 Assuming the added delay is caused by the implied distance and packet-switching, the only real solution to the problem involves modifying the physical link between the client and the server or locating the server closer to the intended clients.
 
@@ -769,7 +773,7 @@ Assuming the added delay is caused by the implied distance and packet-switching,
 \centering
 % \centering% default with `floatrow`
 \includegraphics[scale=0.45]{images/worldmap.jpg}
-\caption{Worldmap displaying the tested locations and their according average recorded roundtrip times}
+\caption{Worldmap displaying the tested locations and their according average recorded round-trip times}
 \label{fig:worldmap}
 \end{figure}
 
@@ -778,29 +782,29 @@ Assuming the added delay is caused by the implied distance and packet-switching,
 
 
 % -----------------------
-\chapter{Conclusion, Discussion and Future Work}
+\chapter{Closing Remark}
 \section{Conclusion}
-The extension works, and can be implemented easily as its functionality is more simple than the native GameMaker networking features\footnote{that are supported for non-browser platforms} as it automatically takes care of specifying the transport protocol and the buffer along with its properties such as size, byte-alignment and type. Data types from the buffer are generic, matching with the weakly typed property of that of GameMaker. Using Socket.io to open and maintain a TCP connection omits the NAT traversal problem that many novice developers would otherwise experience.
+The extension works, and can be implemented easily as its functionality is simpler than the native GameMaker networking features\footnote{that are supported for non-browser platforms} as it automatically takes care of specifying the transport protocol and the buffer along with its properties such as size, byte-alignment and type. Data types from the buffer are generic, matching with the weakly typed property of that of GameMaker. Using Socket.io to open and maintain a TCP connection mitigates the NAT traversal problem that many novice developers would otherwise experience.
 
-The extension offers a sufficiently scalable solution when combined with the provided server implementation using Node.js and Socket.io. This is proven by the fact that the server manages to maintain few thousands of concurrent connections, and handle roughly 5000 messages per second over a long-time period before the packet round-trip time starts to visibly increase, with an accepted rate of 8500 messages per second before the round-trip time starts to exceed 100ms. 
+The extension offers sufficient scalability when combined with the provided server implementation using Node.js and Socket.io. This is proven by the fact that the server manages to maintain a few thousands of concurrent connections, and handles roughly 5000 messages per second over a long-time period before the packet round-trip time starts to visibly increase, with an accepted rate of 8500 messages per second before the round-trip time starts to exceed 100ms. 
 
-Long-distance connections are the main contributor to unfairness, but for this issue apart from distributing multiple servers across the globe or optimizing the physical link between the endpoints, no real solution is known. With a standard server load, any distance up to a few thousand kilometers is however found to provide an acceptable average roundtrip time of less than 100ms.
+Long-distance connections are the main contributor to unfairness, but for this issue apart from distributing multiple servers across the globe or optimizing the physical link between the endpoints, no real solution is known. With a standard server load, any distance up to a few thousand kilometers is however found to provide an acceptable average round-trip time of less than 100ms.
 
-Based on these experiments, developers can ensure their application performs in an optimal fashion.
+Based on these experiments, we can claim that developers can focus on creating their game without having to worry about designing and optimizing the underlying network.
 
 \section{Discussion}
-The evaluation methods indicate that the network indeed performs well enough to allow a sufficient amount of clients to connect and interact simultaneously without impacting a server with average-performing hardware requirements, proving that the extension is indeed useful.
+The evaluation methods indicate that the network indeed performs well enough to allow a sufficient number of clients to connect and interact simultaneously without impacting a server with average-performing hardware requirements, proving that the extension is indeed useful.
 However, proving that the extension is indeed usable to novice developers is a rather more subjective issue. Although the primary focus was to simplify the development process for other developers, this was approached by following the best "software engineering practices", enforcing the right quality attributes on each module of the implementation. A novice or even average browser game developer may not know about these practices. Therefore it would be fair to further evaluate the usability by inviting developers to try out the extension.
 The time required to receiving accurate measurements forced this evaluation to be discontinued for this thesis project.
 
 \section{Future Improvements}
 Collecting feedback for a usability evaluation could indicate possible improvements in terms of simplifying the use of the extention to develop new networked browser games and applications.
 
-Delay in roundtrip times can be masked at the application level (either in the extension or in the client directly) by predicting future values based on recent value changes in the past.
+Delay in round-trip times can be masked at the application level (either in the extension or in the client directly) by predicting future values based on recent value changes in the past.
 
 It may be possible to optimize the network performance by using WebRTC to interact with the server. However this would only be beneficial GameMaker developers if also packet-losses and NAT traversal are resolved by the extension, and would not fix the increase in RTT caused by distance.
 
-Fixing the distance issue can be done by spreading servers across the world, and connecting clients to the server that provides the lowest roundtrip time. This, however forces multiple versions of the game state to coexist, thereby causing the issue where servers need to interact with each other in order to keep their versions of the game state synchronized.
+Fixing the distance issue can be done by spreading servers across the world, and connecting clients to the server that provides the lowest round-trip time. This, however forces multiple versions of the game state to coexist, thereby causing the issue where servers need to interact with each other in order to keep their versions of the game state synchronized.
 
 
 

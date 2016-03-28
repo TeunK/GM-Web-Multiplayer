@@ -1,0 +1,63 @@
+%% Creator: Inkscape 0.91_64bit, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'mean_rtt.eps' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{454.32000588bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.44083466)%
+    \put(0,0){\includegraphics[width=\unitlength]{mean_rtt.eps}}%
+    \put(0.08821976,0.12825762){\color[rgb]{0.34901961,0.34901961,0.34901961}\makebox(0,0)[lb]{\smash{\textbf{0}}}}%
+    \put(0.07769854,0.17331397){\color[rgb]{0.34901961,0.34901961,0.34901961}\makebox(0,0)[lb]{\smash{\textbf{5}\textbf{0}}}}%
+    \put(0.06719933,0.21839233){\color[rgb]{0.34901961,0.34901961,0.34901961}\makebox(0,0)[lb]{\smash{\textbf{1}\textbf{0}\textbf{0}}}}%
+    \put(0.06719933,0.26338264){\color[rgb]{0.34901961,0.34901961,0.34901961}\makebox(0,0)[lb]{\smash{\textbf{1}\textbf{5}\textbf{0}}}}%
+    \put(0.06719933,0.308461){\color[rgb]{0.34901961,0.34901961,0.34901961}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{0}\textbf{0}}}}%
+    \put(0.06719933,0.35345132){\color[rgb]{0.34901961,0.34901961,0.34901961}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{5}\textbf{0}}}}%
+    \put(0.05356577,0.1610759){\color[rgb]{0.34901961,0.34901961,0.34901961}\rotatebox{90.00000252}{\makebox(0,0)[lb]{\smash{MEAN RTT (MS)}}}}%
+    \put(0.33434583,0.03543759){\color[rgb]{0.34901961,0.34901961,0.34901961}\makebox(0,0)[lb]{\smash{TOTAL INCOMING MESSAGES / SECOND}}}%
+    \put(0.43471561,0.39487586){\color[rgb]{0.49803922,0.49803922,0.49803922}\makebox(0,0)[lb]{\smash{Mean RTT}}}%
+  \end{picture}%
+\endgroup%
