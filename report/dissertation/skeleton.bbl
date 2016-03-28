@@ -8,15 +8,11 @@ Vinny Lingham.
   2007.
 \newblock [Accessed: 2016-01-16].
 
-\bibitem{gamemaker_studio_homepage}
-Gamemaker studio homepage.
-\newblock \url{https://www.yoyogames.com/gamemaker}.
-\newblock Accessed: 2016-03-26.
-
-\bibitem{github}
-Github, version control system.
-\newblock \url{https://github.com/}.
-\newblock Accessed: 2016-03-02.
+\bibitem{Pro_HTML5_Programming}
+Peter Lubbers, Brian Albers, and Frank Salim.
+\newblock {\em Pro HTML5 Programming}.
+\newblock Paul Manning, Springer Science and Business Media, LLC., 233 Spring
+  Street, New York, 2010.
 
 \bibitem{Death_Flash_Java}
 Ian Elliot.
@@ -64,6 +60,11 @@ Llopis Noel.
 \newblock Gamemaker studio v1.1.7.
 \newblock {\em Game Developer}, 20(1):40, January 2013.
 
+\bibitem{HTML5_Game_Dev_Gamemaker}
+Jason~Lee Elliott.
+\newblock {\em HTML5 Game Development with GameMaker}.
+\newblock Packt, 35 Livery Street, Birmingham B3 2PB, UK, 2013.
+
 \bibitem{gamemaker_missing_networking}
 Missing networking feature for browser export.
 \newblock
@@ -91,11 +92,23 @@ Tcp open connection.
 \newblock \url{https://tools.ietf.org/html/rfc793}.
 \newblock Accessed: 2016-03-02.
 
+\bibitem{Multiplayer_Networking_modern_engine}
+Alan Edwardes.
+\newblock Multiplayer networking in a modern game engine.
+\newblock Project Writeup, 2014.
+
 \bibitem{udp_connectionless}
 Udp connectionless.
 \newblock
   \url{http://www.erg.abdn.ac.uk/users/gorry/course/inet-pages/udp.html}.
 \newblock Accessed: 2016-03-02.
+
+\bibitem{NAT}
+Yevhen Shylo.
+\newblock Network address translation.
+\newblock {\em Scientific Report - Technological Conference}, 3(1):79, November
+  2015.
+\newblock http://www.dut.edu.ua/uploads/n\_2205\_50283608.pdf.
 
 \bibitem{udp_holepunching}
 Udp holepunching.
@@ -144,6 +157,14 @@ Martin~Kirkholt Melhus.
 \newblock {\em P2P Video Streaming with HTML5 and WebRTC}.
 \newblock PhD thesis, Norwegian University of Science and Technology,
   Trondheim, June 2015.
+
+\bibitem{Where_WebRTC}
+Phil Edholm.
+\newblock Where are the real webrtc apps?
+\newblock
+  \url{http://www.webrtcworld.com/topics/from-the-experts/articles/375465-where-the-real-webrtc-apps.htm},
+  2014.
+\newblock [Accessed: 2016-01-17].
 
 \bibitem{Why_Nodejs}
 Tomislav Capan.
@@ -261,6 +282,23 @@ Suggestion: Gamemaker instead of unity.
   \url{http://forum.unity3d.com/threads/where-to-start-2d-toolkit-or-platformer-pro.380770/}.
 \newblock Accessed: 2016-03-02.
 
+\bibitem{SE_7_Principles}
+Barry~W. Boehm.
+\newblock Seven basic principles of software engineering.
+\newblock {\em Journal of Systems and Software}, 3(1):3--24, March 1983.
+
+\bibitem{Software_Engineering}
+Klaus Pohl, Gunter Bockle, and Frank van~der Frank.
+\newblock {\em Software Product Line Engineering: Foundations, Principles and
+  Techniques}.
+\newblock Springer, Springer-Verlag Berlin Heidelberg, 2005.
+
+\bibitem{Friendly_Programming}
+Nathaniel~S. Borenstein.
+\newblock {\em Programming as if People Mattered: Friendly Programs, Software
+  Engineering and Other Noble Delusions}.
+\newblock Princeton University Press, Princeton, New Jersey, 3rd edition, 1994.
+
 \bibitem{socketiojs}
 socket.io.js documentation.
 \newblock \url{https://docs.omniref.com/js/npm/socket.io/0.8.4}.
@@ -277,83 +315,5 @@ Node.js: 1 million concurrent connections.
 \newblock
   \url{http://blog.caustik.com/2012/08/19/node-js-w1m-concurrent-connections/}.
 \newblock Accessed: 2016-03-19.
-
-\bibitem{Multiplayer_Networking_modern_engine}
-Alan Edwardes.
-\newblock Multiplayer networking in a modern game engine.
-\newblock Project Writeup, 2014.
-
-\bibitem{Pro_HTML5_Programming}
-Peter Lubbers, Brian Albers, and Frank Salim.
-\newblock {\em Pro HTML5 Programming}.
-\newblock Paul Manning, Springer Science and Business Media, LLC., 233 Spring
-  Street, New York, 2010.
-
-\bibitem{Friendly_Programming}
-Nathaniel~S. Borenstein.
-\newblock {\em Programming as if People Mattered: Friendly Programs, Software
-  Engineering and Other Noble Delusions}.
-\newblock Princeton University Press, Princeton, New Jersey, 3rd edition, 1994.
-
-\bibitem{Community_Social_Psychology}
-Erin~L. O'~Connor, Huon Longman, Katherine~M. White, and Patricia~L. Obst.
-\newblock Sense of community, social identity and social support among players
-  of massively multiplayer online games (mmogs): A qualitative analysis.
-\newblock {\em Journal of Community \& Applied Social Psychology},
-  25(6):459--473, 2015.
-
-\bibitem{Why_MMOG}
-L~Suarez, C~Thio, and S~Singh.
-\newblock Why people play massively multiplayer online games?
-\newblock {\em International Journal of e-Education, e-Business, e-Management
-  and e-Learning}, 3(1), 2013.
-
-\bibitem{Browser_Games}
-Christoph Klimmt, Hannah Schmid, and Julia Orthmann.
-\newblock Exploring the enjoyment of playing browser games.
-\newblock {\em Cyberpsychology \& behavior : the impact of the Internet,
-  multimedia and virtual reality on behavior and society}, 12(2):231--234,
-  2009.
-
-\bibitem{Optimizing_Multiplayer_3D_Game_Synch}
-Alessandro Alinone.
-\newblock Optimizing multiplayer 3d game synchronization over the web.
-\newblock {\em Lightstreamer}, October 2013.
-
-\bibitem{Optimizing_WebSockets_Bandwidth}
-Eric Li.
-\newblock Optimizing websockets bandwidth.
-\newblock {\em Multiplayer}, September 2012.
-
-\bibitem{HTML5_Game_Dev_Gamemaker}
-Jason~Lee Elliott.
-\newblock {\em HTML5 Game Development with GameMaker}.
-\newblock Packt, 35 Livery Street, Birmingham B3 2PB, UK, 2013.
-
-\bibitem{SE_7_Principles}
-Barry~W. Boehm.
-\newblock Seven basic principles of software engineering.
-\newblock {\em Journal of Systems and Software}, 3(1):3--24, March 1983.
-
-\bibitem{Software_Engineering}
-Klaus Pohl, Gunter Bockle, and Frank van~der Frank.
-\newblock {\em Software Product Line Engineering: Foundations, Principles and
-  Techniques}.
-\newblock Springer, Springer-Verlag Berlin Heidelberg, 2005.
-
-\bibitem{NAT}
-Yevhen Shylo.
-\newblock Network address translation.
-\newblock {\em Scientific Report - Technological Conference}, 3(1):79, November
-  2015.
-\newblock http://www.dut.edu.ua/uploads/n\_2205\_50283608.pdf.
-
-\bibitem{Where_WebRTC}
-Phil Edholm.
-\newblock Where are the real webrtc apps?
-\newblock
-  \url{http://www.webrtcworld.com/topics/from-the-experts/articles/375465-where-the-real-webrtc-apps.htm},
-  2014.
-\newblock [Accessed: 2016-01-17].
 
 \end{thebibliography}
