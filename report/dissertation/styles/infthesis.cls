@@ -377,7 +377,7 @@ Computer Science}}
 \renewcommand{\contentsname}{Table of Contents}
 \renewcommand{\listfigurename}{List of Figures}
 \renewcommand{\listtablename}{List of Tables}
-\renewcommand{\bibname}{Bibliographyy}
+\renewcommand{\bibname}{Bibliography}
 \renewcommand{\indexname}{Index}
 \renewcommand{\abstractname}{Abstract}
 

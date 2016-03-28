@@ -38,4 +38,4 @@
 \contentsline {section}{\numberline {6.1}Conclusion}{45}{section.6.1}
 \contentsline {section}{\numberline {6.2}Discussion}{46}{section.6.2}
 \contentsline {section}{\numberline {6.3}Future Improvements}{46}{section.6.3}
-\contentsline {chapter}{Bibliographyy}{47}{chapter*.44}
+\contentsline {chapter}{Bibliography}{47}{chapter*.44}
