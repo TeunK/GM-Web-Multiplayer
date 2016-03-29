@@ -37,6 +37,7 @@
   <fonts name="fonts">
     <font>fonts\ft_main</font>
     <font>fonts\ft_mini</font>
+    <font>fonts\ft_graph</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_Network_controller</object>

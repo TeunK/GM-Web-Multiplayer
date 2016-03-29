@@ -299,18 +299,18 @@ wn_send_message(server_socket)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var x0 = 5
-var y0 = 200
-var margin = 12
-draw_set_color(c_white)
+            <string>var x0 = 30
+var y0 = 480
+var margin = 18
+draw_set_color(c_black)
 pingstring = client_name+" png: "
-var printlim = 5
+var printlim = 7
 var printdistance = 75
 draw_set_font(ft_mini)
 draw_text(x0,y0+item_count*margin,pingstring)
 for (j=0; j&lt;min(array_length_1d(ping),printlim); j+=1)
 {
-    draw_text(x0+15+(j+1)*printdistance,y0+item_count*margin,ping[j])
+    draw_text(x0+20+(j+1)*printdistance,y0+item_count*margin,ping[j])
 }
 draw_set_font(ft_main)
 

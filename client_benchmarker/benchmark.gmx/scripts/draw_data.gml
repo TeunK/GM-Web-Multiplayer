@@ -3,14 +3,14 @@ var x0          = argument0
 var y0          = argument1
 var lines       = argument2
 var width       = max_value(strings_to_widths(lines))
-var line_height = 14
+var line_height = 18
 var height      = line_height*array_length_1d(lines)
 var margin      = 10
 var x_start     = x0 + margin
 var y_start     = y0 + margin
 var text_font   = ft_mini
-var bg_col      = c_black
-var text_col    = c_white
+var bg_col      = c_white
+var text_col    = c_black
 
 //background
 draw_set_color(bg_col)

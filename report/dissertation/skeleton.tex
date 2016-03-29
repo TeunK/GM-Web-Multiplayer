@@ -594,18 +594,15 @@ The \texttt{total req/sec} therefore indicates how many messages are sent out to
 
 \texttt{ping count} describes the size of the message history. 40 means that the graph will display the last 40 ticks worth of average RTTs of all the virtual clients.
 
-This application was used in the evaluation experiments in order to test the system's capabilities, such as the applied stress on the server with different varieties of concurrent connections, certain amounts of messages that need to be processed simultaneously, as well as recording the effect on the RTT when the client is located in different areas in the world.
-
 \begin{figure}[H]
 \centering
 % \centering% default with `floatrow`
-\includegraphics[scale=0.50, angle=00]{images/benchmarker.jpg}
-\caption{Displaying the GUI of the benchmarking application (flipped 90 degrees). On the left top the global data is available for the client. The table on the top-right displays the virtual clients and their 5 most recent round-trip values. The graph on the bottom displays the average RTT over time for these clients. The colors of the image are inverted from the actual interface and the font size is slightly modified to enhance readability on paper.}
+\includegraphics[scale=0.80]{images/benchmarker.eps}
+\caption{Displaying the GUI of the benchmarking application. On the left top the global data is available for the client. The graph below displays the average RTT over time for these clients. The table on the bottom displays the virtual clients and 7 of their most recently observed round-trip values.}
 \label{fig:benchmark_gui}
-\vspace{1em}
 \end{figure}
 
-
+This application was used in the evaluation experiments in order to test the system's capabilities, such as the applied stress on the server with different varieties of concurrent connections, certain amounts of messages that need to be processed simultaneously, as well as recording the effect on the RTT when the client is located in different areas in the world.
 
 
 % -----------------------

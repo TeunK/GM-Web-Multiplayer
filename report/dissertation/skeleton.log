@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  29 MAR 2016 01:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  29 MAR 2016 02:04
 entering extended mode
 **./skeleton.tex
 (skeleton.tex
@@ -982,18 +982,31 @@ Overfull \hbox (0.56567pt too wide) in paragraph at lines 575--576
 -stances (vir-tual clients),
  []
 
-[34] <images/benchmarker.jpg, id=573, 817.0525pt x 447.6725pt>
-File: images/benchmarker.jpg Graphic file (type jpg)
+[34]
+Package epstopdf Info: Source file: <images/benchmarker.eps>
+(epstopdf)                    date: 2016-03-29 01:54:02
+(epstopdf)                    size: 63939 bytes
+(epstopdf)             Output file: <images/benchmarker-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-03-29 01:54:24
+(epstopdf)                    size: 44447 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/benchmarker-eps-conv
+erted-to.pdf images/benchmarker.eps>
+(epstopdf)             \includegraphics on input line 600.
+Package epstopdf Info: Output file is already uptodate.
 
-<use images/benchmarker.jpg>
-Package pdftex.def Info: images/benchmarker.jpg used on input line 602.
-(pdftex.def)             Requested size: 408.52525pt x 223.8357pt.
- [35 <./images/benchmarker.jpg>] [36
+<images/benchmarker-eps-converted-to.pdf, id=573, 514.92375pt x 540.0175pt>
+File: images/benchmarker-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/benchmarker-eps-converted-to.pdf>
+Package pdftex.def Info: images/benchmarker-eps-converted-to.pdf used on input 
+line 600.
+(pdftex.def)             Requested size: 411.93954pt x 432.01459pt.
+ [35 <./images/benchmarker-eps-converted-to.pdf>] [36
 
 ]
 Chapter 5.
 
-Overfull \hbox (0.75887pt too wide) in paragraph at lines 621--622
+Overfull \hbox (0.75887pt too wide) in paragraph at lines 618--619
 \T1/ppl/m/n/12 house-hold net-work band-width [[]]. This in-volves an up-load s
 peed of 5Mbit/s,
  []
@@ -1008,15 +1021,15 @@ to.pdf>
 (epstopdf)                    size: 16512 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/test_CLIENT_CPUusage
 -eps-converted-to.pdf images/test_CLIENT_CPUusage.eps>
-(epstopdf)             \includegraphics on input line 631.
+(epstopdf)             \includegraphics on input line 628.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/test_CLIENT_CPUusage-eps-converted-to.pdf, id=591, 456.70625pt x 197.73
+<images/test_CLIENT_CPUusage-eps-converted-to.pdf, id=594, 456.70625pt x 197.73
 875pt>
 File: images/test_CLIENT_CPUusage-eps-converted-to.pdf Graphic file (type pdf)
  <use images/test_CLIENT_CPUusage-eps-converted-to.pdf>
 Package pdftex.def Info: images/test_CLIENT_CPUusage-eps-converted-to.pdf used 
-on input line 631.
+on input line 628.
 (pdftex.def)             Requested size: 411.03181pt x 177.96323pt.
 Package epstopdf Info: Source file: <images/test_CLIENT_CPUtime.eps>
 (epstopdf)                    date: 2016-03-29 00:27:10
@@ -1027,15 +1040,15 @@ o.pdf>
 (epstopdf)                    size: 15637 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/test_CLIENT_CPUtime-
 eps-converted-to.pdf images/test_CLIENT_CPUtime.eps>
-(epstopdf)             \includegraphics on input line 640.
+(epstopdf)             \includegraphics on input line 637.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/test_CLIENT_CPUtime-eps-converted-to.pdf, id=592, 456.70625pt x 198.742
+<images/test_CLIENT_CPUtime-eps-converted-to.pdf, id=595, 456.70625pt x 198.742
 5pt>
 File: images/test_CLIENT_CPUtime-eps-converted-to.pdf Graphic file (type pdf)
  <use images/test_CLIENT_CPUtime-eps-converted-to.pdf>
 Package pdftex.def Info: images/test_CLIENT_CPUtime-eps-converted-to.pdf used o
-n input line 640.
+n input line 637.
 (pdftex.def)             Requested size: 411.03181pt x 178.86658pt.
 Package epstopdf Info: Source file: <images/test_CLIENT_RSS.eps>
 (epstopdf)                    date: 2016-03-29 00:31:12
@@ -1046,15 +1059,15 @@ f>
 (epstopdf)                    size: 16648 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/test_CLIENT_RSS-eps-
 converted-to.pdf images/test_CLIENT_RSS.eps>
-(epstopdf)             \includegraphics on input line 648.
+(epstopdf)             \includegraphics on input line 645.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/test_CLIENT_RSS-eps-converted-to.pdf, id=593, 456.70625pt x 200.75pt>
+<images/test_CLIENT_RSS-eps-converted-to.pdf, id=596, 456.70625pt x 200.75pt>
 File: images/test_CLIENT_RSS-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/test_CLIENT_RSS-eps-converted-to.pdf>
 Package pdftex.def Info: images/test_CLIENT_RSS-eps-converted-to.pdf used on in
-put line 648.
+put line 645.
 (pdftex.def)             Requested size: 411.03181pt x 180.67331pt.
  [38 <./images/test_CLIENT_CPUusage-eps-converted-to.pdf> <./images/test_CLIENT
 _CPUtime-eps-converted-to.pdf>] [39 <./images/test_CLIENT_RSS-eps-converted-to.
@@ -1067,15 +1080,15 @@ Package epstopdf Info: Source file: <images/mean_rtt.eps>
 (epstopdf)                    size: 81923 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/mean_rtt-eps-convert
 ed-to.pdf images/mean_rtt.eps>
-(epstopdf)             \includegraphics on input line 673.
+(epstopdf)             \includegraphics on input line 670.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/mean_rtt-eps-converted-to.pdf, id=629, 475.7775pt x 211.79124pt>
+<images/mean_rtt-eps-converted-to.pdf, id=632, 475.7775pt x 211.79124pt>
 File: images/mean_rtt-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/mean_rtt-eps-converted-to.pdf>
 Package pdftex.def Info: images/mean_rtt-eps-converted-to.pdf used on input lin
-e 673.
+e 670.
 (pdftex.def)             Requested size: 409.16792pt x 182.14015pt.
 Package epstopdf Info: Source file: <images/test_SERVER_RTTmean.eps>
 (epstopdf)                    date: 2016-03-29 00:45:25
@@ -1086,15 +1099,15 @@ o.pdf>
 (epstopdf)                    size: 26872 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/test_SERVER_RTTmean-
 eps-converted-to.pdf images/test_SERVER_RTTmean.eps>
-(epstopdf)             \includegraphics on input line 685.
+(epstopdf)             \includegraphics on input line 682.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/test_SERVER_RTTmean-eps-converted-to.pdf, id=633, 703.62875pt x 318.188
+<images/test_SERVER_RTTmean-eps-converted-to.pdf, id=636, 703.62875pt x 318.188
 75pt>
 File: images/test_SERVER_RTTmean-eps-converted-to.pdf Graphic file (type pdf)
  <use images/test_SERVER_RTTmean-eps-converted-to.pdf>
 Package pdftex.def Info: images/test_SERVER_RTTmean-eps-converted-to.pdf used o
-n input line 685.
+n input line 682.
 (pdftex.def)             Requested size: 408.10497pt x 184.54959pt.
  [40 <./images/mean_rtt-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/test_SERVER_RTTstd.eps>
@@ -1106,33 +1119,33 @@ Package epstopdf Info: Source file: <images/test_SERVER_RTTstd.eps>
 (epstopdf)                    size: 26779 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/test_SERVER_RTTstd-e
 ps-converted-to.pdf images/test_SERVER_RTTstd.eps>
-(epstopdf)             \includegraphics on input line 693.
+(epstopdf)             \includegraphics on input line 690.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/test_SERVER_RTTstd-eps-converted-to.pdf, id=651, 703.62875pt x 319.1925
+<images/test_SERVER_RTTstd-eps-converted-to.pdf, id=654, 703.62875pt x 319.1925
 pt>
 File: images/test_SERVER_RTTstd-eps-converted-to.pdf Graphic file (type pdf)
  <use images/test_SERVER_RTTstd-eps-converted-to.pdf>
 Package pdftex.def Info: images/test_SERVER_RTTstd-eps-converted-to.pdf used on
- input line 693.
+ input line 690.
 (pdftex.def)             Requested size: 408.10497pt x 185.13177pt.
  [41 <./images/test_SERVER_RTTmean-eps-converted-to.pdf> <./images/test_SERVER_
 RTTstd-eps-converted-to.pdf>] [42] [43]
-Overfull \hbox (21.29054pt too wide) in paragraph at lines 770--771
+Overfull \hbox (21.29054pt too wide) in paragraph at lines 767--768
 []\T1/ppl/m/n/12 Assuming the added de-lay is caused by the im-plied dis-tance 
 and packet-switching,
  []
 
-<images/worldmap.jpg, id=708, 892.33376pt x 474.77374pt>
+<images/worldmap.jpg, id=711, 892.33376pt x 474.77374pt>
 File: images/worldmap.jpg Graphic file (type jpg)
 
 <use images/worldmap.jpg>
-Package pdftex.def Info: images/worldmap.jpg used on input line 775.
+Package pdftex.def Info: images/worldmap.jpg used on input line 772.
 (pdftex.def)             Requested size: 401.54648pt x 213.64621pt.
  [44 <./images/worldmap.jpg>]
 Chapter 6.
 
-Overfull \hbox (5.30614pt too wide) in paragraph at lines 796--799
+Overfull \hbox (5.30614pt too wide) in paragraph at lines 793--796
 \T1/ppl/m/n/12 The eval-u-a-tion meth-ods in-di-cate that the net-work in-deed 
 per-forms well enough
  []
@@ -1327,20 +1340,20 @@ ach-[]23mbps .$
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 885.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 882.
  [50]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 885.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 882.
  (skeleton.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 885.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 885.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 882.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 882.
 Package rerunfilecheck Info: File `skeleton.out' has not changed.
 (rerunfilecheck)             Checksum: 4D3A1A8D8D2CE7A793A1764E2078BEBB;2755.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 885.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 882.
  ) 
 Here is how much of TeX's memory you used:
  9188 strings out of 493634
- 135821 string characters out of 3141302
- 237455 words of memory out of 3000000
+ 135889 string characters out of 3141302
+ 237302 words of memory out of 3000000
  12172 multiletter control sequences out of 15000+200000
  32548 words of font info for 70 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -1361,9 +1374,9 @@ r8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program
  Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on skeleton.pdf (50 pages, 1801893 bytes).
+Output written on skeleton.pdf (50 pages, 1726922 bytes).
 PDF statistics:
- 991 PDF objects out of 1000 (max. 8388607)
+ 994 PDF objects out of 1000 (max. 8388607)
  218 named destinations out of 1000 (max. 500000)
  419 words of extra memory for PDF output out of 10000 (max. 10000000)
 

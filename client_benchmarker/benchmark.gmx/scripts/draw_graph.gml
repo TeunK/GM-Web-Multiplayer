@@ -1,7 +1,7 @@
 //color scheme
-var bg_col          = c_black
-var text_col        = c_white
-var curve_col       = c_lime
+var bg_col          = c_white
+var text_col        = c_black
+var curve_col       = c_navy
 
 
 //draw limit
@@ -19,8 +19,8 @@ for (i=0; i<limit; i+=1)
 /*************************************/
 // GRAPH CREATION
 //define bottom-left corner of graph
-var graph_x0        = room_width-600
-var graph_y0        = 240
+var graph_x0        = 60
+var graph_y0        = 460
 var graph_height    = 180
 var graph_width     = 580
 draw_set_font(ft_mini)
@@ -92,7 +92,9 @@ for(i=1; i<interval_count; i+=1)
     draw_set_halign(fa_center)
     draw_set_color(text_col)
     if (instances[i] == 0) {instances[i] = 1}
+    draw_set_font(ft_graph)
     draw_text(graph_x0+x_right,graph_y0-y_new-20,round(pings[i]))
+    draw_set_font(ft_mini);
     draw_set_halign(fa_left)
 }
 draw_set_font(ft_main)
