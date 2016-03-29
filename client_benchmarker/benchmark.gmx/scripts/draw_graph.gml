@@ -3,19 +3,6 @@ var bg_col          = c_white
 var text_col        = c_black
 var curve_col       = c_navy
 
-
-//draw limit
-/*
-var limit = min(5, obj_Controller.ping_history_limit)
-
-for (i=0; i<limit; i+=1)
-{
-    var ping = obj_Network_controller.ping[i]
-    draw_set_color(text_col)
-    draw_set_halign(fa_left)
-    draw_text(ping_x,ping_y+margin*i, "Ping: "+ping)
-}
-*/
 /*************************************/
 // GRAPH CREATION
 //define bottom-left corner of graph

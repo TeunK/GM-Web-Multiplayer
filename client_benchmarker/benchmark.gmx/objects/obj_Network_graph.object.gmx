@@ -77,32 +77,6 @@ ping_y = 20
           <argument>
             <kind>1</kind>
             <string>draw_graph()
-
-/*
-//draw unique details
-var item=0
-var lim = 5
-if (i &lt; lim)
-{
-    with (obj_Network_controller)
-    {
-        var x0 = 20
-        var y0 = 200
-        var margin = 12
-        var i = other.item
-        draw_set_color(c_white)
-        pingstring[i] = "PINGS: "
-        for (j=0; j&lt;array_length_1d(ping); j+=1)
-        {
-            pingstring[i] += string(ping[j]) + " | "
-        }
-        other.item+=1
-        draw_set_font(ft_mini)
-        draw_text(x0,y0+i*margin,pingstring[i])
-        draw_set_font(ft_main)
-    }
-}
-*/
 </string>
           </argument>
         </arguments>

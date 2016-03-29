@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//content
+            <string>//Draw client and server details
 var x0          = 20
 var y0          = 60
 var lines;

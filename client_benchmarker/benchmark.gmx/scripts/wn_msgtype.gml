@@ -29,6 +29,8 @@ if (message_direction == "C2S")
             return 7;
         case "remove_virtual_client":
             return 8;
+        case "update_user":
+            return 9;
     }
 }
 else if (message_direction == "S2C")
@@ -48,6 +50,8 @@ else if (message_direction == "S2C")
         case 6:
             return "client_count";
         case 7:
-            return "request_count"
+            return "request_count";
+        case 8:
+            return "update_user";
     }
 }

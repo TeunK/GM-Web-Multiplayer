@@ -25,11 +25,6 @@
     <script>scripts\min_value.gml</script>
     <script>scripts\strings_to_widths.gml</script>
     <script>scripts\draw_data.gml</script>
-    <scripts name="bored">
-      <script>scripts\init_drawbox.gml</script>
-      <script>scripts\scr_matrix.gml</script>
-      <script>scripts\draw_typebox.gml</script>
-    </scripts>
     <script>scripts\draw_graph.gml</script>
     <script>scripts\calc_total_pings.gml</script>
     <script>scripts\button_pressed.gml</script>
@@ -45,7 +40,6 @@
     <object>objects\obj_Controller</object>
     <object>objects\obj_Network_graph</object>
     <object>objects\obj_Server_status</object>
-    <object>objects\obj_Bored</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

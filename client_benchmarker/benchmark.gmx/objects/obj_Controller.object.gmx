@@ -74,9 +74,6 @@ nodes = ds_map_create();
           <argument>
             <kind>1</kind>
             <string>
-
-
-
 //client creation
 if (instance_number(obj_Network_controller) &lt; clients)
 {
@@ -230,7 +227,8 @@ with (obj_Network_controller)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(c_white)
+            <string>//application details and controls
+draw_set_color(c_white)
 draw_rectangle(20-4,20-2,20+4+string_width("User: "+username),20+2+string_height("User: "+username),0)
 draw_set_color(c_black)
 draw_set_halign(fa_left);
@@ -272,6 +270,7 @@ lines[8] = "ping-rate/s: "+string(room_speed / req_rate_ping)
 lines[9] = "total req/sec: "+string(clients * req_rate_ping)
 lines[10] = "ping count: "+string(array_length_1d(pings))
 
+//interactive buttons
 if button_pressed(205,50,"-100 clients",c_gray,c_black) &amp;&amp; clients &gt; 100
 {
     clients -= 100
