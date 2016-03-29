@@ -363,7 +363,7 @@ The core functionality of the server that takes care of incoming messages and co
 
 \begin{figure}[H]
 % \centering% default with `floatrow`
-\includegraphics[scale=0.56]{images/server_sequence_diagram.jpg}
+\includegraphics[scale=0.3]{images/server_sequence_diagram2.eps}
 \caption{Sequence diagram displaying the overall server logic. Note that clients can asynchronously and repeatedly send messages to the server after having received their server acknowledgement (ACK) packet. The \texttt{Msg\_Type} can be anything such as \texttt{chat\_message}, \texttt{update\_user} or \texttt{client\_disconnected}, and the action taken by the server is specified by the player object method, referenced by the action dictionary on the server.}
 \label{fig:server_sequence_diagram}
 \end{figure}

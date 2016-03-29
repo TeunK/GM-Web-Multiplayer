@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  29 MAR 2016 02:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  29 MAR 2016 18:14
 entering extended mode
 **./skeleton.tex
 (skeleton.tex
@@ -867,20 +867,33 @@ Overfull \hbox (1.0292pt too wide) in paragraph at lines 332--332
 Underfull \vbox (badness 1867) has occurred while \output is active []
 
  [23]
-<images/server_sequence_diagram.jpg, id=465, 756.8275pt x 483.8075pt>
-File: images/server_sequence_diagram.jpg Graphic file (type jpg)
+Package epstopdf Info: Source file: <images/server_sequence_diagram2.eps>
+(epstopdf)                    date: 2016-03-29 18:14:07
+(epstopdf)                    size: 68602 bytes
+(epstopdf)             Output file: <images/server_sequence_diagram2-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2016-03-29 18:14:11
+(epstopdf)                    size: 26072 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/server_sequence_diag
+ram2-eps-converted-to.pdf images/server_sequence_diagram2.eps>
+(epstopdf)             \includegraphics on input line 366.
+Package epstopdf Info: Output file is already uptodate.
 
-<use images/server_sequence_diagram.jpg>
-Package pdftex.def Info: images/server_sequence_diagram.jpg used on input line 
-366.
-(pdftex.def)             Requested size: 423.82051pt x 270.93034pt.
+<images/server_sequence_diagram2-eps-converted-to.pdf, id=465, 1386.17876pt x 8
+25.0825pt>
+File: images/server_sequence_diagram2-eps-converted-to.pdf Graphic file (type p
+df)
+ <use images/server_sequence_diagram2-eps-converted-to.pdf>
+Package pdftex.def Info: images/server_sequence_diagram2-eps-converted-to.pdf u
+sed on input line 366.
+(pdftex.def)             Requested size: 415.85684pt x 247.52666pt.
 
-Overfull \hbox (11.25554pt too wide) in paragraph at lines 366--367
+Overfull \hbox (3.29187pt too wide) in paragraph at lines 366--367
 [][] 
  []
 
-[24 <./images/server_sequence_diagram.jpg>]
-<images/server_code.jpg, id=484, 602.25pt x 293.095pt>
+[24 <./images/server_sequence_diagram2-eps-converted-to.pdf>]
+<images/server_code.jpg, id=511, 602.25pt x 293.095pt>
 File: images/server_code.jpg Graphic file (type jpg)
 
 <use images/server_code.jpg>
@@ -891,14 +904,14 @@ Overfull \hbox (21.05469pt too wide) in paragraph at lines 381--382
 [][] 
  []
 
-<images/server_actions.jpg, id=487, 464.73625pt x 458.71375pt>
+<images/server_actions.jpg, id=514, 464.73625pt x 458.71375pt>
 File: images/server_actions.jpg Graphic file (type jpg)
 
 <use images/server_actions.jpg>
 Package pdftex.def Info: images/server_actions.jpg used on input line 388.
 (pdftex.def)             Requested size: 302.07498pt x 298.1604pt.
 
-<images/server_player_functions.jpg, id=488, 379.4175pt x 406.51875pt>
+<images/server_player_functions.jpg, id=515, 379.4175pt x 406.51875pt>
 File: images/server_player_functions.jpg Graphic file (type jpg)
 
 <use images/server_player_functions.jpg>
@@ -906,7 +919,7 @@ Package pdftex.def Info: images/server_player_functions.jpg used on input line
 395.
 (pdftex.def)             Requested size: 246.61844pt x 264.23404pt.
 
-<images/server_player_construct.jpg, id=494, 718.685pt x 517.935pt>
+<images/server_player_construct.jpg, id=521, 718.685pt x 517.935pt>
 File: images/server_player_construct.jpg Graphic file (type jpg)
 
 <use images/server_player_construct.jpg>
@@ -920,7 +933,7 @@ Overfull \hbox (126.44745pt too wide) in paragraph at lines 406--407
 
 [25 <./images/server_code.jpg>] [26 <./images/server_actions.jpg> <./images/ser
 ver_player_functions.jpg>]
-<images/server_message_tags.jpg, id=512, 280.04625pt x 405.515pt>
+<images/server_message_tags.jpg, id=539, 280.04625pt x 405.515pt>
 File: images/server_message_tags.jpg Graphic file (type jpg)
 
 <use images/server_message_tags.jpg>
@@ -936,7 +949,7 @@ Overfull \hbox (14.59334pt too wide) in paragraph at lines 427--428
 vided by Learn-
  []
 
-<images/extension_flow.jpg, id=518, 972.63374pt x 565.11125pt>
+<images/extension_flow.jpg, id=545, 972.63374pt x 565.11125pt>
 File: images/extension_flow.jpg Graphic file (type jpg)
 
 <use images/extension_flow.jpg>
@@ -949,14 +962,14 @@ r_ip, server_port) \T1/ppl/m/n/12 opens a socket
  []
 
 [29 <./images/extension_flow.jpg>]
-<images/extensions_folder.png, id=536, 160.80075pt x 135.50626pt>
+<images/extensions_folder.png, id=563, 160.80075pt x 135.50626pt>
 File: images/extensions_folder.png Graphic file (type png)
 
 <use images/extensions_folder.png>
 Package pdftex.def Info: images/extensions_folder.png used on input line 468.
 (pdftex.def)             Requested size: 192.95992pt x 162.60666pt.
 
-<images/xml_mapping.png, id=538, 345.08925pt x 181.8795pt>
+<images/xml_mapping.png, id=565, 345.08925pt x 181.8795pt>
 File: images/xml_mapping.png Graphic file (type png)
 
 <use images/xml_mapping.png>
@@ -994,7 +1007,7 @@ erted-to.pdf images/benchmarker.eps>
 (epstopdf)             \includegraphics on input line 600.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/benchmarker-eps-converted-to.pdf, id=573, 514.92375pt x 540.0175pt>
+<images/benchmarker-eps-converted-to.pdf, id=600, 514.92375pt x 540.0175pt>
 File: images/benchmarker-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/benchmarker-eps-converted-to.pdf>
@@ -1024,7 +1037,7 @@ to.pdf>
 (epstopdf)             \includegraphics on input line 628.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/test_CLIENT_CPUusage-eps-converted-to.pdf, id=594, 456.70625pt x 197.73
+<images/test_CLIENT_CPUusage-eps-converted-to.pdf, id=621, 456.70625pt x 197.73
 875pt>
 File: images/test_CLIENT_CPUusage-eps-converted-to.pdf Graphic file (type pdf)
  <use images/test_CLIENT_CPUusage-eps-converted-to.pdf>
@@ -1043,7 +1056,7 @@ eps-converted-to.pdf images/test_CLIENT_CPUtime.eps>
 (epstopdf)             \includegraphics on input line 637.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/test_CLIENT_CPUtime-eps-converted-to.pdf, id=595, 456.70625pt x 198.742
+<images/test_CLIENT_CPUtime-eps-converted-to.pdf, id=622, 456.70625pt x 198.742
 5pt>
 File: images/test_CLIENT_CPUtime-eps-converted-to.pdf Graphic file (type pdf)
  <use images/test_CLIENT_CPUtime-eps-converted-to.pdf>
@@ -1062,7 +1075,7 @@ converted-to.pdf images/test_CLIENT_RSS.eps>
 (epstopdf)             \includegraphics on input line 645.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/test_CLIENT_RSS-eps-converted-to.pdf, id=596, 456.70625pt x 200.75pt>
+<images/test_CLIENT_RSS-eps-converted-to.pdf, id=623, 456.70625pt x 200.75pt>
 File: images/test_CLIENT_RSS-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/test_CLIENT_RSS-eps-converted-to.pdf>
@@ -1083,7 +1096,7 @@ ed-to.pdf images/mean_rtt.eps>
 (epstopdf)             \includegraphics on input line 670.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/mean_rtt-eps-converted-to.pdf, id=632, 475.7775pt x 211.79124pt>
+<images/mean_rtt-eps-converted-to.pdf, id=659, 475.7775pt x 211.79124pt>
 File: images/mean_rtt-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/mean_rtt-eps-converted-to.pdf>
@@ -1102,7 +1115,7 @@ eps-converted-to.pdf images/test_SERVER_RTTmean.eps>
 (epstopdf)             \includegraphics on input line 682.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/test_SERVER_RTTmean-eps-converted-to.pdf, id=636, 703.62875pt x 318.188
+<images/test_SERVER_RTTmean-eps-converted-to.pdf, id=663, 703.62875pt x 318.188
 75pt>
 File: images/test_SERVER_RTTmean-eps-converted-to.pdf Graphic file (type pdf)
  <use images/test_SERVER_RTTmean-eps-converted-to.pdf>
@@ -1122,7 +1135,7 @@ ps-converted-to.pdf images/test_SERVER_RTTstd.eps>
 (epstopdf)             \includegraphics on input line 690.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/test_SERVER_RTTstd-eps-converted-to.pdf, id=654, 703.62875pt x 319.1925
+<images/test_SERVER_RTTstd-eps-converted-to.pdf, id=681, 703.62875pt x 319.1925
 pt>
 File: images/test_SERVER_RTTstd-eps-converted-to.pdf Graphic file (type pdf)
  <use images/test_SERVER_RTTstd-eps-converted-to.pdf>
@@ -1136,7 +1149,7 @@ Overfull \hbox (21.29054pt too wide) in paragraph at lines 767--768
 and packet-switching,
  []
 
-<images/worldmap.jpg, id=711, 892.33376pt x 474.77374pt>
+<images/worldmap.jpg, id=738, 892.33376pt x 474.77374pt>
 File: images/worldmap.jpg Graphic file (type jpg)
 
 <use images/worldmap.jpg>
@@ -1352,7 +1365,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 882.
  ) 
 Here is how much of TeX's memory you used:
  9188 strings out of 493634
- 135889 string characters out of 3141302
+ 135962 string characters out of 3141302
  237302 words of memory out of 3000000
  12172 multiletter control sequences out of 15000+200000
  32548 words of font info for 70 fonts, out of 3000000 for 9000
@@ -1374,9 +1387,9 @@ r8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program
  Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on skeleton.pdf (50 pages, 1726922 bytes).
+Output written on skeleton.pdf (50 pages, 1625984 bytes).
 PDF statistics:
- 994 PDF objects out of 1000 (max. 8388607)
+ 1021 PDF objects out of 1200 (max. 8388607)
  218 named destinations out of 1000 (max. 500000)
  419 words of extra memory for PDF output out of 10000 (max. 10000000)
 
