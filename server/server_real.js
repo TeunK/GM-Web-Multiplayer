@@ -32,7 +32,6 @@ io.sockets.on('connection', function(client_socket) {
 
 
 
-
 /* Network Logic Handling */
 action = {};
 var msgs = MESSAGES['C2S'];
@@ -41,7 +40,6 @@ action[msgs.initial_client_details] = function(player){
     player.set_username(username);
 };
 action[msgs.client_disconnects] = function(player){
-    console.log("logout");
     controller.clients.splice(player, 1);
     player.disconnect();
 };
@@ -50,6 +48,7 @@ action[msgs.chat_message] = function(player){
     player.send_message(chat_message);
 };
 action[msgs.ping] = function(player){
+    var virtual_username = bufferread();
     var ping_sendtime   = bufferread();
     player.return_ping(ping_sendtime);
 };
@@ -59,6 +58,14 @@ action[msgs.client_count] = function(player){
 action[msgs.update_user] = function(player){
     player.update();
 };
+action[msgs.new_virtual_client] = function(player){
+    virtual_username = bufferread();
+    player.add_virtual_client(virtual_username);
+};
+action[msgs.remove_virtual_client] = function(player){
+    virtual_username = bufferread();
+    player.remove_virtual_client(virtual_username);
+};
 
 function Player(client_id, socket_id) {
     /* sets client_id and socket_id for the client, and
@@ -66,6 +73,7 @@ function Player(client_id, socket_id) {
     self = this;
     this.client_id = client_id;
     this.socket_id = socket_id;
+    this.virtual_clients = [];
 
     // This object represents a player in the game.
     // Make sure the variables match those of the client player object that you want to track.
@@ -93,14 +101,12 @@ function Player(client_id, socket_id) {
 }
 Player.prototype.set_username = function(username) {
     this.client_username = username;
-    console.log(this.client_username);
 };
 Player.prototype.get_socket_id = function() {
     return this.socket_id;
 };
 Player.prototype.update = function() {
     this.receive_player_data();
-    console.log("Client ["+this.client_id.toString()+"]: ("+this.x.toString()+","+this.y.toString()+")");
     this.broadcast_player_data();
 };
 Player.prototype.receive_player_data = function() {
@@ -168,8 +174,19 @@ Player.prototype.return_clientcount = function() {
     bufferwrite(controller.clients.length);
     sendmessage(this.socket_id);
 };
-
-
+Player.prototype.add_virtual_client = function(virtual_username) {
+    //add client name to array if not yet registered
+    if (this.virtual_clients.indexOf(virtual_username) == -1) {
+        this.virtual_clients.push(this.client_username+"."+virtual_username);
+    }
+};
+Player.prototype.remove_virtual_client = function(virtual_username) {
+    //add client name to array if not yet registered
+    var index = this.virtual_clients.indexOf(this.client_username+"."+virtual_username);
+    if (index > -1) {
+        this.virtual_clients.splice(index, 1);
+    }
+};
 
 
 
