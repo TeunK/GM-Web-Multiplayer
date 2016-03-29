@@ -376,44 +376,15 @@ More detailed, the server logic behaves as follows:
 \item Depending on the action (Figure \ref{fig:server_actions} defined in \ref{fig:server_message_tags}), the client instance will receive a function call that handles the message (Figure \ref{fig:server_player_functions}).
 \end{enumerate}
 
-\begin{figure}[b!]
-% \centering% default with `floatrow`
-\includegraphics[scale=0.72]{images/server_code.jpg}
-\caption{Core functionality of the server network setup, responsible for connecting new clients, creating reference instances with their details connection details (1, 2), listening to their incoming messages on the server (3) and handling them accordingly (4, messages codes are defined in messages.js. see Figure \ref{fig:server_message_tags}). }
-\label{fig:server_core}
-\end{figure}
-
-\begin{figure}
-% \centering% default with `floatrow`
-\includegraphics[scale=0.65]{images/server_actions.jpg}
-\caption{Dictionary storing the high-level actions for a specified player instance to perform.}
-\label{fig:server_actions}
-\end{figure}
-
-\begin{figure}
-% \centering% default with `floatrow`
-\includegraphics[scale=0.65]{images/server_player_functions.jpg}
-\caption{Low level methods the player instance on the server can perform. These methods are called by the incoming message block (Figure \ref{fig:server_core} point 4), defined in the action dictionary (Figure \ref{fig:server_actions})}
-\label{fig:server_player_functions}
-\end{figure}
-
 The client class (Player) is made to be synchronized with the state of its corresponding client, such that any change in the actual client application will also modify the representative client state in the server (Figure \ref{fig:server_player_construct}). This way, the developer no longer needs to worry about redundantly transmitting all variables to all other clients, including those variables that never changed since a previous transmission, because the server will still have these in memory. Another benefit to this is that the client is allowed to send smaller messages.
 
 The server has a template set-up, supporting features such as updating the client's state on the server, informing other clients with this client's state and broadcasting messages. These features can easily be modified and extended without with new functionality depending on any specific need the developer may have.
 
 \begin{figure}[H]
 % \centering% default with `floatrow`
-\includegraphics[scale=0.75]{images/server_player_construct.jpg}
-\caption{Player class matching variables of the GameMaker client player object class. Upon instantiation, the constructor automatically returns a message to the referenced client with it's unique identity defined by the server.}
+\includegraphics[scale=1]{images/server_class_diagram.eps}
+\caption{Class diagram indicating the interaction between incoming messages through Socket.io, and the methods provided by the Player class that are used to handle these messages.}
 \label{fig:server_player_construct}
-\vspace{1em}
-\end{figure}
-
-\begin{figure}[H]
-% \centering% default with `floatrow`
-\includegraphics[scale=0.75]{images/server_message_tags.jpg}
-\caption{Server specified message tags. C2S refers to "Client-to-Server" and S2C refers to "Server-to-Client" messages.}
-\label{fig:server_message_tags}
 \vspace{1em}
 \end{figure}
 
@@ -462,23 +433,7 @@ When at any time, the buffer needs to be reused for sending a new message, \text
 \paragraph*{Creating a mapping}
 can be done directly in the GUI of GameMaker as displayed in Figure \ref{fig:extension_folder}. After creating a new extension setup in the extensions directory, the previously specified extension files can be referenced. In each of the files, functions can be added that map GML functions to extension functions. Figure \ref{fig:xml_mapping} is part of the mapping xml file that displays how it looks in detail.
 
-\begin{figure}[H]
-\centering
-% \centering% default with `floatrow`
-\includegraphics[scale=1.2]{images/extensions_folder.png}
-\caption{View inside the GUI that visualises the extension function mapping setup.}
-\label{fig:extension_folder}
-\vspace{1em}
-\end{figure}
 
-\begin{figure}[H]
-\centering
-% \centering% default with `floatrow`
-\includegraphics[scale=1.2]{images/xml_mapping.png}
-\caption{External function \texttt{connect} from JavaScript extension file located in GMWebNet.js, mapped to a GML function \texttt{wn\_connect} located in the client application. The function takes 2 arguments, each of type String (id = 1), and returns a Double type (id = 2)}
-\label{fig:xml_mapping}
-\vspace{1em}
-\end{figure}
 
 The natively supported networking functions can easily be translated into the the browser-compatible functions defined by the extension as displayed in table \ref{table:function_translations}. The following purposes are included:
 \begin{itemize}
@@ -561,8 +516,7 @@ After initializing the connection using the function \texttt{wn\_connect(ip\_add
 Exact implementation details can be found in the included GameMaker application files by opening the corresponding project files in GameMaker Studio: 
 \begin{enumerate}
 \item Benchmarker project:\\ \texttt{/client\_benchmarker/benchmark.gmx/benchmark.project.gmx}
-\item Messenger project:\\ \texttt{/client\_messenger/client.gmx/client.project.gmx}
-\item Full scale game:\\ \texttt{/client\_real/rendonan\_client.gmx/rendonan\_client.project.gmx}
+\item Chatroom project:\\ \texttt{/client\_messenger/client.gmx/client.project.gmx}
 \end{enumerate}
 
 After creating a game-like mechanism the application can be exported to the HTML5 target module with GameMaker, which automatically converts the project into a browser-executable javascript file. The extension will be integrated with this file, and continue to take care of handling the network.
@@ -604,6 +558,20 @@ The \texttt{total req/sec} therefore indicates how many messages are sent out to
 
 This application was used in the evaluation experiments in order to test the system's capabilities, such as the applied stress on the server with different varieties of concurrent connections, certain amounts of messages that need to be processed simultaneously, as well as recording the effect on the RTT when the client is located in different areas in the world.
 
+\subsection{Chatroom Application}
+Another application was created, both for demonstration and template purposes to other developers. This application is in the form of a chat room where users can log-in, walk across a room and broadcast messages to each other. A screenshot of this application is provided in Figure \ref{fig:messenger}.
+
+Upon startup, an instance of the game-controller object (\texttt{obj\_Controller}) is instantiated which prompts the user for a username. Once this username is set, it instantiates the network-controller (\texttt{obj\_Network\_controller}).
+
+The network controller then initiates a connection with the server using the function \texttt{wn\_connect(server\_ip, server\_port)}. It then awaits incoming messages from the server, which will be one of the S2C types as described in Figure \ref{fig:server_message_tags}. The network controller is also responsible for forwarding user data such as user coordinates, cursor position etc. This is all done using the functions described in Table \ref{table:function_translations}.
+
+\begin{figure}[H]
+\centering
+% \centering% default with `floatrow`
+\includegraphics[scale=0.44]{images/messenger.jpg}
+\caption{Ingame screenshot of the messenger application, showing three players connected on localhost, and interacting with eachother through the message box in the bottom-left corner.}
+\label{fig:messenger}
+\end{figure}
 
 % -----------------------
 \chapter{Network Extension Evaluation}
@@ -803,9 +771,61 @@ It may be possible to optimize the network performance by using WebRTC to intera
 
 Fixing the distance issue can be done by spreading servers across the world, and connecting clients to the server that provides the lowest round-trip time. This, however forces multiple versions of the game state to coexist, thereby causing the issue where servers need to interact with each other in order to keep their versions of the game state synchronized.
 
+\chapter{Appendix}
+\begin{figure}
+% \centering% default with `floatrow`
+\includegraphics[scale=0.72]{images/server_code.jpg}
+\caption{Core functionality of the server network setup, responsible for connecting new clients, creating reference instances with their details connection details (1, 2), listening to their incoming messages on the server (3) and handling them accordingly (4, messages codes are defined in messages.js. see Figure \ref{fig:server_message_tags}). }
+\label{fig:server_core}
+\end{figure}
 
+\begin{figure}
+% \centering% default with `floatrow`
+\includegraphics[scale=0.65]{images/server_actions.jpg}
+\caption{Dictionary storing the high-level actions for a specified player instance to perform.}
+\label{fig:server_actions}
+\end{figure}
 
+\begin{figure}
+% \centering% default with `floatrow`
+\includegraphics[scale=0.65]{images/server_player_functions.jpg}
+\caption{Low level methods the player instance on the server can perform. These methods are called by the incoming message block (Figure \ref{fig:server_core} point 4), defined in the action dictionary (Figure \ref{fig:server_actions})}
+\label{fig:server_player_functions}
+\end{figure}
 
+\begin{figure}
+% \centering% default with `floatrow`
+\includegraphics[scale=0.75]{images/server_player_construct.jpg}
+\caption{Player class matching variables of the GameMaker client player object class. Upon instantiation, the constructor automatically returns a message to the referenced client with it's unique identity defined by the server.}
+\label{fig:server_player_construct}
+\vspace{1em}
+\end{figure}
+
+\begin{figure}
+% \centering% default with `floatrow`
+\includegraphics[scale=0.75]{images/server_message_tags.jpg}
+\caption{Server specified message tags. C2S refers to "Client-to-Server" and S2C refers to "Server-to-Client" messages.}
+\label{fig:server_message_tags}
+\vspace{1em}
+\end{figure}
+
+\begin{figure}
+\centering
+% \centering% default with `floatrow`
+\includegraphics[scale=1.2]{images/extensions_folder.png}
+\caption{View inside the GUI that visualises the extension function mapping setup.}
+\label{fig:extension_folder}
+\vspace{1em}
+\end{figure}
+
+\begin{figure}
+\centering
+% \centering% default with `floatrow`
+\includegraphics[scale=1.2]{images/xml_mapping.png}
+\caption{External function \texttt{connect} from JavaScript extension file located in GMWebNet.js, mapped to a GML function \texttt{wn\_connect} located in the client application. The function takes 2 arguments, each of type String (id = 1), and returns a Double type (id = 2)}
+\label{fig:xml_mapping}
+\vspace{1em}
+\end{figure}
 
 % -----------------------
 % >>>> REMOVE THIS BLOCK
