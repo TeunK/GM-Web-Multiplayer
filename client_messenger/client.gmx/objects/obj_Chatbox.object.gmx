@@ -36,7 +36,7 @@ for (i = 0; i &lt; chat_lines_max; i += 1)
     chat_contents[i,2] = c_white;   //Color
 }
 
-chat_contents = add_line(chat_contents, "SYSTEM: ","Press &lt;Enter&gt;, type your message, and press &lt;Enter&gt; again to send it.",c_white);
+chat_contents = add_line(chat_contents, "SYSTEM: ","Press &lt;Enter&gt;, type your message.",c_white);
 
 </string>
           </argument>

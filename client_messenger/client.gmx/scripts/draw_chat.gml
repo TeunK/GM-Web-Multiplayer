@@ -6,7 +6,7 @@ draw_set_font(ft_main);
 
 var x0              = argument0
 var y0              = argument1
-var width           = room_width-x0
+var width           = 384 //room_width-x0
 var messages        = argument2
 var max_chatlines   = obj_Chatbox.chat_lines_max
 var chatting        = obj_Chatbox.chatting
