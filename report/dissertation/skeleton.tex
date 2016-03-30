@@ -721,7 +721,7 @@ The network controller then initiates a connection with the server using the fun
 In this chapter, the extension is evaluated in terms of fairness and performance. More specifically, we test how concurrent connections impact the server performance in terms of CPU (Central Processing Unit) usage, CPU processing time and RSS (Resident Set Size). We then observe how the server performs and scales based on client interactions, discover how broadcasting messages\footnote{as opposed to one-to-one interaction} does not affect the round-trip time of messages, and that although large distances do affect the round-trip time, countries located within Europe maintain a round-trip time well within the acceptable 100 milliseconds.
 
 \section{Controlled Network}
-Controlled experiments were conducted in order allow making predictions of server behaviour when loaded under similar pressure in future occasions.
+Controlled experiments were conducted in order allow making predictions about the server's behaviour when loaded under similar pressure in future occasions.
 
 These experiments were executed on a Windows 7 64-bit platform with 12.6GB available physical memory and an Intel(R) Core(TM) i7-2600K CPU @ 3.40GHz processor. The software entailed Node v0.12.3 and Socket.io v1.3.7 in order to handle the networking operations.
 
