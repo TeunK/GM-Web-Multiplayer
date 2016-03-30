@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{//clear the buffer content to prepare a new packet}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}clear}\PYG{p}{();}
+
+\PYG{c+c1}{//add the message type}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{wn\PYGZus{}msgtype}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}C2S\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}update\PYGZus{}user\PYGZdq{}}\PYG{p}{));}
+
+\PYG{c+c1}{//store the player variables in the send buffer}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{username}\PYG{p}{);}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{sprite\PYGZus{}id}\PYG{p}{);}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{x}\PYG{p}{);}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{y}\PYG{p}{);}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{h\PYGZus{}speed}\PYG{p}{);}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{v\PYGZus{}speed}\PYG{p}{);}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{mouse\PYGZus{}x}\PYG{p}{);}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{mouse\PYGZus{}y}\PYG{p}{);}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{roomname}\PYG{p}{);}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{level}\PYG{p}{);}
+
+\PYG{c+c1}{//send the packet to the server}
+\PYG{n+nx}{wn\PYGZus{}send\PYGZus{}message}\PYG{p}{(}\PYG{n+nx}{server\PYGZus{}socket}\PYG{p}{)}
+\end{Verbatim}

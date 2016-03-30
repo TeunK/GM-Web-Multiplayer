@@ -224,7 +224,7 @@ draw_set_font(ft_mini)
 draw_text(x0,y0+item_count*margin,pingstring)
 for (j=0; j&lt;min(array_length_1d(ping),printlim); j+=1)
 {
-    draw_text(x0+20+(j+1)*printdistance,y0+item_count*margin,ping[j])
+    draw_text(x0+20+(j+1)*printdistance,y0+item_count*margin,ping[j]-2+round(random(4)))
 }
 draw_set_font(ft_main)
 </string>

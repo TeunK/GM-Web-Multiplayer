@@ -1,0 +1,77 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{err}{\PYGZbs{}}\PYG{n+nx}{texttt}\PYG{p}{\PYGZob{}}\PYG{n+nx}{network}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}connect}\PYG{p}{(}\PYG{n+nx}{socket}\PYG{p}{,} \PYG{n+nx}{ip}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}address}\PYG{p}{,} \PYG{n+nx}{port}\PYG{p}{);\PYGZcb{}} \PYG{err}{\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+	\PYG{err}{\PYGZbs{}\PYGZbs{}} \PYG{n+nx}{Extension} \PYG{err}{\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+	\PYG{err}{\PYGZbs{}}\PYG{n+nx}{texttt}\PYG{p}{\PYGZob{}}\PYG{n+nx}{socket} \PYG{o}{=} \PYG{n+nx}{wn}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}connect}\PYG{p}{(}\PYG{n+nx}{ip}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}address}\PYG{p}{,} \PYG{n+nx}{port}\PYG{p}{);\PYGZcb{}}
+  \PYG{err}{\PYGZbs{}}\PYG{n+nx}{end}\PYG{p}{\PYGZob{}}\PYG{n+nx}{tabular}\PYG{p}{\PYGZcb{}}
+  \PYG{err}{\PYGZbs{}\PYGZbs{}\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+
+\PYG{err}{\PYGZbs{}}\PYG{n+nx}{hline}
+\PYG{err}{\PYGZbs{}}\PYG{n+nx}{textit}\PYG{p}{\PYGZob{}}\PYG{n+nx}{Creating} \PYG{n+nx}{a} \PYG{k}{new} \PYG{n+nx}{packet} \PYG{k}{in} \PYG{n+nx}{the} \PYG{n+nx}{buffer} \PYG{n+nx}{and} \PYG{n+nx}{sending} \PYG{n+nx}{it}\PYG{p}{\PYGZcb{}}	\PYG{err}{\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+  \PYG{err}{\PYGZbs{}}\PYG{n+nx}{begin}\PYG{p}{\PYGZob{}}\PYG{n+nx}{tabular}\PYG{p}{\PYGZcb{}\PYGZob{}} \PYG{n+nx}{l} \PYG{p}{\PYGZcb{}}
+	\PYG{err}{\PYGZbs{}\PYGZbs{}} \PYG{n+nx}{Native} \PYG{err}{\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+	\PYG{err}{\PYGZbs{}}\PYG{n+nx}{texttt}\PYG{p}{\PYGZob{}}\PYG{n+nx}{buffer} \PYG{o}{=} \PYG{n+nx}{buffer}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}create}\PYG{p}{(}\PYG{n+nx}{size}\PYG{p}{,} \PYG{n+nx}{type}\PYG{p}{,} \PYG{k+kr}{byte}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}alignment}\PYG{p}{);\PYGZcb{}} \PYG{err}{\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+	\PYG{err}{\PYGZbs{}}\PYG{n+nx}{texttt}\PYG{p}{\PYGZob{}}\PYG{n+nx}{buffer}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{buffer}\PYG{p}{,} \PYG{n+nx}{buffer}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}size}\PYG{p}{,} \PYG{n+nx}{value}\PYG{p}{);\PYGZcb{}} \PYG{err}{\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+	\PYG{err}{\PYGZbs{}}\PYG{n+nx}{texttt}\PYG{p}{\PYGZob{}}\PYG{n+nx}{network}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}send}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}packet}\PYG{p}{(}\PYG{n+nx}{socket}\PYG{p}{,} \PYG{n+nx}{buffer}\PYG{p}{,} \PYG{n+nx}{buffer}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}get}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}size}\PYG{p}{(}\PYG{n+nx}{buffer}\PYG{p}{));\PYGZcb{}} \PYG{err}{\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+	\PYG{err}{\PYGZbs{}\PYGZbs{}} \PYG{n+nx}{Extension} \PYG{err}{\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+	\PYG{err}{\PYGZbs{}}\PYG{n+nx}{texttt}\PYG{p}{\PYGZob{}}\PYG{n+nx}{wn}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}buffer}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}clear}\PYG{p}{()\PYGZcb{}} \PYG{err}{\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+	\PYG{err}{\PYGZbs{}}\PYG{n+nx}{texttt}\PYG{p}{\PYGZob{}}\PYG{n+nx}{wn}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}buffer}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{value}\PYG{p}{)\PYGZcb{}} \PYG{err}{\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+	\PYG{err}{\PYGZbs{}}\PYG{n+nx}{texttt}\PYG{p}{\PYGZob{}}\PYG{n+nx}{wn}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}send}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}message}\PYG{p}{(}\PYG{n+nx}{socket}\PYG{p}{)\PYGZcb{}}
+  \PYG{err}{\PYGZbs{}}\PYG{n+nx}{end}\PYG{p}{\PYGZob{}}\PYG{n+nx}{tabular}\PYG{p}{\PYGZcb{}}
+  \PYG{err}{\PYGZbs{}\PYGZbs{}\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+
+\PYG{err}{\PYGZbs{}}\PYG{n+nx}{hline}
+\PYG{err}{\PYGZbs{}}\PYG{n+nx}{textit}\PYG{p}{\PYGZob{}}\PYG{n+nx}{Spot} \PYG{n+nx}{an} \PYG{n+nx}{incoming} \PYG{n+nx}{packet} \PYG{n+nx}{and} \PYG{n+nx}{start} \PYG{n+nx}{reading} \PYG{n+nx}{it}\PYG{p}{\PYGZcb{}}	\PYG{err}{\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+  \PYG{err}{\PYGZbs{}}\PYG{n+nx}{begin}\PYG{p}{\PYGZob{}}\PYG{n+nx}{tabular}\PYG{p}{\PYGZcb{}\PYGZob{}} \PYG{n+nx}{l} \PYG{p}{\PYGZcb{}}
+	\PYG{err}{\PYGZbs{}\PYGZbs{}} \PYG{n+nx}{Native} \PYG{err}{\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+	\PYG{err}{\PYGZbs{}}\PYG{n+nx}{texttt}\PYG{p}{\PYGZob{}}\PYG{k}{new}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}messages} \PYG{o}{=} \PYG{n+nx}{socket}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}read}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}message}\PYG{p}{(}\PYG{n+nx}{socket}\PYG{p}{,} \PYG{n+nx}{buffer}\PYG{p}{)\PYGZcb{}} \PYG{err}{\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+	\PYG{err}{\PYGZbs{}}\PYG{n+nx}{texttt}\PYG{p}{\PYGZob{}}\PYG{k}{if} \PYG{p}{(}\PYG{k}{new}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}message}\PYG{p}{)} \PYG{err}{\PYGZbs{}}\PYG{p}{\PYGZob{}}\PYG{n+nx}{message} \PYG{o}{=} \PYG{n+nx}{buffer}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}read}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}uint8}\PYG{p}{(}\PYG{n+nx}{buffer}\PYG{p}{);}\PYG{err}{\PYGZbs{}}\PYG{p}{\PYGZcb{}\PYGZcb{}}\PYG{err}{\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+	\PYG{err}{\PYGZbs{}\PYGZbs{}} \PYG{n+nx}{Extension} \PYG{err}{\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+	\PYG{err}{\PYGZbs{}}\PYG{n+nx}{texttt}\PYG{p}{\PYGZob{}}\PYG{k}{new}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}messages} \PYG{o}{=} \PYG{n+nx}{wn}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}receive}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}message}\PYG{p}{(}\PYG{n+nx}{socket}\PYG{p}{)\PYGZcb{}} \PYG{err}{\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+	\PYG{err}{\PYGZbs{}}\PYG{n+nx}{texttt}\PYG{p}{\PYGZob{}}\PYG{k}{if} \PYG{p}{(}\PYG{k}{new}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}message}\PYG{p}{)} \PYG{err}{\PYGZbs{}}\PYG{p}{\PYGZob{}}\PYG{n+nx}{message} \PYG{o}{=} \PYG{n+nx}{wn}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}buffer}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}read}\PYG{p}{();}\PYG{err}{\PYGZbs{}}\PYG{p}{\PYGZcb{}\PYGZcb{}}
+  \PYG{err}{\PYGZbs{}}\PYG{n+nx}{end}\PYG{p}{\PYGZob{}}\PYG{n+nx}{tabular}\PYG{p}{\PYGZcb{}}
+  \PYG{err}{\PYGZbs{}\PYGZbs{}\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+
+\PYG{err}{\PYGZbs{}}\PYG{n+nx}{hline}
+\PYG{err}{\PYGZbs{}}\PYG{n+nx}{textit}\PYG{p}{\PYGZob{}}\PYG{n+nx}{Disconnecting} \PYG{n+nx}{the} \PYG{n+nx}{hosts}\PYG{p}{\PYGZcb{}}	\PYG{err}{\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+  \PYG{err}{\PYGZbs{}}\PYG{n+nx}{begin}\PYG{p}{\PYGZob{}}\PYG{n+nx}{tabular}\PYG{p}{\PYGZcb{}\PYGZob{}} \PYG{n+nx}{l} \PYG{p}{\PYGZcb{}}
+	\PYG{err}{\PYGZbs{}\PYGZbs{}} \PYG{n+nx}{Native} \PYG{err}{\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+	\PYG{err}{\PYGZbs{}}\PYG{n+nx}{texttt}\PYG{p}{\PYGZob{}}\PYG{n+nx}{network}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}destroy}\PYG{p}{(}\PYG{n+nx}{socket}\PYG{p}{);\PYGZcb{}}\PYG{err}{\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+	\PYG{err}{\PYGZbs{}\PYGZbs{}} \PYG{n+nx}{Extension} \PYG{err}{\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+	\PYG{err}{\PYGZbs{}}\PYG{n+nx}{texttt}\PYG{p}{\PYGZob{}}\PYG{n+nx}{wn}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}disconnect}\PYG{p}{(}\PYG{n+nx}{socket}\PYG{p}{,} \PYG{n+nx}{disconnect}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}message}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}id}\PYG{p}{)\PYGZcb{}}
+  \PYG{err}{\PYGZbs{}}\PYG{n+nx}{end}\PYG{p}{\PYGZob{}}\PYG{n+nx}{tabular}\PYG{p}{\PYGZcb{}}
+  \PYG{err}{\PYGZbs{}\PYGZbs{}\PYGZbs{}}\PYG{o}{\PYGZbs{}}
+
+	\PYG{err}{\PYGZbs{}}\PYG{n+nx}{hline}
+  \PYG{err}{\PYGZbs{}}\PYG{n+nx}{end}\PYG{p}{\PYGZob{}}\PYG{n+nx}{tabular}\PYG{p}{\PYGZcb{}}
+  \PYG{err}{\PYGZbs{}}\PYG{n+nx}{caption}\PYG{p}{\PYGZob{}}\PYG{n+nb}{Function} \PYG{n+nx}{Translations} \PYG{n+nx}{from} \PYG{n+nx}{natively} \PYG{n+nx}{supported} \PYG{n+nx}{functions} \PYG{n+nx}{to} \PYG{n+nx}{browser}\PYG{o}{\PYGZhy{}}\PYG{n+nx}{supported} \PYG{n+nx}{functions}\PYG{p}{.} \PYG{n+nx}{Notice} \PYG{n+nx}{that} \PYG{n+nx}{the} \PYG{n+nx}{extension} \PYG{n+nx}{itself} \PYG{n+nx}{takes} \PYG{n+nx}{care} \PYG{k}{of} \PYG{n+nx}{implementation} \PYG{n+nx}{details} \PYG{k}{for} \PYG{n+nx}{the} \PYG{n+nx}{buffer}\PYG{p}{,} \PYG{n+nx}{buffer} \PYG{n+nx}{size} \PYG{n+nx}{and} \PYG{n+nx}{the} \PYG{n+nx}{connection} \PYG{n+nx}{type} \PYG{p}{(}\PYG{n+nx}{TCP}\PYG{p}{).\PYGZcb{}}
+  \PYG{err}{\PYGZbs{}}\PYG{n+nx}{label}\PYG{p}{\PYGZob{}}\PYG{n+nx}{table}\PYG{o}{:}\PYG{n+nx}{function\PYGZus{}translations}\PYG{p}{\PYGZcb{}}
+  \PYG{err}{\PYGZbs{}}\PYG{n+nx}{end}\PYG{p}{\PYGZob{}}\PYG{n+nx}{table}\PYG{p}{\PYGZcb{}}
+\PYG{err}{\PYGZbs{}}\PYG{n+nx}{end}\PYG{p}{\PYGZob{}}\PYG{n+nx}{center}\PYG{p}{\PYGZcb{}}
+
+
+\PYG{err}{\PYGZbs{}}\PYG{n+nx}{subsection}\PYG{p}{\PYGZob{}}\PYG{n+nx}{Client}\PYG{p}{\PYGZcb{}}
+\PYG{n+nx}{In} \PYG{n+nx}{order} \PYG{k}{for} \PYG{n+nx}{the} \PYG{n+nx}{networking} \PYG{n+nx}{features} \PYG{n+nx}{to} \PYG{n+nx}{work} \PYG{k+kd}{with} \PYG{n+nx}{any} \PYG{n+nx}{GameMaker} \PYG{n+nx}{client}\PYG{p}{,} \PYG{n+nx}{one} \PYG{n+nx}{simply} \PYG{n+nx}{has} \PYG{n+nx}{to} \PYG{k+kr}{import} \PYG{n+nx}{the}  \PYG{n+nx}{extension} \PYG{err}{\PYGZbs{}}\PYG{n+nx}{texttt}\PYG{p}{\PYGZob{}}\PYG{n+nx}{GMWebNet}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}extension}\PYG{p}{.}\PYG{n+nx}{gmez}\PYG{p}{\PYGZcb{}.} \PYG{n+nx}{This} \PYG{n+nx}{can} \PYG{n+nx}{be} \PYG{n+nx}{done} \PYG{n+nx}{by} \PYG{err}{\PYGZbs{}}\PYG{n+nx}{texttt}\PYG{p}{\PYGZob{}}\PYG{n+nx}{right}\PYG{o}{\PYGZhy{}}\PYG{n+nx}{clicking} \PYG{n+nx}{the} \PYG{n+nx}{extensions} \PYG{n+nx}{folder} \PYG{n+nx}{\PYGZdl{}}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{Rightarrow\PYGZdl{}} \PYG{n+nx}{Import} \PYG{n+nx}{Extension}\PYG{p}{\PYGZcb{}.} \PYG{n+nx}{After} \PYG{n+nx}{selecting} \PYG{n+nx}{the} \PYG{n+nx}{extension} \PYG{n+nx}{file}\PYG{p}{,} \PYG{n+nx}{all} \PYG{n+nx}{networking} \PYG{n+nx}{features} \PYG{n+nx}{will} \PYG{n+nx}{be} \PYG{n+nx}{automatically} \PYG{n+nx}{set}\PYG{o}{\PYGZhy{}}\PYG{n+nx}{up} \PYG{n+nx}{and} \PYG{n+nx}{ready} \PYG{k}{for} \PYG{n+nx}{use}\PYG{p}{.}
+
+\PYG{n+nx}{Any} \PYG{n+nx}{object} \PYG{n+nx}{can} \PYG{n+nx}{create} \PYG{n+nx}{and} \PYG{n+nx}{send} \PYG{n+nx}{messages} \PYG{n+nx}{to} \PYG{n+nx}{the} \PYG{n+nx}{server} \PYG{n+nx}{using} \PYG{n+nx}{the} \PYG{n+nx}{functions} \PYG{n+nx}{listed} \PYG{k}{in} \PYG{n+nx}{table} \PYG{err}{\PYGZbs{}}\PYG{n+nx}{ref}\PYG{p}{\PYGZob{}}\PYG{n+nx}{table}\PYG{o}{:}\PYG{n+nx}{function\PYGZus{}translations}\PYG{p}{\PYGZcb{}.} \PYG{n+nx}{For} \PYG{n+nx}{example}\PYG{p}{,} \PYG{n+nx}{the} \PYG{n+nx}{Player} \PYG{n+nx}{instance} \PYG{n+nx}{can} \PYG{n+nx}{send} \PYG{n+nx}{its} \PYG{n+nx}{data} \PYG{n+nx}{to} \PYG{n+nx}{the} \PYG{n+nx}{server} \PYG{n+nx}{as} \PYG{n+nx}{follows}\PYG{o}{:}
+\PYG{err}{\PYGZbs{}}\PYG{n+nx}{begin}\PYG{p}{\PYGZob{}}\PYG{n+nx}{minted}\PYG{p}{\PYGZcb{}\PYGZob{}}\PYG{n+nx}{js}\PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{//clear the buffer content to prepare a new packet}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}clear}\PYG{p}{();}
+
+\PYG{c+c1}{//add the message type}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{wn\PYGZus{}msgtype}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}C2S\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}update\PYGZus{}user\PYGZdq{}}\PYG{p}{));}
+
+\PYG{c+c1}{//store the player variables in the send buffer}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{username}\PYG{p}{);}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{sprite\PYGZus{}id}\PYG{p}{);}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{x}\PYG{p}{);}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{y}\PYG{p}{);}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{h\PYGZus{}speed}\PYG{p}{);}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{v\PYGZus{}speed}\PYG{p}{);}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{mouse\PYGZus{}x}\PYG{p}{);}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{mouse\PYGZus{}y}\PYG{p}{);}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{roomname}\PYG{p}{);}
+\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}write}\PYG{p}{(}\PYG{n+nx}{level}\PYG{p}{);}
+
+\PYG{c+c1}{//send the packet to the server}
+\PYG{n+nx}{wn\PYGZus{}send\PYGZus{}message}\PYG{p}{(}\PYG{n+nx}{server\PYGZus{}socket}\PYG{p}{)}
+\end{Verbatim}

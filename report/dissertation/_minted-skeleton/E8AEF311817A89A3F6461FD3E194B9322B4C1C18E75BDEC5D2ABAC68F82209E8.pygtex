@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZob{}}
+	\PYG{n+nt}{\PYGZdq{}S2C\PYGZdq{}}\PYG{p}{:} \PYG{p}{\PYGZob{}}
+		\PYG{n+nt}{\PYGZdq{}confirm\PYGZus{}client\PYGZus{}id\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{1}\PYG{p}{,}
+		\PYG{n+nt}{\PYGZdq{}send\PYGZus{}client\PYGZus{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{2}\PYG{p}{,}
+		\PYG{n+nt}{\PYGZdq{}client\PYGZus{}disconnected\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{3}\PYG{p}{,}
+		\PYG{n+nt}{\PYGZdq{}chat\PYGZus{}message\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{4}\PYG{p}{,}
+		\PYG{n+nt}{\PYGZdq{}ping\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{5}\PYG{p}{,}
+		\PYG{n+nt}{\PYGZdq{}client\PYGZus{}count\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{6}\PYG{p}{,}
+		\PYG{n+nt}{\PYGZdq{}request\PYGZus{}count\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{7}\PYG{p}{,}
+		\PYG{n+nt}{\PYGZdq{}update\PYGZus{}user\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{8}
+	\PYG{p}{\PYGZcb{},}
+	\PYG{n+nt}{\PYGZdq{}C2S\PYGZdq{}}\PYG{p}{:\PYGZob{}}
+		\PYG{n+nt}{\PYGZdq{}initial\PYGZus{}client\PYGZus{}details\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{1}\PYG{p}{,}
+		\PYG{n+nt}{\PYGZdq{}client\PYGZus{}disconnects\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{2}\PYG{p}{,}
+		\PYG{n+nt}{\PYGZdq{}chat\PYGZus{}message\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{3}\PYG{p}{,}
+		\PYG{n+nt}{\PYGZdq{}ping\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{4}\PYG{p}{,}
+		\PYG{n+nt}{\PYGZdq{}client\PYGZus{}count\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{5}\PYG{p}{,}
+		\PYG{n+nt}{\PYGZdq{}request\PYGZus{}count\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{6}\PYG{p}{,}
+		\PYG{n+nt}{\PYGZdq{}new\PYGZus{}virtual\PYGZus{}client\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{7}\PYG{p}{,}
+		\PYG{n+nt}{\PYGZdq{}remove\PYGZus{}virtual\PYGZus{}client\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{8}\PYG{p}{,}
+		\PYG{n+nt}{\PYGZdq{}update\PYGZus{}user\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{9}
+	\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

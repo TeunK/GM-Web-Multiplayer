@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{//listen for incoming messages from the server}
+\PYG{k}{while}\PYG{p}{(}\PYG{n+nx}{wn\PYGZus{}receive\PYGZus{}message}\PYG{p}{(}\PYG{n+nx}{server\PYGZus{}socket}\PYG{p}{))}
+\PYG{p}{\PYGZob{}}
+	\PYG{c+c1}{//read the type / purpose of the message}
+	\PYG{k+kd}{var} \PYG{n+nx}{msg\PYGZus{}type}\PYG{o}{=}\PYG{n+nx}{wn\PYGZus{}msgtype}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}S2C\PYGZdq{}}\PYG{p}{,}\PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}read}\PYG{p}{());}
+
+	\PYG{k}{switch}\PYG{p}{(}\PYG{n+nx}{msg\PYGZus{}type}\PYG{p}{)}
+	\PYG{p}{\PYGZob{}}
+		\PYG{k}{case} \PYG{l+s+s2}{\PYGZdq{}chat\PYGZus{}message\PYGZdq{}}\PYG{o}{:}
+			\PYG{c+c1}{//receive message from some user}
+			\PYG{k+kd}{var} \PYG{n+nx}{sender}          \PYG{o}{=} \PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}read}\PYG{p}{();}
+			\PYG{k+kd}{var} \PYG{n+nx}{chat\PYGZus{}message}    \PYG{o}{=} \PYG{n+nx}{wn\PYGZus{}buffer\PYGZus{}read}\PYG{p}{();}
+
+			\PYG{c+c1}{//add new message to the chatbox}
+			\PYG{n+nx}{obj\PYGZus{}Chatbox}\PYG{p}{.}\PYG{n+nx}{chat\PYGZus{}contents} \PYG{o}{=} \PYG{n+nx}{add\PYGZus{}line}\PYG{p}{(}\PYG{n+nx}{sender}\PYG{p}{,} \PYG{n+nx}{chat\PYGZus{}message}\PYG{p}{);}
+
+			\PYG{k}{break}\PYG{p}{;}
+	\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

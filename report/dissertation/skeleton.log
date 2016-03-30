@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  29 MAR 2016 22:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  30 MAR 2016 05:49
 entering extended mode
 **./skeleton.tex
 (skeleton.tex
@@ -269,6 +269,12 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 ))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\appendix\appendix.sty"
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count104
+\c@@ppsavesec=\count105
+\c@@ppsaveapp=\count106
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 \Gin@req@height=\dimen122
@@ -533,12 +539,12 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \cmidrulesep=\dimen133
 \cmidrulekern=\dimen134
 \defaultaddspace=\dimen135
-\@cmidla=\count104
-\@cmidlb=\count105
+\@cmidla=\count107
+\@cmidlb=\count108
 \@aboverulesep=\dimen136
 \@belowrulesep=\dimen137
-\@thisruleclass=\count106
-\@lastruleclass=\count107
+\@thisruleclass=\count109
+\@lastruleclass=\count110
 \@thisrulewidth=\dimen138
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
@@ -561,13 +567,13 @@ Package: amsbsy 1999/11/29 v1.2d
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count108
+\inf@bad=\count111
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count109
-\leftroot@=\count110
+\uproot@=\count112
+\leftroot@=\count113
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count111
-\DOTSCASE@=\count112
+\classnum@=\count114
+\DOTSCASE@=\count115
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
@@ -576,15 +582,15 @@ LaTeX Info: Redefining \cdots on input line 466.
 \big@size=\dimen141
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count113
-\c@MaxMatrixCols=\count114
+\macc@depth=\count116
+\c@MaxMatrixCols=\count117
 \dotsspace@=\muskip11
-\c@parentequation=\count115
-\dspbrk@lvl=\count116
+\c@parentequation=\count118
+\dspbrk@lvl=\count119
 \tag@help=\toks22
-\row@=\count117
-\column@=\count118
-\maxfields@=\count119
+\row@=\count120
+\column@=\count121
+\maxfields@=\count122
 \andhelp@=\toks23
 \eqnshift@=\dimen142
 \alignsep@=\dimen143
@@ -606,6 +612,112 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\minted\minted.sty"
+Package: minted 2015/09/09 v2.1 Yet another Pygments shim for LaTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyvrb\fancyvrb.sty"
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count123
+\FV@InFile=\read1
+\FV@TabBox=\box30
+\c@FancyVerbLine=\count124
+\FV@StepNumber=\count125
+\FV@OutFile=\write3
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count126
+\calc@Bcount=\count127
+\calc@Adimen=\dimen148
+\calc@Bdimen=\dimen149
+\calc@Askip=\skip49
+\calc@Bskip=\skip50
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count128
+\calc@Cskip=\skip51
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ifplatform\ifplatform.sty"
+Package: ifplatform 2010/10/22 v0.4 Testing for the operating system
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\catchfile.sty"
+Package: catchfile 2011/03/01 v1.6 Catch the contents of a file (HO)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count129
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xstring\xstring.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xstring\xstring.tex"
+\@xs@message=\write4
+\integerpart=\count130
+\decimalpart=\count131
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lineno\lineno.sty"
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count132
+\output=\toks26
+\linenoprevgraf=\count133
+\linenumbersep=\dimen150
+\linenumberwidth=\dimen151
+\c@linenumber=\count134
+\c@pagewiselinenumber=\count135
+\c@LN@truepage=\count136
+\c@internallinenumber=\count137
+\c@internallinenumbers=\count138
+\quotelinenumbersep=\dimen152
+\bframerule=\dimen153
+\bframesep=\dimen154
+\bframebox=\box31
+LaTeX Info: Redefining \\ on input line 3056.
+)
+\minted@appexistsfile=\read2
+\FV@BreakIndent=\dimen155
+\FV@BreakSymbolSepLeft=\dimen156
+\FV@BreakSymbolSepRight=\dimen157
+\FV@BreakSymbolIndentLeft=\dimen158
+\FV@BreakSymbolIndentRight=\dimen159
+\c@FancyVerbLineBreakLast=\count139
+\FV@LineBox=\box32
+\FV@LineIndentBox=\box33
+\minted@bgbox=\box34
+\minted@code=\write5
+\c@minted@FancyVerbLineTemp=\count140
+\@float@every@listing=\toks27
+\c@listing=\count141
+)
+runsystem(if not exist "_minted-skeleton" mkdir "_minted-skeleton")...executed.
+
+
+(_minted-skeleton/default.pygstyle)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+\lst@mode=\count142
+\lst@gtempboxa=\box35
+\lst@token=\toks28
+\lst@length=\count143
+\lst@currlwidth=\dimen160
+\lst@column=\count144
+\lst@pos=\count145
+\lst@lostspace=\dimen161
+\lst@width=\dimen162
+\lst@newlines=\count146
+\lst@lineno=\count147
+\lst@maxwidth=\dimen163
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count148
+\lst@skipnumbers=\count149
+\lst@framebox=\box36
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
@@ -615,41 +727,43 @@ LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\mdwtools\footnote.sty"
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
-\fn@notes=\box30
-\fn@width=\dimen148
+\fn@notes=\box37
+\fn@width=\dimen164
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
 Package: tabularx 2014/10/28 v2.10 `tabularx' package (DPC)
-\TX@col@width=\dimen149
-\TX@old@table=\dimen150
-\TX@old@col=\dimen151
-\TX@target=\dimen152
-\TX@delta=\dimen153
-\TX@cols=\count120
-\TX@ftn=\toks26
+\TX@col@width=\dimen165
+\TX@old@table=\dimen166
+\TX@old@col=\dimen167
+\TX@target=\dimen168
+\TX@delta=\dimen169
+\TX@cols=\count150
+\TX@ftn=\toks29
 )
-(skeleton.aux
+runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set >"sk
+eleton.aex" <nul: /p x=^%~$PATH:i>>"skeleton.aex")...executed.
 
-LaTeX Warning: Label `fig:server_player_construct' multiply defined.
+runsystem(del "skeleton.aex")...executed.
 
-)
+
+(skeleton.aux)
 \openout1 = `skeleton.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Try loading font information for T1+ppl on input line 40.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 42.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1ppl.fd"
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
@@ -689,48 +803,51 @@ File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count121
-\scratchdimen=\dimen154
-\scratchbox=\box31
-\nofMPsegments=\count122
-\nofMParguments=\count123
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count124
-\MPscratchDim=\dimen155
-\MPnumerator=\count125
-\makeMPintoPDFobject=\count126
-\everyMPtoPDFconversion=\toks28
+\scratchcounter=\count151
+\scratchdimen=\dimen170
+\scratchbox=\box38
+\nofMPsegments=\count152
+\nofMParguments=\count153
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count154
+\MPscratchDim=\dimen171
+\MPnumerator=\count155
+\makeMPintoPDFobject=\count156
+\everyMPtoPDFconversion=\toks31
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box32
-Package hyperref Info: Link coloring ON on input line 40.
+\AtBeginShipoutBox=\box39
+Package hyperref Info: Link coloring ON on input line 42.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count127
+\c@section@level=\count157
 )
-LaTeX Info: Redefining \ref on input line 40.
-LaTeX Info: Redefining \pageref on input line 40.
-LaTeX Info: Redefining \nameref on input line 40.
+LaTeX Info: Redefining \ref on input line 42.
+LaTeX Info: Redefining \pageref on input line 42.
+LaTeX Info: Redefining \nameref on input line 42.
 
 (skeleton.out) (skeleton.out)
-\@outlinefile=\write3
-\openout3 = `skeleton.out'.
+\@outlinefile=\write6
+\openout6 = `skeleton.out'.
 
+ (_minted-skeleton/default-pyg-prefix.pygstyle)
+\c@lstlisting=\count158
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 53.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 54.
 
-<styles/logos/eushield-normal.pdf, id=175, 369.38pt x 373.395pt>
+<styles/logos/eushield-normal.pdf, id=171, 369.38pt x 373.395pt>
 File: styles/logos/eushield-normal.pdf Graphic file (type pdf)
 
 <use styles/logos/eushield-normal.pdf>
-Package pdftex.def Info: styles/logos/eushield-normal.pdf used on input line 53
+Package pdftex.def Info: styles/logos/eushield-normal.pdf used on input line 54
 .
 (pdftex.def)             Requested size: 369.37909pt x 373.39409pt.
  [1
@@ -740,31 +857,34 @@ s/logos/eushield-normal.pdf>] [2
 
 ]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 53.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 54.
 
 [3]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 69.
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 79.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 70.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 80.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsppl.fd"
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 79.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 80.
 
-Overfull \hbox (6.28967pt too wide) in paragraph at lines 79--80
+Overfull \hbox (6.28967pt too wide) in paragraph at lines 80--81
 []\T1/ppl/b/n/12 GML \T1/ppl/m/n/12 - GameMaker Lan-guage: the pri-mary lan-gua
 ge used in GameMaker.
  []
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
 [5] [6]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 97.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 98.
  (skeleton.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 
@@ -778,99 +898,136 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [7
 
 ])
-\tf@toc=\write4
-\openout4 = `skeleton.toc'.
+\tf@toc=\write7
+\openout7 = `skeleton.toc'.
 
  [8]
 Chapter 1.
 
-Overfull \hbox (12.54306pt too wide) in paragraph at lines 112--113
+Overfull \hbox (4.71902pt too wide) in paragraph at lines 117--118
 \T1/ppl/m/n/12 game de-vel-op-ment and tech-nolo-gies. The newly re-leased web 
-stan-dard, HTML5,
+stan-dard, known
  []
 
 
-Overfull \hbox (10.04648pt too wide) in paragraph at lines 112--113
-\T1/ppl/m/n/12 al-lows game graph-ics and en-gines to be ex-e-cuted di-rectly i
-n-side the web browser
- []
+Underfull \vbox (badness 5374) has occurred while \output is active []
 
-[9
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.124 
+       [1
 
 ]
-Overfull \hbox (20.34181pt too wide) in paragraph at lines 129--130
-\T1/ppl/m/n/12 These syn-chro-niza-tion is-sues beat the pur-pose of pro-vid-in
-g a simple-to-implement
+Overfull \hbox (4.56267pt too wide) in paragraph at lines 136--137
+\T1/ppl/m/n/12 games de-vel-oped with GameMaker that did pre-vi-ously not work 
+in the browser
  []
 
-[10]
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.143 
+       [2]pdfTeX warning (ext4): destination with the same identifier (name{pag
+e.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.152 \chapter
+              {Background} [3]pdfTeX warning (ext4): destination with the same 
+identifier (name{page.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.152 \chapter
+              {Background} [4
+
+]
 Chapter 2.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 141.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 142.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 157.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 158.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [11
-
-]
-Overfull \hbox (1.92303pt too wide) in paragraph at lines 153--154
+)pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.166 
+       [5]
+Overfull \hbox (1.92303pt too wide) in paragraph at lines 169--170
 \T1/ppl/m/n/12 and the grow-ing pop-u-lar-ity of GameMaker, Yoyo-Games has pro-
 vided the func-
  []
 
-[12] [13]
-Overfull \hbox (4.49026pt too wide) in paragraph at lines 178--180
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.179 O
+       n various games, clients may automatically get disconnected from the ...
+[6]pdfTeX warning (ext4): destination with the same identifier (name{page.7}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.193 
+       [7]
+Overfull \hbox (4.49026pt too wide) in paragraph at lines 196--198
 \T1/ppl/m/n/12 traver-sal tech-niques such as "hole punch-ing" are there-fore e
 s-tab-lished, al-though
  []
 
-[14] [15] [16]
+pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.209 
+       [8]
+Underfull \vbox (badness 1521) has occurred while \output is active []
+
+ [9]
+[10]
 Chapter 3.
 
-Overfull \hbox (0.32605pt too wide) in paragraph at lines 229--230
+Overfull \hbox (0.32605pt too wide) in paragraph at lines 248--249
 []\T1/ppl/m/n/12 Note that GameMaker does na-tively sup-port net-work-ing func-
 tion-al-ity for non-
  []
 
 
-Overfull \hbox (14.71417pt too wide) in paragraph at lines 233--234
-\T1/ppl/m/n/12 each with dif-fer-ent back-grounds in 2D browser game de-vel-op-
-ment. gamepix.com
- []
-
-
-Underfull \hbox (badness 1237) in paragraph at lines 242--242
+Underfull \hbox (badness 1237) in paragraph at lines 261--261
 [][]\T1/ppl/m/n/10 Advertised at de-vel-oper.mozilla.org: [][]$\T1/cmtt/m/n/10 
 https : / / developer . mozilla . org / en-[]US / docs /$
  []
 
 
-Overfull \hbox (22.2484pt too wide) in paragraph at lines 242--242
+Overfull \hbox (22.2484pt too wide) in paragraph at lines 261--261
 [][]\T1/ppl/m/n/10 Advertised at [][]$\T1/cmtt/m/n/10 http : / / www . gamepix 
 . com / blog / the-[]big-[]list-[]of-[]2d-[]html5-[]games-[]engines/$[][]| 
  []
 
-[17
+[11
 
-] [18]
-Overfull \hbox (2.9121pt too wide) in paragraph at lines 289--298
+] [12]
+Overfull \hbox (2.9121pt too wide) in paragraph at lines 311--320
  [][] 
  []
 
-[19] [20
+
+Underfull \vbox (badness 2884) has occurred while \output is active []
+
+ [13]
+[14]
+Chapter 4.
+[15
 
 ]
-Chapter 4.
-[21]
-Overfull \hbox (1.0292pt too wide) in paragraph at lines 332--332
+Overfull \hbox (1.0292pt too wide) in paragraph at lines 354--354
 []\T1/ppl/b/n/14.4 Non-Functional Re-quire-ments and De-sir-able Qual-ity At-
  []
 
-[22]
-Underfull \vbox (badness 1867) has occurred while \output is active []
-
- [23]
+[16] [17]
 Package epstopdf Info: Source file: <images/server_sequence_diagram2.eps>
 (epstopdf)                    date: 2016-03-29 18:14:07
 (epstopdf)                    size: 68602 bytes
@@ -880,23 +1037,57 @@ ted-to.pdf>
 (epstopdf)                    size: 26072 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/server_sequence_diag
 ram2-eps-converted-to.pdf images/server_sequence_diagram2.eps>
-(epstopdf)             \includegraphics on input line 366.
+(epstopdf)             \includegraphics on input line 388.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/server_sequence_diagram2-eps-converted-to.pdf, id=475, 1386.17876pt x 8
+<images/server_sequence_diagram2-eps-converted-to.pdf, id=509, 1386.17876pt x 8
 25.0825pt>
 File: images/server_sequence_diagram2-eps-converted-to.pdf Graphic file (type p
 df)
  <use images/server_sequence_diagram2-eps-converted-to.pdf>
 Package pdftex.def Info: images/server_sequence_diagram2-eps-converted-to.pdf u
-sed on input line 366.
+sed on input line 388.
 (pdftex.def)             Requested size: 415.85684pt x 247.52666pt.
 
-Overfull \hbox (3.29187pt too wide) in paragraph at lines 366--367
+Overfull \hbox (3.29187pt too wide) in paragraph at lines 388--389
 [][] 
  []
 
-[24 <./images/server_sequence_diagram2-eps-converted-to.pdf>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--397
+
+ []
+
+[18 <./images/server_sequence_diagram2-eps-converted-to.pdf>]
+\openout3 = `skeleton.pyg'.
+
+
+(_minted-skeleton/E8AEF311817A89A3F6461FD3E194B9322B4C1C18E75BDEC5D2ABAC68F8220
+9E8.pygtex
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 3.
+) <images/server_code.jpg, id=553, 602.25pt x 293.095pt>
+File: images/server_code.jpg Graphic file (type jpg)
+
+<use images/server_code.jpg>
+Package pdftex.def Info: images/server_code.jpg used on input line 435.
+(pdftex.def)             Requested size: 433.61966pt x 211.02823pt.
+
+Overfull \hbox (21.05469pt too wide) in paragraph at lines 435--436
+[][] 
+ []
+
+<images/server_actions.jpg, id=554, 464.73625pt x 458.71375pt>
+File: images/server_actions.jpg Graphic file (type jpg)
+
+<use images/server_actions.jpg>
+Package pdftex.def Info: images/server_actions.jpg used on input line 442.
+(pdftex.def)             Requested size: 302.07498pt x 298.1604pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
+[20 <./images/server_code.jpg> <./images/server_actions.jpg>]
 Package epstopdf Info: Source file: <images/server_class_diagram.eps>
 (epstopdf)                    date: 2016-03-29 22:02:15
 (epstopdf)                    size: 335310 bytes
@@ -906,99 +1097,118 @@ to.pdf>
 (epstopdf)                    size: 325170 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/server_class_diagram
 -eps-converted-to.pdf images/server_class_diagram.eps>
-(epstopdf)             \includegraphics on input line 385.
+(epstopdf)             \includegraphics on input line 451.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/server_class_diagram-eps-converted-to.pdf, id=522, 420.57124pt x 515.92
+<images/server_class_diagram-eps-converted-to.pdf, id=568, 420.57124pt x 515.92
 75pt>
 File: images/server_class_diagram-eps-converted-to.pdf Graphic file (type pdf)
  <use images/server_class_diagram-eps-converted-to.pdf>
 Package pdftex.def Info: images/server_class_diagram-eps-converted-to.pdf used 
-on input line 385.
+on input line 451.
 (pdftex.def)             Requested size: 420.57022pt x 515.92624pt.
 
-Overfull \hbox (8.00525pt too wide) in paragraph at lines 385--386
+Overfull \hbox (8.00525pt too wide) in paragraph at lines 451--452
 [][] 
+ []
+
+[21 <./images/server_class_diagram-eps-converted-to.pdf>]
+<images/server_player_construct.jpg, id=576, 718.685pt x 517.935pt>
+File: images/server_player_construct.jpg Graphic file (type jpg)
+
+<use images/server_player_construct.jpg>
+Package pdftex.def Info: images/server_player_construct.jpg used on input line 
+461.
+(pdftex.def)             Requested size: 539.01242pt x 388.45029pt.
+
+Overfull \hbox (126.44745pt too wide) in paragraph at lines 461--462
+[][] 
+ []
+
+[22 <./images/server_player_construct.jpg>]
+Overfull \hbox (14.59334pt too wide) in paragraph at lines 472--473
+[]\T1/ppl/m/n/12 An MIT-licensed open-source socket.io JavaScript li-brary pro-
+vided by Learn-
+ []
+
+<images/extension_flow.jpg, id=582, 972.63374pt x 565.11125pt>
+File: images/extension_flow.jpg Graphic file (type jpg)
+
+<use images/extension_flow.jpg>
+Package pdftex.def Info: images/extension_flow.jpg used on input line 479.
+(pdftex.def)             Requested size: 408.50339pt x 237.3451pt.
+ [23 <./images/extension_flow.jpg>]
+Overfull \hbox (12.9658pt too wide) in paragraph at lines 493--496
+[]\T1/ppl/m/n/12 A sim-ple con-nec-tion func-tion \T1/cmtt/m/n/12 connect(serve
+r_ip, server_port) \T1/ppl/m/n/12 opens a socket
+ []
+
+<images/extensions_folder.png, id=598, 160.80075pt x 135.50626pt>
+File: images/extensions_folder.png Graphic file (type png)
+
+<use images/extensions_folder.png>
+Package pdftex.def Info: images/extensions_folder.png used on input line 523.
+(pdftex.def)             Requested size: 192.95992pt x 162.60666pt.
+ [24]
+<images/xml_mapping.png, id=608, 345.08925pt x 181.8795pt>
+File: images/xml_mapping.png Graphic file (type png)
+
+<use images/xml_mapping.png>
+Package pdftex.def Info: images/xml_mapping.png used on input line 532.
+(pdftex.def)             Requested size: 414.10503pt x 218.25429pt.
+
+Overfull \hbox (1.54005pt too wide) in paragraph at lines 532--533
+ [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25]
-Underfull \vbox (badness 1173) has occurred while \output is active []
+ [25 <./images/extensions_folder.png> <./images/xml_mapping.png>] [26]
+\openout3 = `skeleton.pyg'.
 
- [26 <./images/server_class_diagram-eps-converted-to.pdf>]
-Overfull \hbox (14.59334pt too wide) in paragraph at lines 398--399
-[]\T1/ppl/m/n/12 An MIT-licensed open-source socket.io JavaScript li-brary pro-
-vided by Learn-
- []
 
-<images/extension_flow.jpg, id=545, 972.63374pt x 565.11125pt>
-File: images/extension_flow.jpg Graphic file (type jpg)
+(_minted-skeleton/9AF6906AF7C72B0BD070BFA4E51C1F805D764DE80052C0D0737CD863CD6F0
+8C8.pygtex) [27]
+\openout3 = `skeleton.pyg'.
 
-<use images/extension_flow.jpg>
-Package pdftex.def Info: images/extension_flow.jpg used on input line 405.
-(pdftex.def)             Requested size: 408.50339pt x 237.3451pt.
- [27 <./images/extension_flow.jpg>]
-Overfull \hbox (12.9658pt too wide) in paragraph at lines 419--422
-[]\T1/ppl/m/n/12 A sim-ple con-nec-tion func-tion \T1/cmtt/m/n/12 connect(serve
-r_ip, server_port) \T1/ppl/m/n/12 opens a socket
- []
 
-[28]
-Underfull \vbox (badness 2173) has occurred while \output is active []
-
- [29]
-Underfull \vbox (badness 7397) has occurred while \output is active []
-
- [30]
-Overfull \hbox (0.56567pt too wide) in paragraph at lines 529--530
+(_minted-skeleton/3723F69C5C288751FAEEB8A95FF3E25E5D764DE80052C0D0737CD863CD6F0
+8C8.pygtex)
+Overfull \hbox (0.56567pt too wide) in paragraph at lines 666--667
 []\T1/ppl/m/n/12 Since then, it has evolved into sup-port-ing a va-ri-ety of in
 -stances (vir-tual clients),
  []
 
-[31]
-Package epstopdf Info: Source file: <images/benchmarker.eps>
-(epstopdf)                    date: 2016-03-29 01:54:02
-(epstopdf)                    size: 63939 bytes
-(epstopdf)             Output file: <images/benchmarker-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-03-29 01:54:24
-(epstopdf)                    size: 44447 bytes
-(epstopdf)             Command: <epstopdf --outfile=images/benchmarker-eps-conv
-erted-to.pdf images/benchmarker.eps>
-(epstopdf)             \includegraphics on input line 554.
-Package epstopdf Info: Output file is already uptodate.
+[28] <images/benchmarker2.jpg, id=636, 643.40375pt x 676.5275pt>
+File: images/benchmarker2.jpg Graphic file (type jpg)
 
-<images/benchmarker-eps-converted-to.pdf, id=586, 514.92375pt x 540.0175pt>
-File: images/benchmarker-eps-converted-to.pdf Graphic file (type pdf)
-
-<use images/benchmarker-eps-converted-to.pdf>
-Package pdftex.def Info: images/benchmarker-eps-converted-to.pdf used on input 
-line 554.
-(pdftex.def)             Requested size: 411.93954pt x 432.01459pt.
- [32 <./images/benchmarker-eps-converted-to.pdf>]
-Overfull \hbox (1.30754pt too wide) in paragraph at lines 566--567
+<use images/benchmarker2.jpg>
+Package pdftex.def Info: images/benchmarker2.jpg used on input line 693.
+(pdftex.def)             Requested size: 398.9062pt x 419.4427pt.
+ [29] [30 <./images/benchmarker2.jpg>]
+Overfull \hbox (1.30754pt too wide) in paragraph at lines 705--707
 \T1/ppl/m/n/12 func-tion \T1/cmtt/m/n/12 wn_connect(server_ip, server_port)\T1/
 ppl/m/n/12 . It then awaits in-com-ing mes-
  []
 
-<images/messenger.jpg, id=597, 910.40125pt x 572.1375pt>
+<images/messenger.jpg, id=650, 910.40125pt x 572.1375pt>
 File: images/messenger.jpg Graphic file (type jpg)
 
 <use images/messenger.jpg>
-Package pdftex.def Info: images/messenger.jpg used on input line 571.
+Package pdftex.def Info: images/messenger.jpg used on input line 711.
 (pdftex.def)             Requested size: 400.57779pt x 251.74127pt.
- [33 <./images/messenger.jpg>] [34
+ [31 <./images/messenger.jpg>] [32
 
 ]
 Chapter 5.
 
-Overfull \hbox (0.75887pt too wide) in paragraph at lines 586--587
+Overfull \hbox (0.75887pt too wide) in paragraph at lines 728--729
 \T1/ppl/m/n/12 house-hold net-work band-width [[]]. This in-volves an up-load s
 peed of 5Mbit/s,
  []
 
-[35]
+[33]
 Package epstopdf Info: Source file: <images/test_CLIENT_CPUusage.eps>
 (epstopdf)                    date: 2016-03-29 00:29:30
 (epstopdf)                    size: 54331 bytes
@@ -1008,15 +1218,15 @@ to.pdf>
 (epstopdf)                    size: 16512 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/test_CLIENT_CPUusage
 -eps-converted-to.pdf images/test_CLIENT_CPUusage.eps>
-(epstopdf)             \includegraphics on input line 596.
+(epstopdf)             \includegraphics on input line 738.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/test_CLIENT_CPUusage-eps-converted-to.pdf, id=615, 456.70625pt x 197.73
+<images/test_CLIENT_CPUusage-eps-converted-to.pdf, id=667, 456.70625pt x 197.73
 875pt>
 File: images/test_CLIENT_CPUusage-eps-converted-to.pdf Graphic file (type pdf)
  <use images/test_CLIENT_CPUusage-eps-converted-to.pdf>
 Package pdftex.def Info: images/test_CLIENT_CPUusage-eps-converted-to.pdf used 
-on input line 596.
+on input line 738.
 (pdftex.def)             Requested size: 411.03181pt x 177.96323pt.
 Package epstopdf Info: Source file: <images/test_CLIENT_CPUtime.eps>
 (epstopdf)                    date: 2016-03-29 00:27:10
@@ -1027,15 +1237,15 @@ o.pdf>
 (epstopdf)                    size: 15637 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/test_CLIENT_CPUtime-
 eps-converted-to.pdf images/test_CLIENT_CPUtime.eps>
-(epstopdf)             \includegraphics on input line 605.
+(epstopdf)             \includegraphics on input line 747.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/test_CLIENT_CPUtime-eps-converted-to.pdf, id=616, 456.70625pt x 198.742
+<images/test_CLIENT_CPUtime-eps-converted-to.pdf, id=668, 456.70625pt x 198.742
 5pt>
 File: images/test_CLIENT_CPUtime-eps-converted-to.pdf Graphic file (type pdf)
  <use images/test_CLIENT_CPUtime-eps-converted-to.pdf>
 Package pdftex.def Info: images/test_CLIENT_CPUtime-eps-converted-to.pdf used o
-n input line 605.
+n input line 747.
 (pdftex.def)             Requested size: 411.03181pt x 178.86658pt.
 Package epstopdf Info: Source file: <images/test_CLIENT_RSS.eps>
 (epstopdf)                    date: 2016-03-29 00:31:12
@@ -1046,18 +1256,18 @@ f>
 (epstopdf)                    size: 16648 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/test_CLIENT_RSS-eps-
 converted-to.pdf images/test_CLIENT_RSS.eps>
-(epstopdf)             \includegraphics on input line 613.
+(epstopdf)             \includegraphics on input line 755.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/test_CLIENT_RSS-eps-converted-to.pdf, id=617, 456.70625pt x 200.75pt>
+<images/test_CLIENT_RSS-eps-converted-to.pdf, id=669, 456.70625pt x 200.75pt>
 File: images/test_CLIENT_RSS-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/test_CLIENT_RSS-eps-converted-to.pdf>
 Package pdftex.def Info: images/test_CLIENT_RSS-eps-converted-to.pdf used on in
-put line 613.
+put line 755.
 (pdftex.def)             Requested size: 411.03181pt x 180.67331pt.
- [36 <./images/test_CLIENT_CPUusage-eps-converted-to.pdf> <./images/test_CLIENT
-_CPUtime-eps-converted-to.pdf>] [37 <./images/test_CLIENT_RSS-eps-converted-to.
+ [34 <./images/test_CLIENT_CPUusage-eps-converted-to.pdf> <./images/test_CLIENT
+_CPUtime-eps-converted-to.pdf>] [35 <./images/test_CLIENT_RSS-eps-converted-to.
 pdf>]
 Package epstopdf Info: Source file: <images/mean_rtt.eps>
 (epstopdf)                    date: 2016-03-29 00:53:18
@@ -1067,15 +1277,15 @@ Package epstopdf Info: Source file: <images/mean_rtt.eps>
 (epstopdf)                    size: 81923 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/mean_rtt-eps-convert
 ed-to.pdf images/mean_rtt.eps>
-(epstopdf)             \includegraphics on input line 638.
+(epstopdf)             \includegraphics on input line 780.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/mean_rtt-eps-converted-to.pdf, id=654, 475.7775pt x 211.79124pt>
+<images/mean_rtt-eps-converted-to.pdf, id=706, 475.7775pt x 211.79124pt>
 File: images/mean_rtt-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/mean_rtt-eps-converted-to.pdf>
 Package pdftex.def Info: images/mean_rtt-eps-converted-to.pdf used on input lin
-e 638.
+e 780.
 (pdftex.def)             Requested size: 409.16792pt x 182.14015pt.
 Package epstopdf Info: Source file: <images/test_SERVER_RTTmean.eps>
 (epstopdf)                    date: 2016-03-29 00:45:25
@@ -1086,17 +1296,17 @@ o.pdf>
 (epstopdf)                    size: 26872 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/test_SERVER_RTTmean-
 eps-converted-to.pdf images/test_SERVER_RTTmean.eps>
-(epstopdf)             \includegraphics on input line 650.
+(epstopdf)             \includegraphics on input line 792.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/test_SERVER_RTTmean-eps-converted-to.pdf, id=658, 703.62875pt x 318.188
+<images/test_SERVER_RTTmean-eps-converted-to.pdf, id=710, 703.62875pt x 318.188
 75pt>
 File: images/test_SERVER_RTTmean-eps-converted-to.pdf Graphic file (type pdf)
  <use images/test_SERVER_RTTmean-eps-converted-to.pdf>
 Package pdftex.def Info: images/test_SERVER_RTTmean-eps-converted-to.pdf used o
-n input line 650.
+n input line 792.
 (pdftex.def)             Requested size: 408.10497pt x 184.54959pt.
- [38 <./images/mean_rtt-eps-converted-to.pdf>]
+ [36 <./images/mean_rtt-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/test_SERVER_RTTstd.eps>
 (epstopdf)                    date: 2016-03-29 00:50:32
 (epstopdf)                    size: 92389 bytes
@@ -1106,339 +1316,329 @@ Package epstopdf Info: Source file: <images/test_SERVER_RTTstd.eps>
 (epstopdf)                    size: 26779 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/test_SERVER_RTTstd-e
 ps-converted-to.pdf images/test_SERVER_RTTstd.eps>
-(epstopdf)             \includegraphics on input line 658.
+(epstopdf)             \includegraphics on input line 800.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/test_SERVER_RTTstd-eps-converted-to.pdf, id=676, 703.62875pt x 319.1925
+<images/test_SERVER_RTTstd-eps-converted-to.pdf, id=728, 703.62875pt x 319.1925
 pt>
 File: images/test_SERVER_RTTstd-eps-converted-to.pdf Graphic file (type pdf)
  <use images/test_SERVER_RTTstd-eps-converted-to.pdf>
 Package pdftex.def Info: images/test_SERVER_RTTstd-eps-converted-to.pdf used on
- input line 658.
+ input line 800.
 (pdftex.def)             Requested size: 408.10497pt x 185.13177pt.
- [39 <./images/test_SERVER_RTTmean-eps-converted-to.pdf> <./images/test_SERVER_
-RTTstd-eps-converted-to.pdf>] [40] [41]
-Overfull \hbox (21.29054pt too wide) in paragraph at lines 735--736
-[]\T1/ppl/m/n/12 Assuming the added de-lay is caused by the im-plied dis-tance 
-and packet-switching,
- []
-
-<images/worldmap.jpg, id=732, 892.33376pt x 474.77374pt>
+ [37 <./images/test_SERVER_RTTmean-eps-converted-to.pdf> <./images/test_SERVER_
+RTTstd-eps-converted-to.pdf>] [38] [39] <images/worldmap.jpg, id=784, 892.33376
+pt x 474.77374pt>
 File: images/worldmap.jpg Graphic file (type jpg)
 
 <use images/worldmap.jpg>
-Package pdftex.def Info: images/worldmap.jpg used on input line 740.
+Package pdftex.def Info: images/worldmap.jpg used on input line 882.
 (pdftex.def)             Requested size: 401.54648pt x 213.64621pt.
- [42 <./images/worldmap.jpg>]
+ [40 <./images/worldmap.jpg>]
 Chapter 6.
 
-Overfull \hbox (5.30614pt too wide) in paragraph at lines 761--764
+Overfull \hbox (0.91306pt too wide) in paragraph at lines 894--895
+\T1/ppl/m/n/12 and main-tain a TCP con-nec-tion mit-i-gates the NAT traver-sal 
+prob-lem that many
+ []
+
+
+Overfull \hbox (5.30614pt too wide) in paragraph at lines 903--904
 \T1/ppl/m/n/12 The eval-u-a-tion meth-ods in-di-cate that the net-work in-deed 
 per-forms well enough
  []
 
+[41
 
-Underfull \vbox (badness 3907) has occurred while \output is active []
+] (skeleton.bbl [42]
+Underfull \hbox (badness 5878) in paragraph at lines 4--7
+[]\T1/ppl/m/n/12 Gml def-i-ni-tion by wikipedia.  [][]$\T1/cmtt/m/n/12 https : 
+/ / en . wikipedia . org / wiki /$
+ []
 
- [43
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
+[]\T1/ppl/m/n/12 Api def-i-ni-tion by how-stuff-works.com.  [][]$\T1/cmtt/m/n/1
+2 http : / /$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
+$\T1/cmtt/m/n/12 money . howstuffworks . com / business-[]communications /$
+ []
+
+
+Underfull \hbox (badness 8000) in paragraph at lines 20--23
+[]\T1/ppl/m/n/12 Tcp def-i-ni-tion by wikipedia.  [][]$\T1/cmtt/m/n/12 https : 
+/ / en . wikipedia . org / wiki /$
+ []
+
+
+Underfull \hbox (badness 7081) in paragraph at lines 35--38
+[]\T1/ppl/m/n/12 P2p def-i-ni-tion by wikipedia.  [][]$\T1/cmtt/m/n/12 https : 
+/ / en . wikipedia . org / wiki /$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--43
+[]\T1/ppl/m/n/12 Rtt def-i-ni-tion by wikipedia.  [][]$\T1/cmtt/m/n/12 https : 
+/ / en . wikipedia . org / wiki /$
+ []
+
+
+Underfull \hbox (badness 8170) in paragraph at lines 45--48
+[]\T1/ppl/m/n/12 Rss def-i-ni-tion by wikipedia.  [][]$\T1/cmtt/m/n/12 https : 
+/ / en . wikipedia . org / wiki /$
+ []
+
+
+Underfull \hbox (badness 6001) in paragraph at lines 50--53
+[]\T1/ppl/m/n/12 Cpu def-i-ni-tion by wikipedia.  [][]$\T1/cmtt/m/n/12 https : 
+/ / en . wikipedia . org / wiki /$
+ []
+
+
+Underfull \hbox (badness 5345) in paragraph at lines 55--58
+[]\T1/ppl/m/n/12 Ram def-i-ni-tion by wikipedia.  [][]$\T1/cmtt/m/n/12 https : 
+/ / en . wikipedia . org / wiki /$
+ []
+
+
+Underfull \hbox (badness 7344) in paragraph at lines 65--68
+[]\T1/ppl/m/n/12 Gui def-i-ni-tion by wikipedia.  [][]$\T1/cmtt/m/n/12 https : 
+/ / en . wikipedia . org / wiki /$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--74
+[]\T1/ppl/m/n/12 Ide def-i-ni-tion by wikipedia.  [][]$\T1/cmtt/m/n/12 https : 
+/ / en . wikipedia . org / wiki /$
+ []
+
+[43
 
 ]
-[44]
-Chapter 7.
-<images/server_code.jpg, id=749, 602.25pt x 293.095pt>
-File: images/server_code.jpg Graphic file (type jpg)
-
-<use images/server_code.jpg>
-Package pdftex.def Info: images/server_code.jpg used on input line 777.
-(pdftex.def)             Requested size: 433.61966pt x 211.02823pt.
-
-Overfull \hbox (21.05469pt too wide) in paragraph at lines 777--778
-[][] 
- []
-
-<images/server_actions.jpg, id=752, 464.73625pt x 458.71375pt>
-File: images/server_actions.jpg Graphic file (type jpg)
-
-<use images/server_actions.jpg>
-Package pdftex.def Info: images/server_actions.jpg used on input line 784.
-(pdftex.def)             Requested size: 302.07498pt x 298.1604pt.
-
-<images/server_player_functions.jpg, id=753, 379.4175pt x 406.51875pt>
-File: images/server_player_functions.jpg Graphic file (type jpg)
-
-<use images/server_player_functions.jpg>
-Package pdftex.def Info: images/server_player_functions.jpg used on input line 
-791.
-(pdftex.def)             Requested size: 246.61844pt x 264.23404pt.
-
-<images/server_player_construct.jpg, id=758, 718.685pt x 517.935pt>
-File: images/server_player_construct.jpg Graphic file (type jpg)
-
-<use images/server_player_construct.jpg>
-Package pdftex.def Info: images/server_player_construct.jpg used on input line 
-798.
-(pdftex.def)             Requested size: 539.01242pt x 388.45029pt.
-
-Overfull \hbox (126.44745pt too wide) in paragraph at lines 798--799
-[][] 
- []
-
-<images/server_message_tags.jpg, id=759, 280.04625pt x 405.515pt>
-File: images/server_message_tags.jpg Graphic file (type jpg)
-
-<use images/server_message_tags.jpg>
-Package pdftex.def Info: images/server_message_tags.jpg used on input line 806.
-
-(pdftex.def)             Requested size: 210.03415pt x 304.13548pt.
-
-<images/extensions_folder.png, id=760, 160.80075pt x 135.50626pt>
-File: images/extensions_folder.png Graphic file (type png)
-
-<use images/extensions_folder.png>
-Package pdftex.def Info: images/extensions_folder.png used on input line 815.
-(pdftex.def)             Requested size: 192.95992pt x 162.60666pt.
-
-<images/xml_mapping.png, id=762, 345.08925pt x 181.8795pt>
-File: images/xml_mapping.png Graphic file (type png)
-
-<use images/xml_mapping.png>
-Package pdftex.def Info: images/xml_mapping.png used on input line 824.
-(pdftex.def)             Requested size: 414.10503pt x 218.25429pt.
-
-Overfull \hbox (1.54005pt too wide) in paragraph at lines 824--825
- [][] 
- []
-
-(skeleton.bbl [45
-
-] [46 <./images/server_code.jpg> <./images/server_actions.jpg>] [47 <./images/s
-erver_player_functions.jpg>] [48 <./images/server_player_construct.jpg>] [49 <.
-/images/server_message_tags.jpg> <./images/extensions_folder.png>] [50 <./image
-s/xml_mapping.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 4--10
+Underfull \hbox (badness 10000) in paragraph at lines 86--92
 []\T1/ppl/m/n/12 Vinny Ling-ham.  Top 20 rea-sons why web apps are su-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--10
+Underfull \hbox (badness 10000) in paragraph at lines 86--92
 \T1/ppl/m/n/12 pe-rior to desk-top apps.  [][]$\T1/cmtt/m/n/12 http : / / www .
  vinnylingham . com /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--10
+Underfull \hbox (badness 10000) in paragraph at lines 86--92
 $\T1/cmtt/m/n/12 top-[]20-[]reasons-[]why-[]web-[]apps-[]are-[]superior-[]to-[]
 desktop-[]apps . html$[][]\T1/ppl/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 5533) in paragraph at lines 69--73
+Underfull \hbox (badness 5533) in paragraph at lines 151--155
 []\T1/ppl/m/n/12 Missing net-work-ing fea-ture for browser ex-port.  [][]$\T1/c
 mtt/m/n/12 http : / / docs .$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--73
+Underfull \hbox (badness 10000) in paragraph at lines 151--155
 $\T1/cmtt/m/n/12 yoyogames . com / source / dadiospice / 002 _ reference / netw
 orking /$
  []
 
-[51
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 85--89
+Underfull \hbox (badness 10000) in paragraph at lines 167--171
 []\T1/ppl/m/n/12 Tcp 3-way hand-shake.  [][]$\T1/cmtt/m/n/12 http : / / www . i
 netdaemon . com / tutorials /$
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--105
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 183--187
 []\T1/ppl/m/n/12 Udp con-nec-tion-less.  [][]$\T1/cmtt/m/n/12 http : / / www . 
 erg . abdn . ac . uk / users / gorry /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--112
+Underfull \hbox (badness 10000) in paragraph at lines 189--194
 []\T1/ppl/m/n/12 Yevhen Shylo.  Net-work ad-dress trans-la-tion.  \T1/ppl/m/it/
 12 Sci-en-tific
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--112
+Underfull \hbox (badness 10000) in paragraph at lines 189--194
 \T1/ppl/m/it/12 Re-port - Tech-no-log-i-cal Con-fer-ence\T1/ppl/m/n/12 , 3(1):7
 9, Novem-ber 2015.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--148
+Underfull \hbox (badness 10000) in paragraph at lines 223--230
 []\T1/ppl/m/n/12 Mikito Takada.  Per-for-mance bench-mark-ing socket.io
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--148
+Underfull \hbox (badness 10000) in paragraph at lines 223--230
 \T1/ppl/m/n/12 0.8.7, 0.7.11 and 0.6.17 and node's na-tive tcp.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--148
+Underfull \hbox (badness 10000) in paragraph at lines 223--230
 \T1/ppl/m/n/12 http://blog.mixu.net/2011/11/22/performance-benchmarking-socket-
 
  []
 
 
-Underfull \hbox (badness 6625) in paragraph at lines 141--148
+Underfull \hbox (badness 6625) in paragraph at lines 223--230
 \T1/ppl/m/n/12 io-0-8-7-0-7-11-and-0-6-17-and-nodes-native-tcp/, 2011.  [Ac-ces
 sed:
  []
 
 
-Underfull \hbox (badness 7030) in paragraph at lines 162--168
+Underfull \hbox (badness 7030) in paragraph at lines 244--250
 []\T1/ppl/m/n/12 Phil Ed-holm.  Where are the real we-brtc apps?  [][]$\T1/cmtt
 /m/n/12 http :$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--168
+Underfull \hbox (badness 10000) in paragraph at lines 244--250
 $\T1/cmtt/m/n/12 / / www . webrtcworld . com / topics / from-[]the-[]experts / 
 articles /$
  []
 
 
-Underfull \hbox (badness 1852) in paragraph at lines 162--168
+Underfull \hbox (badness 1852) in paragraph at lines 244--250
 $\T1/cmtt/m/n/12 375465-[]where-[]the-[]real-[]webrtc-[]apps . htm$[][]\T1/ppl/
 m/n/12 , 2014.  [Ac-cessed: 2016-
  []
 
-[52]
-Underfull \hbox (badness 4072) in paragraph at lines 183--188
+[45]
+Underfull \hbox (badness 4072) in paragraph at lines 265--270
 []\T1/ppl/m/n/12 Alejandro Her-nan-dez.  Init.js: A guide to the why and how
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
+Underfull \hbox (badness 10000) in paragraph at lines 265--270
 \T1/ppl/m/n/12 of full-stack javascript.  [][]$\T1/cmtt/m/n/12 http : / / www .
  toptal . com / javascript /$
  []
 
 
-Underfull \hbox (badness 7468) in paragraph at lines 190--194
+Underfull \hbox (badness 7468) in paragraph at lines 272--276
 []\T1/ppl/m/n/12 Quality at-tributes.  [][]$\T1/cmtt/m/n/12 https : / / msdn . 
 microsoft . com / en-[]us / library /$
  []
 
 
-Underfull \hbox (badness 5787) in paragraph at lines 196--199
+Underfull \hbox (badness 5787) in paragraph at lines 278--281
 []\T1/ppl/m/n/12 Review sys-tem for html5 game de-vel-op-ment tools.  [][]$\T1/
 cmtt/m/n/12 https : / /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--219
+Underfull \hbox (badness 10000) in paragraph at lines 297--301
 $\T1/cmtt/m/n/12 developer . mozilla . org / en-[]US / docs / Games / Tools / E
 ngines _ and _ tools$[][]\T1/ppl/m/n/12 .
  []
 
 
-Underfull \hbox (badness 3189) in paragraph at lines 242--248
+Underfull \hbox (badness 3189) in paragraph at lines 324--330
 []\T1/ppl/m/n/12 Ashley Gullen.  Mul-ti-player tu-to-rial.  [][]$\T1/cmtt/m/n/1
 2 https : / / www . scirra . com /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 242--248
+Underfull \hbox (badness 10000) in paragraph at lines 324--330
 $\T1/cmtt/m/n/12 tutorials / 892 / multiplayer-[]tutorial-[]1-[]concepts / page
 -[]1$[][]\T1/ppl/m/n/12 , March
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--258
+Underfull \hbox (badness 10000) in paragraph at lines 337--340
 []\T1/ppl/m/n/12 Unity net-work-ing fea-ture sup-port.  [][]$\T1/cmtt/m/n/12 ht
 tp : / / docs . unity3d . com /$
  []
 
-[53]
-Underfull \hbox (badness 10000) in paragraph at lines 260--263
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--345
 []\T1/ppl/m/n/12 Websocket-sharp plu-gin for unity.  [][]$\T1/cmtt/m/n/12 https
  : / / github . com / sta /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--268
+Underfull \hbox (badness 10000) in paragraph at lines 347--350
 []\T1/ppl/m/n/12 Unity statis-tics and pub-lic re-la-tions.  [][]$\T1/cmtt/m/n/
 12 https : / / unity3d . com /$
  []
 
-
-Underfull \hbox (badness 1127) in paragraph at lines 275--278
+[46]
+Underfull \hbox (badness 1127) in paragraph at lines 357--360
 []\T1/ppl/m/n/12 Unity 2d de-vel-op-ment fo-rum sec-tion.  [][]$\T1/cmtt/m/n/12
  http : / / forum . unity3d . com /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--284
+Underfull \hbox (badness 10000) in paragraph at lines 362--366
 $\T1/cmtt/m/n/12 threads / where-[]to-[]start-[]2d-[]toolkit-[]or-[]platformer-
 []pro . 380770/$[][]\T1/ppl/m/n/12 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--312
+Underfull \hbox (badness 10000) in paragraph at lines 390--394
 []\T1/ppl/m/n/12 Average house-hold net-work band-width in the united king-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--312
+Underfull \hbox (badness 10000) in paragraph at lines 390--394
 \T1/ppl/m/n/12 dom.  [][]$\T1/cmtt/m/n/12 http : / / www . ispreview . co . uk 
 / index . php / 2015 / 02 /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--312
+Underfull \hbox (badness 10000) in paragraph at lines 390--394
 $\T1/cmtt/m/n/12 ofcom-[]average-[]uk-[]home-[]broadband-[]speeds-[]slowly-[]re
 ach-[]23mbps .$
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 902.
- [54]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 902.
+runsystem(del "skeleton.pyg")...executed.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 996.
+ [47]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 996.
  (skeleton.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 902.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 902.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 996.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 996.
 Package rerunfilecheck Info: File `skeleton.out' has not changed.
-(rerunfilecheck)             Checksum: DD888F942929B8B0259EEB9205C093DA;2875.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 902.
+(rerunfilecheck)             Checksum: 490EFDF0E3845239FF174E19841CAF05;2830.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 996.
  ) 
 Here is how much of TeX's memory you used:
- 9208 strings out of 493634
- 136433 string characters out of 3141302
- 237550 words of memory out of 3000000
- 12183 multiletter control sequences out of 15000+200000
- 32548 words of font info for 70 fonts, out of 3000000 for 9000
+ 12989 strings out of 493634
+ 202430 string characters out of 3141302
+ 340085 words of memory out of 3000000
+ 15886 multiletter control sequences out of 15000+200000
+ 33032 words of font info for 72 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 43i,16n,71p,936b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exi
-st, replaced by a fixed one
+ 43i,16n,71p,937b,521s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not ex
+ist, replaced by a fixed one
 
-pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
 , replaced by a fixed one
 
  <C:\Users\Gebruiker\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
-0\ectt1200.pk> <C:\Users\Gebruiker\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
-appen\ec\dpi600\ectt1000.pk>{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/
-fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-r8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on skeleton.pdf (54 pages, 2310487 bytes).
+0\ecit1200.pk> <C:\Users\Gebruiker\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
+appen\ec\dpi600\ectt1200.pk> <C:\Users\Gebruiker\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk>{C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/
+uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.p
+fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on skeleton.pdf (55 pages, 2200657 bytes).
 PDF statistics:
- 1057 PDF objects out of 1200 (max. 8388607)
- 225 named destinations out of 1000 (max. 500000)
- 445 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1136 PDF objects out of 1200 (max. 8388607)
+ 234 named destinations out of 1000 (max. 500000)
+ 427 words of extra memory for PDF output out of 10000 (max. 10000000)
 

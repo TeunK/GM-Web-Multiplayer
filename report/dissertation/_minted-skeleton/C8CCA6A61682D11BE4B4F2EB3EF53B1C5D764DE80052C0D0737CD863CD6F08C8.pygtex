@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{n+nx}{socket} \PYG{o}{=} \PYG{n+nx}{network}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}create}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}socket}\PYG{p}{(}\PYG{n+nx}{network}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}socket}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}tcp}\PYG{p}{);}
+	\PYG{n+nx}{network}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}connect}\PYG{p}{(}\PYG{n+nx}{socket}\PYG{p}{,} \PYG{n+nx}{ip}\PYG{err}{\PYGZbs{}}\PYG{n+nx}{\PYGZus{}address}\PYG{p}{,} \PYG{n+nx}{port}\PYG{p}{);}
+\end{Verbatim}
