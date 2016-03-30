@@ -1,7 +1,7 @@
 % to choose your degree
 % please un-comment just one of the following
 % \documentclass[bsc,frontabs,twoside,singlespacing,parskip,deptreport]{styles/infthesis}     % for BSc, BEng etc.
-\documentclass[bsc, 12pt, twoside, singlespacing, parskip, abbrevs, notimes, normalheadings, logo]{styles/infthesis}
+\documentclass[bsc, 12pt, twoside, singlespacing, parskip, abbrevs, notimes, normalheadings, logo, deptreport]{styles/infthesis}
 % \documentclass[minf,frontabs,twoside,singlespacing,parskip,deptreport]{infthesis}  % for MInf
 
 \usepackage{float} %for image positioning
@@ -10,8 +10,8 @@
 \hypersetup{
     colorlinks,
     linkcolor={black!50!black},
-    citecolor={blue!50!black},
-    urlcolor={blue!80!black}
+    citecolor={black!50!black},
+    urlcolor={black!80!black}
 }
 \usepackage{epstopdf}
 
@@ -518,18 +518,35 @@ The natively supported networking functions can easily be translated into the th
 \end{itemize} 
 
 \begin{figure}[H]
+	\vspace{8em}
 	\centering
 	% \centering% default with `floatrow`
-	\includegraphics[scale=1.2]{images/extensions_folder.png}
-	\caption{View inside the GUI that visualises the extension function mapping setup.}
+	\includegraphics[scale=1]{images/extensions_folder.png}
+	\caption{View inside the GUI that visualises the extension function mapping setup after correctly importing the extension into GameMaker.}
 	\label{fig:extension_folder}
-	\vspace{1em}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	% \centering% default with `floatrow`
-	\includegraphics[scale=1.2]{images/xml_mapping.png}
+	\begin{minted}[tabsize=2]{xml}
+	<function>
+		<name>wn_connect</name>
+		<externalName>connect</externalName>
+		<kind>11</kind>
+		<help>
+			wn_connect(server_ip, server_port) 
+			-- Connect to a server at ip (address) and port.
+			Returns socket-ID
+		</help>
+		<returnType>2</returnType>
+		<argCount>2</argCount>
+		<args>
+			<arg>1</arg>
+			<arg>1</arg>
+		</args>
+	</function>
+	\end{minted}
 	\caption{External function \texttt{connect} from JavaScript extension file located in GMWebNet.js, mapped to a GML function \texttt{wn\_connect} located in the client application. The function takes 2 arguments, each of type String (id = 1), and returns a Double type (id = 2)}
 	\label{fig:xml_mapping}
 	\vspace{1em}
@@ -718,12 +735,12 @@ The network controller then initiates a connection with the server using the fun
 % -----------------------
 \chapter{Network Extension Evaluation}
 %description of experiments, presentation + (directly including) interpretation of the data
-In this chapter, the extension is evaluated in terms of fairness and performance. More specifically, we test how concurrent connections impact the server performance in terms of CPU (Central Processing Unit) usage, CPU processing time and RSS (Resident Set Size). We then observe how the server performs and scales based on client interactions, discover how broadcasting messages\footnote{as opposed to one-to-one interaction} does not affect the round-trip time of messages, and that although large distances do affect the round-trip time, countries located within Europe maintain a round-trip time well within the acceptable 100 milliseconds.
+In this chapter, the extension is evaluated in terms of fairness and performance. More specifically, we test how concurrent connections impact the server performance in terms of CPU (Central Processing Unit) usage, CPU processing time and RSS (Resident Set Size). We then observe how the server performs and scales based on client interactions, discover how broadcasting messages\footnote{as opposed to one-to-one interaction} does not affect their round-trip time, and that although large distances do affect the round-trip time, countries located within Europe maintain a round-trip time well within the acceptable 100 milliseconds.
 
 \section{Controlled Network}
-Controlled experiments were conducted in order allow making predictions about the server's behaviour when loaded under similar pressure in future occasions.
+Controlled experiments were conducted in order allow making predictions about the server's behaviour when loaded under similar stress in future occasions.
 
-These experiments were executed on a Windows 7 64-bit platform with 12.6GB available physical memory and an Intel(R) Core(TM) i7-2600K CPU @ 3.40GHz processor. The software entailed Node v0.12.3 and Socket.io v1.3.7 in order to handle the networking operations.
+These experiments were performed on a Windows 7 64-bit platform with 12.6GB available physical memory and an Intel(R) Core(TM) i7-2600K CPU @ 3.40GHz processor. The software entailed Node v0.12.3 and Socket.io v1.3.7 in order to handle the networking operations.
 
 The network was controlled using Dummynet, using a below-average UK household network bandwidth \cite{household_bandwidth}. This involves an upload speed of 5Mbit/s, and a download speed of 1Mbit/, although no packet loss was set in order to ensure consistency throughout the controlled network experiments.
 
@@ -758,39 +775,40 @@ It is important to know how many clients a server can host simultaneously and ho
 \label{fig:cpu_rss}
 \end{figure}
 
-Figure \ref{fig:cpu_usage} indicates a logarithmic trend in the CPU usage on the server. This appeared strange at first. Although this effect was then explained by looking at the CPU time in Figure \ref{fig:cpu_time}. 
+Figure \ref{fig:cpu_usage} indicates a logarithmic trend in the CPU usage on the server. This behaviour appeared strange at first. Although this effect is explained by taking the CPU time in Figure \ref{fig:cpu_time} into consideration. 
 
-The system aims to run the process at an optimal CPU usage amount, which can be noticed by the sudden change at a CPU usage of roughly 60\%. As soon as the server processor reaches this point, it will attempt to balance the usage by allowing more processing time for connecting the clients. The connection request processing time scales in a near-linear fashion, indicating clients to be connected one at a time. Occasional peaks and the slight increase in the trend of the CPU time may indicate the processor demanding extra time to process the increased number of connecting clients.
+The system aims to run the process at an optimal CPU usage amount, which can be noticed by the sudden change at a CPU usage of roughly 60\%. As soon as the server's processor reaches this point, it will attempt to balance the usage by allowing more processing time for connecting the clients. The connection request processing time scales in a near-linear fashion, indicating that connecting a new client happens in constant time almost regardless of the amount of already-connected clients on the server. Occasional peaks and the slight increase in the trend of the CPU time may indicate the processor demanding extra time to process the increased number of connecting clients.
 
-Due to the connection handling mechanism of Node.js, where each new client connection is offloaded to a heap using constant memory space, the RSS scales up in an almost linear fashion. This property makes it easy to predict the amount of memory required for a certain expected load. For example, in the observed scenario, each client uses roughly 5KB. Therefore when expecting 10,000 clients to connect to the server, they will be using up around 50MB (slightly higher due to the trend not being exactly linear). Similar experiments have found similar behaviour, where 16GB is consumed to record a total of 1 million concurrent connections \cite{modejs_1m_connections}.
+Due to the connection handling mechanism of Node.js, where each newly connected client is offloaded to a heap using constant memory space, the RSS scales up in an almost linear fashion. This property makes it easy to predict the amount of memory required for a certain expected load. For example, in the observed scenario, each client consumes roughly 5KB of the RAM. Therefore when expecting 10,000 clients to connect to the server, they will be using up around 50MB (slightly higher due to the trend not being exactly linear). Similar experiments have found similar behaviour, where 16GB is consumed to record a total of 1 million concurrent connections \cite{modejs_1m_connections}.
 
 
 \subsection{Message Broadcasting Performance}
 The concurrent connections experiments have indicated that the system scales well within the expected demands of an average multiplayer game in terms of client concurrency. The following experiment evaluates what happens when these clients start interacting. It observes the number of messages that can be handled by the server simultaneously, and considers how this affects the fairness in response-time of the individual clients.
+\vspace{-1em}
+\paragraph*{The setup}involves up to 5000 concurrently connected clients (10 physical instances connected by a cable, simulating at most 500 clients each) all located within the same local network. Clients can send 8-Byte packets, and each client sends these packets at regular time intervals. Each client measures the round-trip time of the packet, and for each interval these round-trip times are averaged.
 
-\paragraph*{The setup}involves up to 5000 concurrently connected clients (10 physical instances simulating at most 500 clients each) all located within the same network. Clients can send 8-Byte packets, and each client sends these packets at regular time intervals. Each client measures the round-trip time of the packet, and for each interval these round-trip times are averaged.
+The values in Figure \ref{fig:mean_rtt} were generated by combining several experiments, each containing a different fixed number of clients: 50, 100, 500, 1000, 2500 and 5000. In these experiments we modified the rate at which each client transmits messages to the server (a higher sending rate results in more incoming messages per second at the server).
 
-The values in Figure \ref{fig:mean_rtt} were generated by modifying the rate at which each client transmits messages to the server (a sending higher rate resulting in more incoming messages per second at the server), for a fixed number of clients: 50, 100, 500, 1000, 2500 and 5000.
-
-Each time when the average RTT exceeds 200ms, the experiment is stopped. Beyond this point, the server appears to receive messages faster than it can handle, causing it to temporarily store the messages in a queue for later. However as clients keep sending packets at the same constant rate, resulting in a vicious cycle that causes the memory to eventually overflow.
+RTTs of over 200ms would significantly negatively impact the user experience. Each time when the average RTT exceeds this threshold, the experiment is terminated. Moreover, beyond this point, the server appears to receive messages faster than it can handle, causing it to temporarily store the messages in a queue for future processing cycles. This behaviour results in a vicious cycle that causes the memory to eventually overflow, as clients keep sending packets at the same constant rate.
 
 \begin{figure}[H]
 \centering
 % \centering% default with `floatrow`
 \includegraphics[scale=0.86]{images/mean_rtt.eps}
-\caption{The general case scenario indicating the observed mean 8-byte message round-trip time, depending on the total number of messages incoming to the server at every second. Note that the final max-value is biased by the fact that experiments were terminated where the RTT exceeded 200ms.}
+\caption{The general case scenario indicating the observed mean 8-byte message round-trip time, depending on the total number of messages incoming to the server at every second. Note that the final max-value is biased by the fact that some of the experiments were already terminated, as their RTT exceeded 200ms.}
+\vspace{-1em}
 \label{fig:mean_rtt}
 \end{figure}
 
-From Figure \ref{fig:mean_rtt}, it can be observed that the messages maintain a stable 32ms round-trip time until the server receives around 5000 messages per second. Beyond this point, the round-trip time grows exponentially until it reaches >200ms, which is when the experiment is terminated.
+From Figure \ref{fig:mean_rtt}, it can be observed that the messages maintain a stable 32ms round-trip time until the server receives around 5000 messages per second. Beyond this point, the round-trip time grows exponentially until it reaches >200ms, which is when each of the experiments are terminated. A line can be drawn around 8000 to 8500 incoming messages per second (100ms RTT), as this is the boundary where the user experience in professional fast-paced multiplayer games is considered to be affected. Note however that the real boundary depends largely on the expectation and possible delay-masking qualities of the application.
 
-Note that after receiving, these messages were broadcasted to all other clients. In order to further visualise the effect of broadcasting messages from each client to every other client, the mean RTT results are displayed separately in Figure \ref{fig:broadcast_rtt_mean}, as well as their corresponding standard deviation in Figure \ref{fig:broadcast_rtt_std}.
+Note also that after receiving, these messages were broadcasted to all other clients (as opposed to one-to-one messages). In order to further visualise the effect of broadcasting messages from each client to every other client, the mean RTT results are displayed separately in Figure \ref{fig:broadcast_rtt_mean}, as well as their corresponding standard deviation in Figure \ref{fig:broadcast_rtt_std}.
 
 \begin{figure}[H]
 \centering
 % \centering% default with `floatrow`
 \includegraphics[scale=0.58]{images/test_SERVER_RTTmean.eps}
-\caption{The mean round-trip time of all the messages that pass through the server, for different numbers of specified clients (50, 100, 500, 1000, 2500 and 5000). Each client sending messages at a variable rate per second.}
+\caption{The mean round-trip time of all the messages that pass through the server, for different numbers of clients (50, 100, 500, 1000, 2500 and 5000). Each client sends messages to the server at variable rates.}
 \label{fig:broadcast_rtt_mean}
 \end{figure}
 
@@ -798,11 +816,11 @@ Note that after receiving, these messages were broadcasted to all other clients.
 \centering
 % \centering% default with `floatrow`
 \includegraphics[scale=0.58]{images/test_SERVER_RTTstd.eps}
-\caption{The standard deviation of the message round-trip times as displayed in Figure \ref{fig:broadcast_rtt_mean} for all messages that pass through the server, for different numbers of specified clients (50, 100, 500, 1000, 2500 and 5000). Each client sending messages at a variable rate per second.}
+\caption{The standard deviation of the message round-trip times as displayed in Figure \ref{fig:broadcast_rtt_mean} for all messages that pass through the server, for different numbers of clients (50, 100, 500, 1000, 2500 and 5000) and for messages sent to the server at a variable rate.}
 \label{fig:broadcast_rtt_std}
 \end{figure}
 
-The graphs in Figure \ref{fig:broadcast_rtt_mean} and Figure \ref{fig:broadcast_rtt_std} indicate as expected that with few concurrently connected clients and the same send rate per client, the server manages to broadcast many more messages (as fewer clients will be sending messages). It is important to remember that broadcasting is an intensive task with a complexity of O($n^{2}$) for n clients, as every client sends a message to every other client.
+The graphs in Figure \ref{fig:broadcast_rtt_mean} and Figure \ref{fig:broadcast_rtt_std} indicate as expected that with few concurrently connected clients and the same send rate per client, the server manages to broadcast many more messages (as fewer clients will be sending messages). The number of messages the server needs to transmit every second is $sending\_clients \times send\_rate \times receiving\_clients$. It is important to remember that broadcasting is an intensive task with a complexity of O($n^{2}$) for n clients, as every client sends a message to every other client ($broadcasting\_clients == receiving\_clients$). 
 
 Therefore, if n = 100 clients are connected to the server, and each wants to broadcast 100 messages per second, the server receives $100 \times 100$ (= 10,000) messages per second, and has to send $100 \times 100 \times 100$ (=1,000,000) messages every second (although the sender technically does not need to re-receive its own message, this difference is negligible).
 
@@ -810,13 +828,13 @@ For n = 1000 clients, a maximum sending rate of 10 per second is observed. At th
 
 These results are very interesting as they indicate that the average RTT is not necessarily affected by the number of messages the server has to send\footnote{By considering that sending 100,000 messages results in a similar average message RTT as when sending 1,000,000, given that the amount of actually handled messages remains the same}, but rather by the amount of messages the server has to receive and control in the message-handling logic.
 
-
+\vspace{-1em}
 \section{Real Network Results}
-During the real network experiments, the network at the server was observed to running at a rather consistent 54Mb/s download and 3Mb/s upload speed.
+During the real network experiments, the network at the server was observed to be running at a consistent 54Mb/s download and 3Mb/s upload speed.
 
-\paragraph*{}Multiple tests were executed with clients located at specified locations. In each case, the clients were again sending 8-byte messages to the server, at a regular interval of 1 second for 2 minutes. The 120 round-trip times for each client were then averaged in order to blur occasional peaks caused by inconsistencies in the network. The round-trip times of the clients in each common location were averaged, and the deviation of the round-trip times within the 2-minute time frame for each of these locations were calculated.
+Multiple tests were executed with clients located at specified locations. In each case, the clients were again sending 8-byte messages to the server, at regular intervals of 1 second for 2 minutes. The 120 round-trip times for each client were then averaged in order to blur occasional peaks caused by inconsistencies in the network. The round-trip times of the clients in each common location were averaged, and the deviation of the round-trip times within the 2-minute time frame for each of these locations were calculated.
 
-All network experiments were executed using a single server located in Edinburgh and in each experiment all clients were connected and communicating to that server simultaneously. During the experiments, in order to prevent data transmission to affect the results, logs were saved at the clients. Only after each experiment was complete, these logs were forwarded for processing purposes. The round-trip times represent the delay times between the packet-send event in the browser client, and the packet-receive event by the same client for the same packet.
+All network experiments were executed using a single server located in Edinburgh and in each experiment all clients were connected and communicating to that server simultaneously. During the experiments, in order to prevent data transmission to affect the results, logs were saved locally at the clients. Only after each experiment was complete, these logs were forwarded for processing purposes. The round-trip times represent the delay times between the packet-send event in the browser client application, and the packet-receive event by the same client for the same packet.
 
 \subsection{Location-based Delay Fairness}
 The following experiments evaluate the effect of the geographical distance between groups of clients and the server with respect to fairness in response-time from the server to the clients.
@@ -842,7 +860,7 @@ The following experiments evaluate the effect of the geographical distance betwe
     Mean RTT 		& 32.1ms 	& 54.8ms 	& 62.7ms 	& 70.6ms 	& 107.5ms	\\ \hline
     Std RTT			& 0.4ms		& 2.9ms		& 6.8ms		& 3.36ms	& 43.6ms	\\ \hline
   \end{tabular}
-  \caption{Average round-trip times per test}
+  \caption{Observed average round-trip times and the standard deviation per test}
   \label{table:geo_avg_roundtrip}
 \end{table}
 
@@ -866,13 +884,13 @@ South Africa	& 144ms			&9760km\\
 California (USA)& 158ms			&8065km\\
 Thailand		& 171ms			&9438km\\
   \end{tabular}
-  \caption{Average round-trip times per location, along with their overall geographical distance from the server.}
+  \caption{Average round-trip times per location, along with their geographical distance from the server.}
   \label{table:geo_avg_location}
 \end{table}
 
-Clients located within the local network have the fastest round-trip time, as expected since packets can travel. After this point, Clients located anywhere within Europe have an overall round-trip time between 55ms and 76ms. These values are reasonable depending on the purpose of the game that is created with the extension, but complicated to omit. A general rule of thumb for ping values is that anything below 100ms is acceptable, even for high-end shootergames such as Battlefield and Call of Duty, where clients may automatically get kicked when their round-trip time exceeds 150ms or 200ms potentially disrupting the gameplay.
+Clients located within the local network have the shortest round-trip time, as expected since this scenario requires packets to travel through the least number of nodes before reaching the endpoint. Clients located anywhere within Europe have an overall round-trip time between 55ms and 76ms. These values are reasonable depending on the purpose of the game that is created with the extension, but complicated to omit. The considered rule of thumb for RTT values is that anything below 100ms is acceptable, even for high-end shootergames such as Battlefield and Call of Duty, where clients may be dis-allowed from joining the server only when their round-trip time exceeds 150ms or 200ms for the reason of potentially disrupting the gameplay.
 
-Table \ref{table:geo_avg_roundtrip} and table \ref{table:geo_avg_location} show the average round-trip times observed by clients located at different locations on earth. These RTT for these locations may differ due to factors such as the connection speed, ISP quality and firewall settings. But the experiment shows that the major contributor to unfairness in the network appears to be directly affected by the distance to the server, as the average RTT for each of the locations significantly increases as the distance increases. Figure \ref{fig:worldmap} visualises the connection between the observed round-trip times and the corresponding distance between the client and the server. 
+Table \ref{table:geo_avg_roundtrip} and table \ref{table:geo_avg_location} show the average round-trip times observed by clients located at different locations on earth. These RTT for these locations may differ due to factors i.a. the connection speed, number of traversed nodes, ISP quality and firewall settings. The experiment shows that the major contributor to unfairness in the network appears to be directly affected by the distance to the server, as the average RTT for each of the locations significantly increases as the distance increases. Figure \ref{fig:worldmap} visualises the connection between the observed round-trip times and the corresponding distance between the client and the server. 
 
 Assuming that the added delay is caused by the implied distance and packet-switching, the only real solution to the problem involves modifying the physical link between the client and the server or locating the server closer to the intended clients.
 

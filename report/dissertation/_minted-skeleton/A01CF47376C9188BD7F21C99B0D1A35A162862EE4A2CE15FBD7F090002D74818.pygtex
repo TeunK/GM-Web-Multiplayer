@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{n+nt}{\PYGZlt{}function\PYGZgt{}}
+		\PYG{n+nt}{\PYGZlt{}name\PYGZgt{}}wn\PYGZus{}connect\PYG{n+nt}{\PYGZlt{}/name\PYGZgt{}}
+		\PYG{n+nt}{\PYGZlt{}externalName\PYGZgt{}}connect\PYG{n+nt}{\PYGZlt{}/externalName\PYGZgt{}}
+		\PYG{n+nt}{\PYGZlt{}kind\PYGZgt{}}11\PYG{n+nt}{\PYGZlt{}/kind\PYGZgt{}}
+		\PYG{n+nt}{\PYGZlt{}help\PYGZgt{}}
+			wn\PYGZus{}connect(server\PYGZus{}ip, server\PYGZus{}port)
+			\PYGZhy{}\PYGZhy{} Connect to a server at ip (address) and port.
+			Returns socket\PYGZhy{}ID
+		\PYG{n+nt}{\PYGZlt{}/help\PYGZgt{}}
+		\PYG{n+nt}{\PYGZlt{}returnType\PYGZgt{}}2\PYG{n+nt}{\PYGZlt{}/returnType\PYGZgt{}}
+		\PYG{n+nt}{\PYGZlt{}argCount\PYGZgt{}}2\PYG{n+nt}{\PYGZlt{}/argCount\PYGZgt{}}
+		\PYG{n+nt}{\PYGZlt{}args\PYGZgt{}}
+			\PYG{n+nt}{\PYGZlt{}arg\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/arg\PYGZgt{}}
+			\PYG{n+nt}{\PYGZlt{}arg\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/arg\PYGZgt{}}
+		\PYG{n+nt}{\PYGZlt{}/args\PYGZgt{}}
+	\PYG{n+nt}{\PYGZlt{}/function\PYGZgt{}}
+\end{Verbatim}
