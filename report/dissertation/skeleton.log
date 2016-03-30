@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  30 MAR 2016 18:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  31 MAR 2016 01:25
 entering extended mode
 **./skeleton.tex
 (skeleton.tex
@@ -1293,32 +1293,37 @@ Package pdftex.def Info: images/test_SERVER_RTTmean-eps-converted-to.pdf used o
 n input line 812.
 (pdftex.def)             Requested size: 408.10497pt x 184.54959pt.
 Package epstopdf Info: Source file: <images/test_SERVER_RTTstd.eps>
-(epstopdf)                    date: 2016-03-29 00:50:32
-(epstopdf)                    size: 92389 bytes
+(epstopdf)                    date: 2016-03-31 01:23:25
+(epstopdf)                    size: 54498 bytes
 (epstopdf)             Output file: <images/test_SERVER_RTTstd-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2016-03-29 00:56:52
-(epstopdf)                    size: 26779 bytes
+(epstopdf)                    date: 2016-03-31 01:23:47
+(epstopdf)                    size: 47488 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/test_SERVER_RTTstd-e
 ps-converted-to.pdf images/test_SERVER_RTTstd.eps>
 (epstopdf)             \includegraphics on input line 820.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/test_SERVER_RTTstd-eps-converted-to.pdf, id=723, 703.62875pt x 319.1925
-pt>
+<images/test_SERVER_RTTstd-eps-converted-to.pdf, id=723, 1333.98375pt x 607.268
+75pt>
 File: images/test_SERVER_RTTstd-eps-converted-to.pdf Graphic file (type pdf)
  <use images/test_SERVER_RTTstd-eps-converted-to.pdf>
 Package pdftex.def Info: images/test_SERVER_RTTstd-eps-converted-to.pdf used on
  input line 820.
-(pdftex.def)             Requested size: 408.10497pt x 185.13177pt.
- [37 <./images/test_SERVER_RTTmean-eps-converted-to.pdf> <./images/test_SERVER_
-RTTstd-eps-converted-to.pdf>] [38]
+(pdftex.def)             Requested size: 413.53069pt x 188.25136pt.
+
+Overfull \hbox (0.96571pt too wide) in paragraph at lines 820--821
+ [][] 
+ []
+
+[37 <./images/test_SERVER_RTTmean-eps-converted-to.pdf> <./images/test_SERVER_R
+TTstd-eps-converted-to.pdf>] [38]
 Overfull \hbox (0.17065pt too wide) in paragraph at lines 893--894
 \T1/ppl/m/n/12 allowed from join-ing the server only when their round-trip time
  ex-ceeds 150ms
  []
 
-[39] <images/worldmap.jpg, id=778, 892.33376pt x 474.77374pt>
+[39] <images/worldmap.jpg, id=771, 892.33376pt x 474.77374pt>
 File: images/worldmap.jpg Graphic file (type jpg)
 
 <use images/worldmap.jpg>
@@ -1580,9 +1585,9 @@ amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/
 uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.p
 fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on skeleton.pdf (55 pages, 2172339 bytes).
+Output written on skeleton.pdf (55 pages, 2192978 bytes).
 PDF statistics:
- 1132 PDF objects out of 1200 (max. 8388607)
+ 1125 PDF objects out of 1200 (max. 8388607)
  233 named destinations out of 1000 (max. 500000)
  417 words of extra memory for PDF output out of 10000 (max. 10000000)
 
