@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  30 MAR 2016 16:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.13)  30 MAR 2016 18:25
 entering extended mode
 **./skeleton.tex
 (skeleton.tex
@@ -896,12 +896,6 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [8]
 Chapter 1.
 
-Overfull \hbox (4.71902pt too wide) in paragraph at lines 117--118
-\T1/ppl/m/n/12 game de-vel-op-ment and tech-nolo-gies. The newly re-leased web 
-stan-dard, known
- []
-
-
 Underfull \vbox (badness 5374) has occurred while \output is active []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
@@ -912,7 +906,7 @@ l.124
        [1
 
 ]
-Overfull \hbox (4.56267pt too wide) in paragraph at lines 136--137
+Overfull \hbox (4.56267pt too wide) in paragraph at lines 135--136
 \T1/ppl/m/n/12 games de-vel-oped with GameMaker that did pre-vi-ously not work 
 in the browser
  []
@@ -921,24 +915,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.143 
+l.142 
        [2]pdfTeX warning (ext4): destination with the same identifier (name{pag
 e.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.152 \chapter
+l.154 \chapter
               {Background} [3]pdfTeX warning (ext4): destination with the same 
 identifier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.152 \chapter
+l.154 \chapter
               {Background} [4
 
 ]
 Chapter 2.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 157.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 158.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 159.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 160.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -946,9 +940,9 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.166 
+l.168 
        [5]
-Overfull \hbox (1.92303pt too wide) in paragraph at lines 169--170
+Overfull \hbox (1.92303pt too wide) in paragraph at lines 171--172
 \T1/ppl/m/n/12 and the grow-ing pop-u-lar-ity of GameMaker, Yoyo-Games has pro-
 vided the func-
  []
@@ -957,15 +951,15 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.179 O
+l.181 O
        n various games, clients may automatically get disconnected from the ...
 [6]pdfTeX warning (ext4): destination with the same identifier (name{page.7}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.193 
+l.195 
        [7]
-Overfull \hbox (4.49026pt too wide) in paragraph at lines 196--198
+Overfull \hbox (4.49026pt too wide) in paragraph at lines 198--200
 \T1/ppl/m/n/12 traver-sal tech-niques such as "hole punch-ing" are there-fore e
 s-tab-lished, al-though
  []
@@ -974,7 +968,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.209 
+l.211 
        [8]
 Underfull \vbox (badness 1521) has occurred while \output is active []
 
@@ -982,19 +976,19 @@ Underfull \vbox (badness 1521) has occurred while \output is active []
 [10]
 Chapter 3.
 
-Overfull \hbox (0.32605pt too wide) in paragraph at lines 248--249
+Overfull \hbox (0.32605pt too wide) in paragraph at lines 250--251
 []\T1/ppl/m/n/12 Note that GameMaker does na-tively sup-port net-work-ing func-
 tion-al-ity for non-
  []
 
 
-Underfull \hbox (badness 1237) in paragraph at lines 261--261
+Underfull \hbox (badness 1237) in paragraph at lines 263--263
 [][]\T1/ppl/m/n/10 Advertised at de-vel-oper.mozilla.org: [][]$\T1/cmtt/m/n/10 
 https : / / developer . mozilla . org / en-[]US / docs /$
  []
 
 
-Overfull \hbox (22.2484pt too wide) in paragraph at lines 261--261
+Overfull \hbox (22.2484pt too wide) in paragraph at lines 263--263
 [][]\T1/ppl/m/n/10 Advertised at [][]$\T1/cmtt/m/n/10 http : / / www . gamepix 
 . com / blog / the-[]big-[]list-[]of-[]2d-[]html5-[]games-[]engines/$[][]| 
  []
@@ -1002,7 +996,7 @@ Overfull \hbox (22.2484pt too wide) in paragraph at lines 261--261
 [11
 
 ] [12]
-Overfull \hbox (2.9121pt too wide) in paragraph at lines 311--320
+Overfull \hbox (2.9121pt too wide) in paragraph at lines 313--322
  [][] 
  []
 
@@ -1015,7 +1009,7 @@ Chapter 4.
 [15
 
 ]
-Overfull \hbox (1.0292pt too wide) in paragraph at lines 354--354
+Overfull \hbox (1.0292pt too wide) in paragraph at lines 356--356
 []\T1/ppl/b/n/14.4 Non-Functional Re-quire-ments and De-sir-able Qual-ity At-
  []
 
@@ -1029,7 +1023,7 @@ ted-to.pdf>
 (epstopdf)                    size: 26072 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/server_sequence_diag
 ram2-eps-converted-to.pdf images/server_sequence_diagram2.eps>
-(epstopdf)             \includegraphics on input line 388.
+(epstopdf)             \includegraphics on input line 390.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/server_sequence_diagram2-eps-converted-to.pdf, id=506, 1386.17876pt x 8
@@ -1038,15 +1032,15 @@ File: images/server_sequence_diagram2-eps-converted-to.pdf Graphic file (type p
 df)
  <use images/server_sequence_diagram2-eps-converted-to.pdf>
 Package pdftex.def Info: images/server_sequence_diagram2-eps-converted-to.pdf u
-sed on input line 388.
+sed on input line 390.
 (pdftex.def)             Requested size: 415.85684pt x 247.52666pt.
 
-Overfull \hbox (3.29187pt too wide) in paragraph at lines 388--389
+Overfull \hbox (3.29187pt too wide) in paragraph at lines 390--391
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 396--397
+Underfull \hbox (badness 10000) in paragraph at lines 398--399
 
  []
 
@@ -1062,10 +1056,10 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
 File: images/server_code.jpg Graphic file (type jpg)
 
 <use images/server_code.jpg>
-Package pdftex.def Info: images/server_code.jpg used on input line 435.
+Package pdftex.def Info: images/server_code.jpg used on input line 437.
 (pdftex.def)             Requested size: 433.61966pt x 211.02823pt.
 
-Overfull \hbox (21.05469pt too wide) in paragraph at lines 435--436
+Overfull \hbox (21.05469pt too wide) in paragraph at lines 437--438
 [][] 
  []
 
@@ -1073,7 +1067,7 @@ Overfull \hbox (21.05469pt too wide) in paragraph at lines 435--436
 File: images/server_actions.jpg Graphic file (type jpg)
 
 <use images/server_actions.jpg>
-Package pdftex.def Info: images/server_actions.jpg used on input line 442.
+Package pdftex.def Info: images/server_actions.jpg used on input line 444.
 (pdftex.def)             Requested size: 302.07498pt x 298.1604pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1089,7 +1083,7 @@ to.pdf>
 (epstopdf)                    size: 325170 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/server_class_diagram
 -eps-converted-to.pdf images/server_class_diagram.eps>
-(epstopdf)             \includegraphics on input line 451.
+(epstopdf)             \includegraphics on input line 453.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/server_class_diagram-eps-converted-to.pdf, id=565, 420.57124pt x 515.92
@@ -1097,10 +1091,10 @@ Package epstopdf Info: Output file is already uptodate.
 File: images/server_class_diagram-eps-converted-to.pdf Graphic file (type pdf)
  <use images/server_class_diagram-eps-converted-to.pdf>
 Package pdftex.def Info: images/server_class_diagram-eps-converted-to.pdf used 
-on input line 451.
+on input line 453.
 (pdftex.def)             Requested size: 420.57022pt x 515.92624pt.
 
-Overfull \hbox (8.00525pt too wide) in paragraph at lines 451--452
+Overfull \hbox (8.00525pt too wide) in paragraph at lines 453--454
 [][] 
  []
 
@@ -1110,15 +1104,15 @@ File: images/server_player_construct.jpg Graphic file (type jpg)
 
 <use images/server_player_construct.jpg>
 Package pdftex.def Info: images/server_player_construct.jpg used on input line 
-461.
+463.
 (pdftex.def)             Requested size: 539.01242pt x 388.45029pt.
 
-Overfull \hbox (126.44745pt too wide) in paragraph at lines 461--462
+Overfull \hbox (126.44745pt too wide) in paragraph at lines 463--464
 [][] 
  []
 
 [22 <./images/server_player_construct.jpg>]
-Overfull \hbox (14.59334pt too wide) in paragraph at lines 472--473
+Overfull \hbox (14.59334pt too wide) in paragraph at lines 474--475
 []\T1/ppl/m/n/12 An MIT-licensed open-source socket.io JavaScript li-brary pro-
 vided by Learn-
  []
@@ -1127,10 +1121,10 @@ vided by Learn-
 File: images/extension_flow.jpg Graphic file (type jpg)
 
 <use images/extension_flow.jpg>
-Package pdftex.def Info: images/extension_flow.jpg used on input line 479.
+Package pdftex.def Info: images/extension_flow.jpg used on input line 481.
 (pdftex.def)             Requested size: 408.50339pt x 237.3451pt.
  [23 <./images/extension_flow.jpg>]
-Overfull \hbox (12.9658pt too wide) in paragraph at lines 493--496
+Overfull \hbox (12.9658pt too wide) in paragraph at lines 495--498
 []\T1/ppl/m/n/12 A sim-ple con-nec-tion func-tion \T1/cmtt/m/n/12 connect(serve
 r_ip, server_port) \T1/ppl/m/n/12 opens a socket
  []
@@ -1139,14 +1133,10 @@ r_ip, server_port) \T1/ppl/m/n/12 opens a socket
 File: images/extensions_folder.png Graphic file (type png)
 
 <use images/extensions_folder.png>
-Package pdftex.def Info: images/extensions_folder.png used on input line 524.
+Package pdftex.def Info: images/extensions_folder.png used on input line 526.
 (pdftex.def)             Requested size: 160.80034pt x 135.5059pt.
  [24]
 \openout3 = `skeleton.pyg'.
-
-runsystem(pygmentize -l xml -f latex -P commandprefix=PYG -F tokenmerge -o "_mi
-nted-skeleton/A01CF47376C9188BD7F21C99B0D1A35A162862EE4A2CE15FBD7F090002D74818.
-pygtex" "skeleton.pyg" )...executed.
 
 
 (_minted-skeleton/A01CF47376C9188BD7F21C99B0D1A35A162862EE4A2CE15FBD7F090002D74
@@ -1164,7 +1154,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 (_minted-skeleton/3723F69C5C288751FAEEB8A95FF3E25E5D764DE80052C0D0737CD863CD6F0
 8C8.pygtex)
-Overfull \hbox (0.56567pt too wide) in paragraph at lines 683--684
+Overfull \hbox (0.56567pt too wide) in paragraph at lines 685--686
 []\T1/ppl/m/n/12 Since then, it has evolved into sup-port-ing a va-ri-ety of in
 -stances (vir-tual clients),
  []
@@ -1173,10 +1163,10 @@ Overfull \hbox (0.56567pt too wide) in paragraph at lines 683--684
 File: images/benchmarker2.jpg Graphic file (type jpg)
 
 <use images/benchmarker2.jpg>
-Package pdftex.def Info: images/benchmarker2.jpg used on input line 710.
+Package pdftex.def Info: images/benchmarker2.jpg used on input line 712.
 (pdftex.def)             Requested size: 398.9062pt x 419.4427pt.
  [29] [30 <./images/benchmarker2.jpg>]
-Overfull \hbox (1.30754pt too wide) in paragraph at lines 722--724
+Overfull \hbox (1.30754pt too wide) in paragraph at lines 724--726
 \T1/ppl/m/n/12 func-tion \T1/cmtt/m/n/12 wn_connect(server_ip, server_port)\T1/
 ppl/m/n/12 . It then awaits in-com-ing mes-
  []
@@ -1185,20 +1175,20 @@ ppl/m/n/12 . It then awaits in-com-ing mes-
 File: images/messenger.jpg Graphic file (type jpg)
 
 <use images/messenger.jpg>
-Package pdftex.def Info: images/messenger.jpg used on input line 728.
+Package pdftex.def Info: images/messenger.jpg used on input line 730.
 (pdftex.def)             Requested size: 400.57779pt x 251.74127pt.
  [31 <./images/messenger.jpg>] [32
 
 ]
 Chapter 5.
 
-Overfull \hbox (6.33919pt too wide) in paragraph at lines 743--744
+Overfull \hbox (6.33919pt too wide) in paragraph at lines 745--746
 []\T1/ppl/m/n/12 These ex-per-i-ments were per-formed on a Win-dows 7 64-bit pl
 at-form with 12.6GB
  []
 
 
-Overfull \hbox (0.75887pt too wide) in paragraph at lines 745--746
+Overfull \hbox (0.75887pt too wide) in paragraph at lines 747--748
 \T1/ppl/m/n/12 house-hold net-work band-width [[]]. This in-volves an up-load s
 peed of 5Mbit/s,
  []
@@ -1213,7 +1203,7 @@ to.pdf>
 (epstopdf)                    size: 16512 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/test_CLIENT_CPUusage
 -eps-converted-to.pdf images/test_CLIENT_CPUusage.eps>
-(epstopdf)             \includegraphics on input line 755.
+(epstopdf)             \includegraphics on input line 757.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/test_CLIENT_CPUusage-eps-converted-to.pdf, id=662, 456.70625pt x 197.73
@@ -1221,7 +1211,7 @@ Package epstopdf Info: Output file is already uptodate.
 File: images/test_CLIENT_CPUusage-eps-converted-to.pdf Graphic file (type pdf)
  <use images/test_CLIENT_CPUusage-eps-converted-to.pdf>
 Package pdftex.def Info: images/test_CLIENT_CPUusage-eps-converted-to.pdf used 
-on input line 755.
+on input line 757.
 (pdftex.def)             Requested size: 411.03181pt x 177.96323pt.
 Package epstopdf Info: Source file: <images/test_CLIENT_CPUtime.eps>
 (epstopdf)                    date: 2016-03-29 00:27:10
@@ -1232,7 +1222,7 @@ o.pdf>
 (epstopdf)                    size: 15637 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/test_CLIENT_CPUtime-
 eps-converted-to.pdf images/test_CLIENT_CPUtime.eps>
-(epstopdf)             \includegraphics on input line 764.
+(epstopdf)             \includegraphics on input line 766.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/test_CLIENT_CPUtime-eps-converted-to.pdf, id=663, 456.70625pt x 198.742
@@ -1240,7 +1230,7 @@ Package epstopdf Info: Output file is already uptodate.
 File: images/test_CLIENT_CPUtime-eps-converted-to.pdf Graphic file (type pdf)
  <use images/test_CLIENT_CPUtime-eps-converted-to.pdf>
 Package pdftex.def Info: images/test_CLIENT_CPUtime-eps-converted-to.pdf used o
-n input line 764.
+n input line 766.
 (pdftex.def)             Requested size: 411.03181pt x 178.86658pt.
 Package epstopdf Info: Source file: <images/test_CLIENT_RSS.eps>
 (epstopdf)                    date: 2016-03-29 00:31:12
@@ -1251,7 +1241,7 @@ f>
 (epstopdf)                    size: 16648 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/test_CLIENT_RSS-eps-
 converted-to.pdf images/test_CLIENT_RSS.eps>
-(epstopdf)             \includegraphics on input line 772.
+(epstopdf)             \includegraphics on input line 774.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/test_CLIENT_RSS-eps-converted-to.pdf, id=664, 456.70625pt x 200.75pt>
@@ -1259,7 +1249,7 @@ File: images/test_CLIENT_RSS-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/test_CLIENT_RSS-eps-converted-to.pdf>
 Package pdftex.def Info: images/test_CLIENT_RSS-eps-converted-to.pdf used on in
-put line 772.
+put line 774.
 (pdftex.def)             Requested size: 411.03181pt x 180.67331pt.
  [34 <./images/test_CLIENT_CPUusage-eps-converted-to.pdf> <./images/test_CLIENT
 _CPUtime-eps-converted-to.pdf>] [35 <./images/test_CLIENT_RSS-eps-converted-to.
@@ -1272,7 +1262,7 @@ Package epstopdf Info: Source file: <images/mean_rtt.eps>
 (epstopdf)                    size: 81923 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/mean_rtt-eps-convert
 ed-to.pdf images/mean_rtt.eps>
-(epstopdf)             \includegraphics on input line 797.
+(epstopdf)             \includegraphics on input line 799.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/mean_rtt-eps-converted-to.pdf, id=701, 475.7775pt x 211.79124pt>
@@ -1280,7 +1270,7 @@ File: images/mean_rtt-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/mean_rtt-eps-converted-to.pdf>
 Package pdftex.def Info: images/mean_rtt-eps-converted-to.pdf used on input lin
-e 797.
+e 799.
 (pdftex.def)             Requested size: 409.16792pt x 182.14015pt.
  [36 <./images/mean_rtt-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/test_SERVER_RTTmean.eps>
@@ -1292,7 +1282,7 @@ o.pdf>
 (epstopdf)                    size: 26872 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/test_SERVER_RTTmean-
 eps-converted-to.pdf images/test_SERVER_RTTmean.eps>
-(epstopdf)             \includegraphics on input line 810.
+(epstopdf)             \includegraphics on input line 812.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/test_SERVER_RTTmean-eps-converted-to.pdf, id=722, 703.62875pt x 318.188
@@ -1300,7 +1290,7 @@ Package epstopdf Info: Output file is already uptodate.
 File: images/test_SERVER_RTTmean-eps-converted-to.pdf Graphic file (type pdf)
  <use images/test_SERVER_RTTmean-eps-converted-to.pdf>
 Package pdftex.def Info: images/test_SERVER_RTTmean-eps-converted-to.pdf used o
-n input line 810.
+n input line 812.
 (pdftex.def)             Requested size: 408.10497pt x 184.54959pt.
 Package epstopdf Info: Source file: <images/test_SERVER_RTTstd.eps>
 (epstopdf)                    date: 2016-03-29 00:50:32
@@ -1311,7 +1301,7 @@ Package epstopdf Info: Source file: <images/test_SERVER_RTTstd.eps>
 (epstopdf)                    size: 26779 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/test_SERVER_RTTstd-e
 ps-converted-to.pdf images/test_SERVER_RTTstd.eps>
-(epstopdf)             \includegraphics on input line 818.
+(epstopdf)             \includegraphics on input line 820.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/test_SERVER_RTTstd-eps-converted-to.pdf, id=723, 703.62875pt x 319.1925
@@ -1319,11 +1309,11 @@ pt>
 File: images/test_SERVER_RTTstd-eps-converted-to.pdf Graphic file (type pdf)
  <use images/test_SERVER_RTTstd-eps-converted-to.pdf>
 Package pdftex.def Info: images/test_SERVER_RTTstd-eps-converted-to.pdf used on
- input line 818.
+ input line 820.
 (pdftex.def)             Requested size: 408.10497pt x 185.13177pt.
  [37 <./images/test_SERVER_RTTmean-eps-converted-to.pdf> <./images/test_SERVER_
 RTTstd-eps-converted-to.pdf>] [38]
-Overfull \hbox (0.17065pt too wide) in paragraph at lines 891--892
+Overfull \hbox (0.17065pt too wide) in paragraph at lines 893--894
 \T1/ppl/m/n/12 allowed from join-ing the server only when their round-trip time
  ex-ceeds 150ms
  []
@@ -1332,18 +1322,18 @@ Overfull \hbox (0.17065pt too wide) in paragraph at lines 891--892
 File: images/worldmap.jpg Graphic file (type jpg)
 
 <use images/worldmap.jpg>
-Package pdftex.def Info: images/worldmap.jpg used on input line 900.
+Package pdftex.def Info: images/worldmap.jpg used on input line 902.
 (pdftex.def)             Requested size: 401.54648pt x 213.64621pt.
  [40 <./images/worldmap.jpg>]
 Chapter 6.
 
-Overfull \hbox (0.91306pt too wide) in paragraph at lines 912--913
+Overfull \hbox (0.91306pt too wide) in paragraph at lines 914--915
 \T1/ppl/m/n/12 and main-tain a TCP con-nec-tion mit-i-gates the NAT traver-sal 
 prob-lem that many
  []
 
 
-Overfull \hbox (5.30614pt too wide) in paragraph at lines 921--922
+Overfull \hbox (5.30614pt too wide) in paragraph at lines 923--924
 \T1/ppl/m/n/12 The eval-u-a-tion meth-ods in-di-cate that the net-work in-deed 
 per-forms well enough
  []
@@ -1552,25 +1542,22 @@ ach-[]23mbps .$
  []
 
 )
-runsystem(del "_minted-skeleton\733D12AEB5CBA4287D7C8613B3B28449162862EE4A2CE15
-FBD7F090002D74818.pygtex")...executed.
-
 runsystem(del "skeleton.pyg")...executed.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1014.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1016.
  [47]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1014.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1016.
  (skeleton.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1014.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1014.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1016.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1016.
 
 Package rerunfilecheck Info: File `skeleton.out' has not changed.
 (rerunfilecheck)             Checksum: 0FDDF9641BBD2AC826E0CD29A86F2930;2830.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1014.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1016.
  ) 
 Here is how much of TeX's memory you used:
- 12989 strings out of 493634
- 202658 string characters out of 3141302
+ 12988 strings out of 493634
+ 202594 string characters out of 3141302
  339294 words of memory out of 3000000
  15886 multiletter control sequences out of 15000+200000
  33963 words of font info for 73 fonts, out of 3000000 for 9000
@@ -1593,7 +1580,7 @@ amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/
 uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.p
 fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on skeleton.pdf (55 pages, 2171951 bytes).
+Output written on skeleton.pdf (55 pages, 2172339 bytes).
 PDF statistics:
  1132 PDF objects out of 1200 (max. 8388607)
  233 named destinations out of 1000 (max. 500000)
