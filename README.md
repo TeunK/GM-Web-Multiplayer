@@ -3,9 +3,9 @@ Honours Project
 
 Dissertation PDF:
 
-[https://github.com/TeunK/GM-Web-Multiplayer/blob/master/report/dissertation/skeleton.pdf](view from git)
+[View dissertation.pdf](https://github.com/TeunK/GM-Web-Multiplayer/blob/master/report/dissertation/skeleton.pdf)
 
-[https://github.com/TeunK/GM-Web-Multiplayer/raw/master/report/dissertation/skeleton.pdf](download link)
+[Download dissertation.pdf](https://github.com/TeunK/GM-Web-Multiplayer/raw/master/report/dissertation/skeleton.pdf)
 
 
 
